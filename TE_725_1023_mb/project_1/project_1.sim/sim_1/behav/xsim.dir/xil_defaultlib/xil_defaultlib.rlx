@@ -1,0 +1,7 @@
+0.6
+2016.4
+Jan 23 2017
+19:37:30
+C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.sim/sim_1/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
+C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sim_1/new/adc_sim.v,1509219051,verilog,,,,adc_sim,,,../../../project_1.srcs/sources_1/ip/MAIN_CLK;../../../project_1.srcs/sources_1/ip/SUB_CLK,,,,,
+C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/new/ADS7056.v,1509220539,verilog,,,,ADS7056,,,../../../project_1.srcs/sources_1/ip/MAIN_CLK;../../../project_1.srcs/sources_1/ip/SUB_CLK,,,,,

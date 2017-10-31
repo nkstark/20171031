@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="module_ads7056_wrapper.mmi" key="module_ads7056_wrapper_hw_platform_0-bmmFile"/>
+	<item value="C:\Users\nks\Desktop\TE_725_1023\project_1\project_1.sdk\Conn_test\Debug\Conn_test.elf" key="module_ads7056_wrapper_hw_platform_0-microblaze_0-initElf"/>
+	<item value="module_ads7056_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="module_ads7056_wrapper.bit" key="module_ads7056_wrapper_hw_platform_0-bitFile"/>
+	<item value="false" key="module_ads7056_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Local" key="module_ads7056_wrapper_hw_platform_0-target"/>
+	<item value="Auto Detect" key="module_ads7056_wrapper_hw_platform_0-device"/>
+</section>

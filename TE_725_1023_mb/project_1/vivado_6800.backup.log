@@ -1,0 +1,1651 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Oct 21 00:03:10 2017
+# Process ID: 6800
+# Current directory: C:/Users/nks/Desktop/test_725/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1212 C:\Users\nks\Desktop\test_725\project_1\project_1.xpr
+# Log file: C:/Users/nks/Desktop/test_725/project_1/vivado.log
+# Journal file: C:/Users/nks/Desktop/test_725/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nks/Desktop/test_725/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/rzaadmin/Desktop/test_725/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <ADC7961_cnv> not found while processing module instance <adtest> [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v:50]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me17.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me17.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/mytop.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/mytop.v:1]
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:1]
+[Sat Oct 21 00:08:09 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 00:10:22 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 00:10:22 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 799.418 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 799.418 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 844.871 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 02:16:29 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 02:16:29 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 844.871 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 844.871 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v:57]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 02:46:13 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 02:46:13 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 844.871 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 845.477 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 02:50:44 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 02:50:44 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 845.477 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 02:55:37 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 02:55:37 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 860.438 ; gain = 0.000
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 860.438 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 02:59:23 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 02:59:23 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 860.438 ; gain = 0.000
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 860.438 ; gain = 0.000
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcsg324-2
+Top: led
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:04:46 ; elapsed = 03:12:09 . Memory (MB): peak = 873.785 ; gain = 664.297
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314_clk_wiz_0_0' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314_clk_wiz_0_0' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314' (2#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+WARNING: [Synth 8-3331] design led has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:04:47 ; elapsed = 03:12:10 . Memory (MB): peak = 900.969 ; gain = 691.480
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:47 ; elapsed = 03:12:10 . Memory (MB): peak = 900.969 ; gain = 691.480
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.dcp' for cell 'myclk/clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Device 21-403] Loading part xc7a35tcsg324-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  OBUFDS => OBUFDS: 1 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:04:59 ; elapsed = 03:12:19 . Memory (MB): peak = 1188.957 ; gain = 979.469
+23 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1188.957 ; gain = 325.188
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 03:16:45 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 03:16:45 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1206.480 ; gain = 0.000
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.785 ; gain = 0.000
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+
+****** Webtalk v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/xsim.dir/adc_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Oct 21 03:39:22 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 21 03:39:22 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "adc_sim_behav -key {Behavioral:sim_1:Functional:adc_sim} -tclbatch {adc_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source adc_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'adc_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.785 ; gain = 0.000
+run 100 us
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.785 ; gain = 0.000
+run 100 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'adc_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj adc_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/ADC7961.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADC7961_cnv_clk
+INFO: [VRFC 10-311] analyzing module ADC7961_dco_dat
+INFO: [VRFC 10-311] analyzing module ADC7961
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_sim
+INFO: [VRFC 10-2458] undeclared symbol adc_cnv, assumed default net type wire [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sim_1/new/adc_sim.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nks/Desktop/test_725/project_1/project_1.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto 981c9c4a152248e8b374d3a3a801109c --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot adc_sim_behav xil_defaultlib.adc_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC7961_cnv_clk
+Compiling module xil_defaultlib.ADC7961_dco_dat
+Compiling module xil_defaultlib.adc_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot adc_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs impl_1 -jobs 4
+[Sat Oct 21 03:55:08 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 21 03:55:09 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:07:15 ; elapsed = 03:54:11 . Memory (MB): peak = 1215.625 ; gain = 1006.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314_clk_wiz_0_0' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314_clk_wiz_0_0' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314' (2#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+WARNING: [Synth 8-3331] design led has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:07:16 ; elapsed = 03:54:11 . Memory (MB): peak = 1220.238 ; gain = 1010.750
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:07:16 ; elapsed = 03:54:12 . Memory (MB): peak = 1220.238 ; gain = 1010.750
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.dcp' for cell 'myclk/clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1265.082 ; gain = 49.457
+open_bd_design {C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd}
+Adding cell -- xilinx.com:ip:clk_wiz:5.3 - clk_wiz_0
+Successfully read diagram <clk_A1314> from BD file <C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1265.082 ; gain = 0.000
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+startgroup
+set_property -dict [list CONFIG.ENABLE_CLOCK_MONITOR {false} CONFIG.PRIMITIVE {MMCM}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : <C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd> 
+reset_run synth_1
+reset_run clk_A1314_clk_wiz_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+Verilog Output written to : C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v
+Verilog Output written to : C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314_wrapper.v
+Wrote  : <C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hw_handoff/clk_A1314.hwh
+Generated Block Design Tcl file C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hw_handoff/clk_A1314_bd.tcl
+Generated Hardware Definition File C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_A1314_clk_wiz_0_0, cache-ID = 968e1c03c62981d1; cache size = 0.139 MB.
+[Sat Oct 21 04:07:33 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 21 04:07:33 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:08:36 ; elapsed = 04:08:06 . Memory (MB): peak = 1359.359 ; gain = 1149.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_A1314_clk_wiz_0_0' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314_clk_wiz_0_0' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/clk_A1314_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_A1314' (2#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/hdl/clk_A1314.v:13]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+WARNING: [Synth 8-3331] design led has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:08:37 ; elapsed = 04:08:07 . Memory (MB): peak = 1372.035 ; gain = 1162.547
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:08:37 ; elapsed = 04:08:07 . Memory (MB): peak = 1372.035 ; gain = 1162.547
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.dcp' for cell 'myclk/clk_wiz_0'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0_board.xdc] for cell 'myclk/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc] for cell 'myclk/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 1431.668 ; gain = 72.309
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.4
+  **** Build date : Jan 23 2017-19:37:29
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/251633000451A
+set_property PROGRAM.FILE {C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/led.bit} [lindex [get_hw_devices xc7a35t_0] 0]
+current_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {s25fl256sxxxxxx0-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROGRAM.FILE {C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/led.bit} [lindex [get_hw_devices xc7a35t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+WARNING: [Labtoolstcl 44-130] No matching hw_ilas were found.
+close_hw
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/nks/Desktop/test_725/project_1/vivado_pid6800.debug)
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/nks/Desktop/test_725/project_1/vivado_pid6800.debug)
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp/led_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/ip/clk_A1314_clk_wiz_0_0/clk_A1314_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2030.141 ; gain = 494.270
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp/led_early.xdc]
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp/led.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.136 . Memory (MB): peak = 2034.281 ; gain = 4.129
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.137 . Memory (MB): peak = 2034.281 ; gain = 4.129
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2101.789 ; gain = 628.918
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_bd_design {C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd}
+open_bd_design {C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd}
+remove_files  C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314/clk_A1314.bd
+file delete -force C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/bd/clk_A1314
+file delete -force C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/bd/clk_A1314
+ERROR: [Common 17-69] Command failed: Port 'clk_100m' already exists
+CRITICAL WARNING: [IP_Flow 19-1747] Failed to deliver file 'c:/Xilinx/Vivado/2016.4/data/ip/xilinx/clk_wiz_v5_3/elaborate/ports.xit': ERROR: [Common 17-69] Command failed: Port 'clk_100m' already exists
+
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3541] IP Elaboration error: Failed to generate IP 'clk_wiz_0'. Failed to generate 'Elaborate Ports' outputs: 
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.3 -module_name MAIN_CLK -dir c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip
+set_property -dict [list CONFIG.USE_SPREAD_SPECTRUM {false} CONFIG.USE_DYN_PHASE_SHIFT {false} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT4_USED {false} CONFIG.PRIMARY_PORT {clk_100m_p17} CONFIG.CLK_OUT1_PORT {clk_250m} CONFIG.CLK_OUT2_PORT {clk_120m} CONFIG.CLK_OUT3_PORT {clk_100m} CONFIG.CLK_OUT4_PORT {clk_10m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {250} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {10} CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {250} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {true} CONFIG.CLKOUT5_USED {false} CONFIG.CLKOUT6_USED {false} CONFIG.CLKOUT1_REQUESTED_DUTY_CYCLE {50.0} CONFIG.CLKOUT2_REQUESTED_DUTY_CYCLE {50.0} CONFIG.CLKOUT3_REQUESTED_DUTY_CYCLE {50.0} CONFIG.CLKOUT4_REQUESTED_DUTY_CYCLE {50.0} CONFIG.CLKOUT5_REQUESTED_DUTY_CYCLE {50.0} CONFIG.CLKOUT6_REQUESTED_DUTY_CYCLE {50.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4.000} CONFIG.MMCM_CLKOUT1_DIVIDE {10} CONFIG.MMCM_CLKOUT2_DIVIDE {100} CONFIG.MMCM_CLKOUT3_DIVIDE {1} CONFIG.MMCM_CLKOUT4_DIVIDE {1} CONFIG.MMCM_CLKOUT5_DIVIDE {1} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT1_JITTER {110.209} CONFIG.CLKOUT1_PHASE_ERROR {98.575} CONFIG.CLKOUT2_JITTER {130.958} CONFIG.CLKOUT2_PHASE_ERROR {98.575} CONFIG.CLKOUT3_JITTER {209.588} CONFIG.CLKOUT3_PHASE_ERROR {98.575} CONFIG.CLKOUT4_JITTER {110.209} CONFIG.CLKOUT4_PHASE_ERROR {98.575} CONFIG.CLKOUT5_JITTER {236.910} CONFIG.CLKOUT5_PHASE_ERROR {732.678} CONFIG.CLKOUT6_JITTER {236.910} CONFIG.CLKOUT6_PHASE_ERROR {732.678}] [get_ips MAIN_CLK]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLK_OUT4_PORT' from 'clk_out4' to 'clk_10m' has been ignored for IP 'MAIN_CLK'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT4_REQUESTED_OUT_FREQ' from '100.000' to '250' has been ignored for IP 'MAIN_CLK'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT4_REQUESTED_DUTY_CYCLE' from '50.000' to '50.0' has been ignored for IP 'MAIN_CLK'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT5_REQUESTED_DUTY_CYCLE' from '50.000' to '50.0' has been ignored for IP 'MAIN_CLK'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT6_REQUESTED_DUTY_CYCLE' from '50.000' to '50.0' has been ignored for IP 'MAIN_CLK'
+generate_target {instantiation_template} [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'MAIN_CLK'...
+generate_target all [get_files  c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'MAIN_CLK'...
+catch { config_ip_cache -export [get_ips -all MAIN_CLK] }
+export_ip_user_files -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci]
+launch_runs -jobs 4 MAIN_CLK_synth_1
+[Sat Oct 21 12:55:44 2017] Launched MAIN_CLK_synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/MAIN_CLK_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci] -directory C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+ERROR: [Common 17-69] Command failed: Port 'clk_100m' already exists
+CRITICAL WARNING: [IP_Flow 19-1747] Failed to deliver file 'c:/Xilinx/Vivado/2016.4/data/ip/xilinx/clk_wiz_v5_3/elaborate/ports.xit': ERROR: [Common 17-69] Command failed: Port 'clk_100m' already exists
+
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3541] IP Elaboration error: Failed to generate IP 'MAIN_CLK'. Failed to generate 'Elaborate Ports' outputs: 
+set_property -dict [list CONFIG.CLK_OUT2_PORT {clk_100m} CONFIG.CLK_OUT3_PORT {clk_10m} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4.000} CONFIG.MMCM_CLKOUT1_DIVIDE {10} CONFIG.MMCM_CLKOUT2_DIVIDE {100} CONFIG.CLKOUT1_JITTER {110.209} CONFIG.CLKOUT1_PHASE_ERROR {98.575} CONFIG.CLKOUT2_JITTER {130.958} CONFIG.CLKOUT2_PHASE_ERROR {98.575} CONFIG.CLKOUT3_JITTER {209.588} CONFIG.CLKOUT3_PHASE_ERROR {98.575}] [get_ips MAIN_CLK]
+generate_target all [get_files  c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'MAIN_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'MAIN_CLK'...
+catch { config_ip_cache -export [get_ips -all MAIN_CLK] }
+export_ip_user_files -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci] -no_script -sync -force -quiet
+reset_run MAIN_CLK_synth_1
+launch_runs -jobs 4 MAIN_CLK_synth_1
+[Sat Oct 21 12:58:32 2017] Launched MAIN_CLK_synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/MAIN_CLK_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xci] -directory C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_design rtl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:16:39 ; elapsed = 12:56:16 . Memory (MB): peak = 2458.254 ; gain = 2248.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MAIN_CLK' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+ERROR: [Synth 8-448] named port connection 'clock_rtl' does not exist for instance 'myclk' of module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:65]
+ERROR: [Synth 8-448] named port connection 'clk_120m' does not exist for instance 'myclk' of module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:65]
+WARNING: [Synth 8-350] instance 'myclk' of module 'MAIN_CLK' requires 5 connections, but only 2 given [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:65]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+ERROR: [Synth 8-285] failed synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+ERROR: [Synth 8-285] failed synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:16:40 ; elapsed = 12:56:17 . Memory (MB): peak = 2487.379 ; gain = 2277.891
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2487.379 ; gain = 59.070
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+can't read "mmcm_bufgcediv2": no such variable
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.3 -module_name SUB_CLK -dir c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {100} CONFIG.CLK_OUT1_PORT {clk_120m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {120} CONFIG.USE_LOCKED {false} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {42} CONFIG.MMCM_CLKIN1_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {279.155} CONFIG.CLKOUT1_PHASE_ERROR {310.955}] [get_ips SUB_CLK]
+generate_target {instantiation_template} [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'SUB_CLK'...
+generate_target all [get_files  c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'SUB_CLK'...
+catch { config_ip_cache -export [get_ips -all SUB_CLK] }
+export_ip_user_files -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci]
+launch_runs -jobs 4 SUB_CLK_synth_1
+[Sat Oct 21 13:16:49 2017] Launched SUB_CLK_synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/SUB_CLK_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci] -directory C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:18:18 ; elapsed = 13:14:30 . Memory (MB): peak = 2550.965 ; gain = 2341.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MAIN_CLK' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (2#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (4#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+WARNING: [Synth 8-3848] Net clk_120m in module/entity led does not have driver. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:60]
+INFO: [Synth 8-256] done synthesizing module 'led' (5#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:18:19 ; elapsed = 13:14:31 . Memory (MB): peak = 2580.906 ; gain = 2371.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin POF_test:clk2x to constant 0 [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:81]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:18:19 ; elapsed = 13:14:32 . Memory (MB): peak = 2580.906 ; gain = 2371.418
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp' for cell 'myclk'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2631.605 ; gain = 99.180
+refresh_design
+WARNING: [Synth 8-2254] instance name 'clk_120m' matches net/port name [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:79]
+ERROR: [Synth 8-2715] syntax error near : [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:82]
+INFO: [Synth 8-2350] module led ignored due to previous errors [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+Failed to read verilog 'C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v'
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+set_property -dict [list CONFIG.PRIMARY_PORT {clk_in_100m}] [get_ips SUB_CLK]
+generate_target all [get_files  c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'SUB_CLK'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'SUB_CLK'...
+catch { config_ip_cache -export [get_ips -all SUB_CLK] }
+export_ip_user_files -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci] -no_script -sync -force -quiet
+reset_run SUB_CLK_synth_1
+launch_runs -jobs 4 SUB_CLK_synth_1
+[Sat Oct 21 13:20:55 2017] Launched SUB_CLK_synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/SUB_CLK_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xci] -directory C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/nks/Desktop/test_725/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/nks/Desktop/test_725/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:19:05 ; elapsed = 13:18:59 . Memory (MB): peak = 2631.605 ; gain = 2422.117
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MAIN_CLK' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'SUB_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'SUB_CLK' (2#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:19:06 ; elapsed = 13:18:59 . Memory (MB): peak = 2631.605 ; gain = 2422.117
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:19:06 ; elapsed = 13:19:00 . Memory (MB): peak = 2631.605 ; gain = 2422.117
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp' for cell 'myclk'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.dcp' for cell 'myclk2'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 3 OBUFs to IO ports without IO buffers.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. myclk2/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'myclk2/clk_in_100m' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp_2/SUB_CLK.edf:259]
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2632.508 ; gain = 0.902
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:19:29 ; elapsed = 13:20:26 . Memory (MB): peak = 2632.508 ; gain = 2423.020
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MAIN_CLK' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'SUB_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'SUB_CLK' (2#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:19:30 ; elapsed = 13:20:27 . Memory (MB): peak = 2632.508 ; gain = 2423.020
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:19:30 ; elapsed = 13:20:27 . Memory (MB): peak = 2632.508 ; gain = 2423.020
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp' for cell 'myclk'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.dcp' for cell 'myclk2'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. myclk2/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'myclk2/clk_in_100m' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp_2/SUB_CLK.edf:259]
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_10m'. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'clk_100m'. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'clk_10m'. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'clk_100m'. [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc:12]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/led_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2646.016 ; gain = 13.508
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sat Oct 21 13:24:58 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 21 13:24:58 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.016 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sat Oct 21 13:34:31 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 21 13:34:31 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:20:52 ; elapsed = 13:39:08 . Memory (MB): peak = 2646.016 ; gain = 2436.527
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'led' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+INFO: [Synth 8-638] synthesizing module 'MAIN_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MAIN_CLK' (1#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/MAIN_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'SUB_CLK' [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'SUB_CLK' (2#1) [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/realtime/SUB_CLK_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_2m5' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clk_2m5' (3#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:23]
+INFO: [Synth 8-638] synthesizing module 'me18' [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-256] done synthesizing module 'me18' (4#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/me18.v:24]
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (5#1) [C:/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21941]
+INFO: [Synth 8-256] done synthesizing module 'led' (6#1) [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:20:52 ; elapsed = 13:39:09 . Memory (MB): peak = 2646.016 ; gain = 2436.527
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:20:53 ; elapsed = 13:39:09 . Memory (MB): peak = 2646.016 ; gain = 2436.527
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp' for cell 'myclk'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.dcp' for cell 'myclk2'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. myclk2/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'myclk2/clk_in_100m' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp_2/SUB_CLK.edf:259]
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2663.941 ; gain = 17.926
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk_in]]
+place_ports clk_in P17
+place_ports led M18
+set_property IOSTANDARD LVCMOS33 [get_ports [list led]]
+set_property slew FAST [get_ports [list POF_out_p]]
+place_ports POF_out_p A10
+set_property IOSTANDARD LVDS_25 [get_ports [list POF_out_p]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
+set_property PULLTYPE PULLDOWN [get_ports [list reset]]
+place_ports reset K1
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sat Oct 21 13:45:35 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+[Sat Oct 21 13:45:35 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v" into library work [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/new/led.v:1]
+[Sat Oct 21 13:56:27 2017] Launched synth_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp' for cell 'myclk'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.dcp' for cell 'myclk2'
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. myclk2/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'myclk2/clk_in_100m' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [C:/Users/nks/Desktop/test_725/project_1/.Xil/Vivado-6800-DESKTOP-6EAE6HJ/dcp_3/SUB_CLK.edf:259]
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK_board.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc:57]
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.xdc] for cell 'myclk/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK_board.xdc] for cell 'myclk2/inst'
+Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc:57]
+Finished Parsing XDC File [c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.xdc] for cell 'myclk2/inst'
+Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [C:/Users/nks/Desktop/test_725/project_1/project_1.srcs/constrs_1/new/led.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/MAIN_CLK/MAIN_CLK.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'c:/Users/nks/Desktop/test_725/project_1/project_1.srcs/sources_1/ip/SUB_CLK/SUB_CLK.dcp'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  OBUFDS => OBUFDS: 1 instances
+
+launch_runs impl_1 -jobs 4
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2684.625 ; gain = 0.000
+[Sat Oct 21 13:57:29 2017] Launched impl_1...
+Run output will be captured here: C:/Users/nks/Desktop/test_725/project_1/project_1.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 21 14:06:55 2017...

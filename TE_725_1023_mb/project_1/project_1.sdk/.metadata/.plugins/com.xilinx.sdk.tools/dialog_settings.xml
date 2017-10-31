@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="module_ads7056_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="s25fl256sxxxxxx0-spi-x1_x2_x4" key="module_ads7056_wrapper_hw_platform_0-flashType"/>
+	<item value="false" key="module_ads7056_wrapper_hw_platform_0-blankCheck"/>
+	<item value="0xF8000000" key="module_ads7056_wrapper_hw_platform_0-offSet"/>
+	<item value="true" key="module_ads7056_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="C:\Users\nks\Desktop\TE_725_1023\project_1\project_1.sdk\Conn_test\Debug\Conn_test.elf" key="module_ads7056_wrapper_hw_platform_0-imgFile"/>
+	<item value="" key="module_ads7056_wrapper_hw_platform_0-fsblFile"/>
+	<item value="Auto Detect" key="module_ads7056_wrapper_hw_platform_0-device"/>
+	<item value="Local" key="module_ads7056_wrapper_hw_platform_0-target"/>
+</section>

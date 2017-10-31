@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Oct 30 01:55:30 2017
+# Process ID: 8896
+# Current directory: C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.runs/module_ads7056_auto_pc_1_synth_1
+# Command line: vivado.exe -log module_ads7056_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source module_ads7056_auto_pc_1.tcl
+# Log file: C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.runs/module_ads7056_auto_pc_1_synth_1/module_ads7056_auto_pc_1.vds
+# Journal file: C:/Users/nks/Desktop/TE_725_1023/project_1/project_1.runs/module_ads7056_auto_pc_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source module_ads7056_auto_pc_1.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP module_ads7056_auto_pc_1, cache-ID = 69e2583045d39c8e.
