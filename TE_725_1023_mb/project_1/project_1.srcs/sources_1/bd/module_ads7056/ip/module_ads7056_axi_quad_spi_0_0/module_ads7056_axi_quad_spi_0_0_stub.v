@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Mon Oct 30 01:54:56 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:23:39 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_stub.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_stub.v
 // Design      : module_ads7056_axi_quad_spi_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-2
@@ -13,13 +13,14 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_quad_spi,Vivado 2016.4" *)
+(* x_core_info = "axi_quad_spi,Vivado 2017.2" *)
 module module_ads7056_axi_quad_spi_0_0(ext_spi_clk, s_axi_aclk, s_axi_aresetn, 
   s_axi_awaddr, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, 
   s_axi_wready, s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, 
   s_axi_arready, s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, io0_i, io0_o, io0_t, io1_i, 
-  io1_o, io1_t, io2_i, io2_o, io2_t, io3_i, io3_o, io3_t, sck_i, sck_o, sck_t, ss_i, ss_o, ss_t, ip2intc_irpt)
-/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,io2_i,io2_o,io2_t,io3_i,io3_o,io3_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt" */;
+  io1_o, io1_t, io2_i, io2_o, io2_t, io3_i, io3_o, io3_t, ss_i, ss_o, ss_t, cfgclk, cfgmclk, eos, preq, clk, gsr, 
+  gts, keyclearb, usrcclkts, usrdoneo, usrdonets, ip2intc_irpt)
+/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,io2_i,io2_o,io2_t,io3_i,io3_o,io3_t,ss_i[0:0],ss_o[0:0],ss_t,cfgclk,cfgmclk,eos,preq,clk,gsr,gts,keyclearb,usrcclkts,usrdoneo,usrdonets,ip2intc_irpt" */;
   input ext_spi_clk;
   input s_axi_aclk;
   input s_axi_aresetn;
@@ -52,11 +53,19 @@ module module_ads7056_axi_quad_spi_0_0(ext_spi_clk, s_axi_aclk, s_axi_aresetn,
   input io3_i;
   output io3_o;
   output io3_t;
-  input sck_i;
-  output sck_o;
-  output sck_t;
   input [0:0]ss_i;
   output [0:0]ss_o;
   output ss_t;
+  output cfgclk;
+  output cfgmclk;
+  output eos;
+  output preq;
+  input clk;
+  input gsr;
+  input gts;
+  input keyclearb;
+  input usrcclkts;
+  input usrdoneo;
+  input usrdonets;
   output ip2intc_irpt;
 endmodule

@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Mon Oct 30 01:51:49 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:19:47 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_microblaze_0_axi_intc_0/module_ads7056_microblaze_0_axi_intc_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_microblaze_0_axi_intc_0/module_ads7056_microblaze_0_axi_intc_0_sim_netlist.v
 // Design      : module_ads7056_microblaze_0_axi_intc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_microblaze_0_axi_intc_0,axi_intc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_intc,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_microblaze_0_axi_intc_0,axi_intc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_intc,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_microblaze_0_axi_intc_0
    (s_axi_aclk,
@@ -93,7 +93,7 @@ module module_ads7056_microblaze_0_axi_intc_0
   wire s_axi_wvalid;
   wire [1:0]NLW_U0_processor_ack_out_UNCONNECTED;
 
-  (* C_ASYNC_INTR = "-7" *) 
+  (* C_ASYNC_INTR = "-3" *) 
   (* C_CASCADE_MASTER = "0" *) 
   (* C_DISABLE_SYNCHRONIZERS = "0" *) 
   (* C_ENABLE_ASYNC = "0" *) 
@@ -1189,7 +1189,7 @@ module module_ads7056_microblaze_0_axi_intc_0_address_decoder
         .O(s_axi_wready));
 endmodule
 
-(* C_ASYNC_INTR = "-7" *) (* C_CASCADE_MASTER = "0" *) (* C_DISABLE_SYNCHRONIZERS = "0" *) 
+(* C_ASYNC_INTR = "-3" *) (* C_CASCADE_MASTER = "0" *) (* C_DISABLE_SYNCHRONIZERS = "0" *) 
 (* C_ENABLE_ASYNC = "0" *) (* C_EN_CASCADE_MODE = "0" *) (* C_FAMILY = "artix7" *) 
 (* C_HAS_CIE = "1" *) (* C_HAS_FAST = "1" *) (* C_HAS_ILR = "0" *) 
 (* C_HAS_IPR = "1" *) (* C_HAS_IVR = "1" *) (* C_HAS_SIE = "1" *) 
@@ -1430,6 +1430,8 @@ module module_ads7056_microblaze_0_axi_intc_0_axi_intc
         .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 (AXI_LITE_IPIF_I_n_28),
         .\IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0 (INTC_CORE_I_n_14),
         .\IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_1 (INTC_CORE_I_n_20),
+        .\IVR_GEN.ivr_reg[1]_0 (INTC_CORE_I_n_0),
+        .\IVR_GEN.ivr_reg[1]_1 (INTC_CORE_I_n_16),
         .Q(INTC_CORE_I_n_19),
         .\REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0 (INTC_CORE_I_n_5),
         .\REG_GEN[0].ier_reg[0]_0 (INTC_CORE_I_n_8),
@@ -1441,8 +1443,6 @@ module module_ads7056_microblaze_0_axi_intc_0_axi_intc
         .interrupt_address(interrupt_address),
         .intr(intr),
         .irq(irq),
-        .irq_gen_reg_0(INTC_CORE_I_n_0),
-        .irq_gen_reg_1(INTC_CORE_I_n_16),
         .p_0_in(p_0_in_0),
         .p_0_in21_in(p_0_in21_in),
         .p_0_in23_in(p_0_in23_in),
@@ -1767,7 +1767,7 @@ endmodule
 
 (* ORIG_REF_NAME = "intc_core" *) 
 module module_ads7056_microblaze_0_axi_intc_0_intc_core
-   (irq_gen_reg_0,
+   (\IVR_GEN.ivr_reg[1]_0 ,
     p_0_in8_in,
     p_0_in7_in,
     SS,
@@ -1783,7 +1783,7 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
     p_0_in21_in,
     \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0 ,
     p_0_in,
-    irq_gen_reg_1,
+    \IVR_GEN.ivr_reg[1]_1 ,
     p_1_in9_in,
     p_1_in,
     Q,
@@ -1792,7 +1792,6 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
     Douta,
     interrupt_address,
     s_axi_aclk,
-    intr,
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ,
@@ -1813,10 +1812,11 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] ,
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_0 ,
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_1 ,
+    intr,
     p_17_in,
     bus2ip_wrce,
     \bus2ip_addr_i_reg[5] );
-  output irq_gen_reg_0;
+  output \IVR_GEN.ivr_reg[1]_0 ;
   output p_0_in8_in;
   output p_0_in7_in;
   output [0:0]SS;
@@ -1832,7 +1832,7 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   output p_0_in21_in;
   output \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0 ;
   output p_0_in;
-  output irq_gen_reg_1;
+  output \IVR_GEN.ivr_reg[1]_1 ;
   output p_1_in9_in;
   output p_1_in;
   output [0:0]Q;
@@ -1841,7 +1841,6 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   output [31:0]Douta;
   output [31:0]interrupt_address;
   input s_axi_aclk;
-  input [2:0]intr;
   input \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ;
   input \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ;
   input \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1 ;
@@ -1862,6 +1861,7 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   input \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] ;
   input \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_0 ;
   input \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_1 ;
+  input [2:0]intr;
   input p_17_in;
   input [0:0]bus2ip_wrce;
   input [3:0]\bus2ip_addr_i_reg[5] ;
@@ -1901,6 +1901,8 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   wire \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0 ;
   wire \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_1 ;
   wire \IVR_GEN.ivr[1]_i_1_n_0 ;
+  wire \IVR_GEN.ivr_reg[1]_0 ;
+  wire \IVR_GEN.ivr_reg[1]_1 ;
   wire Irq_i;
   wire [0:0]Q;
   wire \REG_GEN[0].IAR_FAST_MODE_GEN.iar[0]_i_1_n_0 ;
@@ -1934,11 +1936,10 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   wire [2:0]intr;
   wire intr_d1;
   (* async_reg = "true" *) wire [0:1]intr_ff;
+  (* async_reg = "true" *) wire [0:1]intr_ff__0;
   wire irq;
   wire irq_gen;
   wire irq_gen_i;
-  wire irq_gen_reg_0;
-  wire irq_gen_reg_1;
   wire [1:0]ivar_index_axi_clk;
   wire ivar_index_sample_en;
   wire ivar_index_sample_en_i;
@@ -2096,11 +2097,31 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
         .D(\INTR_DETECT_GEN[1].LVL_DETECT_GEN.hw_intr[1]_i_1_n_0 ),
         .Q(hw_intr[1]),
         .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(intr[2]),
+        .Q(intr_ff__0[0]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[1] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(intr_ff__0[0]),
+        .Q(intr_ff__0[1]),
+        .R(1'b0));
   LUT5 #(
     .INIT(32'h0000AE00)) 
     \INTR_DETECT_GEN[2].EDGE_DETECT_GEN.hw_intr[2]_i_1 
        (.I0(hw_intr[2]),
-        .I1(intr[2]),
+        .I1(intr_ff__0[1]),
         .I2(\INTR_DETECT_GEN[2].EDGE_DETECT_GEN.intr_d1_reg_n_0 ),
         .I3(s_axi_aresetn),
         .I4(p_2_in),
@@ -2114,14 +2135,14 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   FDRE \INTR_DETECT_GEN[2].EDGE_DETECT_GEN.intr_d1_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(intr[2]),
+        .D(intr_ff__0[1]),
         .Q(\INTR_DETECT_GEN[2].EDGE_DETECT_GEN.intr_d1_reg_n_0 ),
         .R(SS));
   LUT2 #(
     .INIT(4'h8)) 
     \IPR_GEN.ipr[0]_i_1 
-       (.I0(irq_gen_reg_1),
-        .I1(irq_gen_reg_0),
+       (.I0(\IVR_GEN.ivr_reg[1]_0 ),
+        .I1(\IVR_GEN.ivr_reg[1]_1 ),
         .O(\IPR_GEN.ipr[0]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
@@ -2294,23 +2315,23 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
         .Q(ivar_index_sample_en),
         .R(SS));
   LUT6 #(
-    .INIT(64'h0FFF077707770777)) 
+    .INIT(64'h0000F777F777F777)) 
     \IVR_GEN.ivr[0]_i_1 
        (.I0(p_1_in),
         .I1(p_0_in7_in),
-        .I2(irq_gen_reg_1),
-        .I3(irq_gen_reg_0),
-        .I4(p_1_in9_in),
-        .I5(p_0_in8_in),
+        .I2(p_0_in8_in),
+        .I3(p_1_in9_in),
+        .I4(\IVR_GEN.ivr_reg[1]_0 ),
+        .I5(\IVR_GEN.ivr_reg[1]_1 ),
         .O(ivr_in));
   LUT5 #(
     .INIT(32'h557F7F7F)) 
     \IVR_GEN.ivr[1]_i_1 
        (.I0(s_axi_aresetn),
-        .I1(p_1_in9_in),
-        .I2(p_0_in8_in),
-        .I3(irq_gen_reg_1),
-        .I4(irq_gen_reg_0),
+        .I1(p_0_in8_in),
+        .I2(p_1_in9_in),
+        .I3(\IVR_GEN.ivr_reg[1]_0 ),
+        .I4(\IVR_GEN.ivr_reg[1]_1 ),
         .O(\IVR_GEN.ivr[1]_i_1_n_0 ));
   FDSE \IVR_GEN.ivr_reg[0] 
        (.C(s_axi_aclk),
@@ -2359,7 +2380,7 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   LUT6 #(
     .INIT(64'h0C080C080C0C0C00)) 
     \REG_GEN[0].ier[0]_i_1 
-       (.I0(irq_gen_reg_0),
+       (.I0(\IVR_GEN.ivr_reg[1]_0 ),
         .I1(s_axi_aresetn),
         .I2(\REG_GEN[0].ier_reg[0]_1 ),
         .I3(\REG_GEN[0].ier_reg[0]_0 ),
@@ -2370,7 +2391,7 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(p_17_out),
-        .Q(irq_gen_reg_0),
+        .Q(\IVR_GEN.ivr_reg[1]_0 ),
         .R(1'b0));
   LUT2 #(
     .INIT(4'hB)) 
@@ -2386,13 +2407,13 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
         .I2(Bus_RNW_reg),
         .I3(p_17_in),
         .I4(p_0_in),
-        .I5(irq_gen_reg_1),
+        .I5(\IVR_GEN.ivr_reg[1]_1 ),
         .O(\REG_GEN[0].isr[0]_i_2_n_0 ));
   FDRE \REG_GEN[0].isr_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\REG_GEN[0].isr[0]_i_2_n_0 ),
-        .Q(irq_gen_reg_1),
+        .Q(\IVR_GEN.ivr_reg[1]_1 ),
         .R(p_20_out));
   LUT6 #(
     .INIT(64'h00000000A8080000)) 
@@ -2568,12 +2589,12 @@ module module_ads7056_microblaze_0_axi_intc_0_intc_core
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     irq_gen_i_1
-       (.I0(p_1_in9_in),
-        .I1(p_0_in8_in),
-        .I2(irq_gen_reg_1),
-        .I3(irq_gen_reg_0),
-        .I4(p_0_in7_in),
-        .I5(p_1_in),
+       (.I0(p_0_in7_in),
+        .I1(p_1_in),
+        .I2(\IVR_GEN.ivr_reg[1]_1 ),
+        .I3(\IVR_GEN.ivr_reg[1]_0 ),
+        .I4(p_1_in9_in),
+        .I5(p_0_in8_in),
         .O(irq_gen_i));
   FDRE irq_gen_reg
        (.C(s_axi_aclk),
@@ -4747,8 +4768,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

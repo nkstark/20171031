@@ -104,11 +104,11 @@ ARCHITECTURE module_ads7056_util_ds_buf_1_0_arch OF module_ads7056_util_ds_buf_1
     );
   END COMPONENT util_ds_buf;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF module_ads7056_util_ds_buf_1_0_arch: ARCHITECTURE IS "util_ds_buf,Vivado 2016.4";
+  ATTRIBUTE X_CORE_INFO OF module_ads7056_util_ds_buf_1_0_arch: ARCHITECTURE IS "util_ds_buf,Vivado 2017.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF module_ads7056_util_ds_buf_1_0_arch : ARCHITECTURE IS "module_ads7056_util_ds_buf_1_0,util_ds_buf,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF module_ads7056_util_ds_buf_1_0_arch: ARCHITECTURE IS "module_ads7056_util_ds_buf_1_0,util_ds_buf,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BUF_TYPE=BUFG,C_SIZE=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF module_ads7056_util_ds_buf_1_0_arch: ARCHITECTURE IS "module_ads7056_util_ds_buf_1_0,util_ds_buf,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BUF_TYPE=BUFG,C_SIZE=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF BUFG_I: SIGNAL IS "xilinx.com:signal:clock:1.0 BUFG_I CLK";
   ATTRIBUTE X_INTERFACE_INFO OF BUFG_O: SIGNAL IS "xilinx.com:signal:clock:1.0 BUFG_O CLK";

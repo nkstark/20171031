@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_quad_spi:3.2
--- IP Revision: 10
+-- IP Revision: 12
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_quad_spi_v3_2_10;
-USE axi_quad_spi_v3_2_10.axi_quad_spi;
+LIBRARY axi_quad_spi_v3_2_12;
+USE axi_quad_spi_v3_2_12.axi_quad_spi;
 
 ENTITY module_ads7056_axi_quad_spi_0_0 IS
   PORT (
@@ -90,12 +90,20 @@ ENTITY module_ads7056_axi_quad_spi_0_0 IS
     io3_i : IN STD_LOGIC;
     io3_o : OUT STD_LOGIC;
     io3_t : OUT STD_LOGIC;
-    sck_i : IN STD_LOGIC;
-    sck_o : OUT STD_LOGIC;
-    sck_t : OUT STD_LOGIC;
     ss_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ss_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     ss_t : OUT STD_LOGIC;
+    cfgclk : OUT STD_LOGIC;
+    cfgmclk : OUT STD_LOGIC;
+    eos : OUT STD_LOGIC;
+    preq : OUT STD_LOGIC;
+    clk : IN STD_LOGIC;
+    gsr : IN STD_LOGIC;
+    gts : IN STD_LOGIC;
+    keyclearb : IN STD_LOGIC;
+    usrcclkts : IN STD_LOGIC;
+    usrdoneo : IN STD_LOGIC;
+    usrdonets : IN STD_LOGIC;
     ip2intc_irpt : OUT STD_LOGIC
   );
 END module_ads7056_axi_quad_spi_0_0;
@@ -241,12 +249,12 @@ ARCHITECTURE module_ads7056_axi_quad_spi_0_0_arch OF module_ads7056_axi_quad_spi
     );
   END COMPONENT axi_quad_spi;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF module_ads7056_axi_quad_spi_0_0_arch: ARCHITECTURE IS "axi_quad_spi,Vivado 2016.4";
+  ATTRIBUTE X_CORE_INFO OF module_ads7056_axi_quad_spi_0_0_arch: ARCHITECTURE IS "axi_quad_spi,Vivado 2017.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF module_ads7056_axi_quad_spi_0_0_arch : ARCHITECTURE IS "module_ads7056_axi_quad_spi_0_0,axi_quad_spi,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF module_ads7056_axi_quad_spi_0_0_arch: ARCHITECTURE IS "module_ads7056_axi_quad_spi_0_0,axi_quad_spi,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_quad_spi,x_ipVersion=3.2,x_ipCoreRevision=10,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Async_Clk=1,C_FAMILY=artix7,C_SELECT_XPM=0,C_SUB_FAMILY=artix7,C_INSTANCE=axi_quad_spi_inst,C_SPI_MEM_ADDR_BITS=24,C_TYPE_OF_AXI4_INTERFACE=0,C_XIP_MODE=0,C_UC_FAMILY=0,C_FIFO_DEPTH=16,C_SCK_RATIO=2,C_DUAL_QUAD_MODE=0,C_NUM_SS_BITS=1,C_NUM_TRANSFER_BITS=8,C_SPI_MODE=2,C_USE_STARTUP=0,C_USE" & 
-"_STARTUP_EXT=0,C_SPI_MEMORY=3,C_S_AXI_ADDR_WIDTH=7,C_S_AXI_DATA_WIDTH=32,C_S_AXI4_ADDR_WIDTH=24,C_S_AXI4_DATA_WIDTH=32,C_S_AXI4_ID_WIDTH=1,C_SHARED_STARTUP=0,C_S_AXI4_BASEADDR=0xFFFFFFFF,C_S_AXI4_HIGHADDR=0x00000000,C_LSB_STUP=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF module_ads7056_axi_quad_spi_0_0_arch: ARCHITECTURE IS "module_ads7056_axi_quad_spi_0_0,axi_quad_spi,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_quad_spi,x_ipVersion=3.2,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,Async_Clk=1,C_FAMILY=artix7,C_SELECT_XPM=0,C_SUB_FAMILY=artix7,C_INSTANCE=axi_quad_spi_inst,C_SPI_MEM_ADDR_BITS=24,C_TYPE_OF_AXI4_INTERFACE=0,C_XIP_MODE=0,C_UC_FAMILY=0,C_FIFO_DEPTH=16,C_SCK_RATIO=2,C_DUAL_QUAD_MODE=0,C_NUM_SS_BITS=1,C_NUM_TRANSFER_BITS=8,C_SPI_MODE=2,C_USE_STARTUP=1,C_USE" & 
+"_STARTUP_EXT=0,C_SPI_MEMORY=3,C_S_AXI_ADDR_WIDTH=7,C_S_AXI_DATA_WIDTH=32,C_S_AXI4_ADDR_WIDTH=24,C_S_AXI4_DATA_WIDTH=32,C_S_AXI4_ID_WIDTH=1,C_SHARED_STARTUP=1,C_S_AXI4_BASEADDR=0xFFFFFFFF,C_S_AXI4_HIGHADDR=0x00000000,C_LSB_STUP=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF ext_spi_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 spi_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 lite_clk CLK";
@@ -280,12 +288,20 @@ ARCHITECTURE module_ads7056_axi_quad_spi_0_0_arch OF module_ads7056_axi_quad_spi
   ATTRIBUTE X_INTERFACE_INFO OF io3_i: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO3_I";
   ATTRIBUTE X_INTERFACE_INFO OF io3_o: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO3_O";
   ATTRIBUTE X_INTERFACE_INFO OF io3_t: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO3_T";
-  ATTRIBUTE X_INTERFACE_INFO OF sck_i: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_I";
-  ATTRIBUTE X_INTERFACE_INFO OF sck_o: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_O";
-  ATTRIBUTE X_INTERFACE_INFO OF sck_t: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_T";
   ATTRIBUTE X_INTERFACE_INFO OF ss_i: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SS_I";
   ATTRIBUTE X_INTERFACE_INFO OF ss_o: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SS_O";
   ATTRIBUTE X_INTERFACE_INFO OF ss_t: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SS_T";
+  ATTRIBUTE X_INTERFACE_INFO OF cfgclk: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S cfgclk";
+  ATTRIBUTE X_INTERFACE_INFO OF cfgmclk: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S cfgmclk";
+  ATTRIBUTE X_INTERFACE_INFO OF eos: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S eos";
+  ATTRIBUTE X_INTERFACE_INFO OF preq: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S preq";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S clk";
+  ATTRIBUTE X_INTERFACE_INFO OF gsr: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S gsr";
+  ATTRIBUTE X_INTERFACE_INFO OF gts: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S gts";
+  ATTRIBUTE X_INTERFACE_INFO OF keyclearb: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S keyclearb";
+  ATTRIBUTE X_INTERFACE_INFO OF usrcclkts: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S usrclkts";
+  ATTRIBUTE X_INTERFACE_INFO OF usrdoneo: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S userdoneo";
+  ATTRIBUTE X_INTERFACE_INFO OF usrdonets: SIGNAL IS "xilinx.com:interface:startup:1.0 STARTUP_IO_S usrdonets";
   ATTRIBUTE X_INTERFACE_INFO OF ip2intc_irpt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT";
 BEGIN
   U0 : axi_quad_spi
@@ -305,7 +321,7 @@ BEGIN
       C_NUM_SS_BITS => 1,
       C_NUM_TRANSFER_BITS => 8,
       C_SPI_MODE => 2,
-      C_USE_STARTUP => 0,
+      C_USE_STARTUP => 1,
       C_USE_STARTUP_EXT => 0,
       C_SPI_MEMORY => 3,
       C_S_AXI_ADDR_WIDTH => 7,
@@ -313,7 +329,7 @@ BEGIN
       C_S_AXI4_ADDR_WIDTH => 24,
       C_S_AXI4_DATA_WIDTH => 32,
       C_S_AXI4_ID_WIDTH => 1,
-      C_SHARED_STARTUP => 0,
+      C_SHARED_STARTUP => 1,
       C_S_AXI4_BASEADDR => X"FFFFFFFF",
       C_S_AXI4_HIGHADDR => X"00000000",
       C_LSB_STUP => 0
@@ -382,20 +398,22 @@ BEGIN
       io2_1_i => '0',
       io3_1_i => '0',
       spisel => '1',
-      sck_i => sck_i,
-      sck_o => sck_o,
-      sck_t => sck_t,
+      sck_i => '0',
       ss_i => ss_i,
       ss_o => ss_o,
       ss_t => ss_t,
       ss_1_i => '0',
-      clk => '0',
-      gsr => '0',
-      gts => '0',
-      keyclearb => '0',
-      usrcclkts => '0',
-      usrdoneo => '1',
-      usrdonets => '0',
+      cfgclk => cfgclk,
+      cfgmclk => cfgmclk,
+      eos => eos,
+      preq => preq,
+      clk => clk,
+      gsr => gsr,
+      gts => gts,
+      keyclearb => keyclearb,
+      usrcclkts => usrcclkts,
+      usrdoneo => usrdoneo,
+      usrdonets => usrdonets,
       pack => '0',
       ip2intc_irpt => ip2intc_irpt
     );

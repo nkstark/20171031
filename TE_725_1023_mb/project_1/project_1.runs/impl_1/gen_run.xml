@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-2" LaunchTime="1508599378">
+  <File Type="PWROPT-DRC" Name="led_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="led_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="led_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="led_power_routed.rpx"/>
   <File Type="PA-TCL" Name="led.tcl"/>
-  <File Type="INIT-TIMING" Name="led_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="led_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="led_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="led.hwdef"/>
   <File Type="RDI-RDI" Name="led.vdi"/>
   <File Type="OPT-DCP" Name="led_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="led.hwdef"/>
   <File Type="OPT-DRC" Name="led_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="led_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="led_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="led_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="led_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="led_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="led_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="led.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="led_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="led_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="led.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="led_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="led_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="led.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="led_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="led_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="led.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="led_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="led_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="led_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="led_route_status.rpt"/>

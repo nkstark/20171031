@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:microblaze:10.0
--- IP Revision: 1
+-- IP Revision: 3
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY microblaze_v10_0_1;
-USE microblaze_v10_0_1.MicroBlaze;
+LIBRARY microblaze_v10_0_3;
+USE microblaze_v10_0_3.MicroBlaze;
 
 ENTITY module_ads7056_microblaze_0_0 IS
   PORT (
@@ -199,6 +199,7 @@ ARCHITECTURE module_ads7056_microblaze_0_0_arch OF module_ads7056_microblaze_0_0
       C_NUM_SYNC_FF_CLK_IRQ : INTEGER;
       C_NUM_SYNC_FF_CLK_DEBUG : INTEGER;
       C_NUM_SYNC_FF_DBG_CLK : INTEGER;
+      C_NUM_SYNC_FF_DBG_TRACE_CLK : INTEGER;
       C_FAULT_TOLERANT : INTEGER;
       C_ECC_USE_CE_EXCEPTION : INTEGER;
       C_LOCKSTEP_SLAVE : INTEGER;
@@ -208,6 +209,7 @@ ARCHITECTURE module_ads7056_microblaze_0_0_arch OF module_ads7056_microblaze_0_0
       C_DATA_SIZE : INTEGER;
       C_INSTR_SIZE : INTEGER;
       C_IADDR_SIZE : INTEGER;
+      C_PIADDR_SIZE : INTEGER;
       C_DADDR_SIZE : INTEGER;
       C_INSTANCE : STRING;
       C_AVOID_PRIMITIVES : INTEGER;
@@ -273,6 +275,7 @@ ARCHITECTURE module_ads7056_microblaze_0_0_arch OF module_ads7056_microblaze_0_0
       C_DEBUG_COUNTER_WIDTH : INTEGER;
       C_DEBUG_TRACE_SIZE : INTEGER;
       C_DEBUG_EXTERNAL_TRACE : INTEGER;
+      C_DEBUG_TRACE_ASYNC_RESET : INTEGER;
       C_DEBUG_PROFILE_SIZE : INTEGER;
       C_INTERRUPT_IS_EDGE : INTEGER;
       C_EDGE_IS_POSITIVE : INTEGER;
@@ -362,6 +365,8 @@ ARCHITECTURE module_ads7056_microblaze_0_0_arch OF module_ads7056_microblaze_0_0
       Scan_Reset : IN STD_LOGIC;
       Scan_Reset_Sel : IN STD_LOGIC;
       RAM_Static : IN STD_LOGIC_VECTOR(1023 DOWNTO 0);
+      RAM_To : IN STD_LOGIC_VECTOR(16383 DOWNTO 0);
+      RAM_From : OUT STD_LOGIC_VECTOR(16383 DOWNTO 0);
       Interrupt : IN STD_LOGIC;
       Interrupt_Address : IN STD_LOGIC_VECTOR(0 TO 31);
       Interrupt_Ack : OUT STD_LOGIC_VECTOR(0 TO 1);
@@ -933,6 +938,7 @@ BEGIN
       C_NUM_SYNC_FF_CLK_IRQ => 1,
       C_NUM_SYNC_FF_CLK_DEBUG => 2,
       C_NUM_SYNC_FF_DBG_CLK => 1,
+      C_NUM_SYNC_FF_DBG_TRACE_CLK => 2,
       C_FAULT_TOLERANT => 0,
       C_ECC_USE_CE_EXCEPTION => 0,
       C_LOCKSTEP_SLAVE => 0,
@@ -942,6 +948,7 @@ BEGIN
       C_DATA_SIZE => 32,
       C_INSTR_SIZE => 32,
       C_IADDR_SIZE => 32,
+      C_PIADDR_SIZE => 32,
       C_DADDR_SIZE => 32,
       C_INSTANCE => "module_ads7056_microblaze_0_0",
       C_AVOID_PRIMITIVES => 0,
@@ -1007,6 +1014,7 @@ BEGIN
       C_DEBUG_COUNTER_WIDTH => 32,
       C_DEBUG_TRACE_SIZE => 8192,
       C_DEBUG_EXTERNAL_TRACE => 0,
+      C_DEBUG_TRACE_ASYNC_RESET => 0,
       C_DEBUG_PROFILE_SIZE => 0,
       C_INTERRUPT_IS_EDGE => 0,
       C_EDGE_IS_POSITIVE => 1,
@@ -1045,10 +1053,10 @@ BEGIN
       C_M15_AXIS_DATA_WIDTH => 32,
       C_S15_AXIS_DATA_WIDTH => 32,
       C_ICACHE_BASEADDR => X"0000000000000000",
-      C_ICACHE_HIGHADDR => X"000000003FFFFFFF",
+      C_ICACHE_HIGHADDR => X"000000003fffffff",
       C_USE_ICACHE => 1,
       C_ALLOW_ICACHE_WR => 1,
-      C_ADDR_TAG_BITS => 15,
+      C_ADDR_TAG_BITS => 17,
       C_CACHE_BYTE_SIZE => 32768,
       C_ICACHE_LINE_LEN => 4,
       C_ICACHE_ALWAYS_USED => 1,
@@ -1069,7 +1077,7 @@ BEGIN
       C_DCACHE_HIGHADDR => X"000000003fffffff",
       C_USE_DCACHE => 1,
       C_ALLOW_DCACHE_WR => 1,
-      C_DCACHE_ADDR_TAG => 15,
+      C_DCACHE_ADDR_TAG => 17,
       C_DCACHE_BYTE_SIZE => 32768,
       C_DCACHE_LINE_LEN => 4,
       C_DCACHE_ALWAYS_USED => 0,
@@ -1096,6 +1104,7 @@ BEGIN
       Scan_Reset => '0',
       Scan_Reset_Sel => '0',
       RAM_Static => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1024)),
+      RAM_To => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 16384)),
       Interrupt => Interrupt,
       Interrupt_Address => Interrupt_Address,
       Interrupt_Ack => Interrupt_Ack,

@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Oct 29 22:35:28 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:18:22 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_dlmb_bram_if_cntlr_0/module_ads7056_dlmb_bram_if_cntlr_0_stub.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_dlmb_bram_if_cntlr_0/module_ads7056_dlmb_bram_if_cntlr_0_stub.v
 // Design      : module_ads7056_dlmb_bram_if_cntlr_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-2
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "lmb_bram_if_cntlr,Vivado 2016.4" *)
+(* x_core_info = "lmb_bram_if_cntlr,Vivado 2017.2" *)
 module module_ads7056_dlmb_bram_if_cntlr_0(LMB_Clk, LMB_Rst, LMB_ABus, LMB_WriteDBus, 
   LMB_AddrStrobe, LMB_ReadStrobe, LMB_WriteStrobe, LMB_BE, Sl_DBus, Sl_Ready, Sl_Wait, Sl_UE, 
   Sl_CE, BRAM_Rst_A, BRAM_Clk_A, BRAM_Addr_A, BRAM_EN_A, BRAM_WEN_A, BRAM_Dout_A, BRAM_Din_A)

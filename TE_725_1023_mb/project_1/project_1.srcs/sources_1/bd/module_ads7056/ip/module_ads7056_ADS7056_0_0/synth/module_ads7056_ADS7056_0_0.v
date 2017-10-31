@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:ADS7056:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "ADS7056,Vivado 2016.4" *)
+(* X_CORE_INFO = "ADS7056,Vivado 2017.2" *)
 (* CHECK_LICENSE_TYPE = "module_ads7056_ADS7056_0_0,ADS7056,{}" *)
-(* CORE_GENERATION_INFO = "module_ads7056_ADS7056_0_0,ADS7056,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ADS7056,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "module_ads7056_ADS7056_0_0,ADS7056,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ADS7056,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module module_ads7056_ADS7056_0_0 (
   data_in,

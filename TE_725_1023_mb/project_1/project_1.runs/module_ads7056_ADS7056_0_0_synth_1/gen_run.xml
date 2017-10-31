@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="module_ads7056_ADS7056_0_0_synth_1" LaunchPart="xc7a35tcsg324-2" LaunchTime="1509321121">
+<GenRun Id="module_ads7056_ADS7056_0_0_synth_1" LaunchPart="xc7a35tcsg324-2" LaunchTime="1509408896">
   <File Type="RDS-PROPCONSTRS" Name="module_ads7056_ADS7056_0_0_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="module_ads7056_ADS7056_0_0.tcl"/>
   <File Type="RDS-RDS" Name="module_ads7056_ADS7056_0_0.vds"/>
@@ -11,9 +11,11 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/module_ads7056_ADS7056_0_0">
     <File Path="$PSRCDIR/sources_1/bd/module_ads7056/ip/module_ads7056_ADS7056_0_0/module_ads7056_ADS7056_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -24,9 +26,11 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/module_ads7056_ADS7056_0_0">
     <File Path="$PSRCDIR/sources_1/bd/module_ads7056/ip/module_ads7056_ADS7056_0_0/module_ads7056_ADS7056_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -35,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

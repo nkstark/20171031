@@ -142,7 +142,7 @@ wire clk_in2_module_ads7056_clk_wiz_0_0;
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.0))
+    .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
    (

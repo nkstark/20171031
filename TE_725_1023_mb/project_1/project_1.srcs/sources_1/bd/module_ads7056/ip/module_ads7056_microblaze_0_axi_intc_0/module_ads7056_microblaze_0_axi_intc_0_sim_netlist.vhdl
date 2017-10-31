@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Mon Oct 30 01:51:49 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:19:47 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_microblaze_0_axi_intc_0/module_ads7056_microblaze_0_axi_intc_0_sim_netlist.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_microblaze_0_axi_intc_0/module_ads7056_microblaze_0_axi_intc_0_sim_netlist.vhdl
 -- Design      : module_ads7056_microblaze_0_axi_intc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2497,7 +2497,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_microblaze_0_axi_intc_0_intc_core is
   port (
-    irq_gen_reg_0 : out STD_LOGIC;
+    \IVR_GEN.ivr_reg[1]_0\ : out STD_LOGIC;
     p_0_in8_in : out STD_LOGIC;
     p_0_in7_in : out STD_LOGIC;
     SS : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2513,7 +2513,7 @@ entity module_ads7056_microblaze_0_axi_intc_0_intc_core is
     p_0_in21_in : out STD_LOGIC;
     \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0\ : out STD_LOGIC;
     p_0_in : out STD_LOGIC;
-    irq_gen_reg_1 : out STD_LOGIC;
+    \IVR_GEN.ivr_reg[1]_1\ : out STD_LOGIC;
     p_1_in9_in : out STD_LOGIC;
     p_1_in : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2522,7 +2522,6 @@ entity module_ads7056_microblaze_0_axi_intc_0_intc_core is
     Douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     interrupt_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_aclk : in STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1\ : in STD_LOGIC;
@@ -2543,6 +2542,7 @@ entity module_ads7056_microblaze_0_axi_intc_0_intc_core is
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_0\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]_1\ : in STD_LOGIC;
+    intr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     p_17_in : in STD_LOGIC;
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 0 to 0 );
     \bus2ip_addr_i_reg[5]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
@@ -2570,6 +2570,8 @@ architecture STRUCTURE of module_ads7056_microblaze_0_axi_intc_0_intc_core is
   signal \^ivar_index_sync_on_axi_clk_gen.ivar_index_axi_clk_reg[1]_0\ : STD_LOGIC;
   signal \^ivar_index_sync_on_axi_clk_gen.ivar_index_axi_clk_reg[1]_1\ : STD_LOGIC;
   signal \IVR_GEN.ivr[1]_i_1_n_0\ : STD_LOGIC;
+  signal \^ivr_gen.ivr_reg[1]_0\ : STD_LOGIC;
+  signal \^ivr_gen.ivr_reg[1]_1\ : STD_LOGIC;
   signal Irq_i : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \REG_GEN[0].IAR_FAST_MODE_GEN.iar[0]_i_1_n_0\ : STD_LOGIC;
@@ -2601,10 +2603,10 @@ architecture STRUCTURE of module_ads7056_microblaze_0_axi_intc_0_intc_core is
   signal intr_ff : STD_LOGIC_VECTOR ( 0 to 1 );
   attribute async_reg : string;
   attribute async_reg of intr_ff : signal is "true";
+  signal \intr_ff__0\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__0\ : signal is "true";
   signal irq_gen : STD_LOGIC;
   signal irq_gen_i : STD_LOGIC;
-  signal \^irq_gen_reg_0\ : STD_LOGIC;
-  signal \^irq_gen_reg_1\ : STD_LOGIC;
   signal ivar_index_axi_clk : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal ivar_index_sample_en : STD_LOGIC;
   signal ivar_index_sample_en_i : STD_LOGIC;
@@ -2639,6 +2641,10 @@ architecture STRUCTURE of module_ads7056_microblaze_0_axi_intc_0_intc_core is
   attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
   attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
   attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.Irq_i_2\ : label is "soft_lutpair32";
   attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state[1]_i_1\ : label is "soft_lutpair32";
   attribute SOFT_HLUTNM of \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.idle_and_irq_d1_i_1\ : label is "soft_lutpair33";
@@ -2646,14 +2652,14 @@ architecture STRUCTURE of module_ads7056_microblaze_0_axi_intc_0_intc_core is
 begin
   \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0\ <= \^ivar_index_sync_on_axi_clk_gen.ivar_index_axi_clk_reg[1]_0\;
   \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_1\ <= \^ivar_index_sync_on_axi_clk_gen.ivar_index_axi_clk_reg[1]_1\;
+  \IVR_GEN.ivr_reg[1]_0\ <= \^ivr_gen.ivr_reg[1]_0\;
+  \IVR_GEN.ivr_reg[1]_1\ <= \^ivr_gen.ivr_reg[1]_1\;
   Q(0) <= \^q\(0);
   \REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0\ <= \^reg_gen[0].imr_fast_mode_gen.imr_reg[0]_0\;
   \REG_GEN[0].ier_reg[0]_0\ <= \^reg_gen[0].ier_reg[0]_0\;
   \REG_GEN[0].ier_reg[0]_1\ <= \^reg_gen[0].ier_reg[0]_1\;
   \REG_GEN[2].IMR_FAST_MODE_GEN.imr_reg[2]_0\ <= \^reg_gen[2].imr_fast_mode_gen.imr_reg[2]_0\;
   SS(0) <= \^ss\(0);
-  irq_gen_reg_0 <= \^irq_gen_reg_0\;
-  irq_gen_reg_1 <= \^irq_gen_reg_1\;
   p_0_in <= \^p_0_in\;
   p_0_in21_in <= \^p_0_in21_in\;
   p_0_in23_in <= \^p_0_in23_in\;
@@ -2825,13 +2831,35 @@ begin
       Q => hw_intr(1),
       R => '0'
     );
+\INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(2),
+      Q => \intr_ff__0\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[2].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__0\(0),
+      Q => \intr_ff__0\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[2].EDGE_DETECT_GEN.hw_intr[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000AE00"
     )
         port map (
       I0 => hw_intr(2),
-      I1 => intr(2),
+      I1 => \intr_ff__0\(1),
       I2 => \INTR_DETECT_GEN[2].EDGE_DETECT_GEN.intr_d1_reg_n_0\,
       I3 => s_axi_aresetn,
       I4 => p_2_in,
@@ -2849,7 +2877,7 @@ begin
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => intr(2),
+      D => \intr_ff__0\(1),
       Q => \INTR_DETECT_GEN[2].EDGE_DETECT_GEN.intr_d1_reg_n_0\,
       R => \^ss\(0)
     );
@@ -2858,8 +2886,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => \^irq_gen_reg_1\,
-      I1 => \^irq_gen_reg_0\,
+      I0 => \^ivr_gen.ivr_reg[1]_0\,
+      I1 => \^ivr_gen.ivr_reg[1]_1\,
       O => \IPR_GEN.ipr[0]_i_1_n_0\
     );
 \IPR_GEN.ipr[1]_i_1\: unisim.vcomponents.LUT2
@@ -3090,15 +3118,15 @@ begin
     );
 \IVR_GEN.ivr[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FFF077707770777"
+      INIT => X"0000F777F777F777"
     )
         port map (
       I0 => \^p_1_in\,
       I1 => \^p_0_in7_in\,
-      I2 => \^irq_gen_reg_1\,
-      I3 => \^irq_gen_reg_0\,
-      I4 => \^p_1_in9_in\,
-      I5 => \^p_0_in8_in\,
+      I2 => \^p_0_in8_in\,
+      I3 => \^p_1_in9_in\,
+      I4 => \^ivr_gen.ivr_reg[1]_0\,
+      I5 => \^ivr_gen.ivr_reg[1]_1\,
       O => ivr_in(0)
     );
 \IVR_GEN.ivr[1]_i_1\: unisim.vcomponents.LUT5
@@ -3107,10 +3135,10 @@ begin
     )
         port map (
       I0 => s_axi_aresetn,
-      I1 => \^p_1_in9_in\,
-      I2 => \^p_0_in8_in\,
-      I3 => \^irq_gen_reg_1\,
-      I4 => \^irq_gen_reg_0\,
+      I1 => \^p_0_in8_in\,
+      I2 => \^p_1_in9_in\,
+      I3 => \^ivr_gen.ivr_reg[1]_0\,
+      I4 => \^ivr_gen.ivr_reg[1]_1\,
       O => \IVR_GEN.ivr[1]_i_1_n_0\
     );
 \IVR_GEN.ivr_reg[0]\: unisim.vcomponents.FDSE
@@ -3176,7 +3204,7 @@ begin
       INIT => X"0C080C080C0C0C00"
     )
         port map (
-      I0 => \^irq_gen_reg_0\,
+      I0 => \^ivr_gen.ivr_reg[1]_0\,
       I1 => s_axi_aresetn,
       I2 => \^reg_gen[0].ier_reg[0]_1\,
       I3 => \^reg_gen[0].ier_reg[0]_0\,
@@ -3189,7 +3217,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => p_17_out,
-      Q => \^irq_gen_reg_0\,
+      Q => \^ivr_gen.ivr_reg[1]_0\,
       R => '0'
     );
 \REG_GEN[0].isr[0]_i_1\: unisim.vcomponents.LUT2
@@ -3211,7 +3239,7 @@ begin
       I2 => Bus_RNW_reg,
       I3 => p_17_in,
       I4 => \^p_0_in\,
-      I5 => \^irq_gen_reg_1\,
+      I5 => \^ivr_gen.ivr_reg[1]_1\,
       O => \REG_GEN[0].isr[0]_i_2_n_0\
     );
 \REG_GEN[0].isr_reg[0]\: unisim.vcomponents.FDRE
@@ -3219,7 +3247,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => \REG_GEN[0].isr[0]_i_2_n_0\,
-      Q => \^irq_gen_reg_1\,
+      Q => \^ivr_gen.ivr_reg[1]_1\,
       R => p_20_out
     );
 \REG_GEN[1].IAR_FAST_MODE_GEN.iar[1]_i_1\: unisim.vcomponents.LUT6
@@ -3455,12 +3483,12 @@ irq_gen_i_1: unisim.vcomponents.LUT6
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \^p_1_in9_in\,
-      I1 => \^p_0_in8_in\,
-      I2 => \^irq_gen_reg_1\,
-      I3 => \^irq_gen_reg_0\,
-      I4 => \^p_0_in7_in\,
-      I5 => \^p_1_in\,
+      I0 => \^p_0_in7_in\,
+      I1 => \^p_1_in\,
+      I2 => \^ivr_gen.ivr_reg[1]_1\,
+      I3 => \^ivr_gen.ivr_reg[1]_0\,
+      I4 => \^p_1_in9_in\,
+      I5 => \^p_0_in8_in\,
       O => irq_gen_i
     );
 irq_gen_reg: unisim.vcomponents.FDRE
@@ -4877,7 +4905,7 @@ entity module_ads7056_microblaze_0_axi_intc_0_axi_intc is
     processor_ack_out : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of module_ads7056_microblaze_0_axi_intc_0_axi_intc : entity is -7;
+  attribute C_ASYNC_INTR of module_ads7056_microblaze_0_axi_intc_0_axi_intc : entity is -3;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of module_ads7056_microblaze_0_axi_intc_0_axi_intc : entity is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -5102,6 +5130,8 @@ INTC_CORE_I: entity work.module_ads7056_microblaze_0_axi_intc_0_intc_core
       \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1\ => AXI_LITE_IPIF_I_n_28,
       \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_0\ => INTC_CORE_I_n_14,
       \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]_1\ => INTC_CORE_I_n_20,
+      \IVR_GEN.ivr_reg[1]_0\ => INTC_CORE_I_n_0,
+      \IVR_GEN.ivr_reg[1]_1\ => INTC_CORE_I_n_16,
       Q(0) => INTC_CORE_I_n_19,
       \REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0\ => INTC_CORE_I_n_5,
       \REG_GEN[0].ier_reg[0]_0\ => INTC_CORE_I_n_8,
@@ -5113,8 +5143,6 @@ INTC_CORE_I: entity work.module_ads7056_microblaze_0_axi_intc_0_intc_core
       interrupt_address(31 downto 0) => interrupt_address(31 downto 0),
       intr(2 downto 0) => intr(2 downto 0),
       irq => irq,
-      irq_gen_reg_0 => INTC_CORE_I_n_0,
-      irq_gen_reg_1 => INTC_CORE_I_n_16,
       p_0_in => p_0_in_0,
       p_0_in21_in => p_0_in21_in,
       p_0_in23_in => p_0_in23_in,
@@ -5205,13 +5233,13 @@ entity module_ads7056_microblaze_0_axi_intc_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of module_ads7056_microblaze_0_axi_intc_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of module_ads7056_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2016.4";
+  attribute x_core_info of module_ads7056_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2017.2";
 end module_ads7056_microblaze_0_axi_intc_0;
 
 architecture STRUCTURE of module_ads7056_microblaze_0_axi_intc_0 is
   signal NLW_U0_processor_ack_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of U0 : label is -7;
+  attribute C_ASYNC_INTR of U0 : label is -3;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of U0 : label is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;

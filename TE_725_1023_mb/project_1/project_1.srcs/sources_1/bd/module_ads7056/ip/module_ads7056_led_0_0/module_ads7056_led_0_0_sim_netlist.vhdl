@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sun Oct 29 23:48:57 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:17:12 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_led_0_0/module_ads7056_led_0_0_sim_netlist.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_led_0_0/module_ads7056_led_0_0_sim_netlist.vhdl
 -- Design      : module_ads7056_led_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -95,7 +95,6 @@ architecture STRUCTURE of module_ads7056_led_0_0_led is
   signal counter_compare : STD_LOGIC_VECTOR ( 23 downto 18 );
   signal \counter_compare[18]_i_1_n_0\ : STD_LOGIC;
   signal \counter_compare[23]_i_1_n_0\ : STD_LOGIC;
-  signal counter_compare_regn_0_0 : STD_LOGIC;
   signal counter_reg : STD_LOGIC_VECTOR ( 31 downto 6 );
   signal \counter_reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \counter_reg[0]_i_2_n_1\ : STD_LOGIC;
@@ -728,10 +727,10 @@ counter0_carry_i_8: unisim.vcomponents.LUT4
       INIT => X"0001"
     )
         port map (
-      I0 => control(0),
-      I1 => control(1),
-      I2 => control(3),
-      I3 => control(2),
+      I0 => control(1),
+      I1 => control(0),
+      I2 => control(2),
+      I3 => control(3),
       O => \counter_compare[18]_i_1_n_0\
     );
 \counter_compare[23]_i_1\: unisim.vcomponents.LUT4
@@ -739,35 +738,33 @@ counter0_carry_i_8: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => control(0),
-      I1 => control(1),
-      I2 => control(3),
-      I3 => control(2),
+      I0 => control(1),
+      I1 => control(0),
+      I2 => control(2),
+      I3 => control(3),
       O => \counter_compare[23]_i_1_n_0\
     );
 \counter_compare_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => counter_compare_regn_0_0,
+    generic map(
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => clk_led,
       CE => '1',
       D => \counter_compare[18]_i_1_n_0\,
       Q => counter_compare(18),
       R => '0'
     );
 \counter_compare_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => counter_compare_regn_0_0,
+    generic map(
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => clk_led,
       CE => '1',
       D => \counter_compare[23]_i_1_n_0\,
       Q => counter_compare(23),
       R => '0'
-    );
-counter_compare_regi_0: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => clk_led,
-      O => counter_compare_regn_0_0
     );
 \counter_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -1300,7 +1297,7 @@ entity module_ads7056_led_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of module_ads7056_led_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of module_ads7056_led_0_0 : entity is "led,Vivado 2016.4";
+  attribute X_CORE_INFO of module_ads7056_led_0_0 : entity is "led,Vivado 2017.2";
 end module_ads7056_led_0_0;
 
 architecture STRUCTURE of module_ads7056_led_0_0 is

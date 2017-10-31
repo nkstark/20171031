@@ -1,8 +1,8 @@
-//Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-//Date        : Mon Oct 30 01:55:01 2017
-//Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+//Date        : Tue Oct 31 01:14:35 2017
+//Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 //Command     : generate_target module_ads7056_wrapper.bd
 //Design      : module_ads7056_wrapper
 //Purpose     : IP block netlist
@@ -24,7 +24,6 @@ module module_ads7056_wrapper
     spi_rtl_io1_io,
     spi_rtl_io2_io,
     spi_rtl_io3_io,
-    spi_rtl_sck_io,
     spi_rtl_ss_io);
   output NCS;
   output [0:0]POF_N;
@@ -40,7 +39,6 @@ module module_ads7056_wrapper
   inout spi_rtl_io1_io;
   inout spi_rtl_io2_io;
   inout spi_rtl_io3_io;
-  inout spi_rtl_sck_io;
   inout [0:0]spi_rtl_ss_io;
 
   wire NCS;
@@ -69,10 +67,6 @@ module module_ads7056_wrapper
   wire spi_rtl_io3_io;
   wire spi_rtl_io3_o;
   wire spi_rtl_io3_t;
-  wire spi_rtl_sck_i;
-  wire spi_rtl_sck_io;
-  wire spi_rtl_sck_o;
-  wire spi_rtl_sck_t;
   wire [0:0]spi_rtl_ss_i_0;
   wire [0:0]spi_rtl_ss_io_0;
   wire [0:0]spi_rtl_ss_o_0;
@@ -101,9 +95,6 @@ module module_ads7056_wrapper
         .spi_rtl_io3_i(spi_rtl_io3_i),
         .spi_rtl_io3_o(spi_rtl_io3_o),
         .spi_rtl_io3_t(spi_rtl_io3_t),
-        .spi_rtl_sck_i(spi_rtl_sck_i),
-        .spi_rtl_sck_o(spi_rtl_sck_o),
-        .spi_rtl_sck_t(spi_rtl_sck_t),
         .spi_rtl_ss_i(spi_rtl_ss_i_0),
         .spi_rtl_ss_o(spi_rtl_ss_o_0),
         .spi_rtl_ss_t(spi_rtl_ss_t));
@@ -127,11 +118,6 @@ module module_ads7056_wrapper
         .IO(spi_rtl_io3_io),
         .O(spi_rtl_io3_i),
         .T(spi_rtl_io3_t));
-  IOBUF spi_rtl_sck_iobuf
-       (.I(spi_rtl_sck_o),
-        .IO(spi_rtl_sck_io),
-        .O(spi_rtl_sck_i),
-        .T(spi_rtl_sck_t));
   IOBUF spi_rtl_ss_iobuf_0
        (.I(spi_rtl_ss_o_0),
         .IO(spi_rtl_ss_io[0]),

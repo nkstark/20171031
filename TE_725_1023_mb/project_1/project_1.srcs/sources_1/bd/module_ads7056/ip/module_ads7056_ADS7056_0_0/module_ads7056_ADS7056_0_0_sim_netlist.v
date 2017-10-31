@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Mon Oct 30 00:52:39 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:17:12 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_ADS7056_0_0/module_ads7056_ADS7056_0_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_ADS7056_0_0/module_ads7056_ADS7056_0_0_sim_netlist.v
 // Design      : module_ads7056_ADS7056_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_ADS7056_0_0,ADS7056,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "ADS7056,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_ADS7056_0_0,ADS7056,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "ADS7056,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_ADS7056_0_0
    (data_in,
@@ -71,7 +71,6 @@ module module_ads7056_ADS7056_0_0_ADS7056
   wire [17:0]data;
   wire \data[17]_i_1_n_0 ;
   wire data_in;
-  wire data_regn_0_0;
   wire [4:0]p_3_in;
   wire rst;
 
@@ -181,119 +180,150 @@ module module_ads7056_ADS7056_0_0_ADS7056
     \data[17]_i_1 
        (.I0(clk_60m),
         .O(\data[17]_i_1_n_0 ));
-  FDCE \data_reg[0] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[0] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data_in),
         .Q(data[0]));
-  FDCE \data_reg[10] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[10] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[9]),
         .Q(data[10]));
-  FDCE \data_reg[11] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[11] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[10]),
         .Q(data[11]));
-  FDCE \data_reg[12] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[12] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[11]),
         .Q(data[12]));
-  FDCE \data_reg[13] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[13] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[12]),
         .Q(data[13]));
-  FDCE \data_reg[14] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[14] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[13]),
         .Q(data[14]));
-  FDCE \data_reg[15] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[15] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[14]),
         .Q(data[15]));
-  FDCE \data_reg[16] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[16] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[15]),
         .Q(data[16]));
-  FDCE \data_reg[17] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[17] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[16]),
         .Q(data[17]));
-  FDCE \data_reg[1] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[1] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[0]),
         .Q(data[1]));
-  FDCE \data_reg[2] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[2] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[1]),
         .Q(data[2]));
-  FDCE \data_reg[3] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[3] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[2]),
         .Q(data[3]));
-  FDCE \data_reg[4] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[4] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[3]),
         .Q(data[4]));
-  FDCE \data_reg[5] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[5] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[4]),
         .Q(data[5]));
-  FDCE \data_reg[6] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[6] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[5]),
         .Q(data[6]));
-  FDCE \data_reg[7] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[7] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[6]),
         .Q(data[7]));
-  FDCE \data_reg[8] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[8] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[7]),
         .Q(data[8]));
-  FDCE \data_reg[9] 
-       (.C(data_regn_0_0),
+  FDCE #(
+    .IS_C_INVERTED(1'b1)) 
+    \data_reg[9] 
+       (.C(clk_60m),
         .CE(\data[17]_i_1_n_0 ),
         .CLR(rst),
         .D(data[8]),
         .Q(data[9]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    data_regi_0
-       (.I0(clk_60m),
-        .O(data_regn_0_0));
 endmodule
 `ifndef GLBL
 `define GLBL
@@ -345,8 +375,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

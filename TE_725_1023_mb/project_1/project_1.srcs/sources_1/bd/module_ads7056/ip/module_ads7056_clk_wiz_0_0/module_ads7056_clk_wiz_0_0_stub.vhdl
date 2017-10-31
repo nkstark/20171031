@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sun Oct 29 21:55:48 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:17:11 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_clk_wiz_0_0/module_ads7056_clk_wiz_0_0_stub.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_clk_wiz_0_0/module_ads7056_clk_wiz_0_0_stub.vhdl
 -- Design      : module_ads7056_clk_wiz_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcsg324-2

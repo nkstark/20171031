@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-2" LaunchTime="1508599378">
-  <File Type="PA-TCL" Name="led.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="led_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="led.tcl"/>
   <File Type="RDS-RDS" Name="led.vds"/>
   <File Type="RDS-UTIL" Name="led_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="led_utilization_synth.pb"/>

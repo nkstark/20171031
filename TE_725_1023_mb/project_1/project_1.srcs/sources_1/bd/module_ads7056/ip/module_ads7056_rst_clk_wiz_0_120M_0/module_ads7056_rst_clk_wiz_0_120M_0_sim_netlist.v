@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Oct 29 23:02:13 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:21:11 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_rst_clk_wiz_0_120M_0/module_ads7056_rst_clk_wiz_0_120M_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_rst_clk_wiz_0_120M_0/module_ads7056_rst_clk_wiz_0_120M_0_sim_netlist.v
 // Design      : module_ads7056_rst_clk_wiz_0_120M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_rst_clk_wiz_0_120M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_rst_clk_wiz_0_120M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_rst_clk_wiz_0_120M_0
    (slowest_sync_clk,
@@ -99,8 +99,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync
   wire slowest_sync_clk;
 
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
@@ -116,8 +116,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync
         .I1(mb_debug_sys_rst),
         .O(exr_d1));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
@@ -127,8 +127,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync
         .Q(s_level_out_d2),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
@@ -138,8 +138,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync
         .Q(s_level_out_d3),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
@@ -192,8 +192,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync_0
   wire slowest_sync_clk;
 
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
@@ -208,8 +208,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync_0
        (.I0(aux_reset_in),
         .O(asr_d1));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
@@ -219,8 +219,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync_0
         .Q(s_level_out_d2),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
@@ -230,8 +230,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_cdc_sync_0
         .Q(s_level_out_d3),
         .R(1'b0));
   (* ASYNC_REG *) 
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
@@ -349,8 +349,8 @@ module module_ads7056_rst_clk_wiz_0_120M_0_lpf
         .D(p_3_out[1]),
         .Q(p_3_out[0]),
         .R(1'b0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "SRL16" *) 
+  (* box_type = "PRIMITIVE" *) 
   (* srl_name = "U0/\EXT_LPF/POR_SRL_I " *) 
   SRL16E #(
     .INIT(16'hFFFF)) 
@@ -913,8 +913,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

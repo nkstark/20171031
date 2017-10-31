@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Mon Oct 30 01:54:56 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:23:39 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_stub.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_stub.vhdl
 -- Design      : module_ads7056_axi_quad_spi_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcsg324-2
@@ -46,12 +46,20 @@ entity module_ads7056_axi_quad_spi_0_0 is
     io3_i : in STD_LOGIC;
     io3_o : out STD_LOGIC;
     io3_t : out STD_LOGIC;
-    sck_i : in STD_LOGIC;
-    sck_o : out STD_LOGIC;
-    sck_t : out STD_LOGIC;
     ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     ss_t : out STD_LOGIC;
+    cfgclk : out STD_LOGIC;
+    cfgmclk : out STD_LOGIC;
+    eos : out STD_LOGIC;
+    preq : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    gsr : in STD_LOGIC;
+    gts : in STD_LOGIC;
+    keyclearb : in STD_LOGIC;
+    usrcclkts : in STD_LOGIC;
+    usrdoneo : in STD_LOGIC;
+    usrdonets : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC
   );
 
@@ -61,8 +69,8 @@ architecture stub of module_ads7056_axi_quad_spi_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,io2_i,io2_o,io2_t,io3_i,io3_o,io3_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt";
+attribute black_box_pad_pin of stub : architecture is "ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,io2_i,io2_o,io2_t,io3_i,io3_o,io3_t,ss_i[0:0],ss_o[0:0],ss_t,cfgclk,cfgmclk,eos,preq,clk,gsr,gts,keyclearb,usrcclkts,usrdoneo,usrdonets,ip2intc_irpt";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "axi_quad_spi,Vivado 2016.4";
+attribute x_core_info of stub : architecture is "axi_quad_spi,Vivado 2017.2";
 begin
 end;

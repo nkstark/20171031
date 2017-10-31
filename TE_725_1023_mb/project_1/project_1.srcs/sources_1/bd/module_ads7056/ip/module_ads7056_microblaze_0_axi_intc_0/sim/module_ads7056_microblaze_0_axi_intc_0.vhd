@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_intc:4.1
--- IP Revision: 9
+-- IP Revision: 10
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_intc_v4_1_9;
-USE axi_intc_v4_1_9.axi_intc;
+LIBRARY axi_intc_v4_1_10;
+USE axi_intc_v4_1_10.axi_intc;
 
 ENTITY module_ads7056_microblaze_0_axi_intc_0 IS
   PORT (
@@ -186,7 +186,7 @@ BEGIN
       C_KIND_OF_INTR => X"fffffffd",
       C_KIND_OF_EDGE => X"FFFFFFFF",
       C_KIND_OF_LVL => X"FFFFFFFF",
-      C_ASYNC_INTR => X"FFFFFFF9",
+      C_ASYNC_INTR => X"FFFFFFFD",
       C_NUM_SYNC_FF => 2,
       C_IVAR_RESET_VALUE => X"00000010",
       C_ENABLE_ASYNC => 0,

@@ -1,8 +1,8 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Mon Oct 30 01:51:49 2017
-| Host         : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Oct 31 01:19:47 2017
+| Host         : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file module_ads7056_microblaze_0_axi_intc_0_utilization_synth.rpt -pb module_ads7056_microblaze_0_axi_intc_0_utilization_synth.pb
 | Design       : module_ads7056_microblaze_0_axi_intc_0
 | Device       : 7a35tcsg324-2
@@ -35,8 +35,8 @@ Table of Contents
 |   LUT as Memory            |   64 |     0 |      9600 |  0.67 |
 |     LUT as Distributed RAM |   64 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  187 |     0 |     41600 |  0.45 |
-|   Register as Flip Flop    |  187 |     0 |     41600 |  0.45 |
+| Slice Registers            |  189 |     0 |     41600 |  0.45 |
+|   Register as Flip Flop    |  189 |     0 |     41600 |  0.45 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 186   |          Yes |       Reset |            - |
+| 188   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,7 +148,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  186 |        Flop & Latch |
+| FDRE     |  188 |        Flop & Latch |
 | RAMD32   |   64 |  Distributed Memory |
 | LUT3     |   42 |                 LUT |
 | LUT6     |   38 |                 LUT |

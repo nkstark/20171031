@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="module_ads7056" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1509324906"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1509324906"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1509324906"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1509408883"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1509408883"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1509408883"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\module_ads7056_ADS7056_0_0\module_ads7056_ADS7056_0_0.xci" Type="IP">
         <Instance HierarchyPath="ADS7056_0"/>
@@ -41,13 +41,6 @@
       <File Name="ip\module_ads7056_util_ds_buf_0_0\module_ads7056_util_ds_buf_0_0.xci" Type="IP">
         <Instance HierarchyPath="util_ds_buf_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hdl\module_ads7056.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -133,14 +126,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\module_ads7056_xbar_0\module_ads7056_xbar_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\module_ads7056_rst_clk_wiz_0_120M_0\module_ads7056_rst_clk_wiz_0_120M_0.xci" Type="IP">
         <Instance HierarchyPath="rst_clk_wiz_0_120M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -173,8 +158,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\module_ads7056_auto_pc_0\module_ads7056_auto_pc_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/s01_couplers/auto_pc"/>
+      <File Name="ip\module_ads7056_xbar_0\module_ads7056_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -184,6 +169,21 @@
       <File Name="ip\module_ads7056_auto_pc_1\module_ads7056_auto_pc_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/s02_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\module_ads7056_auto_pc_0\module_ads7056_auto_pc_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/s01_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="hdl\module_ads7056.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

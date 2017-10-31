@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="module_ads7056_me18_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_me18_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_util_ds_buf_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_util_ds_buf_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_dlmb_v10_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_ilmb_v10_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_led_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_led_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_util_ds_buf_1_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_util_ds_buf_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_ADS7056_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_ADS7056_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_clk_wiz_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_microblaze_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_lmb_bram_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_microblaze_0_axi_intc_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_microblaze_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_microblaze_0_xlconcat_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_microblaze_0_xlconcat_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_mdm_1_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_rst_clk_wiz_0_120M_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_rst_clk_wiz_0_120M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_axi_gpio_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_axi_quad_spi_0_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_axi_quad_spi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_auto_pc_1_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_auto_pc_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="module_ads7056_xbar_0_synth_1" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/module_ads7056_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="module_ads7056_me18_0_0_synth_1"/>
+		<Parent Id="module_ads7056_util_ds_buf_0_0_synth_1"/>
+		<Parent Id="module_ads7056_dlmb_v10_0_synth_1"/>
+		<Parent Id="module_ads7056_ilmb_v10_0_synth_1"/>
+		<Parent Id="module_ads7056_led_0_0_synth_1"/>
+		<Parent Id="module_ads7056_util_ds_buf_1_0_synth_1"/>
+		<Parent Id="module_ads7056_ADS7056_0_0_synth_1"/>
+		<Parent Id="module_ads7056_clk_wiz_0_0_synth_1"/>
+		<Parent Id="module_ads7056_microblaze_0_0_synth_1"/>
+		<Parent Id="module_ads7056_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="module_ads7056_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="module_ads7056_lmb_bram_0_synth_1"/>
+		<Parent Id="module_ads7056_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="module_ads7056_microblaze_0_xlconcat_0_synth_1"/>
+		<Parent Id="module_ads7056_mdm_1_0_synth_1"/>
+		<Parent Id="module_ads7056_rst_clk_wiz_0_120M_0_synth_1"/>
+		<Parent Id="module_ads7056_axi_gpio_0_0_synth_1"/>
+		<Parent Id="module_ads7056_axi_quad_spi_0_0_synth_1"/>
+		<Parent Id="module_ads7056_auto_pc_1_synth_1"/>
+		<Parent Id="module_ads7056_auto_pc_0_synth_1"/>
+		<Parent Id="module_ads7056_xbar_0_synth_1"/>
+	</Run>
+</Runs>
+

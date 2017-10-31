@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_2" LaunchPart="xc7a35tcsg324-2" LaunchTime="1509408899">
+  <File Type="RDS-PROPCONSTRS" Name="module_ads7056_wrapper_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="module_ads7056_wrapper.tcl"/>
+  <File Type="RDS-RDS" Name="module_ads7056_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="module_ads7056_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="module_ads7056_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="module_ads7056_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="module_ads7056_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="module_ads7056_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ADS7056.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/me18.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/led.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/module_ads7056/module_ads7056.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/module_ads7056/hdl/module_ads7056_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SYN.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ADC7961.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mytop.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/MAIN_CLK/MAIN_CLK.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/SUB_CLK/SUB_CLK.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="module_ads7056_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/led.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/led.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design">
+      <Option Id="ResourceSharing">2</Option>
+    </Step>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_me18_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_util_ds_buf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_ADS7056_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_led_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_util_ds_buf_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_microblaze_0_xlconcat_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_rst_clk_wiz_0_120M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="module_ads7056_xbar_0"/>
+</GenRun>

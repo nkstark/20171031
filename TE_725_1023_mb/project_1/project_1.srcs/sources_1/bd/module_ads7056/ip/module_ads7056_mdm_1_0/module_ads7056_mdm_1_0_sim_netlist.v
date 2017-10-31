@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Oct 29 22:39:37 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:21:25 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_mdm_1_0/module_ads7056_mdm_1_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_mdm_1_0/module_ads7056_mdm_1_0_sim_netlist.v
 // Design      : module_ads7056_mdm_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_mdm_1_0,MDM,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MDM,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_mdm_1_0,MDM,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MDM,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_mdm_1_0
    (S_AXI_ACLK,
@@ -981,6 +981,7 @@ module module_ads7056_mdm_1_0
   wire [3:0]NLW_U0_M_AXI_WSTRB_UNCONNECTED;
   wire [31:0]NLW_U0_TRACE_DATA_UNCONNECTED;
 
+  (* C_AVOID_PRIMITIVES = "0" *) 
   (* C_DATA_SIZE = "32" *) 
   (* C_DBG_MEM_ACCESS = "0" *) 
   (* C_DBG_REG_ACCESS = "0" *) 
@@ -997,6 +998,7 @@ module module_ads7056_mdm_1_0
   (* C_S_AXI_ACLK_FREQ_HZ = "120000000" *) 
   (* C_S_AXI_ADDR_WIDTH = "4" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_TRACE_ASYNC_RESET = "0" *) 
   (* C_TRACE_CLK_FREQ_HZ = "200000000" *) 
   (* C_TRACE_CLK_OUT_PHASE = "90" *) 
   (* C_TRACE_DATA_WIDTH = "32" *) 
@@ -2535,12 +2537,12 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     Debug_SYS_Rst,
     Dbg_Rst_0,
     Ext_BRK,
-    E,
     tdo,
     tx_Buffer_Full,
     p_0_in,
     \Use_Serial_Unified_Completion.completion_block_reg_0 ,
     p_31_out__0,
+    E,
     Dbg_Reg_En_0,
     \Use_Serial_Unified_Completion.count_reg[4]_0 ,
     tx_Buffer_Empty,
@@ -2552,19 +2554,19 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     S_AXI_ACLK,
     \Use_Uart.reset_TX_FIFO_reg ,
     S_AXI_WDATA,
-    \Use_Uart.clear_Ext_BRK_reg ,
     \Use_BSCAN.PORT_Selector_reg[0]_0 ,
+    \Use_Uart.clear_Ext_BRK_reg ,
     \Use_BSCAN.PORT_Selector_reg[2] ,
     \Use_BSCAN.PORT_Selector_reg[3] ,
     Dbg_TDO_0,
     \Use_BSCAN.PORT_Selector_reg[0]_1 ,
     sel,
+    Scan_Reset_Sel,
+    Scan_Reset,
     FIFO_Write,
     Bus_RNW_reg,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
     bus2ip_rdce,
-    Scan_Reset,
-    Scan_Reset_Sel,
     Q_0,
     enable_interrupts,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ,
@@ -2572,7 +2574,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     \Use_BSCAN.PORT_Selector_reg[0]_2 ,
     \Using_FPGA.Native_1 ,
     D,
-    \command_reg[5]_0 ,
+    \Use_BSCAN.command_reg[5]_0 ,
     \Use_Serial_Unified_Completion.count_reg[5]_0 ,
     \shift_Count_reg[0]_0 );
   output [0:0]Q;
@@ -2585,12 +2587,12 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   output Debug_SYS_Rst;
   output Dbg_Rst_0;
   output Ext_BRK;
-  output [0:0]E;
   output tdo;
   output tx_Buffer_Full;
   output p_0_in;
   output \Use_Serial_Unified_Completion.completion_block_reg_0 ;
   output p_31_out__0;
+  output [0:0]E;
   output [0:7]Dbg_Reg_En_0;
   output [0:0]\Use_Serial_Unified_Completion.count_reg[4]_0 ;
   output tx_Buffer_Empty;
@@ -2602,19 +2604,19 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   input S_AXI_ACLK;
   input \Use_Uart.reset_TX_FIFO_reg ;
   input [7:0]S_AXI_WDATA;
-  input \Use_Uart.clear_Ext_BRK_reg ;
   input \Use_BSCAN.PORT_Selector_reg[0]_0 ;
+  input \Use_Uart.clear_Ext_BRK_reg ;
   input \Use_BSCAN.PORT_Selector_reg[2] ;
   input [3:0]\Use_BSCAN.PORT_Selector_reg[3] ;
   input Dbg_TDO_0;
   input \Use_BSCAN.PORT_Selector_reg[0]_1 ;
   input sel;
+  input Scan_Reset_Sel;
+  input Scan_Reset;
   input FIFO_Write;
   input Bus_RNW_reg;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   input [0:0]bus2ip_rdce;
-  input Scan_Reset;
-  input Scan_Reset_Sel;
   input Q_0;
   input enable_interrupts;
   input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
@@ -2622,7 +2624,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   input [0:0]\Use_BSCAN.PORT_Selector_reg[0]_2 ;
   input [0:0]\Using_FPGA.Native_1 ;
   input [0:0]D;
-  input [0:0]\command_reg[5]_0 ;
+  input [0:0]\Use_BSCAN.command_reg[5]_0 ;
   input [0:0]\Use_Serial_Unified_Completion.count_reg[5]_0 ;
   input [0:0]\shift_Count_reg[0]_0 ;
 
@@ -2634,7 +2636,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire CE;
   wire CLK;
   wire [0:0]D;
-  wire D_0;
+  wire D_2;
   wire [4:5]Data_Out;
   wire [0:7]Dbg_Reg_En_0;
   wire Dbg_Rst_0;
@@ -2647,16 +2649,6 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire [0:0]E;
   wire Ext_BRK;
   wire Ext_NM_BRK;
-  wire FDC_I_n_15;
-  wire FDC_I_n_16;
-  wire FDC_I_n_17;
-  wire FDC_I_n_18;
-  wire FDC_I_n_32;
-  wire FDC_I_n_33;
-  wire FDC_I_n_34;
-  wire FDC_I_n_35;
-  wire FDC_I_n_36;
-  wire FDC_I_n_37;
   wire FIFO_Write;
   wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
@@ -2664,17 +2656,34 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire [0:0]Q;
   wire Q0_out;
   wire Q_0;
+  wire Q_1;
   wire [0:7]RX_Data;
   wire S_AXI_ACLK;
   wire [7:0]S_AXI_WDATA;
   wire Scan_Reset;
   wire Scan_Reset_Sel;
+  wire \Use_BSCAN.FDC_I_n_13 ;
+  wire \Use_BSCAN.FDC_I_n_14 ;
+  wire \Use_BSCAN.FDC_I_n_15 ;
+  wire \Use_BSCAN.FDC_I_n_16 ;
+  wire \Use_BSCAN.FDC_I_n_19 ;
+  wire \Use_BSCAN.FDC_I_n_22 ;
+  wire \Use_BSCAN.FDC_I_n_33 ;
+  wire \Use_BSCAN.FDC_I_n_34 ;
+  wire \Use_BSCAN.FDC_I_n_35 ;
+  wire \Use_BSCAN.FDC_I_n_36 ;
+  wire \Use_BSCAN.FDC_I_n_37 ;
+  wire \Use_BSCAN.FDC_I_n_38 ;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
   wire \Use_BSCAN.PORT_Selector_reg[0]_0 ;
   wire \Use_BSCAN.PORT_Selector_reg[0]_1 ;
   wire [0:0]\Use_BSCAN.PORT_Selector_reg[0]_2 ;
   wire \Use_BSCAN.PORT_Selector_reg[2] ;
   wire [3:0]\Use_BSCAN.PORT_Selector_reg[3] ;
+  wire \Use_BSCAN.SYNC_FDRE_n_1 ;
+  wire \Use_BSCAN.SYNC_FDRE_n_2 ;
+  wire \Use_BSCAN.command[0]_i_1_n_0 ;
+  wire [0:0]\Use_BSCAN.command_reg[5]_0 ;
   wire \Use_Config_SRL16E.SRL16E_1_n_0 ;
   wire \Use_E2.BSCANE2_I_i_3_n_0 ;
   wire \Use_E2.BSCANE2_I_i_4_n_0 ;
@@ -2703,7 +2712,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ;
   wire \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ;
   wire \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ;
-  wire \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0 ;
   wire \Use_Serial_Unified_Completion.sample_1_reg_n_0_[10] ;
   wire \Use_Serial_Unified_Completion.sample_1_reg_n_0_[11] ;
   wire \Use_Serial_Unified_Completion.sample_1_reg_n_0_[12] ;
@@ -2733,30 +2742,26 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire [0:0]\Using_FPGA.Native_1 ;
   wire [0:0]bus2ip_rdce;
   wire [0:7]command;
-  wire \command[0]_i_1_n_0 ;
   wire [0:7]command_1;
   wire command_10;
-  wire [0:0]\command_reg[5]_0 ;
-  wire command_regn_0_0;
   wire completion_ctrl;
   wire [15:0]completion_status;
   wire config_TDO_2;
-  wire data_cmd_noblock;
   wire enable_interrupts;
   wire execute;
   (* async_reg = "true" *) wire execute_1;
   (* async_reg = "true" *) wire execute_2;
   wire execute_3;
   wire [0:7]fifo_Din;
-  wire fifo_Read1_out;
-  wire fifo_Write3_out;
+  wire fifo_Read2_out;
+  wire fifo_Write4_out;
   wire mb_instr_overrun;
   wire p_0_in;
-  wire p_0_in_2;
+  wire p_0_in_4;
   wire [5:1]p_0_in__0;
   wire [4:1]p_0_in__1;
   wire [14:0]p_1_in;
-  wire p_1_in_1;
+  wire p_1_in_3;
   wire p_2_out;
   wire p_31_out__0;
   wire p_3_out__10;
@@ -2764,7 +2769,8 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   wire sample_1;
   wire sel;
   wire sel_n;
-  wire sel_n_i_1_n_0;
+  wire sel_n0;
+  wire sel_reset;
   wire set_Ext_BRK;
   wire [0:0]\shift_Count_reg[0]_0 ;
   wire [4:4]shift_Count_reg__0;
@@ -2786,7 +2792,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   (* async_reg = "true" *) wire tx_buffered_2;
 
   assign out = tx_buffered_2;
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hFD)) 
     Dbg_Shift_31_INST_0_i_1
@@ -2794,7 +2800,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I1(command[7]),
         .I2(command[4]),
         .O(Dbg_Shift_31_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     Dbg_Shift_31_INST_0_i_3
@@ -2809,7 +2815,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(CLK),
         .CE(Debug_Rst_i0),
         .CLR(AR),
-        .D(p_1_in_1),
+        .D(p_1_in_3),
         .Q(Dbg_Rst_0));
   FDCE #(
     .INIT(1'b0)) 
@@ -2831,65 +2837,156 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(CLK),
         .CE(Debug_Rst_i0),
         .CLR(AR),
-        .D(p_0_in_2),
+        .D(p_0_in_4),
         .Q(Ext_NM_BRK));
-  module_ads7056_mdm_1_0_MB_FDC_1 FDC_I
+  module_ads7056_mdm_1_0_MB_FDC_1 \Use_BSCAN.FDC_I 
        (.CE(CE),
         .CLK(CLK),
         .D(p_1_in[9:0]),
-        .D_0(D_0),
+        .D_2(D_2),
         .Dbg_Reg_En_0(Dbg_Reg_En_0),
         .Dbg_TDO_0(Dbg_TDO_0),
         .Debug_Rst_i0(Debug_Rst_i0),
-        .E(E),
-        .Q({command[0],command[1],command[2],command[3],command[4],command[5],command[6],command[7]}),
-        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_0 ),
-        .\Use_BSCAN.PORT_Selector_reg[0]_0 (\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .E(\Use_BSCAN.FDC_I_n_13 ),
+        .Q(completion_status[10:0]),
+        .Q_1(Q_1),
+        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .\Use_BSCAN.PORT_Selector_reg[0]_0 (\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .\Use_BSCAN.PORT_Selector_reg[3] (\Use_BSCAN.PORT_Selector_reg[3] ),
+        .\Use_BSCAN.command_reg[0] ({command[0],command[1],command[2],command[3],command[4],command[5],command[6],command[7]}),
+        .\Use_BSCAN.command_reg[0]_0 (Dbg_Shift_31_INST_0_i_3_n_0),
+        .\Use_BSCAN.command_reg[2] (\Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0 ),
         .\Use_Serial_Unified_Completion.completion_block_reg (\Use_Serial_Unified_Completion.completion_block_reg_0 ),
-        .\Use_Serial_Unified_Completion.completion_block_reg_0 (FDC_I_n_36),
+        .\Use_Serial_Unified_Completion.completion_block_reg_0 (\Use_BSCAN.FDC_I_n_36 ),
         .\Use_Serial_Unified_Completion.completion_block_reg_1 (\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[0] (FDC_I_n_15),
-        .\Use_Serial_Unified_Completion.completion_status_reg[10] (completion_status[10:0]),
         .\Use_Serial_Unified_Completion.completion_status_reg[2] (\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[3] (\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[4] (\Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[5] (\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[7] (\Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ),
-        .\Use_Serial_Unified_Completion.count_reg[0] (\Use_Serial_Unified_Completion.count_reg_n_0_[0] ),
-        .\Use_Serial_Unified_Completion.count_reg[1] (\Use_Serial_Unified_Completion.count_reg_n_0_[1] ),
+        .\Use_Serial_Unified_Completion.count_reg[1] (\Use_BSCAN.SYNC_FDRE_n_2 ),
+        .\Use_Serial_Unified_Completion.count_reg[1]_0 (\Use_BSCAN.SYNC_FDRE_n_1 ),
         .\Use_Serial_Unified_Completion.count_reg[5] (\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg (FDC_I_n_34),
-        .\Use_Serial_Unified_Completion.mb_instr_error_reg (FDC_I_n_33),
-        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg (FDC_I_n_32),
-        .\Use_Serial_Unified_Completion.sample_reg[15] ({FDC_I_n_16,FDC_I_n_17,FDC_I_n_18}),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg (\Use_BSCAN.FDC_I_n_35 ),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg (\Use_BSCAN.FDC_I_n_22 ),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg_0 (\Use_BSCAN.FDC_I_n_34 ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg (\Use_BSCAN.FDC_I_n_33 ),
+        .\Use_Serial_Unified_Completion.sample_1_reg[10] (sample_1),
+        .\Use_Serial_Unified_Completion.sample_reg[15] ({\Use_BSCAN.FDC_I_n_14 ,\Use_BSCAN.FDC_I_n_15 ,\Use_BSCAN.FDC_I_n_16 }),
         .\Use_Serial_Unified_Completion.sample_reg[15]_0 ({sample,\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ,\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ,mb_instr_overrun}),
-        .\Use_UART.tx_buffered_reg (FDC_I_n_37),
+        .\Use_UART.tx_buffered_reg (\Use_BSCAN.FDC_I_n_37 ),
         .\command_1_reg[7] (command_10),
-        .\command_reg[0] (Dbg_Shift_31_INST_0_i_3_n_0),
-        .\command_reg[2] (\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
-        .\command_reg[5] (Dbg_Shift_31_INST_0_i_1_n_0),
         .completion_ctrl(completion_ctrl),
-        .\completion_ctrl_reg[0] (FDC_I_n_35),
-        .data_cmd_noblock(data_cmd_noblock),
+        .\completion_ctrl_reg[0] (\Use_BSCAN.FDC_I_n_38 ),
         .in0(tx_buffered),
         .p_31_out__0(p_31_out__0),
         .p_3_out__10(p_3_out__10),
-        .sample_1(sample_1),
         .sel(sel),
         .sel_n(sel_n),
+        .set_Ext_BRK_reg(\Use_BSCAN.FDC_I_n_19 ),
         .shifting_Data1__0(shifting_Data1__0),
-        .sync(sync),
-        .\tdi_shifter_reg[0] ({p_1_in_1,\tdi_shifter_reg_n_0_[1] ,\tdi_shifter_reg_n_0_[2] ,p_0_in_2,\tdi_shifter_reg_n_0_[4] ,\tdi_shifter_reg_n_0_[5] ,\tdi_shifter_reg_n_0_[6] ,\tdi_shifter_reg_n_0_[7] }));
-  module_ads7056_mdm_1_0_MB_FDRE_1 SYNC_FDRE
+        .\tdi_shifter_reg[0] ({p_1_in_3,\tdi_shifter_reg_n_0_[1] ,\tdi_shifter_reg_n_0_[2] ,p_0_in_4,\tdi_shifter_reg_n_0_[4] ,\tdi_shifter_reg_n_0_[5] ,\tdi_shifter_reg_n_0_[6] ,\tdi_shifter_reg_n_0_[7] }));
+  module_ads7056_mdm_1_0_MB_FDRE_1 \Use_BSCAN.SYNC_FDRE 
        (.CE(CE),
-        .D_0(D_0),
+        .D_2(D_2),
+        .E(E),
+        .Q(command[6]),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
+        .\Use_BSCAN.PORT_Selector_reg[0]_0 (\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .\Use_BSCAN.command_reg[0] (Dbg_Shift_31_INST_0_i_3_n_0),
+        .\Use_BSCAN.command_reg[5] (Dbg_Shift_31_INST_0_i_1_n_0),
+        .\Use_BSCAN.command_reg[6] (\Use_BSCAN.FDC_I_n_22 ),
+        .\Use_Serial_Unified_Completion.count_reg[0] (\Use_Serial_Unified_Completion.count_reg_n_0_[0] ),
+        .\Use_Serial_Unified_Completion.count_reg[1] (\Use_Serial_Unified_Completion.count_reg_n_0_[1] ),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg (\Use_BSCAN.SYNC_FDRE_n_1 ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg (\Use_BSCAN.SYNC_FDRE_n_2 ),
+        .\Using_FPGA.Native_0 (\Use_BSCAN.FDC_I_n_19 ),
         .sync(sync));
+  LUT5 #(
+    .INIT(32'h00000008)) 
+    \Use_BSCAN.command[0]_i_1 
+       (.I0(sel),
+        .I1(\Use_BSCAN.PORT_Selector_reg[3] [0]),
+        .I2(\Use_BSCAN.PORT_Selector_reg[3] [1]),
+        .I3(\Use_BSCAN.PORT_Selector_reg[3] [3]),
+        .I4(\Use_BSCAN.PORT_Selector_reg[3] [2]),
+        .O(\Use_BSCAN.command[0]_i_1_n_0 ));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[0] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[0]),
+        .Q(command[0]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[1] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[1]),
+        .Q(command[1]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[2] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[2]),
+        .Q(command[2]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[3] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[3]),
+        .Q(command[3]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[4] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[4]),
+        .Q(command[4]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[5] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[5]),
+        .Q(command[5]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[6] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[6]),
+        .Q(command[6]));
+  FDCE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[7] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .CLR(AR),
+        .D(command_1[7]),
+        .Q(command[7]));
   module_ads7056_mdm_1_0_MB_SRL16E \Use_Config_SRL16E.SRL16E_1 
        (.Q({A3,A2,A1,Q}),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
-        .\Use_UART.fifo_Din_reg[0] (\Use_Config_SRL16E.SRL16E_1_n_0 ));
+        .sel_n_reg(\Use_Config_SRL16E.SRL16E_1_n_0 ));
   module_ads7056_mdm_1_0_MB_SRL16E__parameterized1 \Use_Config_SRL16E.SRL16E_2 
        (.Q({A3,A2,A1,Q}),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
@@ -2951,11 +3048,11 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
         .\Use_BSCAN.PORT_Selector_reg[0]_0 (\Use_BSCAN.PORT_Selector_reg[3] [0]),
         .\Use_BSCAN.PORT_Selector_reg[2] (\Use_BSCAN.PORT_Selector_reg[2] ),
-        .\command_reg[0] (\Use_E2.BSCANE2_I_i_3_n_0 ),
-        .\command_reg[0]_0 ({command[0],command[5],command[6]}),
-        .\command_reg[5] (\Use_E2.BSCANE2_I_i_7_n_0 ),
-        .\command_reg[5]_0 (\Use_E2.BSCANE2_I_i_9_n_0 ),
-        .\command_reg[6] (\Use_E2.BSCANE2_I_i_4_n_0 ),
+        .\Use_BSCAN.command_reg[0] (\Use_E2.BSCANE2_I_i_3_n_0 ),
+        .\Use_BSCAN.command_reg[0]_0 ({command[0],command[5],command[6]}),
+        .\Use_BSCAN.command_reg[5] (\Use_E2.BSCANE2_I_i_7_n_0 ),
+        .\Use_BSCAN.command_reg[5]_0 (\Use_E2.BSCANE2_I_i_9_n_0 ),
+        .\Use_BSCAN.command_reg[6] (\Use_E2.BSCANE2_I_i_4_n_0 ),
         .config_TDO_2(config_TDO_2),
         .\shift_Count_reg[0] (\Use_Config_SRL16E.SRL16E_1_n_0 ),
         .tdo(tdo));
@@ -2991,45 +3088,45 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_36),
+        .D(\Use_BSCAN.FDC_I_n_36 ),
         .Q(\Use_Serial_Unified_Completion.completion_block_reg_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Use_Serial_Unified_Completion.completion_status[10]_i_1 
        (.I0(\Use_Serial_Unified_Completion.sample_1_reg_n_0_[10] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I2(completion_status[11]),
         .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Use_Serial_Unified_Completion.completion_status[11]_i_1 
        (.I0(\Use_Serial_Unified_Completion.sample_1_reg_n_0_[11] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I2(completion_status[12]),
         .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Use_Serial_Unified_Completion.completion_status[12]_i_1 
        (.I0(\Use_Serial_Unified_Completion.sample_1_reg_n_0_[12] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I2(completion_status[13]),
         .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Use_Serial_Unified_Completion.completion_status[13]_i_1 
        (.I0(\Use_Serial_Unified_Completion.sample_1_reg_n_0_[13] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I2(completion_status[14]),
         .O(p_1_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \Use_Serial_Unified_Completion.completion_status[14]_i_1 
        (.I0(\Use_Serial_Unified_Completion.sample_1_reg_n_0_[14] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I2(completion_status[15]),
         .O(p_1_in[14]));
   LUT3 #(
@@ -3039,7 +3136,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I1(completion_status[0]),
         .I2(completion_status[1]),
         .O(\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \Use_Serial_Unified_Completion.completion_status[4]_i_2 
@@ -3048,7 +3145,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I2(completion_status[0]),
         .I3(completion_status[2]),
         .O(\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \Use_Serial_Unified_Completion.completion_status[5]_i_2 
@@ -3079,7 +3176,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[0] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[0]),
         .Q(completion_status[0]));
@@ -3135,7 +3232,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[1] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[1]),
         .Q(completion_status[1]));
@@ -3143,7 +3240,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[2] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[2]),
         .Q(completion_status[2]));
@@ -3151,7 +3248,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[3] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[3]),
         .Q(completion_status[3]));
@@ -3159,7 +3256,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[4] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[4]),
         .Q(completion_status[4]));
@@ -3167,7 +3264,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[5] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[5]),
         .Q(completion_status[5]));
@@ -3175,7 +3272,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[6] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[6]),
         .Q(completion_status[6]));
@@ -3183,7 +3280,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[7] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[7]),
         .Q(completion_status[7]));
@@ -3191,7 +3288,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[8] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[8]),
         .Q(completion_status[8]));
@@ -3199,7 +3296,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.completion_status_reg[9] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(FDC_I_n_15),
+        .CE(\Use_BSCAN.FDC_I_n_13 ),
         .CLR(AR),
         .D(p_1_in[9]),
         .Q(completion_status[9]));
@@ -3209,9 +3306,9 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.I0(\Use_Serial_Unified_Completion.count_reg__1 [1]),
         .I1(\Use_Serial_Unified_Completion.count[0]__0_i_4_n_0 ),
         .I2(\Use_Serial_Unified_Completion.count_reg__1 [0]),
-        .I3(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I3(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(p_0_in__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \Use_Serial_Unified_Completion.count[0]__0_i_4 
@@ -3224,10 +3321,10 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(64'h0000FF80FF00FF00)) 
     \Use_Serial_Unified_Completion.count[0]_i_1 
        (.I0(\Use_Serial_Unified_Completion.count_reg_n_0_[1] ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I2(sync),
         .I3(\Use_Serial_Unified_Completion.count_reg_n_0_[0] ),
-        .I4(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I4(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I5(shifting_Data1__0),
         .O(\Use_Serial_Unified_Completion.count[0]_i_1_n_0 ));
   LUT6 #(
@@ -3238,19 +3335,19 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I2(\Use_Serial_Unified_Completion.count_reg[4]_0 ),
         .I3(\Use_Serial_Unified_Completion.count_reg__1 [3]),
         .I4(\Use_Serial_Unified_Completion.count_reg__1 [1]),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(p_0_in__0[4]));
   LUT6 #(
     .INIT(64'h00F7FFFF00080000)) 
     \Use_Serial_Unified_Completion.count[1]_i_1 
-       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I1(sync),
         .I2(\Use_Serial_Unified_Completion.count_reg_n_0_[0] ),
-        .I3(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I3(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I4(shifting_Data1__0),
         .I5(\Use_Serial_Unified_Completion.count_reg_n_0_[1] ),
         .O(\Use_Serial_Unified_Completion.count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h00007F80)) 
     \Use_Serial_Unified_Completion.count[2]_i_1 
@@ -3258,23 +3355,23 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I1(\Use_Serial_Unified_Completion.count_reg[4]_0 ),
         .I2(\Use_Serial_Unified_Completion.count_reg__1 [4]),
         .I3(\Use_Serial_Unified_Completion.count_reg__1 [2]),
-        .I4(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I4(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h0078)) 
     \Use_Serial_Unified_Completion.count[3]_i_1 
        (.I0(\Use_Serial_Unified_Completion.count_reg__1 [4]),
         .I1(\Use_Serial_Unified_Completion.count_reg[4]_0 ),
         .I2(\Use_Serial_Unified_Completion.count_reg__1 [3]),
-        .I3(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I3(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(p_0_in__0[2]));
   LUT3 #(
     .INIT(8'h06)) 
     \Use_Serial_Unified_Completion.count[4]_i_1 
        (.I0(\Use_Serial_Unified_Completion.count_reg[4]_0 ),
         .I1(\Use_Serial_Unified_Completion.count_reg__1 [4]),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I2(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(p_0_in__0[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -3288,7 +3385,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[0]__0 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(p_0_in__0[5]),
         .Q(\Use_Serial_Unified_Completion.count_reg__1 [0]));
@@ -3304,7 +3401,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[1]__0 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(p_0_in__0[4]),
         .Q(\Use_Serial_Unified_Completion.count_reg__1 [1]));
@@ -3312,7 +3409,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[2] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(p_0_in__0[3]),
         .Q(\Use_Serial_Unified_Completion.count_reg__1 [2]));
@@ -3320,7 +3417,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[3] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(p_0_in__0[2]),
         .Q(\Use_Serial_Unified_Completion.count_reg__1 [3]));
@@ -3328,7 +3425,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[4] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(p_0_in__0[1]),
         .Q(\Use_Serial_Unified_Completion.count_reg__1 [4]));
@@ -3336,11 +3433,11 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[5] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(\command_reg[5]_0 ),
+        .CE(\Use_BSCAN.command_reg[5]_0 ),
         .CLR(AR),
         .D(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
         .Q(\Use_Serial_Unified_Completion.count_reg[4]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \Use_Serial_Unified_Completion.mb_data_overrun_i_2 
@@ -3352,7 +3449,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   LUT4 #(
     .INIT(16'h0008)) 
     \Use_Serial_Unified_Completion.mb_data_overrun_i_3 
-       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I1(\Use_Serial_Unified_Completion.count_reg__1 [0]),
         .I2(\Use_Serial_Unified_Completion.count_reg__1 [1]),
         .I3(\Use_Serial_Unified_Completion.count_reg__1 [2]),
@@ -3363,7 +3460,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_34),
+        .D(\Use_BSCAN.FDC_I_n_35 ),
         .Q(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -3371,7 +3468,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_33),
+        .D(\Use_BSCAN.FDC_I_n_34 ),
         .Q(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -3379,18 +3476,18 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_32),
+        .D(\Use_BSCAN.FDC_I_n_33 ),
         .Q(mb_instr_overrun));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'h00000008)) 
-    \Use_Serial_Unified_Completion.sample_1[15]_i_2 
+    \Use_Serial_Unified_Completion.sample_1[15]_i_3 
        (.I0(command[2]),
         .I1(command[4]),
         .I2(command[0]),
         .I3(command[1]),
         .I4(command[3]),
-        .O(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ));
+        .O(\Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0 ));
   FDCE \Use_Serial_Unified_Completion.sample_1_reg[10] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(sample_1),
@@ -3433,7 +3530,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_18),
+        .D(\Use_BSCAN.FDC_I_n_16 ),
         .Q(sample[13]));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
@@ -3441,7 +3538,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_17),
+        .D(\Use_BSCAN.FDC_I_n_15 ),
         .Q(sample[14]));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
@@ -3449,7 +3546,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_16),
+        .D(\Use_BSCAN.FDC_I_n_14 ),
         .Q(sample[15]));
   module_ads7056_mdm_1_0_MB_FDRSE \Use_UART.Ext_BRK_FDRSE 
        (.Ext_BRK(Ext_BRK),
@@ -3464,14 +3561,14 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .Q({fifo_Din[0],fifo_Din[1],fifo_Din[2],fifo_Din[3],fifo_Din[4],fifo_Din[5],fifo_Din[6],fifo_Din[7]}),
         .RX_Data(RX_Data),
         .S_AXI_ACLK(S_AXI_ACLK),
-        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .\Use_BSCAN.command_reg[0] (\Use_UART.tdo_reg[4]_i_2_n_0 ),
+        .\Use_BSCAN.command_reg[0]_0 (\Use_UART.tdo_reg[0]_i_3_n_0 ),
         .\Use_UART.fifo_Write_reg (\Use_UART.fifo_Write_reg_n_0 ),
         .\Use_UART.tdo_reg_reg[3] ({tdo_reg[3],tdo_reg[4]}),
         .\Use_Uart.reset_RX_FIFO_reg (\Use_Uart.reset_RX_FIFO_reg ),
         .\Using_FPGA.Native (\Using_FPGA.Native ),
         .bus2ip_rdce(bus2ip_rdce),
-        .\command_reg[0] (\Use_UART.tdo_reg[4]_i_2_n_0 ),
-        .\command_reg[0]_0 (\Use_UART.tdo_reg[0]_i_3_n_0 ),
         .p_0_in(p_0_in));
   module_ads7056_mdm_1_0_SRL_FIFO_0 \Use_UART.TX_FIFO_I 
        (.Bus_RNW_reg(Bus_RNW_reg),
@@ -3483,13 +3580,13 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .Q_0(Q_0),
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA),
-        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .\Use_BSCAN.command_reg[0] (\Use_UART.tdo_reg[4]_i_2_n_0 ),
+        .\Use_BSCAN.command_reg[0]_0 (\Use_UART.tdo_reg[0]_i_3_n_0 ),
         .\Use_UART.fifo_Read_reg (\Use_UART.fifo_Read_reg_n_0 ),
         .\Use_UART.tdo_reg_reg[4] ({Data_Out[4],Data_Out[5]}),
         .\Use_Uart.reset_TX_FIFO_reg (\Use_Uart.reset_TX_FIFO_reg ),
         .\Using_FPGA.Native (\Using_FPGA.Native_0 ),
-        .\command_reg[0] (\Use_UART.tdo_reg[4]_i_2_n_0 ),
-        .\command_reg[0]_0 (\Use_UART.tdo_reg[0]_i_3_n_0 ),
         .data_Exists_I_reg_0(\Using_FPGA.Native ),
         .enable_interrupts(enable_interrupts),
         .out(tx_buffered_2),
@@ -3537,11 +3634,11 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(16'hFB0B)) 
     \Use_UART.execute_i_2 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
-        .I1(data_cmd_noblock),
+        .I1(Q_1),
         .I2(Scan_Reset_Sel),
         .I3(Scan_Reset),
         .O(\Use_UART.execute_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \Use_UART.execute_i_3 
@@ -3605,34 +3702,34 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .D(fifo_Din[6]),
         .Q(fifo_Din[7]));
   LUT6 #(
-    .INIT(64'h0000000000400000)) 
+    .INIT(64'h0000000010000000)) 
     \Use_UART.fifo_Read_i_1 
        (.I0(\Use_UART.execute_i_3_n_0 ),
-        .I1(command[6]),
-        .I2(command[7]),
-        .I3(execute_3),
-        .I4(execute_2),
+        .I1(execute_3),
+        .I2(execute_2),
+        .I3(command[6]),
+        .I4(command[7]),
         .I5(\Use_UART.fifo_Write_i_2_n_0 ),
-        .O(fifo_Read1_out));
+        .O(fifo_Read2_out));
   FDRE #(
     .INIT(1'b0)) 
     \Use_UART.fifo_Read_reg 
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(fifo_Read1_out),
+        .D(fifo_Read2_out),
         .Q(\Use_UART.fifo_Read_reg_n_0 ),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h0000000000100000)) 
     \Use_UART.fifo_Write_i_1 
        (.I0(\Use_UART.execute_i_3_n_0 ),
-        .I1(command[6]),
-        .I2(command[7]),
-        .I3(execute_3),
-        .I4(execute_2),
+        .I1(execute_3),
+        .I2(execute_2),
+        .I3(command[6]),
+        .I4(command[7]),
         .I5(\Use_UART.fifo_Write_i_2_n_0 ),
-        .O(fifo_Write3_out));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+        .O(fifo_Write4_out));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \Use_UART.fifo_Write_i_2 
@@ -3646,7 +3743,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     \Use_UART.fifo_Write_reg 
        (.C(S_AXI_ACLK),
         .CE(1'b1),
-        .D(fifo_Write3_out),
+        .D(fifo_Write4_out),
         .Q(\Use_UART.fifo_Write_reg_n_0 ),
         .R(1'b0));
   LUT6 #(
@@ -3657,9 +3754,9 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I2(command[6]),
         .I3(command[2]),
         .I4(\Use_UART.tdo_reg[0]_i_4_n_0 ),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .O(\Use_UART.tdo_reg[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \Use_UART.tdo_reg[0]_i_4 
@@ -3670,7 +3767,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
   LUT6 #(
     .INIT(64'h0000000000000200)) 
     \Use_UART.tdo_reg[4]_i_2 
-       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+       (.I0(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I1(command[0]),
         .I2(\Use_UART.execute_i_3_n_0 ),
         .I3(command[6]),
@@ -3767,24 +3864,15 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_37),
+        .D(\Use_BSCAN.FDC_I_n_37 ),
         .Q(tx_buffered));
-  LUT5 #(
-    .INIT(32'h00000008)) 
-    \command[0]_i_1 
-       (.I0(sel),
-        .I1(\Use_BSCAN.PORT_Selector_reg[3] [0]),
-        .I2(\Use_BSCAN.PORT_Selector_reg[3] [1]),
-        .I3(\Use_BSCAN.PORT_Selector_reg[3] [3]),
-        .I4(\Use_BSCAN.PORT_Selector_reg[3] [2]),
-        .O(\command[0]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \command_1_reg[0] 
        (.C(CLK),
         .CE(command_10),
         .CLR(AR),
-        .D(p_1_in_1),
+        .D(p_1_in_3),
         .Q(command_1[0]));
   FDCE #(
     .INIT(1'b0)) 
@@ -3808,7 +3896,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
        (.C(CLK),
         .CE(command_10),
         .CLR(AR),
-        .D(p_0_in_2),
+        .D(p_0_in_4),
         .Q(command_1[3]));
   FDCE #(
     .INIT(1'b0)) 
@@ -3844,93 +3932,36 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .Q(command_1[7]));
   FDCE #(
     .INIT(1'b0)) 
-    \command_reg[0] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[0]),
-        .Q(command[0]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[1] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[1]),
-        .Q(command[1]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[2] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[2]),
-        .Q(command[2]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[3] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[3]),
-        .Q(command[3]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[4] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[4]),
-        .Q(command[4]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[5] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[5]),
-        .Q(command[5]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[6] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[6]),
-        .Q(command[6]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \command_reg[7] 
-       (.C(command_regn_0_0),
-        .CE(\command[0]_i_1_n_0 ),
-        .CLR(AR),
-        .D(command_1[7]),
-        .Q(command[7]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    command_regi_0
-       (.I0(CLK),
-        .O(command_regn_0_0));
-  FDCE #(
-    .INIT(1'b0)) 
     \completion_ctrl_reg[0] 
        (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
-        .D(FDC_I_n_35),
+        .D(\Use_BSCAN.FDC_I_n_38 ),
         .Q(completion_ctrl));
-  LUT3 #(
-    .INIT(8'h74)) 
+  LUT5 #(
+    .INIT(32'hFEFFFFFF)) 
     sel_n_i_1
-       (.I0(\command[0]_i_1_n_0 ),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
-        .I2(sel_n),
-        .O(sel_n_i_1_n_0));
-  FDPE sel_n_reg
+       (.I0(\Use_BSCAN.PORT_Selector_reg[3] [2]),
+        .I1(\Use_BSCAN.PORT_Selector_reg[3] [3]),
+        .I2(\Use_BSCAN.PORT_Selector_reg[3] [1]),
+        .I3(\Use_BSCAN.PORT_Selector_reg[3] [0]),
+        .I4(sel),
+        .O(sel_n0));
+  LUT4 #(
+    .INIT(16'hF444)) 
+    sel_n_i_2
+       (.I0(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .I1(CLK),
+        .I2(Scan_Reset_Sel),
+        .I3(Scan_Reset),
+        .O(sel_reset));
+  FDPE #(
+    .INIT(1'b1)) 
+    sel_n_reg
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .CE(1'b1),
-        .D(sel_n_i_1_n_0),
-        .PRE(AR),
+        .CE(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .D(sel_n0),
+        .PRE(sel_reset),
         .Q(sel_n));
   FDCE #(
     .INIT(1'b0)) 
@@ -3944,26 +3975,26 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
     .INIT(8'h48)) 
     \shift_Count[1]_i_1 
        (.I0(Q),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I2(A1),
         .O(p_0_in__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h7080)) 
     \shift_Count[2]_i_1 
        (.I0(A1),
         .I1(Q),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I2(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I3(A2),
         .O(p_0_in__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h7F008000)) 
     \shift_Count[3]_i_1 
        (.I0(A2),
         .I1(Q),
         .I2(A1),
-        .I3(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I3(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I4(A3),
         .O(p_0_in__1[3]));
   LUT6 #(
@@ -3973,7 +4004,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I1(A1),
         .I2(Q),
         .I3(A2),
-        .I4(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I4(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .I5(shift_Count_reg__0),
         .O(p_0_in__1[4]));
   FDCE #(
@@ -4024,7 +4055,7 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .I2(\Use_BSCAN.PORT_Selector_reg[3] [1]),
         .I3(\Use_BSCAN.PORT_Selector_reg[3] [0]),
         .I4(sel),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
         .O(tdi_shifter0));
   FDCE #(
     .INIT(1'b0)) 
@@ -4033,14 +4064,14 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .CE(tdi_shifter0),
         .CLR(AR),
         .D(Dbg_TDI_31),
-        .Q(p_1_in_1));
+        .Q(p_1_in_3));
   FDCE #(
     .INIT(1'b0)) 
     \tdi_shifter_reg[1] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(tdi_shifter0),
         .CLR(AR),
-        .D(p_1_in_1),
+        .D(p_1_in_3),
         .Q(\tdi_shifter_reg_n_0_[1] ));
   FDCE #(
     .INIT(1'b0)) 
@@ -4057,14 +4088,14 @@ module module_ads7056_mdm_1_0_JTAG_CONTROL
         .CE(tdi_shifter0),
         .CLR(AR),
         .D(\tdi_shifter_reg_n_0_[2] ),
-        .Q(p_0_in_2));
+        .Q(p_0_in_4));
   FDCE #(
     .INIT(1'b0)) 
     \tdi_shifter_reg[4] 
        (.C(\Use_BSCAN.PORT_Selector_reg[0] ),
         .CE(tdi_shifter0),
         .CLR(AR),
-        .D(p_0_in_2),
+        .D(p_0_in_4),
         .Q(\tdi_shifter_reg_n_0_[4] ));
   FDCE #(
     .INIT(1'b0)) 
@@ -4098,66 +4129,66 @@ module module_ads7056_mdm_1_0_MB_BSCANE2
     drck_i,
     Ext_JTAG_RESET,
     sel,
-    \Use_Serial_Unified_Completion.completion_status_reg[15] ,
+    \Use_Serial_Unified_Completion.completion_status_reg[10] ,
     Dbg_TDI_31,
-    Ext_JTAG_UPDATE,
+    Dbg_Update_31,
+    \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ,
+    \Use_Serial_Unified_Completion.count_reg[5] ,
     \Use_UART.tdo_reg_reg[7] ,
     shift_n_reset,
     AR,
-    \Use_Serial_Unified_Completion.count_reg[5] ,
+    \Use_Serial_Unified_Completion.count_reg[5]_0 ,
     \shift_Count_reg[0] ,
     D,
-    \Use_Serial_Unified_Completion.completion_status_reg[15]_0 ,
-    \Use_Serial_Unified_Completion.count_reg[0]__0 ,
     tdo,
-    Scan_Reset,
-    Scan_Reset_Sel,
-    \Use_Serial_Unified_Completion.count_reg[5]_0 ,
-    Q,
-    \Use_Serial_Unified_Completion.sample_1_reg[15] ,
     p_54_out__0,
-    p_31_out__0);
+    p_31_out__0,
+    Scan_Reset_Sel,
+    Scan_Reset,
+    \Use_Serial_Unified_Completion.count_reg[5]_1 ,
+    Q,
+    \Use_Serial_Unified_Completion.sample_1_reg[15] );
   output Dbg_Capture_0;
   output drck_i;
   output Ext_JTAG_RESET;
   output sel;
-  output \Use_Serial_Unified_Completion.completion_status_reg[15] ;
+  output \Use_Serial_Unified_Completion.completion_status_reg[10] ;
   output Dbg_TDI_31;
-  output Ext_JTAG_UPDATE;
+  output Dbg_Update_31;
+  output [0:0]\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
+  output [0:0]\Use_Serial_Unified_Completion.count_reg[5] ;
   output [0:0]\Use_UART.tdo_reg_reg[7] ;
   output shift_n_reset;
   output [0:0]AR;
-  output [0:0]\Use_Serial_Unified_Completion.count_reg[5] ;
+  output [0:0]\Use_Serial_Unified_Completion.count_reg[5]_0 ;
   output [0:0]\shift_Count_reg[0] ;
   output [0:0]D;
-  output [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
-  output [0:0]\Use_Serial_Unified_Completion.count_reg[0]__0 ;
   input tdo;
-  input Scan_Reset;
-  input Scan_Reset_Sel;
-  input [0:0]\Use_Serial_Unified_Completion.count_reg[5]_0 ;
-  input [0:0]Q;
-  input [0:0]\Use_Serial_Unified_Completion.sample_1_reg[15] ;
   input p_54_out__0;
   input p_31_out__0;
+  input Scan_Reset_Sel;
+  input Scan_Reset;
+  input [0:0]\Use_Serial_Unified_Completion.count_reg[5]_1 ;
+  input [0:0]Q;
+  input [0:0]\Use_Serial_Unified_Completion.sample_1_reg[15] ;
 
   wire [0:0]AR;
   wire [0:0]D;
   wire Dbg_Capture_0;
   wire Dbg_TDI_31;
+  wire Dbg_Update_31;
   wire Ext_JTAG_RESET;
-  wire Ext_JTAG_UPDATE;
   wire [0:0]Q;
   wire Scan_Reset;
   wire Scan_Reset_Sel;
   wire \Use_E2.BSCANE2_I_n_3 ;
   wire \Use_E2.BSCANE2_I_n_6 ;
   wire \Use_E2.BSCANE2_I_n_8 ;
-  wire \Use_Serial_Unified_Completion.completion_status_reg[15] ;
-  wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
-  wire [0:0]\Use_Serial_Unified_Completion.count_reg[0]__0 ;
+  wire \Use_Serial_Unified_Completion.completion_status_reg[10] ;
+  wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
   wire [0:0]\Use_Serial_Unified_Completion.count_reg[5] ;
   wire [0:0]\Use_Serial_Unified_Completion.count_reg[5]_0 ;
+  wire [0:0]\Use_Serial_Unified_Completion.count_reg[5]_1 ;
   wire [0:0]\Use_Serial_Unified_Completion.sample_1_reg[15] ;
   wire [0:0]\Use_UART.tdo_reg_reg[7] ;
   wire drck_i;
@@ -4170,19 +4201,19 @@ module module_ads7056_mdm_1_0_MB_BSCANE2
 
   (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
-    .INIT(8'h8B)) 
+    .INIT(8'hD1)) 
     \Use_BSCAN.Config_Reg[30]_i_1 
-       (.I0(Scan_Reset),
+       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
         .I1(Scan_Reset_Sel),
-        .I2(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
+        .I2(Scan_Reset),
         .O(shift_n_reset));
   (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
-    .INIT(8'h8B)) 
+    .INIT(8'hD1)) 
     \Use_BSCAN.PORT_Selector[3]_i_1 
-       (.I0(Scan_Reset),
+       (.I0(sel),
         .I1(Scan_Reset_Sel),
-        .I2(sel),
+        .I2(Scan_Reset),
         .O(AR));
   (* box_type = "PRIMITIVE" *) 
   BSCANE2 #(
@@ -4194,52 +4225,54 @@ module module_ads7056_mdm_1_0_MB_BSCANE2
         .RESET(Ext_JTAG_RESET),
         .RUNTEST(\Use_E2.BSCANE2_I_n_3 ),
         .SEL(sel),
-        .SHIFT(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
+        .SHIFT(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
         .TCK(\Use_E2.BSCANE2_I_n_6 ),
         .TDI(Dbg_TDI_31),
         .TDO(tdo),
         .TMS(\Use_E2.BSCANE2_I_n_8 ),
-        .UPDATE(Ext_JTAG_UPDATE));
+        .UPDATE(Dbg_Update_31));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
-    .INIT(8'hA8)) 
+    .INIT(8'hE0)) 
     \Use_Serial_Unified_Completion.completion_status[15]_i_1 
-       (.I0(p_54_out__0),
+       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
         .I1(Dbg_Capture_0),
-        .I2(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
-        .O(\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ));
+        .I2(p_54_out__0),
+        .O(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Use_Serial_Unified_Completion.completion_status[15]_i_2 
        (.I0(Dbg_Capture_0),
         .I1(\Use_Serial_Unified_Completion.sample_1_reg[15] ),
         .O(D));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT3 #(
-    .INIT(8'hA8)) 
-    \Use_Serial_Unified_Completion.count[0]__0_i_1 
-       (.I0(p_31_out__0),
-        .I1(Dbg_Capture_0),
-        .I2(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
-        .O(\Use_Serial_Unified_Completion.count_reg[0]__0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT3 #(
+    .INIT(8'hE0)) 
+    \Use_Serial_Unified_Completion.count[0]__0_i_1 
+       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
+        .I1(Dbg_Capture_0),
+        .I2(p_31_out__0),
+        .O(\Use_Serial_Unified_Completion.count_reg[5] ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \Use_Serial_Unified_Completion.count[5]_i_1 
        (.I0(Dbg_Capture_0),
-        .I1(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .O(\Use_Serial_Unified_Completion.count_reg[5] ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+        .I1(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
+        .O(\Use_Serial_Unified_Completion.count_reg[5]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \Use_UART.tdo_reg[0]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
-        .I1(Dbg_Capture_0),
+       (.I0(Dbg_Capture_0),
+        .I1(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
         .O(\Use_UART.tdo_reg_reg[7] ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_Count[0]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[15] ),
+       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] ),
         .I1(Q),
         .O(\shift_Count_reg[0] ));
 endmodule
@@ -4262,245 +4295,229 @@ endmodule
 
 (* ORIG_REF_NAME = "MB_FDC_1" *) 
 module module_ads7056_mdm_1_0_MB_FDC_1
-   (data_cmd_noblock,
-    D_0,
-    E,
+   (Q_1,
+    D_2,
     D,
     \Use_Serial_Unified_Completion.completion_block_reg ,
-    sample_1,
-    \Use_Serial_Unified_Completion.completion_status_reg[0] ,
+    E,
     \Use_Serial_Unified_Completion.sample_reg[15] ,
+    \Use_Serial_Unified_Completion.sample_1_reg[10] ,
     p_31_out__0,
+    set_Ext_BRK_reg,
     Debug_Rst_i0,
     shifting_Data1__0,
+    \Use_Serial_Unified_Completion.mb_instr_error_reg ,
     Dbg_Reg_En_0,
     CE,
     \command_1_reg[7] ,
     \Use_Serial_Unified_Completion.mb_instr_overrun_reg ,
-    \Use_Serial_Unified_Completion.mb_instr_error_reg ,
+    \Use_Serial_Unified_Completion.mb_instr_error_reg_0 ,
     \Use_Serial_Unified_Completion.mb_data_overrun_reg ,
-    \completion_ctrl_reg[0] ,
     \Use_Serial_Unified_Completion.completion_block_reg_0 ,
     \Use_UART.tx_buffered_reg ,
+    \completion_ctrl_reg[0] ,
     CLK,
     sel_n,
-    \Use_Serial_Unified_Completion.count_reg[1] ,
-    \Use_Serial_Unified_Completion.count_reg[0] ,
-    \command_reg[0] ,
-    sync,
-    \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[5] ,
     Q,
-    \Use_Serial_Unified_Completion.completion_status_reg[10] ,
     \Use_Serial_Unified_Completion.completion_status_reg[2] ,
     \Use_Serial_Unified_Completion.completion_status_reg[3] ,
     \Use_Serial_Unified_Completion.completion_status_reg[4] ,
     \Use_Serial_Unified_Completion.completion_status_reg[5] ,
     \Use_Serial_Unified_Completion.completion_status_reg[7] ,
     \Use_Serial_Unified_Completion.completion_block_reg_1 ,
+    \Use_BSCAN.PORT_Selector_reg[0] ,
     \Use_BSCAN.PORT_Selector_reg[0]_0 ,
     \Use_Serial_Unified_Completion.sample_reg[15]_0 ,
-    \command_reg[2] ,
+    \Use_BSCAN.command_reg[2] ,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.command_reg[0]_0 ,
     \tdi_shifter_reg[0] ,
     \Use_BSCAN.PORT_Selector_reg[3] ,
     sel,
     Dbg_TDO_0,
+    \Use_Serial_Unified_Completion.count_reg[1] ,
+    \Use_Serial_Unified_Completion.count_reg[1]_0 ,
     \Use_Serial_Unified_Completion.count_reg[5] ,
-    completion_ctrl,
     p_3_out__10,
+    completion_ctrl,
     in0);
-  output data_cmd_noblock;
-  output D_0;
-  output [0:0]E;
+  output Q_1;
+  output D_2;
   output [9:0]D;
   output \Use_Serial_Unified_Completion.completion_block_reg ;
-  output sample_1;
-  output [0:0]\Use_Serial_Unified_Completion.completion_status_reg[0] ;
+  output [0:0]E;
   output [2:0]\Use_Serial_Unified_Completion.sample_reg[15] ;
+  output [0:0]\Use_Serial_Unified_Completion.sample_1_reg[10] ;
   output p_31_out__0;
+  output set_Ext_BRK_reg;
   output Debug_Rst_i0;
   output shifting_Data1__0;
+  output \Use_Serial_Unified_Completion.mb_instr_error_reg ;
   output [0:7]Dbg_Reg_En_0;
   output CE;
   output [0:0]\command_1_reg[7] ;
   output \Use_Serial_Unified_Completion.mb_instr_overrun_reg ;
-  output \Use_Serial_Unified_Completion.mb_instr_error_reg ;
+  output \Use_Serial_Unified_Completion.mb_instr_error_reg_0 ;
   output \Use_Serial_Unified_Completion.mb_data_overrun_reg ;
-  output \completion_ctrl_reg[0] ;
   output \Use_Serial_Unified_Completion.completion_block_reg_0 ;
   output \Use_UART.tx_buffered_reg ;
+  output \completion_ctrl_reg[0] ;
   input CLK;
   input sel_n;
-  input \Use_Serial_Unified_Completion.count_reg[1] ;
-  input \Use_Serial_Unified_Completion.count_reg[0] ;
-  input \command_reg[0] ;
-  input sync;
-  input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[5] ;
-  input [7:0]Q;
-  input [10:0]\Use_Serial_Unified_Completion.completion_status_reg[10] ;
+  input [10:0]Q;
   input \Use_Serial_Unified_Completion.completion_status_reg[2] ;
   input \Use_Serial_Unified_Completion.completion_status_reg[3] ;
   input \Use_Serial_Unified_Completion.completion_status_reg[4] ;
   input \Use_Serial_Unified_Completion.completion_status_reg[5] ;
   input \Use_Serial_Unified_Completion.completion_status_reg[7] ;
   input \Use_Serial_Unified_Completion.completion_block_reg_1 ;
+  input \Use_BSCAN.PORT_Selector_reg[0] ;
   input \Use_BSCAN.PORT_Selector_reg[0]_0 ;
   input [5:0]\Use_Serial_Unified_Completion.sample_reg[15]_0 ;
-  input \command_reg[2] ;
+  input \Use_BSCAN.command_reg[2] ;
+  input [7:0]\Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.command_reg[0]_0 ;
   input [7:0]\tdi_shifter_reg[0] ;
   input [3:0]\Use_BSCAN.PORT_Selector_reg[3] ;
   input sel;
   input Dbg_TDO_0;
+  input \Use_Serial_Unified_Completion.count_reg[1] ;
+  input \Use_Serial_Unified_Completion.count_reg[1]_0 ;
   input \Use_Serial_Unified_Completion.count_reg[5] ;
-  input completion_ctrl;
   input p_3_out__10;
+  input completion_ctrl;
   input in0;
 
   wire CE;
   wire CLK;
   wire [9:0]D;
-  wire D_0;
+  wire D_2;
   wire [0:7]Dbg_Reg_En_0;
-  wire Dbg_Shift_31_INST_0_i_2_n_0;
   wire Dbg_TDO_0;
   wire Debug_Rst_i0;
   wire [0:0]E;
-  wire [7:0]Q;
+  wire [10:0]Q;
+  wire Q_1;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
   wire \Use_BSCAN.PORT_Selector_reg[0]_0 ;
   wire [3:0]\Use_BSCAN.PORT_Selector_reg[3] ;
+  wire [7:0]\Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
+  wire \Use_BSCAN.command_reg[2] ;
   wire \Use_Serial_Unified_Completion.completion_block_reg ;
   wire \Use_Serial_Unified_Completion.completion_block_reg_0 ;
   wire \Use_Serial_Unified_Completion.completion_block_reg_1 ;
-  wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[0] ;
-  wire [10:0]\Use_Serial_Unified_Completion.completion_status_reg[10] ;
   wire \Use_Serial_Unified_Completion.completion_status_reg[2] ;
   wire \Use_Serial_Unified_Completion.completion_status_reg[3] ;
   wire \Use_Serial_Unified_Completion.completion_status_reg[4] ;
   wire \Use_Serial_Unified_Completion.completion_status_reg[5] ;
   wire \Use_Serial_Unified_Completion.completion_status_reg[7] ;
-  wire \Use_Serial_Unified_Completion.count_reg[0] ;
   wire \Use_Serial_Unified_Completion.count_reg[1] ;
+  wire \Use_Serial_Unified_Completion.count_reg[1]_0 ;
   wire \Use_Serial_Unified_Completion.count_reg[5] ;
   wire \Use_Serial_Unified_Completion.mb_data_overrun_reg ;
-  wire \Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0 ;
   wire \Use_Serial_Unified_Completion.mb_instr_error_reg ;
-  wire \Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0 ;
+  wire \Use_Serial_Unified_Completion.mb_instr_error_reg_0 ;
   wire \Use_Serial_Unified_Completion.mb_instr_overrun_reg ;
+  wire \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ;
+  wire [0:0]\Use_Serial_Unified_Completion.sample_1_reg[10] ;
   wire [2:0]\Use_Serial_Unified_Completion.sample_reg[15] ;
   wire [5:0]\Use_Serial_Unified_Completion.sample_reg[15]_0 ;
   wire \Use_UART.tx_buffered_i_2_n_0 ;
   wire \Use_UART.tx_buffered_reg ;
   wire \Using_FPGA.Native_i_2_n_0 ;
   wire [0:0]\command_1_reg[7] ;
-  wire \command_reg[0] ;
-  wire \command_reg[2] ;
-  wire \command_reg[5] ;
   wire completion_ctrl;
   wire completion_ctrl0;
   wire \completion_ctrl_reg[0] ;
-  wire data_cmd_noblock;
   wire in0;
   wire p_31_out__0;
   wire p_3_out__10;
-  wire sample_1;
   wire sel;
   wire sel_n;
+  wire set_Ext_BRK_reg;
   wire shifting_Data1__0;
-  wire sync;
   wire [7:0]\tdi_shifter_reg[0] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[0]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[7]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [7]),
         .O(Dbg_Reg_En_0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[1]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[6]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [6]),
         .O(Dbg_Reg_En_0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[2]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[5]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [5]),
         .O(Dbg_Reg_En_0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[3]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[4]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [4]),
         .O(Dbg_Reg_En_0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[4]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[3]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [3]),
         .O(Dbg_Reg_En_0[4]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[5]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[2]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [2]),
         .O(Dbg_Reg_En_0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[6]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[1]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [1]),
         .O(Dbg_Reg_En_0[6]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Dbg_Reg_En_0[7]_INST_0 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I1(data_cmd_noblock),
-        .I2(Q[0]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [0]),
         .O(Dbg_Reg_En_0[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFBFF00000000)) 
-    Dbg_Shift_31_INST_0
-       (.I0(\command_reg[5] ),
-        .I1(Dbg_Shift_31_INST_0_i_2_n_0),
-        .I2(Q[1]),
-        .I3(\command_reg[0] ),
-        .I4(sync),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     Dbg_Shift_31_INST_0_i_2
-       (.I0(data_cmd_noblock),
+       (.I0(Q_1),
         .I1(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .O(Dbg_Shift_31_INST_0_i_2_n_0));
+        .O(set_Ext_BRK_reg));
   LUT6 #(
     .INIT(64'h0002000000000000)) 
     Ext_NM_BRK_i_i_1
-       (.I0(Dbg_Shift_31_INST_0_i_2_n_0),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[3]),
-        .I5(\command_reg[0] ),
+       (.I0(set_Ext_BRK_reg),
+        .I1(\Use_BSCAN.command_reg[0] [0]),
+        .I2(\Use_BSCAN.command_reg[0] [1]),
+        .I3(\Use_BSCAN.command_reg[0] [2]),
+        .I4(\Use_BSCAN.command_reg[0] [3]),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(Debug_Rst_i0));
   LUT6 #(
     .INIT(64'hDFDFDFDF03000000)) 
@@ -4512,156 +4529,157 @@ module module_ads7056_mdm_1_0_MB_FDC_1
         .I4(completion_ctrl),
         .I5(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
         .O(\Use_Serial_Unified_Completion.completion_block_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h8F88)) 
+    .INIT(16'h888F)) 
     \Use_Serial_Unified_Completion.completion_status[0]_i_1 
        (.I0(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I1(\Use_Serial_Unified_Completion.completion_status_reg[10] [1]),
-        .I2(\Use_Serial_Unified_Completion.completion_status_reg[10] [0]),
-        .I3(sample_1),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h00200000)) 
     \Use_Serial_Unified_Completion.completion_status[15]_i_3 
-       (.I0(data_cmd_noblock),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(\command_reg[2] ),
+       (.I0(Q_1),
+        .I1(\Use_BSCAN.command_reg[0] [2]),
+        .I2(\Use_BSCAN.command_reg[0] [1]),
+        .I3(\Use_BSCAN.command_reg[0] [0]),
+        .I4(\Use_BSCAN.command_reg[2] ),
         .O(\Use_Serial_Unified_Completion.completion_block_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'hFF606060)) 
+    .INIT(32'hFF060606)) 
     \Use_Serial_Unified_Completion.completion_status[1]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [1]),
-        .I1(\Use_Serial_Unified_Completion.completion_status_reg[10] [0]),
-        .I2(sample_1),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [2]),
+        .I4(Q[2]),
         .O(D[1]));
   LUT6 #(
-    .INIT(64'hFFFF6A006A006A00)) 
+    .INIT(64'hFFFF006A006A006A)) 
     \Use_Serial_Unified_Completion.completion_status[2]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [2]),
-        .I1(\Use_Serial_Unified_Completion.completion_status_reg[10] [1]),
-        .I2(\Use_Serial_Unified_Completion.completion_status_reg[10] [0]),
-        .I3(sample_1),
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I4(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I5(\Use_Serial_Unified_Completion.completion_status_reg[10] [3]),
+        .I5(Q[3]),
         .O(D[2]));
   LUT5 #(
-    .INIT(32'hFF606060)) 
+    .INIT(32'hFF060606)) 
     \Use_Serial_Unified_Completion.completion_status[3]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [3]),
+       (.I0(Q[3]),
         .I1(\Use_Serial_Unified_Completion.completion_status_reg[2] ),
-        .I2(sample_1),
+        .I2(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [4]),
+        .I4(Q[4]),
         .O(D[3]));
   LUT5 #(
-    .INIT(32'hFF606060)) 
+    .INIT(32'hFF060606)) 
     \Use_Serial_Unified_Completion.completion_status[4]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [4]),
+       (.I0(Q[4]),
         .I1(\Use_Serial_Unified_Completion.completion_status_reg[3] ),
-        .I2(sample_1),
+        .I2(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [5]),
+        .I4(Q[5]),
         .O(D[4]));
   LUT5 #(
-    .INIT(32'hFF606060)) 
+    .INIT(32'hFF060606)) 
     \Use_Serial_Unified_Completion.completion_status[5]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [5]),
+       (.I0(Q[5]),
         .I1(\Use_Serial_Unified_Completion.completion_status_reg[4] ),
-        .I2(sample_1),
+        .I2(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [6]),
+        .I4(Q[6]),
         .O(D[5]));
   LUT5 #(
-    .INIT(32'hFF484848)) 
+    .INIT(32'hFF121212)) 
     \Use_Serial_Unified_Completion.completion_status[6]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [6]),
-        .I1(sample_1),
+       (.I0(Q[6]),
+        .I1(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I2(\Use_Serial_Unified_Completion.completion_status_reg[5] ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [7]),
+        .I4(Q[7]),
         .O(D[6]));
   LUT6 #(
-    .INIT(64'hFFFF488848884888)) 
+    .INIT(64'hFFFF122212221222)) 
     \Use_Serial_Unified_Completion.completion_status[7]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [7]),
-        .I1(sample_1),
+       (.I0(Q[7]),
+        .I1(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I2(\Use_Serial_Unified_Completion.completion_status_reg[5] ),
-        .I3(\Use_Serial_Unified_Completion.completion_status_reg[10] [6]),
+        .I3(Q[6]),
         .I4(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I5(\Use_Serial_Unified_Completion.completion_status_reg[10] [8]),
+        .I5(Q[8]),
         .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hFF484848)) 
+    .INIT(32'hFF121212)) 
     \Use_Serial_Unified_Completion.completion_status[8]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [8]),
-        .I1(sample_1),
+       (.I0(Q[8]),
+        .I1(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I2(\Use_Serial_Unified_Completion.completion_status_reg[7] ),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(\Use_Serial_Unified_Completion.completion_status_reg[10] [9]),
+        .I4(Q[9]),
         .O(D[8]));
   LUT6 #(
-    .INIT(64'h00FF0003AA00AA00)) 
+    .INIT(64'h00F100F1FF000000)) 
     \Use_Serial_Unified_Completion.completion_status[9]_i_1 
-       (.I0(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I1(data_cmd_noblock),
-        .I2(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
+       (.I0(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
+        .I1(Q_1),
+        .I2(completion_ctrl0),
         .I3(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I4(completion_ctrl0),
+        .I4(\Use_BSCAN.PORT_Selector_reg[0] ),
         .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
-        .O(\Use_Serial_Unified_Completion.completion_status_reg[0] ));
+        .O(E));
   LUT6 #(
-    .INIT(64'hFFFF488848884888)) 
+    .INIT(64'hFFFF122212221222)) 
     \Use_Serial_Unified_Completion.completion_status[9]_i_2 
-       (.I0(\Use_Serial_Unified_Completion.completion_status_reg[10] [9]),
-        .I1(sample_1),
+       (.I0(Q[9]),
+        .I1(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
         .I2(\Use_Serial_Unified_Completion.completion_status_reg[7] ),
-        .I3(\Use_Serial_Unified_Completion.completion_status_reg[10] [8]),
+        .I3(Q[8]),
         .I4(\Use_Serial_Unified_Completion.completion_block_reg ),
-        .I5(\Use_Serial_Unified_Completion.completion_status_reg[10] [10]),
+        .I5(Q[10]),
         .O(D[9]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00800000)) 
     \Use_Serial_Unified_Completion.completion_status[9]_i_3 
-       (.I0(Q[2]),
-        .I1(data_cmd_noblock),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(\command_reg[2] ),
+       (.I0(\Use_BSCAN.command_reg[0] [2]),
+        .I1(Q_1),
+        .I2(\Use_BSCAN.command_reg[0] [0]),
+        .I3(\Use_BSCAN.command_reg[0] [1]),
+        .I4(\Use_BSCAN.command_reg[2] ),
         .O(completion_ctrl0));
   LUT6 #(
     .INIT(64'h0200000000000000)) 
     \Use_Serial_Unified_Completion.count[0]__0_i_3 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[3]),
-        .I3(Dbg_Shift_31_INST_0_i_2_n_0),
-        .I4(Q[1]),
-        .I5(\command_reg[0] ),
+       (.I0(\Use_BSCAN.command_reg[0] [2]),
+        .I1(\Use_BSCAN.command_reg[0] [0]),
+        .I2(\Use_BSCAN.command_reg[0] [3]),
+        .I3(set_Ext_BRK_reg),
+        .I4(\Use_BSCAN.command_reg[0] [1]),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(p_31_out__0));
   LUT6 #(
     .INIT(64'h0000020000000000)) 
     \Use_Serial_Unified_Completion.count[0]_i_2 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[3]),
-        .I3(Dbg_Shift_31_INST_0_i_2_n_0),
-        .I4(Q[1]),
-        .I5(\command_reg[0] ),
+       (.I0(\Use_BSCAN.command_reg[0] [2]),
+        .I1(\Use_BSCAN.command_reg[0] [0]),
+        .I2(\Use_BSCAN.command_reg[0] [3]),
+        .I3(set_Ext_BRK_reg),
+        .I4(\Use_BSCAN.command_reg[0] [1]),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(shifting_Data1__0));
   LUT6 #(
-    .INIT(64'h053F0F3F05000000)) 
+    .INIT(64'h113F333F11000000)) 
     \Use_Serial_Unified_Completion.mb_data_overrun_i_1 
        (.I0(Dbg_TDO_0),
-        .I1(completion_ctrl0),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .I2(completion_ctrl0),
         .I3(p_31_out__0),
         .I4(\Use_Serial_Unified_Completion.count_reg[5] ),
         .I5(\Use_Serial_Unified_Completion.sample_reg[15]_0 [2]),
@@ -4670,99 +4688,85 @@ module module_ads7056_mdm_1_0_MB_FDC_1
     .INIT(64'h0B0B033308080000)) 
     \Use_Serial_Unified_Completion.mb_instr_error_i_1 
        (.I0(Dbg_TDO_0),
-        .I1(\Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.count_reg[1]_0 ),
         .I2(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I3(completion_ctrl0),
         .I4(shifting_Data1__0),
         .I5(\Use_Serial_Unified_Completion.sample_reg[15]_0 [1]),
-        .O(\Use_Serial_Unified_Completion.mb_instr_error_reg ));
-  LUT6 #(
-    .INIT(64'h2000000000000000)) 
-    \Use_Serial_Unified_Completion.mb_instr_error_i_2 
-       (.I0(\Use_Serial_Unified_Completion.count_reg[1] ),
-        .I1(\Use_Serial_Unified_Completion.count_reg[0] ),
-        .I2(\Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0 ),
-        .I3(\command_reg[0] ),
-        .I4(sync),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .O(\Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0 ));
+        .O(\Use_Serial_Unified_Completion.mb_instr_error_reg_0 ));
   LUT6 #(
     .INIT(64'h0B0B033308080000)) 
     \Use_Serial_Unified_Completion.mb_instr_overrun_i_1 
        (.I0(Dbg_TDO_0),
-        .I1(\Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.count_reg[1] ),
         .I2(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .I3(completion_ctrl0),
         .I4(shifting_Data1__0),
         .I5(\Use_Serial_Unified_Completion.sample_reg[15]_0 [0]),
         .O(\Use_Serial_Unified_Completion.mb_instr_overrun_reg ));
   LUT6 #(
-    .INIT(64'h1000000000000000)) 
-    \Use_Serial_Unified_Completion.mb_instr_overrun_i_2 
-       (.I0(\Use_Serial_Unified_Completion.count_reg[1] ),
-        .I1(\Use_Serial_Unified_Completion.count_reg[0] ),
-        .I2(\Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0 ),
-        .I3(\command_reg[0] ),
-        .I4(sync),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .O(\Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0 ));
-  LUT6 #(
     .INIT(64'h0000000400000000)) 
     \Use_Serial_Unified_Completion.mb_instr_overrun_i_3 
-       (.I0(Q[1]),
-        .I1(data_cmd_noblock),
+       (.I0(\Use_BSCAN.command_reg[0] [1]),
+        .I1(Q_1),
         .I2(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I3(Q[3]),
-        .I4(Q[0]),
-        .I5(Q[2]),
-        .O(\Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+        .I3(\Use_BSCAN.command_reg[0] [3]),
+        .I4(\Use_BSCAN.command_reg[0] [0]),
+        .I5(\Use_BSCAN.command_reg[0] [2]),
+        .O(\Use_Serial_Unified_Completion.mb_instr_error_reg ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h8)) 
     \Use_Serial_Unified_Completion.sample[13]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.sample_reg[15]_0 [3]),
-        .I1(sample_1),
+       (.I0(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.sample_reg[15]_0 [3]),
         .O(\Use_Serial_Unified_Completion.sample_reg[15] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h8)) 
     \Use_Serial_Unified_Completion.sample[14]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.sample_reg[15]_0 [4]),
-        .I1(sample_1),
+       (.I0(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.sample_reg[15]_0 [4]),
         .O(\Use_Serial_Unified_Completion.sample_reg[15] [1]));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h8)) 
     \Use_Serial_Unified_Completion.sample[15]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.sample_reg[15]_0 [5]),
-        .I1(sample_1),
+       (.I0(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.sample_reg[15]_0 [5]),
         .O(\Use_Serial_Unified_Completion.sample_reg[15] [2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hDFFFF7FF)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \Use_Serial_Unified_Completion.sample_1[15]_i_1 
-       (.I0(\command_reg[2] ),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(data_cmd_noblock),
-        .I4(Q[2]),
-        .O(sample_1));
+       (.I0(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ),
+        .O(\Use_Serial_Unified_Completion.sample_1_reg[10] ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h20000800)) 
+    \Use_Serial_Unified_Completion.sample_1[15]_i_2 
+       (.I0(\Use_BSCAN.command_reg[2] ),
+        .I1(\Use_BSCAN.command_reg[0] [1]),
+        .I2(\Use_BSCAN.command_reg[0] [0]),
+        .I3(Q_1),
+        .I4(\Use_BSCAN.command_reg[0] [2]),
+        .O(\Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hBF80)) 
     \Use_UART.tx_buffered_i_1 
        (.I0(\tdi_shifter_reg[0] [7]),
         .I1(\Use_UART.tx_buffered_i_2_n_0 ),
-        .I2(\command_reg[0] ),
+        .I2(\Use_BSCAN.command_reg[0]_0 ),
         .I3(in0),
         .O(\Use_UART.tx_buffered_reg ));
   LUT6 #(
     .INIT(64'h0000400000000000)) 
     \Use_UART.tx_buffered_i_2 
-       (.I0(Q[0]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[3]),
+       (.I0(\Use_BSCAN.command_reg[0] [0]),
+        .I1(\Use_BSCAN.command_reg[0] [2]),
+        .I2(\Use_BSCAN.command_reg[0] [1]),
+        .I3(\Use_BSCAN.command_reg[0] [3]),
         .I4(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I5(data_cmd_noblock),
+        .I5(Q_1),
         .O(\Use_UART.tx_buffered_i_2_n_0 ));
   (* XILINX_LEGACY_PRIM = "FDC_1" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -4773,8 +4777,8 @@ module module_ads7056_mdm_1_0_MB_FDC_1
        (.C(CLK),
         .CE(1'b1),
         .CLR(sel_n),
-        .D(D_0),
-        .Q(data_cmd_noblock));
+        .D(D_2),
+        .Q(Q_1));
   LUT5 #(
     .INIT(32'h00000800)) 
     \Using_FPGA.Native_i_1 
@@ -4784,12 +4788,12 @@ module module_ads7056_mdm_1_0_MB_FDC_1
         .I3(\tdi_shifter_reg[0] [0]),
         .I4(\tdi_shifter_reg[0] [1]),
         .O(CE));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \Using_FPGA.Native_i_1__3 
-       (.I0(data_cmd_noblock),
-        .O(D_0));
+       (.I0(Q_1),
+        .O(D_2));
   LUT6 #(
     .INIT(64'h0000002000000000)) 
     \Using_FPGA.Native_i_2 
@@ -4798,7 +4802,7 @@ module module_ads7056_mdm_1_0_MB_FDC_1
         .I2(\tdi_shifter_reg[0] [6]),
         .I3(\tdi_shifter_reg[0] [7]),
         .I4(\Use_Serial_Unified_Completion.completion_block_reg_1 ),
-        .I5(data_cmd_noblock),
+        .I5(Q_1),
         .O(\Using_FPGA.Native_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0000000001000000)) 
@@ -4808,7 +4812,7 @@ module module_ads7056_mdm_1_0_MB_FDC_1
         .I2(\Use_BSCAN.PORT_Selector_reg[3] [1]),
         .I3(\Use_BSCAN.PORT_Selector_reg[3] [0]),
         .I4(sel),
-        .I5(Dbg_Shift_31_INST_0_i_2_n_0),
+        .I5(set_Ext_BRK_reg),
         .O(\command_1_reg[7] ));
   LUT3 #(
     .INIT(8'hB8)) 
@@ -4852,19 +4856,82 @@ endmodule
 (* ORIG_REF_NAME = "MB_FDRE_1" *) 
 module module_ads7056_mdm_1_0_MB_FDRE_1
    (sync,
-    D_0,
+    \Use_Serial_Unified_Completion.mb_instr_error_reg ,
+    \Use_Serial_Unified_Completion.mb_instr_overrun_reg ,
+    E,
+    D_2,
     CE,
-    \Use_BSCAN.PORT_Selector_reg[0] );
+    \Use_BSCAN.PORT_Selector_reg[0] ,
+    \Use_Serial_Unified_Completion.count_reg[1] ,
+    \Use_Serial_Unified_Completion.count_reg[0] ,
+    \Use_BSCAN.command_reg[6] ,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.PORT_Selector_reg[0]_0 ,
+    \Use_BSCAN.command_reg[5] ,
+    \Using_FPGA.Native_0 ,
+    Q);
   output sync;
-  input D_0;
+  output \Use_Serial_Unified_Completion.mb_instr_error_reg ;
+  output \Use_Serial_Unified_Completion.mb_instr_overrun_reg ;
+  output [0:0]E;
+  input D_2;
   input CE;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
+  input \Use_Serial_Unified_Completion.count_reg[1] ;
+  input \Use_Serial_Unified_Completion.count_reg[0] ;
+  input \Use_BSCAN.command_reg[6] ;
+  input \Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.PORT_Selector_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[5] ;
+  input \Using_FPGA.Native_0 ;
+  input [0:0]Q;
 
   wire CE;
-  wire D_0;
+  wire D_2;
+  wire [0:0]E;
+  wire [0:0]Q;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.PORT_Selector_reg[0]_0 ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[5] ;
+  wire \Use_BSCAN.command_reg[6] ;
+  wire \Use_Serial_Unified_Completion.count_reg[0] ;
+  wire \Use_Serial_Unified_Completion.count_reg[1] ;
+  wire \Use_Serial_Unified_Completion.mb_instr_error_reg ;
+  wire \Use_Serial_Unified_Completion.mb_instr_overrun_reg ;
+  wire \Using_FPGA.Native_0 ;
   wire sync;
 
+  LUT6 #(
+    .INIT(64'hFFEFFFFF00000000)) 
+    Dbg_Shift_31_INST_0
+       (.I0(sync),
+        .I1(\Use_BSCAN.command_reg[5] ),
+        .I2(\Using_FPGA.Native_0 ),
+        .I3(Q),
+        .I4(\Use_BSCAN.command_reg[0] ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .O(E));
+  LUT6 #(
+    .INIT(64'h2000000000000000)) 
+    \Use_Serial_Unified_Completion.mb_instr_error_i_2 
+       (.I0(\Use_Serial_Unified_Completion.count_reg[1] ),
+        .I1(\Use_Serial_Unified_Completion.count_reg[0] ),
+        .I2(sync),
+        .I3(\Use_BSCAN.command_reg[6] ),
+        .I4(\Use_BSCAN.command_reg[0] ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .O(\Use_Serial_Unified_Completion.mb_instr_error_reg ));
+  LUT6 #(
+    .INIT(64'h1000000000000000)) 
+    \Use_Serial_Unified_Completion.mb_instr_overrun_i_2 
+       (.I0(\Use_Serial_Unified_Completion.count_reg[1] ),
+        .I1(\Use_Serial_Unified_Completion.count_reg[0] ),
+        .I2(sync),
+        .I3(\Use_BSCAN.command_reg[6] ),
+        .I4(\Use_BSCAN.command_reg[0] ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
+        .O(\Use_Serial_Unified_Completion.mb_instr_overrun_reg ));
   (* XILINX_LEGACY_PRIM = "FDRE_1" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -4875,11 +4942,66 @@ module module_ads7056_mdm_1_0_MB_FDRE_1
         .CE(CE),
         .D(1'b1),
         .Q(sync),
-        .R(D_0));
+        .R(D_2));
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDRE" *) 
-module module_ads7056_mdm_1_0_MB_FDRE_10
+module module_ads7056_mdm_1_0_MB_FDRE_15
+   (Addr,
+    S,
+    \Use_Uart.reset_RX_FIFO_reg ,
+    data_Exists_I_reg,
+    O,
+    S_AXI_ACLK,
+    \Using_FPGA.Native_0 ,
+    \Use_UART.fifo_Write_reg ,
+    bus2ip_rdce);
+  output [0:0]Addr;
+  output S;
+  input \Use_Uart.reset_RX_FIFO_reg ;
+  input data_Exists_I_reg;
+  input O;
+  input S_AXI_ACLK;
+  input [2:0]\Using_FPGA.Native_0 ;
+  input \Use_UART.fifo_Write_reg ;
+  input [0:0]bus2ip_rdce;
+
+  wire [0:0]Addr;
+  wire O;
+  wire S;
+  wire S_AXI_ACLK;
+  wire \Use_UART.fifo_Write_reg ;
+  wire \Use_Uart.reset_RX_FIFO_reg ;
+  wire [2:0]\Using_FPGA.Native_0 ;
+  wire [0:0]bus2ip_rdce;
+  wire data_Exists_I_reg;
+
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \Using_FPGA.Native 
+       (.C(S_AXI_ACLK),
+        .CE(data_Exists_I_reg),
+        .D(O),
+        .Q(Addr),
+        .R(\Use_Uart.reset_RX_FIFO_reg ));
+  LUT6 #(
+    .INIT(64'h55555554AAAAAAAA)) 
+    \Using_FPGA.Native_I1_i_1__2 
+       (.I0(Addr),
+        .I1(\Using_FPGA.Native_0 [1]),
+        .I2(\Using_FPGA.Native_0 [0]),
+        .I3(\Using_FPGA.Native_0 [2]),
+        .I4(\Use_UART.fifo_Write_reg ),
+        .I5(bus2ip_rdce),
+        .O(S));
+endmodule
+
+(* ORIG_REF_NAME = "MB_FDRE" *) 
+module module_ads7056_mdm_1_0_MB_FDRE_17
    (\Using_FPGA.Native_0 ,
     S,
     \Use_Uart.reset_RX_FIFO_reg ,
@@ -4934,7 +5056,7 @@ module module_ads7056_mdm_1_0_MB_FDRE_10
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDRE" *) 
-module module_ads7056_mdm_1_0_MB_FDRE_12
+module module_ads7056_mdm_1_0_MB_FDRE_19
    (Addr,
     D,
     p_0_in,
@@ -4947,9 +5069,9 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
     S_AXI_ACLK,
     \Use_UART.tdo_reg_reg[3] ,
     \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[0] ,
+    \Use_BSCAN.command_reg[0] ,
     Data_Out,
-    \command_reg[0]_0 ,
+    \Use_BSCAN.command_reg[0]_0 ,
     \Using_FPGA.Native_0 ,
     \Use_UART.fifo_Write_reg ,
     bus2ip_rdce,
@@ -4967,9 +5089,9 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
   input S_AXI_ACLK;
   input [0:0]\Use_UART.tdo_reg_reg[3] ;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[0] ;
+  input \Use_BSCAN.command_reg[0] ;
   input [0:0]Data_Out;
-  input \command_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[0]_0 ;
   input [2:0]\Using_FPGA.Native_0 ;
   input \Use_UART.fifo_Write_reg ;
   input [0:0]bus2ip_rdce;
@@ -4986,14 +5108,14 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
   wire S;
   wire S_AXI_ACLK;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
   wire \Use_UART.fifo_Write_reg ;
   wire [0:0]\Use_UART.tdo_reg_reg[3] ;
   wire \Use_Uart.reset_RX_FIFO_reg ;
   wire [2:0]\Using_FPGA.Native_0 ;
   wire buffer_Empty__2;
   wire [0:0]bus2ip_rdce;
-  wire \command_reg[0] ;
-  wire \command_reg[0]_0 ;
   wire data_Exists_I_reg;
   wire data_Exists_I_reg_0;
   wire p_0_in;
@@ -5003,10 +5125,10 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
     \Use_UART.tdo_reg[4]_i_1 
        (.I0(\Use_UART.tdo_reg_reg[3] ),
         .I1(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I2(\command_reg[0] ),
+        .I2(\Use_BSCAN.command_reg[0] ),
         .I3(p_0_in),
         .I4(Data_Out),
-        .I5(\command_reg[0]_0 ),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(D));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -5050,7 +5172,7 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
         .I4(buffer_Empty__2),
         .I5(\Use_Uart.reset_RX_FIFO_reg ),
         .O(data_Exists_I_reg));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     data_Exists_I_i_2
@@ -5059,7 +5181,7 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
         .I2(\Using_FPGA.Native_0 [2]),
         .I3(\Using_FPGA.Native_0 [1]),
         .O(buffer_Empty__2));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \s_axi_rdata_i[1]_i_2 
@@ -5068,61 +5190,6 @@ module module_ads7056_mdm_1_0_MB_FDRE_12
         .I2(\Using_FPGA.Native_0 [2]),
         .I3(\Using_FPGA.Native_0 [1]),
         .O(p_0_in));
-endmodule
-
-(* ORIG_REF_NAME = "MB_FDRE" *) 
-module module_ads7056_mdm_1_0_MB_FDRE_14
-   (\Using_FPGA.Native_0 ,
-    LI,
-    \Use_Uart.reset_RX_FIFO_reg ,
-    data_Exists_I_reg,
-    sum_A_0,
-    S_AXI_ACLK,
-    Addr,
-    \Use_UART.fifo_Write_reg ,
-    bus2ip_rdce);
-  output [0:0]\Using_FPGA.Native_0 ;
-  output LI;
-  input \Use_Uart.reset_RX_FIFO_reg ;
-  input data_Exists_I_reg;
-  input sum_A_0;
-  input S_AXI_ACLK;
-  input [2:0]Addr;
-  input \Use_UART.fifo_Write_reg ;
-  input [0:0]bus2ip_rdce;
-
-  wire [2:0]Addr;
-  wire LI;
-  wire S_AXI_ACLK;
-  wire \Use_UART.fifo_Write_reg ;
-  wire \Use_Uart.reset_RX_FIFO_reg ;
-  wire [0:0]\Using_FPGA.Native_0 ;
-  wire [0:0]bus2ip_rdce;
-  wire data_Exists_I_reg;
-  wire sum_A_0;
-
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \Using_FPGA.Native 
-       (.C(S_AXI_ACLK),
-        .CE(data_Exists_I_reg),
-        .D(sum_A_0),
-        .Q(\Using_FPGA.Native_0 ),
-        .R(\Use_Uart.reset_RX_FIFO_reg ));
-  LUT6 #(
-    .INIT(64'h55555554AAAAAAAA)) 
-    \Using_FPGA.Native_i_1__2 
-       (.I0(\Using_FPGA.Native_0 ),
-        .I1(Addr[0]),
-        .I2(Addr[2]),
-        .I3(Addr[1]),
-        .I4(\Use_UART.fifo_Write_reg ),
-        .I5(bus2ip_rdce),
-        .O(LI));
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDRE" *) 
@@ -5178,6 +5245,61 @@ module module_ads7056_mdm_1_0_MB_FDRE_2
         .I4(FIFO_Write),
         .I5(\Use_UART.fifo_Read_reg ),
         .O(S));
+endmodule
+
+(* ORIG_REF_NAME = "MB_FDRE" *) 
+module module_ads7056_mdm_1_0_MB_FDRE_21
+   (\Using_FPGA.Native_0 ,
+    LI,
+    \Use_Uart.reset_RX_FIFO_reg ,
+    data_Exists_I_reg,
+    sum_A_0,
+    S_AXI_ACLK,
+    Addr,
+    \Use_UART.fifo_Write_reg ,
+    bus2ip_rdce);
+  output [0:0]\Using_FPGA.Native_0 ;
+  output LI;
+  input \Use_Uart.reset_RX_FIFO_reg ;
+  input data_Exists_I_reg;
+  input sum_A_0;
+  input S_AXI_ACLK;
+  input [2:0]Addr;
+  input \Use_UART.fifo_Write_reg ;
+  input [0:0]bus2ip_rdce;
+
+  wire [2:0]Addr;
+  wire LI;
+  wire S_AXI_ACLK;
+  wire \Use_UART.fifo_Write_reg ;
+  wire \Use_Uart.reset_RX_FIFO_reg ;
+  wire [0:0]\Using_FPGA.Native_0 ;
+  wire [0:0]bus2ip_rdce;
+  wire data_Exists_I_reg;
+  wire sum_A_0;
+
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \Using_FPGA.Native 
+       (.C(S_AXI_ACLK),
+        .CE(data_Exists_I_reg),
+        .D(sum_A_0),
+        .Q(\Using_FPGA.Native_0 ),
+        .R(\Use_Uart.reset_RX_FIFO_reg ));
+  LUT6 #(
+    .INIT(64'h55555554AAAAAAAA)) 
+    \Using_FPGA.Native_i_1__2 
+       (.I0(\Using_FPGA.Native_0 ),
+        .I1(Addr[0]),
+        .I2(Addr[2]),
+        .I3(Addr[1]),
+        .I4(\Use_UART.fifo_Write_reg ),
+        .I5(bus2ip_rdce),
+        .O(LI));
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDRE" *) 
@@ -5249,9 +5371,9 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
     S_AXI_ACLK,
     Q,
     \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[0] ,
+    \Use_BSCAN.command_reg[0] ,
     Data_Out,
-    \command_reg[0]_0 ,
+    \Use_BSCAN.command_reg[0]_0 ,
     \Using_FPGA.Native_0 ,
     FIFO_Write,
     \Use_UART.fifo_Read_reg ,
@@ -5270,9 +5392,9 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
   input S_AXI_ACLK;
   input [0:0]Q;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[0] ;
+  input \Use_BSCAN.command_reg[0] ;
   input [0:0]Data_Out;
-  input \command_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[0]_0 ;
   input [2:0]\Using_FPGA.Native_0 ;
   input FIFO_Write;
   input \Use_UART.fifo_Read_reg ;
@@ -5292,12 +5414,12 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
   wire S;
   wire S_AXI_ACLK;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
   wire \Use_UART.fifo_Read_reg ;
   wire \Use_Uart.reset_TX_FIFO_reg ;
   wire [2:0]\Using_FPGA.Native_0 ;
   wire buffer_Empty__2;
-  wire \command_reg[0] ;
-  wire \command_reg[0]_0 ;
   wire data_Exists_I_reg;
   wire data_Exists_I_reg_0;
   wire out;
@@ -5308,10 +5430,10 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
     \Use_UART.tdo_reg[6]_i_1 
        (.I0(Q),
         .I1(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I2(\command_reg[0] ),
+        .I2(\Use_BSCAN.command_reg[0] ),
         .I3(tx_Buffer_Full),
         .I4(Data_Out),
-        .I5(\command_reg[0]_0 ),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(D));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -5353,7 +5475,7 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
         .I3(buffer_Empty__2),
         .I4(\Use_Uart.reset_TX_FIFO_reg ),
         .O(data_Exists_I_reg));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     data_Exists_I_i_2__0
@@ -5362,7 +5484,7 @@ module module_ads7056_mdm_1_0_MB_FDRE_5
         .I2(\Using_FPGA.Native_0 [2]),
         .I3(\Using_FPGA.Native_0 [1]),
         .O(buffer_Empty__2));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \s_axi_rdata_i[3]_i_2 
@@ -5426,61 +5548,6 @@ module module_ads7056_mdm_1_0_MB_FDRE_7
         .I4(FIFO_Write),
         .I5(\Use_UART.fifo_Read_reg ),
         .O(LI));
-endmodule
-
-(* ORIG_REF_NAME = "MB_FDRE" *) 
-module module_ads7056_mdm_1_0_MB_FDRE_8
-   (Addr,
-    S,
-    \Use_Uart.reset_RX_FIFO_reg ,
-    data_Exists_I_reg,
-    O,
-    S_AXI_ACLK,
-    \Using_FPGA.Native_0 ,
-    \Use_UART.fifo_Write_reg ,
-    bus2ip_rdce);
-  output [0:0]Addr;
-  output S;
-  input \Use_Uart.reset_RX_FIFO_reg ;
-  input data_Exists_I_reg;
-  input O;
-  input S_AXI_ACLK;
-  input [2:0]\Using_FPGA.Native_0 ;
-  input \Use_UART.fifo_Write_reg ;
-  input [0:0]bus2ip_rdce;
-
-  wire [0:0]Addr;
-  wire O;
-  wire S;
-  wire S_AXI_ACLK;
-  wire \Use_UART.fifo_Write_reg ;
-  wire \Use_Uart.reset_RX_FIFO_reg ;
-  wire [2:0]\Using_FPGA.Native_0 ;
-  wire [0:0]bus2ip_rdce;
-  wire data_Exists_I_reg;
-
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \Using_FPGA.Native 
-       (.C(S_AXI_ACLK),
-        .CE(data_Exists_I_reg),
-        .D(O),
-        .Q(Addr),
-        .R(\Use_Uart.reset_RX_FIFO_reg ));
-  LUT6 #(
-    .INIT(64'h55555554AAAAAAAA)) 
-    \Using_FPGA.Native_I1_i_1__2 
-       (.I0(Addr),
-        .I1(\Using_FPGA.Native_0 [1]),
-        .I2(\Using_FPGA.Native_0 [0]),
-        .I3(\Using_FPGA.Native_0 [2]),
-        .I4(\Use_UART.fifo_Write_reg ),
-        .I5(bus2ip_rdce),
-        .O(S));
 endmodule
 
 (* ORIG_REF_NAME = "MB_FDRSE" *) 
@@ -5596,7 +5663,80 @@ module module_ads7056_mdm_1_0_MB_MUXCY_XORCY
 endmodule
 
 (* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
-module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11
+module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16
+   (LO,
+    O,
+    S,
+    Addr,
+    CI,
+    lopt,
+    lopt_1,
+    lopt_2,
+    lopt_3,
+    lopt_4,
+    lopt_5,
+    lopt_6,
+    lopt_7,
+    lopt_8,
+    lopt_9);
+  output LO;
+  output O;
+  input S;
+  input [0:0]Addr;
+  input CI;
+  output lopt;
+  input lopt_1;
+  input lopt_2;
+  output lopt_3;
+  input lopt_4;
+  input lopt_5;
+  output lopt_6;
+  output lopt_7;
+  output lopt_8;
+  input lopt_9;
+
+  wire [0:0]Addr;
+  wire CI;
+  wire LO;
+  wire O;
+  wire S;
+  wire \^lopt_1 ;
+  wire lopt_10;
+  wire \^lopt_2 ;
+  wire \^lopt_3 ;
+  wire \^lopt_4 ;
+  wire \^lopt_5 ;
+  wire \^lopt_6 ;
+  wire \^lopt_7 ;
+  wire \^lopt_8 ;
+  wire \^lopt_9 ;
+  wire [3:3]\NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED ;
+  wire [3:3]\NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED ;
+
+  assign \^lopt_2  = lopt_1;
+  assign \^lopt_3  = lopt_2;
+  assign \^lopt_5  = lopt_4;
+  assign \^lopt_6  = lopt_5;
+  assign lopt = \^lopt_1 ;
+  assign lopt_10 = lopt_9;
+  assign lopt_3 = \^lopt_4 ;
+  assign lopt_6 = \^lopt_7 ;
+  assign lopt_7 = \^lopt_8 ;
+  assign lopt_8 = \^lopt_9 ;
+  (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
+  (* XILINX_TRANSFORM_PINMAP = "LO:O" *) 
+  (* box_type = "PRIMITIVE" *) 
+  CARRY4 \Using_FPGA.Native_I1_CARRY4 
+       (.CI(1'b0),
+        .CO({\NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED [3],\^lopt_4 ,\^lopt_1 ,LO}),
+        .CYINIT(CI),
+        .DI({\NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED [3],\^lopt_5 ,\^lopt_2 ,Addr}),
+        .O({\^lopt_9 ,\^lopt_8 ,\^lopt_7 ,O}),
+        .S({lopt_10,\^lopt_6 ,\^lopt_3 ,S}));
+endmodule
+
+(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
+module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18
    (LO,
     O,
     S,
@@ -5623,7 +5763,7 @@ module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11
 endmodule
 
 (* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
-module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13
+module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20
    (LO,
     O,
     S,
@@ -5703,91 +5843,18 @@ module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_6
   assign O = lopt_1;
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
-module module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9
-   (LO,
-    O,
-    S,
-    Addr,
-    CI,
-    lopt,
-    lopt_1,
-    lopt_2,
-    lopt_3,
-    lopt_4,
-    lopt_5,
-    lopt_6,
-    lopt_7,
-    lopt_8,
-    lopt_9);
-  output LO;
-  output O;
-  input S;
-  input [0:0]Addr;
-  input CI;
-  output lopt;
-  input lopt_1;
-  input lopt_2;
-  output lopt_3;
-  input lopt_4;
-  input lopt_5;
-  output lopt_6;
-  output lopt_7;
-  output lopt_8;
-  input lopt_9;
-
-  wire [0:0]Addr;
-  wire CI;
-  wire LO;
-  wire O;
-  wire S;
-  wire \^lopt_1 ;
-  wire lopt_10;
-  wire \^lopt_2 ;
-  wire \^lopt_3 ;
-  wire \^lopt_4 ;
-  wire \^lopt_5 ;
-  wire \^lopt_6 ;
-  wire \^lopt_7 ;
-  wire \^lopt_8 ;
-  wire \^lopt_9 ;
-  wire [3:3]\NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED ;
-  wire [3:3]\NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED ;
-
-  assign \^lopt_2  = lopt_1;
-  assign \^lopt_3  = lopt_2;
-  assign \^lopt_5  = lopt_4;
-  assign \^lopt_6  = lopt_5;
-  assign lopt = \^lopt_1 ;
-  assign lopt_10 = lopt_9;
-  assign lopt_3 = \^lopt_4 ;
-  assign lopt_6 = \^lopt_7 ;
-  assign lopt_7 = \^lopt_8 ;
-  assign lopt_8 = \^lopt_9 ;
-  (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
-  (* XILINX_TRANSFORM_PINMAP = "LO:O" *) 
-  (* box_type = "PRIMITIVE" *) 
-  CARRY4 \Using_FPGA.Native_I1_CARRY4 
-       (.CI(1'b0),
-        .CO({\NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED [3],\^lopt_4 ,\^lopt_1 ,LO}),
-        .CYINIT(CI),
-        .DI({\NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED [3],\^lopt_5 ,\^lopt_2 ,Addr}),
-        .O({\^lopt_9 ,\^lopt_8 ,\^lopt_7 ,O}),
-        .S({lopt_10,\^lopt_6 ,\^lopt_3 ,S}));
-endmodule
-
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
 module module_ads7056_mdm_1_0_MB_SRL16E
-   (\Use_UART.fifo_Din_reg[0] ,
+   (sel_n_reg,
     Q,
     \Use_BSCAN.PORT_Selector_reg[0] );
-  output \Use_UART.fifo_Din_reg[0] ;
+  output sel_n_reg;
   input [3:0]Q;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
 
   wire [3:0]Q;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
-  wire \Use_UART.fifo_Din_reg[0] ;
+  wire sel_n_reg;
 
   (* box_type = "PRIMITIVE" *) 
   (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_Config_SRL16E.SRL16E_1/Use_unisim.MB_SRL16E_I1 " *) 
@@ -5802,7 +5869,7 @@ module module_ads7056_mdm_1_0_MB_SRL16E
         .CE(1'b0),
         .CLK(\Use_BSCAN.PORT_Selector_reg[0] ),
         .D(1'b0),
-        .Q(\Use_UART.fifo_Din_reg[0] ));
+        .Q(sel_n_reg));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -5832,500 +5899,6 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized1
         .CLK(\Use_BSCAN.PORT_Selector_reg[0] ),
         .D(1'b0),
         .Q(config_TDO_2));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized11
-   (D,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK,
-    \command_reg[0] ,
-    \Use_BSCAN.PORT_Selector_reg[0] ,
-    Q);
-  output [0:0]D;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-  input \command_reg[0] ;
-  input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input [0:0]Q;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]D;
-  wire [2:2]Data_Out;
-  wire [0:0]Q;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire \Use_BSCAN.PORT_Selector_reg[0] ;
-  wire \command_reg[0] ;
-
-  LUT4 #(
-    .INIT(16'h8F88)) 
-    \Use_UART.tdo_reg[2]_i_1 
-       (.I0(Data_Out),
-        .I1(\command_reg[0] ),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I3(Q),
-        .O(D));
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(Data_Out));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized13
-   (D,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK,
-    \command_reg[0] ,
-    \Use_BSCAN.PORT_Selector_reg[0] ,
-    Q);
-  output [0:0]D;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-  input \command_reg[0] ;
-  input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input [0:0]Q;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]D;
-  wire [3:3]Data_Out;
-  wire [0:0]Q;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire \Use_BSCAN.PORT_Selector_reg[0] ;
-  wire \command_reg[0] ;
-
-  LUT4 #(
-    .INIT(16'h8F88)) 
-    \Use_UART.tdo_reg[3]_i_1 
-       (.I0(Data_Out),
-        .I1(\command_reg[0] ),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I3(Q),
-        .O(D));
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(Data_Out));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized15
-   (\Use_UART.tdo_reg_reg[4] ,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]\Use_UART.tdo_reg_reg[4] ;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire [0:0]\Use_UART.tdo_reg_reg[4] ;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(\Use_UART.tdo_reg_reg[4] ));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized17
-   (\Use_UART.tdo_reg_reg[5] ,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]\Use_UART.tdo_reg_reg[5] ;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire [0:0]\Use_UART.tdo_reg_reg[5] ;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(\Use_UART.tdo_reg_reg[5] ));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized19
-   (Data_Out,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]Data_Out;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Data_Out;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(Data_Out));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized21
-   (D,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK,
-    Q,
-    \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[0] ,
-    data_Exists_I_reg,
-    \command_reg[0]_0 );
-  output [0:0]D;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-  input [0:0]Q;
-  input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[0] ;
-  input data_Exists_I_reg;
-  input \command_reg[0]_0 ;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]D;
-  wire [7:7]Data_Out;
-  wire [0:0]Q;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire \Use_BSCAN.PORT_Selector_reg[0] ;
-  wire \command_reg[0] ;
-  wire \command_reg[0]_0 ;
-  wire data_Exists_I_reg;
-
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \Use_UART.tdo_reg[7]_i_1 
-       (.I0(Q),
-        .I1(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I2(\command_reg[0] ),
-        .I3(data_Exists_I_reg),
-        .I4(Data_Out),
-        .I5(\command_reg[0]_0 ),
-        .O(D));
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(Data_Out));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23
-   (RX_Data,
-    CI,
-    Q,
-    Addr,
-    S_AXI_ACLK);
-  output [0:0]RX_Data;
-  input CI;
-  input [0:0]Q;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]Q;
-  wire [0:0]RX_Data;
-  wire S_AXI_ACLK;
-
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(Q),
-        .Q(RX_Data));
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
@@ -6364,12 +5937,12 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized5
     \Use_BSCAN.PORT_Selector_reg[0] ,
     \Use_BSCAN.PORT_Selector_reg[2] ,
     \Use_BSCAN.PORT_Selector_reg[0]_0 ,
-    \command_reg[0] ,
-    \command_reg[0]_0 ,
-    \command_reg[6] ,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.command_reg[0]_0 ,
+    \Use_BSCAN.command_reg[6] ,
     Dbg_TDO_0,
-    \command_reg[5] ,
-    \command_reg[5]_0 ,
+    \Use_BSCAN.command_reg[5] ,
+    \Use_BSCAN.command_reg[5]_0 ,
     config_TDO_2,
     Q0_out,
     \shift_Count_reg[0] );
@@ -6378,12 +5951,12 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized5
   input \Use_BSCAN.PORT_Selector_reg[0] ;
   input \Use_BSCAN.PORT_Selector_reg[2] ;
   input [0:0]\Use_BSCAN.PORT_Selector_reg[0]_0 ;
-  input \command_reg[0] ;
-  input [2:0]\command_reg[0]_0 ;
-  input \command_reg[6] ;
+  input \Use_BSCAN.command_reg[0] ;
+  input [2:0]\Use_BSCAN.command_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[6] ;
   input Dbg_TDO_0;
-  input \command_reg[5] ;
-  input \command_reg[5]_0 ;
+  input \Use_BSCAN.command_reg[5] ;
+  input \Use_BSCAN.command_reg[5]_0 ;
   input config_TDO_2;
   input Q0_out;
   input \shift_Count_reg[0] ;
@@ -6395,13 +5968,13 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized5
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
   wire [0:0]\Use_BSCAN.PORT_Selector_reg[0]_0 ;
   wire \Use_BSCAN.PORT_Selector_reg[2] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire [2:0]\Use_BSCAN.command_reg[0]_0 ;
+  wire \Use_BSCAN.command_reg[5] ;
+  wire \Use_BSCAN.command_reg[5]_0 ;
+  wire \Use_BSCAN.command_reg[6] ;
   wire \Use_E2.BSCANE2_I_i_5_n_0 ;
   wire \Use_E2.BSCANE2_I_i_8_n_0 ;
-  wire \command_reg[0] ;
-  wire [2:0]\command_reg[0]_0 ;
-  wire \command_reg[5] ;
-  wire \command_reg[5]_0 ;
-  wire \command_reg[6] ;
   wire config_TDO_2;
   wire \shift_Count_reg[0] ;
   wire tdo;
@@ -6411,28 +5984,28 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized5
     \Use_E2.BSCANE2_I_i_1 
        (.I0(\Use_BSCAN.PORT_Selector_reg[2] ),
         .I1(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
-        .I2(\command_reg[0] ),
-        .I3(\command_reg[0]_0 [2]),
-        .I4(\command_reg[6] ),
+        .I2(\Use_BSCAN.command_reg[0] ),
+        .I3(\Use_BSCAN.command_reg[0]_0 [2]),
+        .I4(\Use_BSCAN.command_reg[6] ),
         .I5(\Use_E2.BSCANE2_I_i_5_n_0 ),
         .O(tdo));
   LUT5 #(
     .INIT(32'h2A2A3F00)) 
     \Use_E2.BSCANE2_I_i_5 
        (.I0(Dbg_TDO_0),
-        .I1(\command_reg[0]_0 [0]),
-        .I2(\command_reg[5] ),
+        .I1(\Use_BSCAN.command_reg[0]_0 [0]),
+        .I2(\Use_BSCAN.command_reg[5] ),
         .I3(\Use_E2.BSCANE2_I_i_8_n_0 ),
-        .I4(\command_reg[5]_0 ),
+        .I4(\Use_BSCAN.command_reg[5]_0 ),
         .O(\Use_E2.BSCANE2_I_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hCFCFAFA0C0C0AFA0)) 
+    .INIT(64'hCACAFFF0CACA0F00)) 
     \Use_E2.BSCANE2_I_i_8 
        (.I0(ID_TDO_2),
         .I1(config_TDO_2),
-        .I2(Q[4]),
+        .I2(\Use_BSCAN.command_reg[0]_0 [1]),
         .I3(Q0_out),
-        .I4(\command_reg[0]_0 [1]),
+        .I4(Q[4]),
         .I5(\shift_Count_reg[0] ),
         .O(\Use_E2.BSCANE2_I_i_8_n_0 ));
   (* box_type = "PRIMITIVE" *) 
@@ -6458,13 +6031,13 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7
     S_AXI_WDATA,
     Addr,
     S_AXI_ACLK,
-    \command_reg[0] );
+    \Use_BSCAN.command_reg[0] );
   output [0:0]D;
   input CI;
   input [0:0]S_AXI_WDATA;
   input [0:3]Addr;
   input S_AXI_ACLK;
-  input \command_reg[0] ;
+  input \Use_BSCAN.command_reg[0] ;
 
   wire [0:3]Addr;
   wire CI;
@@ -6472,12 +6045,12 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7
   wire [0:0]Data_Out;
   wire S_AXI_ACLK;
   wire [0:0]S_AXI_WDATA;
-  wire \command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
 
   LUT2 #(
     .INIT(4'h8)) 
     \Use_UART.tdo_reg[0]_i_2 
-       (.I0(\command_reg[0] ),
+       (.I0(\Use_BSCAN.command_reg[0] ),
         .I1(Data_Out),
         .O(D));
   (* box_type = "PRIMITIVE" *) 
@@ -6498,7 +6071,231 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10
+   (D,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.PORT_Selector_reg[0] ,
+    Q);
+  output [0:0]D;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+  input \Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.PORT_Selector_reg[0] ;
+  input [0:0]Q;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]D;
+  wire [3:3]Data_Out;
+  wire [0:0]Q;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \Use_UART.tdo_reg[3]_i_1 
+       (.I0(Data_Out),
+        .I1(\Use_BSCAN.command_reg[0] ),
+        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
+        .I3(Q),
+        .O(D));
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(Data_Out));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11
+   (\Use_UART.tdo_reg_reg[4] ,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]\Use_UART.tdo_reg_reg[4] ;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire [0:0]\Use_UART.tdo_reg_reg[4] ;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(\Use_UART.tdo_reg_reg[4] ));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12
+   (\Use_UART.tdo_reg_reg[5] ,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]\Use_UART.tdo_reg_reg[5] ;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire [0:0]\Use_UART.tdo_reg_reg[5] ;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(\Use_UART.tdo_reg_reg[5] ));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13
+   (Data_Out,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]Data_Out;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Data_Out;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(Data_Out));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14
+   (D,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK,
+    Q,
+    \Use_BSCAN.PORT_Selector_reg[0] ,
+    \Use_BSCAN.command_reg[0] ,
+    data_Exists_I_reg,
+    \Use_BSCAN.command_reg[0]_0 );
+  output [0:0]D;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+  input [0:0]Q;
+  input \Use_BSCAN.PORT_Selector_reg[0] ;
+  input \Use_BSCAN.command_reg[0] ;
+  input data_Exists_I_reg;
+  input \Use_BSCAN.command_reg[0]_0 ;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]D;
+  wire [7:7]Data_Out;
+  wire [0:0]Q;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
+  wire data_Exists_I_reg;
+
+  LUT6 #(
+    .INIT(64'hFFFFF222F222F222)) 
+    \Use_UART.tdo_reg[7]_i_1 
+       (.I0(Q),
+        .I1(\Use_BSCAN.PORT_Selector_reg[0] ),
+        .I2(\Use_BSCAN.command_reg[0] ),
+        .I3(data_Exists_I_reg),
+        .I4(Data_Out),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
+        .O(D));
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(Data_Out));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23
    (RX_Data,
     CI,
     Q,
@@ -6534,61 +6331,7 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16
 endmodule
 
 (* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized9
-   (D,
-    CI,
-    S_AXI_WDATA,
-    Addr,
-    S_AXI_ACLK,
-    \command_reg[0] ,
-    \Use_BSCAN.PORT_Selector_reg[0] ,
-    Q);
-  output [0:0]D;
-  input CI;
-  input [0:0]S_AXI_WDATA;
-  input [0:3]Addr;
-  input S_AXI_ACLK;
-  input \command_reg[0] ;
-  input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input [0:0]Q;
-
-  wire [0:3]Addr;
-  wire CI;
-  wire [0:0]D;
-  wire [1:1]Data_Out;
-  wire [0:0]Q;
-  wire S_AXI_ACLK;
-  wire [0:0]S_AXI_WDATA;
-  wire \Use_BSCAN.PORT_Selector_reg[0] ;
-  wire \command_reg[0] ;
-
-  LUT4 #(
-    .INIT(16'h8F88)) 
-    \Use_UART.tdo_reg[1]_i_1 
-       (.I0(Data_Out),
-        .I1(\command_reg[0] ),
-        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I3(Q),
-        .O(D));
-  (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[1].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
-  SRL16E #(
-    .INIT(16'h0000),
-    .IS_CLK_INVERTED(1'b0)) 
-    \Use_unisim.MB_SRL16E_I1 
-       (.A0(Addr[0]),
-        .A1(Addr[1]),
-        .A2(Addr[2]),
-        .A3(Addr[3]),
-        .CE(CI),
-        .CLK(S_AXI_ACLK),
-        .D(S_AXI_WDATA),
-        .Q(Data_Out));
-endmodule
-
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
-module module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24
    (RX_Data,
     CI,
     Q,
@@ -6623,6 +6366,330 @@ module module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17
         .Q(RX_Data));
 endmodule
 
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30
+   (RX_Data,
+    CI,
+    Q,
+    Addr,
+    S_AXI_ACLK);
+  output [0:0]RX_Data;
+  input CI;
+  input [0:0]Q;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]Q;
+  wire [0:0]RX_Data;
+  wire S_AXI_ACLK;
+
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(Q),
+        .Q(RX_Data));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8
+   (D,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.PORT_Selector_reg[0] ,
+    Q);
+  output [0:0]D;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+  input \Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.PORT_Selector_reg[0] ;
+  input [0:0]Q;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]D;
+  wire [1:1]Data_Out;
+  wire [0:0]Q;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \Use_UART.tdo_reg[1]_i_1 
+       (.I0(Data_Out),
+        .I1(\Use_BSCAN.command_reg[0] ),
+        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
+        .I3(Q),
+        .O(D));
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[1].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(Data_Out));
+endmodule
+
+(* ORIG_REF_NAME = "MB_SRL16E" *) 
+module module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9
+   (D,
+    CI,
+    S_AXI_WDATA,
+    Addr,
+    S_AXI_ACLK,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.PORT_Selector_reg[0] ,
+    Q);
+  output [0:0]D;
+  input CI;
+  input [0:0]S_AXI_WDATA;
+  input [0:3]Addr;
+  input S_AXI_ACLK;
+  input \Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.PORT_Selector_reg[0] ;
+  input [0:0]Q;
+
+  wire [0:3]Addr;
+  wire CI;
+  wire [0:0]D;
+  wire [2:2]Data_Out;
+  wire [0:0]Q;
+  wire S_AXI_ACLK;
+  wire [0:0]S_AXI_WDATA;
+  wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \Use_UART.tdo_reg[2]_i_1 
+       (.I0(Data_Out),
+        .I1(\Use_BSCAN.command_reg[0] ),
+        .I2(\Use_BSCAN.PORT_Selector_reg[0] ),
+        .I3(Q),
+        .O(D));
+  (* box_type = "PRIMITIVE" *) 
+  (* srl_bus_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 " *) 
+  SRL16E #(
+    .INIT(16'h0000),
+    .IS_CLK_INVERTED(1'b0)) 
+    \Use_unisim.MB_SRL16E_I1 
+       (.A0(Addr[0]),
+        .A1(Addr[1]),
+        .A2(Addr[2]),
+        .A3(Addr[3]),
+        .CE(CI),
+        .CLK(S_AXI_ACLK),
+        .D(S_AXI_WDATA),
+        .Q(Data_Out));
+endmodule
+
 (* ORIG_REF_NAME = "MB_XORCY" *) 
 module module_ads7056_mdm_1_0_MB_XORCY
    (sum_A_0,
@@ -6642,7 +6709,7 @@ module module_ads7056_mdm_1_0_MB_XORCY
 endmodule
 
 (* ORIG_REF_NAME = "MB_XORCY" *) 
-module module_ads7056_mdm_1_0_MB_XORCY_15
+module module_ads7056_mdm_1_0_MB_XORCY_22
    (sum_A_0,
     LI,
     LO,
@@ -6659,15 +6726,15 @@ module module_ads7056_mdm_1_0_MB_XORCY_15
   assign sum_A_0 = lopt;
 endmodule
 
-(* C_DATA_SIZE = "32" *) (* C_DBG_MEM_ACCESS = "0" *) (* C_DBG_REG_ACCESS = "0" *) 
-(* C_DEBUG_INTERFACE = "0" *) (* C_FAMILY = "artix7" *) (* C_INTERCONNECT = "2" *) 
-(* C_JTAG_CHAIN = "2" *) (* C_MB_DBG_PORTS = "1" *) (* C_M_AXIS_DATA_WIDTH = "32" *) 
-(* C_M_AXIS_ID_WIDTH = "7" *) (* C_M_AXI_ADDR_WIDTH = "32" *) (* C_M_AXI_DATA_WIDTH = "32" *) 
-(* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "120000000" *) (* C_S_AXI_ADDR_WIDTH = "4" *) 
-(* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) 
-(* C_TRACE_DATA_WIDTH = "32" *) (* C_TRACE_OUTPUT = "0" *) (* C_USE_BSCAN = "0" *) 
-(* C_USE_CONFIG_RESET = "0" *) (* C_USE_CROSS_TRIGGER = "0" *) (* C_USE_UART = "1" *) 
-(* ORIG_REF_NAME = "MDM" *) 
+(* C_AVOID_PRIMITIVES = "0" *) (* C_DATA_SIZE = "32" *) (* C_DBG_MEM_ACCESS = "0" *) 
+(* C_DBG_REG_ACCESS = "0" *) (* C_DEBUG_INTERFACE = "0" *) (* C_FAMILY = "artix7" *) 
+(* C_INTERCONNECT = "2" *) (* C_JTAG_CHAIN = "2" *) (* C_MB_DBG_PORTS = "1" *) 
+(* C_M_AXIS_DATA_WIDTH = "32" *) (* C_M_AXIS_ID_WIDTH = "7" *) (* C_M_AXI_ADDR_WIDTH = "32" *) 
+(* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "120000000" *) 
+(* C_S_AXI_ADDR_WIDTH = "4" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRACE_ASYNC_RESET = "0" *) 
+(* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) (* C_TRACE_DATA_WIDTH = "32" *) 
+(* C_TRACE_OUTPUT = "0" *) (* C_USE_BSCAN = "0" *) (* C_USE_CONFIG_RESET = "0" *) 
+(* C_USE_CROSS_TRIGGER = "0" *) (* C_USE_UART = "1" *) (* ORIG_REF_NAME = "MDM" *) 
 module module_ads7056_mdm_1_0_MDM
    (Config_Reset,
     Scan_Reset_Sel,
@@ -9709,6 +9776,7 @@ module module_ads7056_mdm_1_0_MDM
   wire Dbg_Shift_0;
   wire Dbg_TDI_31;
   wire Dbg_TDO_0;
+  wire Dbg_Update_31;
   wire Debug_SYS_Rst;
   wire Ext_BRK;
   wire Ext_JTAG_CAPTURE;
@@ -9716,7 +9784,6 @@ module module_ads7056_mdm_1_0_MDM
   wire Ext_JTAG_SEL;
   wire Ext_JTAG_SHIFT;
   wire Ext_JTAG_TDO;
-  wire Ext_JTAG_UPDATE;
   wire Ext_NM_BRK;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
@@ -9728,6 +9795,7 @@ module module_ads7056_mdm_1_0_MDM
   wire \JTAG_CONTROL_I/p_0_in28_in ;
   wire \JTAG_CONTROL_I/p_31_out__0 ;
   wire \JTAG_CONTROL_I/p_54_out__0 ;
+  wire \JTAG_CONTROL_I/sel ;
   wire MDM_Core_I1_n_0;
   wire MDM_Core_I1_n_12;
   wire MDM_Core_I1_n_35;
@@ -9752,9 +9820,8 @@ module module_ads7056_mdm_1_0_MDM
   wire Scan_Reset;
   wire Scan_Reset_Sel;
   wire \Use_AXI_IPIF.AXI_LITE_IPIF_I_n_15 ;
-  wire \Use_E2.BSCAN_I_n_13 ;
-  wire \Use_E2.BSCAN_I_n_14 ;
   wire \Use_E2.BSCAN_I_n_7 ;
+  wire \Use_E2.BSCAN_I_n_9 ;
   wire [3:3]bus2ip_rdce;
   wire [2:2]bus2ip_wrce;
   wire clear_Ext_BRK;
@@ -11744,38 +11811,37 @@ module module_ads7056_mdm_1_0_MDM
   assign Dbg_Trig_Out_9[5] = \<const0> ;
   assign Dbg_Trig_Out_9[6] = \<const0> ;
   assign Dbg_Trig_Out_9[7] = \<const0> ;
-  assign Dbg_Update_0 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_1 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_10 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_11 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_12 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_13 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_14 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_15 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_16 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_17 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_18 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_19 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_2 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_20 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_21 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_22 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_23 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_24 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_25 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_26 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_27 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_28 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_29 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_3 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_30 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_31 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_4 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_5 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_6 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_7 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_8 = Ext_JTAG_UPDATE;
-  assign Dbg_Update_9 = Ext_JTAG_UPDATE;
+  assign Dbg_Update_0 = Dbg_Update_31;
+  assign Dbg_Update_1 = Dbg_Update_31;
+  assign Dbg_Update_10 = Dbg_Update_31;
+  assign Dbg_Update_11 = Dbg_Update_31;
+  assign Dbg_Update_12 = Dbg_Update_31;
+  assign Dbg_Update_13 = Dbg_Update_31;
+  assign Dbg_Update_14 = Dbg_Update_31;
+  assign Dbg_Update_15 = Dbg_Update_31;
+  assign Dbg_Update_16 = Dbg_Update_31;
+  assign Dbg_Update_17 = Dbg_Update_31;
+  assign Dbg_Update_18 = Dbg_Update_31;
+  assign Dbg_Update_19 = Dbg_Update_31;
+  assign Dbg_Update_2 = Dbg_Update_31;
+  assign Dbg_Update_20 = Dbg_Update_31;
+  assign Dbg_Update_21 = Dbg_Update_31;
+  assign Dbg_Update_22 = Dbg_Update_31;
+  assign Dbg_Update_23 = Dbg_Update_31;
+  assign Dbg_Update_24 = Dbg_Update_31;
+  assign Dbg_Update_25 = Dbg_Update_31;
+  assign Dbg_Update_26 = Dbg_Update_31;
+  assign Dbg_Update_27 = Dbg_Update_31;
+  assign Dbg_Update_28 = Dbg_Update_31;
+  assign Dbg_Update_29 = Dbg_Update_31;
+  assign Dbg_Update_3 = Dbg_Update_31;
+  assign Dbg_Update_30 = Dbg_Update_31;
+  assign Dbg_Update_4 = Dbg_Update_31;
+  assign Dbg_Update_5 = Dbg_Update_31;
+  assign Dbg_Update_6 = Dbg_Update_31;
+  assign Dbg_Update_7 = Dbg_Update_31;
+  assign Dbg_Update_8 = Dbg_Update_31;
+  assign Dbg_Update_9 = Dbg_Update_31;
   assign Dbg_WDATA_0[31] = \<const0> ;
   assign Dbg_WDATA_0[30] = \<const0> ;
   assign Dbg_WDATA_0[29] = \<const0> ;
@@ -12834,6 +12900,7 @@ module module_ads7056_mdm_1_0_MDM
   assign Dbg_WVALID_9 = \<const0> ;
   assign Ext_JTAG_DRCK = Dbg_Clk_31;
   assign Ext_JTAG_TDI = Dbg_TDI_31;
+  assign Ext_JTAG_UPDATE = Dbg_Update_31;
   assign LMB_Addr_Strobe_0 = \<const0> ;
   assign LMB_Addr_Strobe_1 = \<const0> ;
   assign LMB_Addr_Strobe_10 = \<const0> ;
@@ -15382,7 +15449,7 @@ module module_ads7056_mdm_1_0_MDM
   module_ads7056_mdm_1_0_MDM_Core MDM_Core_I1
        (.AR(sel_n_reset),
         .Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
-        .CLK(Ext_JTAG_UPDATE),
+        .CLK(Dbg_Update_31),
         .D(p_1_in),
         .Dbg_Disable_0(Dbg_Disable_0),
         .Dbg_Reg_En_0(Dbg_Reg_En_0),
@@ -15408,18 +15475,18 @@ module module_ads7056_mdm_1_0_MDM
         .Scan_Reset(Scan_Reset),
         .Scan_Reset_Sel(Scan_Reset_Sel),
         .\Use_BSCAN.PORT_Selector_reg[0]_0 (Dbg_Clk_31),
-        .\Use_BSCAN.PORT_Selector_reg[0]_1 (Ext_JTAG_SHIFT),
-        .\Use_BSCAN.PORT_Selector_reg[0]_2 (Ext_JTAG_CAPTURE),
-        .\Use_BSCAN.PORT_Selector_reg[0]_3 (\Use_E2.BSCAN_I_n_7 ),
+        .\Use_BSCAN.PORT_Selector_reg[0]_1 (Ext_JTAG_CAPTURE),
+        .\Use_BSCAN.PORT_Selector_reg[0]_2 (Ext_JTAG_SHIFT),
+        .\Use_BSCAN.PORT_Selector_reg[0]_3 (\Use_E2.BSCAN_I_n_9 ),
+        .\Use_BSCAN.command_reg[5] (\JTAG_CONTROL_I/sel ),
         .\Use_Serial_Unified_Completion.completion_status_reg[15] (MDM_Core_I1_n_35),
         .\Use_Serial_Unified_Completion.count_reg[4] (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ),
         .\Use_Serial_Unified_Completion.count_reg[5] (p_0_in),
         .\Use_Uart.clear_Ext_BRK_reg_0 (MDM_Core_I1_n_12),
-        .\Using_FPGA.Native (\Use_E2.BSCAN_I_n_13 ),
+        .\Using_FPGA.Native (\Use_E2.BSCAN_I_n_7 ),
         .bus2ip_rdce(bus2ip_rdce),
         .bus2ip_wrce(bus2ip_wrce),
         .clear_Ext_BRK(clear_Ext_BRK),
-        .\command_reg[5] (\Use_E2.BSCAN_I_n_14 ),
         .enable_interrupts(enable_interrupts),
         .fifo_Data_Present(\JTAG_CONTROL_I/fifo_Data_Present ),
         .out(\JTAG_CONTROL_I/p_0_in28_in ),
@@ -15478,18 +15545,18 @@ module module_ads7056_mdm_1_0_MDM
         .D(p_1_in),
         .Dbg_Capture_0(Ext_JTAG_CAPTURE),
         .Dbg_TDI_31(Dbg_TDI_31),
+        .Dbg_Update_31(Dbg_Update_31),
         .Ext_JTAG_RESET(Ext_JTAG_RESET),
-        .Ext_JTAG_UPDATE(Ext_JTAG_UPDATE),
         .Q(MDM_Core_I1_n_0),
         .Scan_Reset(Scan_Reset),
         .Scan_Reset_Sel(Scan_Reset_Sel),
-        .\Use_Serial_Unified_Completion.completion_status_reg[15] (Ext_JTAG_SHIFT),
-        .\Use_Serial_Unified_Completion.completion_status_reg[15]_0 (\Use_E2.BSCAN_I_n_13 ),
-        .\Use_Serial_Unified_Completion.count_reg[0]__0 (\Use_E2.BSCAN_I_n_14 ),
-        .\Use_Serial_Unified_Completion.count_reg[5] (p_0_in),
-        .\Use_Serial_Unified_Completion.count_reg[5]_0 (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[10] (Ext_JTAG_SHIFT),
+        .\Use_Serial_Unified_Completion.completion_status_reg[10]_0 (\Use_E2.BSCAN_I_n_7 ),
+        .\Use_Serial_Unified_Completion.count_reg[5] (\JTAG_CONTROL_I/sel ),
+        .\Use_Serial_Unified_Completion.count_reg[5]_0 (p_0_in),
+        .\Use_Serial_Unified_Completion.count_reg[5]_1 (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ),
         .\Use_Serial_Unified_Completion.sample_1_reg[15] (MDM_Core_I1_n_35),
-        .\Use_UART.tdo_reg_reg[7] (\Use_E2.BSCAN_I_n_7 ),
+        .\Use_UART.tdo_reg_reg[7] (\Use_E2.BSCAN_I_n_9 ),
         .drck_i(drck_i),
         .p_31_out__0(\JTAG_CONTROL_I/p_31_out__0 ),
         .p_54_out__0(\JTAG_CONTROL_I/p_54_out__0 ),
@@ -15515,12 +15582,12 @@ module module_ads7056_mdm_1_0_MDM_Core
     Dbg_Disable_0,
     Ext_BRK,
     enable_interrupts,
-    E,
     tdo,
     tx_Buffer_Full,
     p_0_in,
     p_54_out__0,
     p_31_out__0,
+    E,
     Dbg_Reg_En_0,
     Ext_JTAG_SEL,
     \Use_Serial_Unified_Completion.count_reg[4] ,
@@ -15533,14 +15600,16 @@ module module_ads7056_mdm_1_0_MDM_Core
     bus2ip_wrce,
     reset_RX_FIFO,
     reset_TX_FIFO,
+    \Use_BSCAN.PORT_Selector_reg[0]_1 ,
     clear_Ext_BRK,
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] ,
     shift_n_reset,
-    \Use_BSCAN.PORT_Selector_reg[0]_1 ,
     Dbg_TDO_0,
-    \Use_BSCAN.PORT_Selector_reg[0]_2 ,
     D,
+    \Use_BSCAN.PORT_Selector_reg[0]_2 ,
     sel,
+    Scan_Reset_Sel,
+    Scan_Reset,
     Ext_JTAG_TDO,
     FIFO_Write,
     Bus_RNW_reg,
@@ -15549,14 +15618,12 @@ module module_ads7056_mdm_1_0_MDM_Core
     S_AXI_ARESETN,
     \Use_Serial_Unified_Completion.count_reg[5] ,
     \shift_Count_reg[0] ,
-    Scan_Reset,
-    Scan_Reset_Sel,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ,
     AR,
     Dbg_TDI_31,
     \Use_BSCAN.PORT_Selector_reg[0]_3 ,
     \Using_FPGA.Native ,
-    \command_reg[5] );
+    \Use_BSCAN.command_reg[5] );
   output [0:0]Q;
   output rx_Data_Present;
   output [0:7]RX_Data;
@@ -15569,12 +15636,12 @@ module module_ads7056_mdm_1_0_MDM_Core
   output Dbg_Disable_0;
   output Ext_BRK;
   output enable_interrupts;
-  output [0:0]E;
   output tdo;
   output tx_Buffer_Full;
   output p_0_in;
   output p_54_out__0;
   output p_31_out__0;
+  output [0:0]E;
   output [0:7]Dbg_Reg_En_0;
   output Ext_JTAG_SEL;
   output [0:0]\Use_Serial_Unified_Completion.count_reg[4] ;
@@ -15587,14 +15654,16 @@ module module_ads7056_mdm_1_0_MDM_Core
   input [0:0]bus2ip_wrce;
   input reset_RX_FIFO;
   input reset_TX_FIFO;
+  input \Use_BSCAN.PORT_Selector_reg[0]_1 ;
   input clear_Ext_BRK;
   input \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] ;
   input shift_n_reset;
-  input \Use_BSCAN.PORT_Selector_reg[0]_1 ;
   input Dbg_TDO_0;
-  input \Use_BSCAN.PORT_Selector_reg[0]_2 ;
   input [0:0]D;
+  input \Use_BSCAN.PORT_Selector_reg[0]_2 ;
   input sel;
+  input Scan_Reset_Sel;
+  input Scan_Reset;
   input Ext_JTAG_TDO;
   input FIFO_Write;
   input Bus_RNW_reg;
@@ -15603,14 +15672,12 @@ module module_ads7056_mdm_1_0_MDM_Core
   input S_AXI_ARESETN;
   input [0:0]\Use_Serial_Unified_Completion.count_reg[5] ;
   input [0:0]\shift_Count_reg[0] ;
-  input Scan_Reset;
-  input Scan_Reset_Sel;
   input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
   input [0:0]AR;
   input Dbg_TDI_31;
   input [0:0]\Use_BSCAN.PORT_Selector_reg[0]_3 ;
   input [0:0]\Using_FPGA.Native ;
-  input [0:0]\command_reg[5] ;
+  input [0:0]\Use_BSCAN.command_reg[5] ;
 
   wire [0:0]AR;
   wire Bus_RNW_reg;
@@ -15680,7 +15747,7 @@ module module_ads7056_mdm_1_0_MDM_Core
   wire \Use_BSCAN.PORT_Selector_reg[0]_1 ;
   wire \Use_BSCAN.PORT_Selector_reg[0]_2 ;
   wire [0:0]\Use_BSCAN.PORT_Selector_reg[0]_3 ;
-  wire \Use_BSCAN.PORT_Selector_regn_0_0 ;
+  wire [0:0]\Use_BSCAN.command_reg[5] ;
   wire \Use_E2.BSCANE2_I_i_2_n_0 ;
   wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15] ;
   wire [0:0]\Use_Serial_Unified_Completion.count_reg[4] ;
@@ -15693,7 +15760,6 @@ module module_ads7056_mdm_1_0_MDM_Core
   wire [0:0]bus2ip_rdce;
   wire [0:0]bus2ip_wrce;
   wire clear_Ext_BRK;
-  wire [0:0]\command_reg[5] ;
   wire config_with_scan_reset;
   wire enable_interrupts;
   wire fifo_Data_Present;
@@ -15751,6 +15817,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .\Use_BSCAN.PORT_Selector_reg[0]_2 (\Use_BSCAN.PORT_Selector_reg[0]_3 ),
         .\Use_BSCAN.PORT_Selector_reg[2] (\Use_E2.BSCANE2_I_i_2_n_0 ),
         .\Use_BSCAN.PORT_Selector_reg[3] (PORT_Selector),
+        .\Use_BSCAN.command_reg[5]_0 (\Use_BSCAN.command_reg[5] ),
         .\Use_Serial_Unified_Completion.completion_block_reg_0 (p_54_out__0),
         .\Use_Serial_Unified_Completion.completion_status_reg[15]_0 (\Use_Serial_Unified_Completion.completion_status_reg[15] ),
         .\Use_Serial_Unified_Completion.count_reg[4]_0 (\Use_Serial_Unified_Completion.count_reg[4] ),
@@ -15762,7 +15829,6 @@ module module_ads7056_mdm_1_0_MDM_Core
         .\Using_FPGA.Native_0 (fifo_Data_Present),
         .\Using_FPGA.Native_1 (\Using_FPGA.Native ),
         .bus2ip_rdce(bus2ip_rdce),
-        .\command_reg[5]_0 (\command_reg[5] ),
         .enable_interrupts(enable_interrupts),
         .out(out),
         .p_0_in(p_0_in),
@@ -15772,6 +15838,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .tdo(tdo),
         .tx_Buffer_Empty(tx_Buffer_Empty),
         .tx_Buffer_Full(tx_Buffer_Full));
+  (* SHREG_EXTRACT = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
     \Use_BSCAN.Config_Reg_reg[0] 
@@ -15805,6 +15872,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .CLK(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .D(\Use_BSCAN.Config_Reg_reg_n_0_[25] ),
         .Q(\Use_BSCAN.Config_Reg_reg[12]_srl13_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_11_n_0 ));
+  (* SHREG_EXTRACT = "yes" *) 
   FDPE #(
     .INIT(1'b1)) 
     \Use_BSCAN.Config_Reg_reg[1] 
@@ -15813,6 +15881,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .D(\Use_BSCAN.Config_Reg_reg_n_0_[2] ),
         .PRE(shift_n_reset),
         .Q(\Use_BSCAN.Config_Reg_reg_n_0_[1] ));
+  (* SHREG_EXTRACT = "yes" *) 
   FDPE #(
     .INIT(1'b1)) 
     \Use_BSCAN.Config_Reg_reg[25] 
@@ -15846,6 +15915,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .CLK(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .D(\Use_BSCAN.Config_Reg_reg_n_0_[30] ),
         .Q(\Use_BSCAN.Config_Reg_reg[28]_srl2_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_0_n_0 ));
+  (* SHREG_EXTRACT = "yes" *) 
   FDPE #(
     .INIT(1'b1)) 
     \Use_BSCAN.Config_Reg_reg[2] 
@@ -15854,6 +15924,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .D(\Use_BSCAN.Config_Reg_reg_n_0_[3] ),
         .PRE(shift_n_reset),
         .Q(\Use_BSCAN.Config_Reg_reg_n_0_[2] ));
+  (* SHREG_EXTRACT = "yes" *) 
   FDPE #(
     .INIT(1'b1)) 
     \Use_BSCAN.Config_Reg_reg[30] 
@@ -15887,6 +15958,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .CLK(\Use_BSCAN.PORT_Selector_reg[0]_0 ),
         .D(\Use_BSCAN.Config_Reg_reg_n_0_[9] ),
         .Q(\Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2_n_0 ));
+  (* SHREG_EXTRACT = "yes" *) 
   FDPE #(
     .INIT(1'b1)) 
     \Use_BSCAN.Config_Reg_reg[9] 
@@ -16039,42 +16111,41 @@ module module_ads7056_mdm_1_0_MDM_Core
         .D(TDI_Shifter[3]),
         .Q(PORT_Selector_1[3]));
   FDCE #(
-    .INIT(1'b0)) 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
     \Use_BSCAN.PORT_Selector_reg[0] 
-       (.C(\Use_BSCAN.PORT_Selector_regn_0_0 ),
+       (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
         .D(PORT_Selector_1[0]),
         .Q(PORT_Selector[0]));
   FDCE #(
-    .INIT(1'b0)) 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
     \Use_BSCAN.PORT_Selector_reg[1] 
-       (.C(\Use_BSCAN.PORT_Selector_regn_0_0 ),
+       (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
         .D(PORT_Selector_1[1]),
         .Q(PORT_Selector[1]));
   FDCE #(
-    .INIT(1'b0)) 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
     \Use_BSCAN.PORT_Selector_reg[2] 
-       (.C(\Use_BSCAN.PORT_Selector_regn_0_0 ),
+       (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
         .D(PORT_Selector_1[2]),
         .Q(PORT_Selector[2]));
   FDCE #(
-    .INIT(1'b0)) 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
     \Use_BSCAN.PORT_Selector_reg[3] 
-       (.C(\Use_BSCAN.PORT_Selector_regn_0_0 ),
+       (.C(CLK),
         .CE(1'b1),
         .CLR(AR),
         .D(PORT_Selector_1[3]),
         .Q(PORT_Selector[3]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \Use_BSCAN.PORT_Selector_regi_0 
-       (.I0(CLK),
-        .O(\Use_BSCAN.PORT_Selector_regn_0_0 ));
   LUT6 #(
     .INIT(64'h0001000000000000)) 
     \Use_BSCAN.TDI_Shifter[3]_i_1 
@@ -16083,7 +16154,7 @@ module module_ads7056_mdm_1_0_MDM_Core
         .I2(PORT_Selector[1]),
         .I3(PORT_Selector[0]),
         .I4(sel),
-        .I5(\Use_BSCAN.PORT_Selector_reg[0]_1 ),
+        .I5(\Use_BSCAN.PORT_Selector_reg[0]_2 ),
         .O(p_2_out_1));
   FDCE #(
     .INIT(1'b0)) 
@@ -16182,9 +16253,9 @@ module module_ads7056_mdm_1_0_SRL_FIFO
     Q,
     \Use_UART.tdo_reg_reg[3] ,
     \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[0] ,
+    \Use_BSCAN.command_reg[0] ,
     Data_Out,
-    \command_reg[0]_0 ,
+    \Use_BSCAN.command_reg[0]_0 ,
     \Use_UART.fifo_Write_reg ,
     bus2ip_rdce,
     Bus_RNW_reg,
@@ -16198,9 +16269,9 @@ module module_ads7056_mdm_1_0_SRL_FIFO
   input [7:0]Q;
   input [1:0]\Use_UART.tdo_reg_reg[3] ;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[0] ;
+  input \Use_BSCAN.command_reg[0] ;
   input [1:0]Data_Out;
-  input \command_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[0]_0 ;
   input \Use_UART.fifo_Write_reg ;
   input [0:0]bus2ip_rdce;
   input Bus_RNW_reg;
@@ -16221,6 +16292,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO
   wire S2_out;
   wire S_AXI_ACLK;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
   wire \Use_UART.fifo_Write_reg ;
   wire [1:0]\Use_UART.tdo_reg_reg[3] ;
   wire \Use_Uart.reset_RX_FIFO_reg ;
@@ -16229,8 +16302,6 @@ module module_ads7056_mdm_1_0_SRL_FIFO
   wire addr_cy_1;
   wire addr_cy_2;
   wire [0:0]bus2ip_rdce;
-  wire \command_reg[0] ;
-  wire \command_reg[0]_0 ;
   wire lopt;
   wire lopt_1;
   wire lopt_2;
@@ -16242,7 +16313,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
   wire sum_A_2;
   wire sum_A_3;
 
-  module_ads7056_mdm_1_0_MB_FDRE_8 \Addr_Counters[0].FDRE_I 
+  module_ads7056_mdm_1_0_MB_FDRE_15 \Addr_Counters[0].FDRE_I 
        (.Addr(Addr[0]),
         .O(sum_A_3),
         .S(S),
@@ -16252,7 +16323,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .\Using_FPGA.Native_0 ({Addr[1],Addr[2],Addr[3]}),
         .bus2ip_rdce(bus2ip_rdce),
         .data_Exists_I_reg(\Using_FPGA.Native ));
-  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9 \Addr_Counters[0].Used_MuxCY.MUXCY_L_I 
+  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16 \Addr_Counters[0].Used_MuxCY.MUXCY_L_I 
        (.Addr(Addr[0]),
         .CI(CI),
         .LO(addr_cy_2),
@@ -16268,7 +16339,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .lopt_7(lopt_3),
         .lopt_8(lopt_4),
         .lopt_9(LI));
-  module_ads7056_mdm_1_0_MB_FDRE_10 \Addr_Counters[1].FDRE_I 
+  module_ads7056_mdm_1_0_MB_FDRE_17 \Addr_Counters[1].FDRE_I 
        (.Addr({Addr[0],Addr[2],Addr[3]}),
         .O(sum_A_2),
         .S(S2_out),
@@ -16278,7 +16349,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .\Using_FPGA.Native_0 (Addr[1]),
         .bus2ip_rdce(bus2ip_rdce),
         .data_Exists_I_reg(\Using_FPGA.Native ));
-  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11 \Addr_Counters[1].Used_MuxCY.MUXCY_L_I 
+  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18 \Addr_Counters[1].Used_MuxCY.MUXCY_L_I 
        (.CI(addr_cy_2),
         .LO(addr_cy_1),
         .O(sum_A_2),
@@ -16286,7 +16357,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .\Using_FPGA.Native (Addr[1]),
         .lopt(lopt),
         .lopt_1(lopt_2));
-  module_ads7056_mdm_1_0_MB_FDRE_12 \Addr_Counters[2].FDRE_I 
+  module_ads7056_mdm_1_0_MB_FDRE_19 \Addr_Counters[2].FDRE_I 
        (.Addr(Addr[2]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .CI(CI),
@@ -16297,17 +16368,17 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .S(S1_out),
         .S_AXI_ACLK(S_AXI_ACLK),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0] ),
+        .\Use_BSCAN.command_reg[0]_0 (\Use_BSCAN.command_reg[0]_0 ),
         .\Use_UART.fifo_Write_reg (\Use_UART.fifo_Write_reg ),
         .\Use_UART.tdo_reg_reg[3] (\Use_UART.tdo_reg_reg[3] [1]),
         .\Use_Uart.reset_RX_FIFO_reg (\Use_Uart.reset_RX_FIFO_reg ),
         .\Using_FPGA.Native_0 ({Addr[0],Addr[1],Addr[3]}),
         .bus2ip_rdce(bus2ip_rdce),
-        .\command_reg[0] (\command_reg[0] ),
-        .\command_reg[0]_0 (\command_reg[0]_0 ),
         .data_Exists_I_reg(\Addr_Counters[2].FDRE_I_n_5 ),
         .data_Exists_I_reg_0(\Using_FPGA.Native ),
         .p_0_in(p_0_in));
-  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13 \Addr_Counters[2].Used_MuxCY.MUXCY_L_I 
+  module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20 \Addr_Counters[2].Used_MuxCY.MUXCY_L_I 
        (.Addr(Addr[2]),
         .CI(addr_cy_1),
         .LO(addr_cy_0),
@@ -16315,7 +16386,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .S(S1_out),
         .lopt(lopt_1),
         .lopt_1(lopt_3));
-  module_ads7056_mdm_1_0_MB_FDRE_14 \Addr_Counters[3].FDRE_I 
+  module_ads7056_mdm_1_0_MB_FDRE_21 \Addr_Counters[3].FDRE_I 
        (.Addr({Addr[0],Addr[1],Addr[2]}),
         .LI(LI),
         .S_AXI_ACLK(S_AXI_ACLK),
@@ -16325,54 +16396,54 @@ module module_ads7056_mdm_1_0_SRL_FIFO
         .bus2ip_rdce(bus2ip_rdce),
         .data_Exists_I_reg(\Using_FPGA.Native ),
         .sum_A_0(sum_A_0));
-  module_ads7056_mdm_1_0_MB_XORCY_15 \Addr_Counters[3].No_MuxCY.XORCY_I 
+  module_ads7056_mdm_1_0_MB_XORCY_22 \Addr_Counters[3].No_MuxCY.XORCY_I 
        (.LI(LI),
         .LO(addr_cy_0),
         .lopt(lopt_4),
         .sum_A_0(sum_A_0));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16 \FIFO_RAM[0].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23 \FIFO_RAM[0].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[7]),
         .RX_Data(RX_Data[0]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17 \FIFO_RAM[1].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24 \FIFO_RAM[1].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[6]),
         .RX_Data(RX_Data[1]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18 \FIFO_RAM[2].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25 \FIFO_RAM[2].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[5]),
         .RX_Data(RX_Data[2]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19 \FIFO_RAM[3].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26 \FIFO_RAM[3].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[4]),
         .RX_Data(RX_Data[3]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20 \FIFO_RAM[4].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27 \FIFO_RAM[4].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[3]),
         .RX_Data(RX_Data[4]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21 \FIFO_RAM[5].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28 \FIFO_RAM[5].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[2]),
         .RX_Data(RX_Data[5]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22 \FIFO_RAM[6].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29 \FIFO_RAM[6].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[1]),
         .RX_Data(RX_Data[6]),
         .S_AXI_ACLK(S_AXI_ACLK));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23 \FIFO_RAM[7].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30 \FIFO_RAM[7].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Q(Q[0]),
@@ -16383,10 +16454,10 @@ module module_ads7056_mdm_1_0_SRL_FIFO
     \Use_UART.tdo_reg[5]_i_1 
        (.I0(\Use_UART.tdo_reg_reg[3] [0]),
         .I1(\Use_BSCAN.PORT_Selector_reg[0] ),
-        .I2(\command_reg[0] ),
+        .I2(\Use_BSCAN.command_reg[0] ),
         .I3(\Using_FPGA.Native ),
         .I4(Data_Out[0]),
-        .I5(\command_reg[0]_0 ),
+        .I5(\Use_BSCAN.command_reg[0]_0 ),
         .O(D[0]));
   FDRE #(
     .INIT(1'b0)) 
@@ -16411,8 +16482,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
     S_AXI_WDATA,
     Q,
     \Use_BSCAN.PORT_Selector_reg[0] ,
-    \command_reg[0] ,
-    \command_reg[0]_0 ,
+    \Use_BSCAN.command_reg[0] ,
+    \Use_BSCAN.command_reg[0]_0 ,
     FIFO_Write,
     \Use_UART.fifo_Read_reg ,
     Bus_RNW_reg,
@@ -16432,8 +16503,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
   input [7:0]S_AXI_WDATA;
   input [4:0]Q;
   input \Use_BSCAN.PORT_Selector_reg[0] ;
-  input \command_reg[0] ;
-  input \command_reg[0]_0 ;
+  input \Use_BSCAN.command_reg[0] ;
+  input \Use_BSCAN.command_reg[0]_0 ;
   input FIFO_Write;
   input \Use_UART.fifo_Read_reg ;
   input Bus_RNW_reg;
@@ -16461,6 +16532,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
   wire S_AXI_ACLK;
   wire [7:0]S_AXI_WDATA;
   wire \Use_BSCAN.PORT_Selector_reg[0] ;
+  wire \Use_BSCAN.command_reg[0] ;
+  wire \Use_BSCAN.command_reg[0]_0 ;
   wire \Use_UART.fifo_Read_reg ;
   wire [1:0]\Use_UART.tdo_reg_reg[4] ;
   wire \Use_Uart.reset_TX_FIFO_reg ;
@@ -16468,8 +16541,6 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
   wire addr_cy_0;
   wire addr_cy_1;
   wire addr_cy_2;
-  wire \command_reg[0] ;
-  wire \command_reg[0]_0 ;
   wire data_Exists_I_reg_0;
   wire enable_interrupts;
   wire lopt;
@@ -16542,11 +16613,11 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .S(S1_out),
         .S_AXI_ACLK(S_AXI_ACLK),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0] ),
+        .\Use_BSCAN.command_reg[0]_0 (\Use_BSCAN.command_reg[0]_0 ),
         .\Use_UART.fifo_Read_reg (\Use_UART.fifo_Read_reg ),
         .\Use_Uart.reset_TX_FIFO_reg (\Use_Uart.reset_TX_FIFO_reg ),
         .\Using_FPGA.Native_0 ({Addr[0],Addr[1],Addr[3]}),
-        .\command_reg[0] (\command_reg[0] ),
-        .\command_reg[0]_0 (\command_reg[0]_0 ),
         .data_Exists_I_reg(\Addr_Counters[2].FDRE_I_n_5 ),
         .data_Exists_I_reg_0(\Using_FPGA.Native ),
         .out(out),
@@ -16580,8 +16651,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .D(D[5]),
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[7]),
-        .\command_reg[0] (\command_reg[0]_0 ));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized9 \FIFO_RAM[1].D16.SRL16E_I 
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0]_0 ));
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8 \FIFO_RAM[1].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .D(D[4]),
@@ -16589,8 +16660,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[6]),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
-        .\command_reg[0] (\command_reg[0]_0 ));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized11 \FIFO_RAM[2].D16.SRL16E_I 
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0]_0 ));
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9 \FIFO_RAM[2].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .D(D[3]),
@@ -16598,8 +16669,8 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[5]),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
-        .\command_reg[0] (\command_reg[0]_0 ));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized13 \FIFO_RAM[3].D16.SRL16E_I 
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0]_0 ));
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10 \FIFO_RAM[3].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .D(D[2]),
@@ -16607,26 +16678,26 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[4]),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
-        .\command_reg[0] (\command_reg[0]_0 ));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized15 \FIFO_RAM[4].D16.SRL16E_I 
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0]_0 ));
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11 \FIFO_RAM[4].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[3]),
         .\Use_UART.tdo_reg_reg[4] (\Use_UART.tdo_reg_reg[4] [1]));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized17 \FIFO_RAM[5].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12 \FIFO_RAM[5].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[2]),
         .\Use_UART.tdo_reg_reg[5] (\Use_UART.tdo_reg_reg[4] [0]));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized19 \FIFO_RAM[6].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13 \FIFO_RAM[6].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .Data_Out(Data_Out),
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[1]));
-  module_ads7056_mdm_1_0_MB_SRL16E__parameterized21 \FIFO_RAM[7].D16.SRL16E_I 
+  module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14 \FIFO_RAM[7].D16.SRL16E_I 
        (.Addr(Addr),
         .CI(CI),
         .D(D[0]),
@@ -16634,10 +16705,10 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .S_AXI_ACLK(S_AXI_ACLK),
         .S_AXI_WDATA(S_AXI_WDATA[0]),
         .\Use_BSCAN.PORT_Selector_reg[0] (\Use_BSCAN.PORT_Selector_reg[0] ),
-        .\command_reg[0] (\command_reg[0] ),
-        .\command_reg[0]_0 (\command_reg[0]_0 ),
+        .\Use_BSCAN.command_reg[0] (\Use_BSCAN.command_reg[0] ),
+        .\Use_BSCAN.command_reg[0]_0 (\Use_BSCAN.command_reg[0]_0 ),
         .data_Exists_I_reg(\Using_FPGA.Native ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hF100)) 
     Interrupt_INST_0
@@ -16646,7 +16717,7 @@ module module_ads7056_mdm_1_0_SRL_FIFO_0
         .I2(data_Exists_I_reg_0),
         .I3(enable_interrupts),
         .O(Interrupt));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \Using_FPGA.Native_i_2__0 
@@ -16817,7 +16888,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .D(ce_expnd_i_3),
         .Q(\s_axi_rresp_i_reg[1]_0 ),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1 
@@ -16846,7 +16917,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I3(\s_axi_rresp_i_reg[1] ),
         .I4(S_AXI_ARESETN),
         .O(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2 
@@ -16870,7 +16941,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .\bus2ip_addr_i_reg[2] (\bus2ip_addr_i_reg[2] ),
         .\bus2ip_addr_i_reg[3] (\bus2ip_addr_i_reg[3] ),
         .ce_expnd_i_1(ce_expnd_i_1));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hFF00FE00)) 
     S_AXI_ARREADY_INST_0
@@ -16880,7 +16951,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I3(\Use_Uart.enable_interrupts_reg ),
         .I4(\s_axi_rresp_i_reg[1]_0 ),
         .O(S_AXI_ARREADY));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h00FF00FE)) 
     S_AXI_WREADY_INST_0
@@ -16890,7 +16961,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I3(\Use_Uart.enable_interrupts_reg ),
         .I4(\s_axi_rresp_i_reg[1] ),
         .O(S_AXI_AWREADY));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Use_Uart.clear_Ext_BRK_i_1 
@@ -16898,7 +16969,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I1(\GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ),
         .I2(S_AXI_WDATA[2]),
         .O(clear_Ext_BRK));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \Use_Uart.enable_interrupts_i_1 
@@ -16907,7 +16978,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I2(\Use_Uart.enable_interrupts_reg ),
         .I3(enable_interrupts),
         .O(\Use_Uart.enable_interrupts_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Use_Uart.reset_RX_FIFO_i_2 
@@ -16923,7 +16994,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I1(\GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ),
         .I2(S_AXI_WDATA[0]),
         .O(reset_TX_FIFO));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \Using_FPGA.Native_I1_i_3 
@@ -16931,14 +17002,14 @@ module module_ads7056_mdm_1_0_address_decoder
         .I1(\s_axi_rresp_i_reg[1] ),
         .I2(out),
         .O(FIFO_Write));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Using_FPGA.Native_I1_i_3__0 
        (.I0(\s_axi_rresp_i_reg[1]_0 ),
         .I1(\Use_Uart.enable_interrupts_reg ),
         .O(bus2ip_rdce));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Using_FPGA.Native_i_1__1 
@@ -16962,7 +17033,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I3(S_AXI_BREADY),
         .I4(S_AXI_BVALID),
         .O(s_axi_bvalid_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hAA00C000)) 
     \s_axi_rdata_i[0]_i_1 
@@ -17008,7 +17079,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I3(\Use_Uart.enable_interrupts_reg ),
         .I4(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
         .O(\s_axi_rdata_i_reg[7] [4]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \s_axi_rdata_i[5]_i_1 
@@ -17017,7 +17088,6 @@ module module_ads7056_mdm_1_0_address_decoder
         .I2(\s_axi_rresp_i_reg[1]_0 ),
         .I3(RX_Data[2]),
         .O(\s_axi_rdata_i_reg[7] [5]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \s_axi_rdata_i[6]_i_1 
@@ -17026,6 +17096,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I2(\s_axi_rresp_i_reg[1]_0 ),
         .I3(RX_Data[1]),
         .O(\s_axi_rdata_i_reg[7] [6]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \s_axi_rdata_i[7]_i_2 
@@ -17034,7 +17105,7 @@ module module_ads7056_mdm_1_0_address_decoder
         .I2(\s_axi_rresp_i_reg[1]_0 ),
         .I3(RX_Data[0]),
         .O(\s_axi_rdata_i_reg[7] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'h0F008888)) 
     \s_axi_rresp_i[1]_i_1 
@@ -17469,7 +17540,7 @@ module module_ads7056_mdm_1_0_slave_attachment
         .I1(state[0]),
         .I2(state[1]),
         .O(bus2ip_rnw_i03_out));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'h03020202)) 
     \bus2ip_addr_i[3]_i_3 
@@ -17615,7 +17686,7 @@ module module_ads7056_mdm_1_0_slave_attachment
         .D(I_DECODER_n_23),
         .Q(S_AXI_RVALID),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'h000F0008)) 
     start2_i_1
@@ -17708,8 +17779,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

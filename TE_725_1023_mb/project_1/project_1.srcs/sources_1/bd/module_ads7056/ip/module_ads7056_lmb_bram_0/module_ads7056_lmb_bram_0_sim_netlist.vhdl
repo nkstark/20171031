@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sun Oct 29 22:37:25 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:20:29 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_lmb_bram_0/module_ads7056_lmb_bram_0_sim_netlist.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_lmb_bram_0/module_ads7056_lmb_bram_0_sim_netlist.vhdl
 -- Design      : module_ads7056_lmb_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -46,8 +46,6 @@ architecture STRUCTURE of module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper is
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[1:0][0:16383]";
   attribute box_type : string;
@@ -317,8 +315,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[3:2][0:16383]";
   attribute box_type : string;
@@ -588,8 +584,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[5:4][0:16383]";
   attribute box_type : string;
@@ -859,8 +853,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[23:22][0:16383]";
   attribute box_type : string;
@@ -1130,8 +1122,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[25:24][0:16383]";
   attribute box_type : string;
@@ -1401,8 +1391,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[27:26][0:16383]";
   attribute box_type : string;
@@ -1672,8 +1660,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[29:28][0:16383]";
   attribute box_type : string;
@@ -1943,8 +1929,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[31:30][0:16383]";
   attribute box_type : string;
@@ -2214,8 +2198,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[7:6][0:16383]";
   attribute box_type : string;
@@ -2485,8 +2467,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[9:8][0:16383]";
   attribute box_type : string;
@@ -2756,8 +2736,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[11:10][0:16383]";
   attribute box_type : string;
@@ -3027,8 +3005,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[13:12][0:16383]";
   attribute box_type : string;
@@ -3298,8 +3274,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[15:14][0:16383]";
   attribute box_type : string;
@@ -3569,8 +3543,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[17:16][0:16383]";
   attribute box_type : string;
@@ -3840,8 +3812,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[19:18][0:16383]";
   attribute box_type : string;
@@ -4111,8 +4081,6 @@ architecture STRUCTURE of \module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__p
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  attribute CLOCK_DOMAINS : string;
-  attribute CLOCK_DOMAINS of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "INDEPENDENT";
   attribute bmm_info_memory_device : string;
   attribute bmm_info_memory_device of \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram\ : label is "[21:20][0:16383]";
   attribute box_type : string;
@@ -5415,7 +5383,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth is
+entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -5433,10 +5401,10 @@ entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth is
     web : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth : entity is "blk_mem_gen_v8_3_5_synth";
-end module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth;
+  attribute ORIG_REF_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
+end module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth;
 
-architecture STRUCTURE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth is
+architecture STRUCTURE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth is
 begin
 \gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen\: entity work.module_ads7056_lmb_bram_0_blk_mem_gen_top
      port map (
@@ -5460,7 +5428,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 is
+entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 is
   port (
     clka : in STD_LOGIC;
     rsta : in STD_LOGIC;
@@ -5527,158 +5495,158 @@ entity module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 is
     s_axi_rdaddrecc : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute C_ADDRA_WIDTH : integer;
-  attribute C_ADDRA_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_ADDRA_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_ADDRB_WIDTH : integer;
-  attribute C_ADDRB_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_ADDRB_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_ALGORITHM : integer;
-  attribute C_ALGORITHM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_ALGORITHM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 4;
+  attribute C_AXI_ID_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 4;
   attribute C_AXI_SLAVE_TYPE : integer;
-  attribute C_AXI_SLAVE_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_AXI_SLAVE_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_AXI_TYPE : integer;
-  attribute C_AXI_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_AXI_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_BYTE_SIZE : integer;
-  attribute C_BYTE_SIZE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 8;
+  attribute C_BYTE_SIZE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_COMMON_CLK : integer;
-  attribute C_COMMON_CLK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_COMMON_CLK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_COUNT_18K_BRAM : string;
-  attribute C_COUNT_18K_BRAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "0";
+  attribute C_COUNT_18K_BRAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "0";
   attribute C_COUNT_36K_BRAM : string;
-  attribute C_COUNT_36K_BRAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "16";
+  attribute C_COUNT_36K_BRAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "16";
   attribute C_CTRL_ECC_ALGO : string;
-  attribute C_CTRL_ECC_ALGO of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "NONE";
+  attribute C_CTRL_ECC_ALGO of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "NONE";
   attribute C_DEFAULT_DATA : string;
-  attribute C_DEFAULT_DATA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "0";
+  attribute C_DEFAULT_DATA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "0";
   attribute C_DISABLE_WARN_BHV_COLL : integer;
-  attribute C_DISABLE_WARN_BHV_COLL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_COLL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_DISABLE_WARN_BHV_RANGE : integer;
-  attribute C_DISABLE_WARN_BHV_RANGE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_RANGE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_ELABORATION_DIR : string;
-  attribute C_ELABORATION_DIR of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "./";
+  attribute C_ELABORATION_DIR of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "./";
   attribute C_ENABLE_32BIT_ADDRESS : integer;
-  attribute C_ENABLE_32BIT_ADDRESS of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_ENABLE_32BIT_ADDRESS of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_EN_DEEPSLEEP_PIN : integer;
-  attribute C_EN_DEEPSLEEP_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_DEEPSLEEP_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_ECC_PIPE : integer;
-  attribute C_EN_ECC_PIPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_ECC_PIPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_RDADDRA_CHG : integer;
-  attribute C_EN_RDADDRA_CHG of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_RDADDRA_CHG of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_RDADDRB_CHG : integer;
-  attribute C_EN_RDADDRB_CHG of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_RDADDRB_CHG of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_SAFETY_CKT of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_SHUTDOWN_PIN : integer;
-  attribute C_EN_SHUTDOWN_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_SHUTDOWN_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EN_SLEEP_PIN : integer;
-  attribute C_EN_SLEEP_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_EN_SLEEP_PIN of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "Estimated Power for IP     :     20.388 mW";
+  attribute C_EST_POWER_SUMMARY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "Estimated Power for IP     :     20.388 mW";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "artix7";
+  attribute C_FAMILY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "artix7";
   attribute C_HAS_AXI_ID : integer;
-  attribute C_HAS_AXI_ID of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_AXI_ID of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_HAS_ENA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_HAS_ENB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_HAS_INJECTERR : integer;
-  attribute C_HAS_INJECTERR of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_INJECTERR of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MUX_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_MUX_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_REGCEA : integer;
-  attribute C_HAS_REGCEA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_REGCEA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_REGCEB : integer;
-  attribute C_HAS_REGCEB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_REGCEB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_RSTA : integer;
-  attribute C_HAS_RSTA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_HAS_RSTA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_HAS_RSTB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
-  attribute C_HAS_SOFTECC_INPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_SOFTECC_INPUT_REGS_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
-  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_HAS_SOFTECC_OUTPUT_REGS_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_INITA_VAL : string;
-  attribute C_INITA_VAL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "0";
+  attribute C_INITA_VAL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "0";
   attribute C_INITB_VAL : string;
-  attribute C_INITB_VAL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "0";
+  attribute C_INITB_VAL of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "0";
   attribute C_INIT_FILE : string;
-  attribute C_INIT_FILE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "module_ads7056_lmb_bram_0.mem";
+  attribute C_INIT_FILE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "module_ads7056_lmb_bram_0.mem";
   attribute C_INIT_FILE_NAME : string;
-  attribute C_INIT_FILE_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "no_coe_file_loaded";
+  attribute C_INIT_FILE_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "no_coe_file_loaded";
   attribute C_INTERFACE_TYPE : integer;
-  attribute C_INTERFACE_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_INTERFACE_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_LOAD_INIT_FILE : integer;
-  attribute C_LOAD_INIT_FILE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_LOAD_INIT_FILE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 2;
+  attribute C_MEM_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 2;
   attribute C_MUX_PIPELINE_STAGES : integer;
-  attribute C_MUX_PIPELINE_STAGES of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_MUX_PIPELINE_STAGES of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_PRIM_TYPE : integer;
-  attribute C_PRIM_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_PRIM_TYPE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 16384;
+  attribute C_READ_DEPTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 16384;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 16384;
+  attribute C_READ_DEPTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 16384;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_READ_WIDTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_READ_WIDTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_RSTRAM_A : integer;
-  attribute C_RSTRAM_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_RSTRAM_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_RSTRAM_B : integer;
-  attribute C_RSTRAM_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_RSTRAM_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_RST_PRIORITY_A : string;
-  attribute C_RST_PRIORITY_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "CE";
+  attribute C_RST_PRIORITY_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "CE";
   attribute C_RST_PRIORITY_B : string;
-  attribute C_RST_PRIORITY_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "CE";
+  attribute C_RST_PRIORITY_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "CE";
   attribute C_SIM_COLLISION_CHECK : string;
-  attribute C_SIM_COLLISION_CHECK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "ALL";
+  attribute C_SIM_COLLISION_CHECK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "ALL";
   attribute C_USE_BRAM_BLOCK : integer;
-  attribute C_USE_BRAM_BLOCK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_USE_BRAM_BLOCK of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_USE_BYTE_WEA : integer;
-  attribute C_USE_BYTE_WEA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_USE_BYTE_WEA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_USE_BYTE_WEB : integer;
-  attribute C_USE_BYTE_WEB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 1;
+  attribute C_USE_BYTE_WEB of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_USE_DEFAULT_DATA : integer;
-  attribute C_USE_DEFAULT_DATA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_USE_DEFAULT_DATA of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_USE_ECC : integer;
-  attribute C_USE_ECC of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_USE_ECC of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_USE_SOFTECC : integer;
-  attribute C_USE_SOFTECC of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_USE_SOFTECC of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_USE_URAM : integer;
-  attribute C_USE_URAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 0;
+  attribute C_USE_URAM of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_WEA_WIDTH : integer;
-  attribute C_WEA_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 4;
+  attribute C_WEA_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 4;
   attribute C_WEB_WIDTH : integer;
-  attribute C_WEB_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 4;
+  attribute C_WEB_WIDTH of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 4;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 16384;
+  attribute C_WRITE_DEPTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 16384;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 16384;
+  attribute C_WRITE_DEPTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 16384;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "WRITE_FIRST";
+  attribute C_WRITE_MODE_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "WRITE_FIRST";
   attribute C_WRITE_MODE_B : string;
-  attribute C_WRITE_MODE_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "WRITE_FIRST";
+  attribute C_WRITE_MODE_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_WRITE_WIDTH_A of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is 32;
+  attribute C_WRITE_WIDTH_B of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
-  attribute C_XDEVICEFAMILY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "artix7";
+  attribute C_XDEVICEFAMILY of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "artix7";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "blk_mem_gen_v8_3_5";
+  attribute ORIG_REF_NAME of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 : entity is "yes";
-end module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5;
+  attribute downgradeipidentifiedwarnings of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "yes";
+end module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6;
 
-architecture STRUCTURE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 is
+architecture STRUCTURE of module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
@@ -5805,7 +5773,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst_blk_mem_gen: entity work.module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth
+inst_blk_mem_gen: entity work.module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth
      port map (
       addra(13 downto 0) => addra(15 downto 2),
       addrb(13 downto 0) => addrb(15 downto 2),
@@ -5847,11 +5815,11 @@ entity module_ads7056_lmb_bram_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of module_ads7056_lmb_bram_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of module_ads7056_lmb_bram_0 : entity is "module_ads7056_lmb_bram_0,blk_mem_gen_v8_3_5,{}";
+  attribute CHECK_LICENSE_TYPE of module_ads7056_lmb_bram_0 : entity is "module_ads7056_lmb_bram_0,blk_mem_gen_v8_3_6,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of module_ads7056_lmb_bram_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of module_ads7056_lmb_bram_0 : entity is "blk_mem_gen_v8_3_5,Vivado 2016.4";
+  attribute x_core_info of module_ads7056_lmb_bram_0 : entity is "blk_mem_gen_v8_3_6,Vivado 2017.2";
 end module_ads7056_lmb_bram_0;
 
 architecture STRUCTURE of module_ads7056_lmb_bram_0 is
@@ -6022,7 +5990,7 @@ architecture STRUCTURE of module_ads7056_lmb_bram_0 is
   attribute C_XDEVICEFAMILY of U0 : label is "artix7";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
 begin
-U0: entity work.module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5
+U0: entity work.module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6
      port map (
       addra(31 downto 0) => addra(31 downto 0),
       addrb(31 downto 0) => addrb(31 downto 0),

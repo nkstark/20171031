@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Mon Oct 30 01:54:57 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:23:39 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_sim_netlist.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_axi_quad_spi_0_0/module_ads7056_axi_quad_spi_0_0_sim_netlist.vhdl
 -- Design      : module_ads7056_axi_quad_spi_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -254,6 +254,36 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19_46\ is
+  port (
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]\ : out STD_LOGIC;
+    \bus2ip_addr_i_reg[6]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    Q : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19_46\ : entity is "axi_lite_ipif_v3_0_4_pselect_f";
+end \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19_46\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19_46\ is
+begin
+CS: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1000000000000000"
+    )
+        port map (
+      I0 => \bus2ip_addr_i_reg[6]\(0),
+      I1 => \bus2ip_addr_i_reg[6]\(2),
+      I2 => \bus2ip_addr_i_reg[6]\(1),
+      I3 => \bus2ip_addr_i_reg[6]\(4),
+      I4 => \bus2ip_addr_i_reg[6]\(3),
+      I5 => Q,
+      O => \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized2\ is
   port (
     p_13_out : out STD_LOGIC;
@@ -314,30 +344,30 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28\ is
+entity \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_47\ is
   port (
-    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]\ : out STD_LOGIC;
+    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]\ : out STD_LOGIC;
     \bus2ip_addr_i_reg[6]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     Q : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28\ : entity is "axi_lite_ipif_v3_0_4_pselect_f";
-end \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_47\ : entity is "axi_lite_ipif_v3_0_4_pselect_f";
+end \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_47\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_47\ is
 begin
 CS: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1000000000000000"
+      INIT => X"2000000000000000"
     )
         port map (
-      I0 => \bus2ip_addr_i_reg[6]\(0),
-      I1 => \bus2ip_addr_i_reg[6]\(2),
-      I2 => \bus2ip_addr_i_reg[6]\(1),
-      I3 => \bus2ip_addr_i_reg[6]\(4),
-      I4 => \bus2ip_addr_i_reg[6]\(3),
-      I5 => Q,
-      O => \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]\
+      I0 => \bus2ip_addr_i_reg[6]\(2),
+      I1 => \bus2ip_addr_i_reg[6]\(0),
+      I2 => \bus2ip_addr_i_reg[6]\(4),
+      I3 => \bus2ip_addr_i_reg[6]\(3),
+      I4 => Q,
+      I5 => \bus2ip_addr_i_reg[6]\(1),
+      O => \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]\
     );
 end STRUCTURE;
 library IEEE;
@@ -368,36 +398,6 @@ CS: unisim.vcomponents.LUT6
       I4 => \bus2ip_addr_i_reg[6]\(4),
       I5 => Q,
       O => p_12_out
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32\ is
-  port (
-    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]\ : out STD_LOGIC;
-    \bus2ip_addr_i_reg[6]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    Q : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32\ : entity is "axi_lite_ipif_v3_0_4_pselect_f";
-end \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32\ is
-begin
-CS: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2000000000000000"
-    )
-        port map (
-      I0 => \bus2ip_addr_i_reg[6]\(2),
-      I1 => \bus2ip_addr_i_reg[6]\(0),
-      I2 => \bus2ip_addr_i_reg[6]\(4),
-      I3 => \bus2ip_addr_i_reg[6]\(3),
-      I4 => Q,
-      I5 => \bus2ip_addr_i_reg[6]\(1),
-      O => \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]\
     );
 end STRUCTURE;
 library IEEE;
@@ -682,7 +682,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_cdc_sync_28 is
+entity module_ads7056_axi_quad_spi_0_0_cdc_sync_32 is
   port (
     \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\ : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
@@ -694,10 +694,10 @@ entity module_ads7056_axi_quad_spi_0_0_cdc_sync_28 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_28 : entity is "cdc_sync";
-end module_ads7056_axi_quad_spi_0_0_cdc_sync_28;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_32 : entity is "cdc_sync";
+end module_ads7056_axi_quad_spi_0_0_cdc_sync_32;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_28 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_32 is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal s_level_out_d3 : STD_LOGIC;
@@ -780,17 +780,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_cdc_sync_29 is
+entity module_ads7056_axi_quad_spi_0_0_cdc_sync_33 is
   port (
     scndry_out : out STD_LOGIC;
     prmry_in : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_29 : entity is "cdc_sync";
-end module_ads7056_axi_quad_spi_0_0_cdc_sync_29;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_33 : entity is "cdc_sync";
+end module_ads7056_axi_quad_spi_0_0_cdc_sync_33;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_29 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_33 is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal s_level_out_d3 : STD_LOGIC;
@@ -859,7 +859,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_cdc_sync_30 is
+entity module_ads7056_axi_quad_spi_0_0_cdc_sync_41 is
   port (
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
     \ip_irpt_enable_reg_reg[8]\ : out STD_LOGIC;
@@ -869,10 +869,10 @@ entity module_ads7056_axi_quad_spi_0_0_cdc_sync_30 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_30 : entity is "cdc_sync";
-end module_ads7056_axi_quad_spi_0_0_cdc_sync_30;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_41 : entity is "cdc_sync";
+end module_ads7056_axi_quad_spi_0_0_cdc_sync_41;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_30 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_41 is
   signal \^ip_irpt_enable_reg_reg[8]\ : STD_LOGIC;
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
@@ -953,7 +953,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_cdc_sync_31 is
+entity module_ads7056_axi_quad_spi_0_0_cdc_sync_44 is
   port (
     \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg\ : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
@@ -981,10 +981,10 @@ entity module_ads7056_axi_quad_spi_0_0_cdc_sync_31 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_31 : entity is "cdc_sync";
-end module_ads7056_axi_quad_spi_0_0_cdc_sync_31;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_44 : entity is "cdc_sync";
+end module_ads7056_axi_quad_spi_0_0_cdc_sync_44;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_31 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_44 is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal s_level_out_d3 : STD_LOGIC;
@@ -1116,7 +1116,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_cdc_sync_32 is
+entity module_ads7056_axi_quad_spi_0_0_cdc_sync_45 is
   port (
     \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]\ : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
@@ -1138,10 +1138,10 @@ entity module_ads7056_axi_quad_spi_0_0_cdc_sync_32 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_32 : entity is "cdc_sync";
-end module_ads7056_axi_quad_spi_0_0_cdc_sync_32;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_cdc_sync_45 : entity is "cdc_sync";
+end module_ads7056_axi_quad_spi_0_0_cdc_sync_45;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_32 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_cdc_sync_45 is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal s_level_out_d3 : STD_LOGIC;
@@ -1273,7 +1273,344 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\ is
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0\ is
+  port (
+    scndry_out : out STD_LOGIC;
+    \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\ : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => scndry_out,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_34\ is
+  port (
+    MODF_strobe_reg : out STD_LOGIC;
+    spicr_2_mst_n_slv_frm_axi_clk : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_34\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_34\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_34\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => spicr_2_mst_n_slv_frm_axi_clk,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => MODF_strobe_reg,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_35\ is
+  port (
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \RATIO_OF_2_GENERATE.Count_reg[4]\ : out STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ : in STD_LOGIC;
+    transfer_start_d2 : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    spicr_3_cpol_frm_axi_clk : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_35\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_35\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_35\ is
+  signal \^ratio_of_2_generate.count_reg[4]\ : STD_LOGIC;
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+  \RATIO_OF_2_GENERATE.Count_reg[4]\ <= \^ratio_of_2_generate.count_reg[4]\;
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => spicr_3_cpol_frm_axi_clk,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => \^ratio_of_2_generate.count_reg[4]\,
+      R => '0'
+    );
+\RATIO_OF_2_GENERATE.Count[4]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"00F7"
+    )
+        port map (
+      I0 => \^ratio_of_2_generate.count_reg[4]\,
+      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
+      I2 => transfer_start_d2,
+      I3 => Q(0),
+      O => E(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_36\ is
+  port (
+    \RATIO_OF_2_GENERATE.Count_reg[4]\ : out STD_LOGIC;
+    spicr_4_cpha_frm_axi_clk : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_36\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_36\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_36\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => spicr_4_cpha_frm_axi_clk,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => \RATIO_OF_2_GENERATE.Count_reg[4]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_37\ is
+  port (
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC;
+    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\ : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_37\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_37\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_37\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_38\ is
   port (
     transfer_start_reg : out STD_LOGIC;
     MST_TRANS_INHIBIT_D1_I : out STD_LOGIC;
@@ -1284,10 +1621,10 @@ entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\ is
     ext_spi_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_38\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_38\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_38\ is
   signal \^mst_trans_inhibit_d1_i\ : STD_LOGIC;
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
@@ -1354,169 +1691,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized12\ is
-  port (
-    QSPI_SCK_T : out STD_LOGIC;
-    modf_reg : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized12\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized12\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized12\ is
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => modf_reg,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => QSPI_SCK_T,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized13\ is
-  port (
-    \SS_O_reg[0]\ : out STD_LOGIC;
-    \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\ : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized13\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized13\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized13\ is
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => \SS_O_reg[0]\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized14\ is
-  port (
-    SPICR_RX_FIFO_Rst_en_d2 : out STD_LOGIC;
-    SPICR_RX_FIFO_Rst_en_d1 : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized14\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized14\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized14\ is
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => SPICR_RX_FIFO_Rst_en_d1,
-      Q => SPICR_RX_FIFO_Rst_en_d2,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\ is
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_39\ is
   port (
     D_0 : out STD_LOGIC;
     spicr_bits_7_8_to_spi_clk : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1527,10 +1702,10 @@ entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\ is
     ext_spi_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_39\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_39\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_39\ is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal \^spicr_bits_7_8_to_spi_clk\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1597,17 +1772,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized16\ is
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_40\ is
   port (
     spicr_bits_7_8_to_spi_clk : out STD_LOGIC_VECTOR ( 0 to 0 );
     spicr_bits_7_8_frm_axi_clk : in STD_LOGIC_VECTOR ( 0 to 0 );
     ext_spi_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized16\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized16\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_40\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_40\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized16\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_40\ is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   attribute ASYNC_REG : boolean;
@@ -1661,17 +1836,179 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized17\ is
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_42\ is
+  port (
+    \SS_O_reg[0]\ : out STD_LOGIC;
+    \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\ : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_42\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_42\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_42\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => \SS_O_reg[0]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_43\ is
+  port (
+    QSPI_SCK_T : out STD_LOGIC;
+    modf_reg : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_43\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_43\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_43\ is
+  signal s_level_out_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_d2 : STD_LOGIC;
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => modf_reg,
+      Q => s_level_out_d1_cdc_to,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d1_cdc_to,
+      Q => s_level_out_d2,
+      R => '0'
+    );
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => s_level_out_d2,
+      Q => QSPI_SCK_T,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized1\ is
+  port (
+    SPICR_RX_FIFO_Rst_en_d2 : out STD_LOGIC;
+    SPICR_RX_FIFO_Rst_en_d1 : in STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized1\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized1\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized1\ is
+  attribute ASYNC_REG : boolean;
+  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
+  attribute box_type : string;
+  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
+begin
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => SPICR_RX_FIFO_Rst_en_d1,
+      Q => SPICR_RX_FIFO_Rst_en_d2,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2\ is
   port (
     scndry_out : out STD_LOGIC;
     prmry_in : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized17\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized17\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized17\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2\ is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   attribute ASYNC_REG : boolean;
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
@@ -1710,7 +2047,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\ is
+entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2_0\ is
   port (
     Rx_FIFO_Full_Fifo_d1_synced_i : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
@@ -1725,10 +2062,10 @@ entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\ is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2_0\ : entity is "cdc_sync";
+end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2_0\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2_0\ is
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal \^scndry_out\ : STD_LOGIC;
   attribute ASYNC_REG : boolean;
@@ -1798,354 +2135,6 @@ rc_FIFO_Full_d1_i_1: unisim.vcomponents.LUT2
       I0 => \^scndry_out\,
       I1 => \out\,
       O => Rx_FIFO_Full_Fifo_d1_synced_i
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized3\ is
-  port (
-    scndry_out : out STD_LOGIC;
-    \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\ : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized3\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized3\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized3\ is
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => scndry_out,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized4\ is
-  port (
-    R : out STD_LOGIC;
-    \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : out STD_LOGIC;
-    spicr_2_mst_n_slv_frm_axi_clk : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized4\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized4\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized4\ is
-  signal \^ratio_not_equal_4_generate.sck_o_nq_4_no_startup_used.sck_o_ne_4_fdre_inst\ : STD_LOGIC;
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-  \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ <= \^ratio_not_equal_4_generate.sck_o_nq_4_no_startup_used.sck_o_ne_4_fdre_inst\;
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => spicr_2_mst_n_slv_frm_axi_clk,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => \^ratio_not_equal_4_generate.sck_o_nq_4_no_startup_used.sck_o_ne_4_fdre_inst\,
-      R => '0'
-    );
-\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^ratio_not_equal_4_generate.sck_o_nq_4_no_startup_used.sck_o_ne_4_fdre_inst\,
-      O => R
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized5\ is
-  port (
-    \RATIO_OF_2_GENERATE.Count_reg[4]\ : out STD_LOGIC;
-    spicr_3_cpol_frm_axi_clk : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized5\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized5\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized5\ is
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => spicr_3_cpol_frm_axi_clk,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => \RATIO_OF_2_GENERATE.Count_reg[4]\,
-      R => '0'
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized6\ is
-  port (
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \RATIO_OF_2_GENERATE.Count_reg[4]\ : out STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ : in STD_LOGIC;
-    transfer_start_d2 : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    spicr_4_cpha_frm_axi_clk : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized6\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized6\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized6\ is
-  signal \^ratio_of_2_generate.count_reg[4]\ : STD_LOGIC;
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-  \RATIO_OF_2_GENERATE.Count_reg[4]\ <= \^ratio_of_2_generate.count_reg[4]\;
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => spicr_4_cpha_frm_axi_clk,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => \^ratio_of_2_generate.count_reg[4]\,
-      R => '0'
-    );
-\RATIO_OF_2_GENERATE.Count[4]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"00F7"
-    )
-        port map (
-      I0 => \^ratio_of_2_generate.count_reg[4]\,
-      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
-      I2 => transfer_start_d2,
-      I3 => Q(0),
-      O => E(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized7\ is
-  port (
-    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC;
-    \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\ : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized7\ : entity is "cdc_sync";
-end \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized7\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized7\ is
-  signal s_level_out_d1_cdc_to : STD_LOGIC;
-  signal s_level_out_d2 : STD_LOGIC;
-  attribute ASYNC_REG : boolean;
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type : string;
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : label is "PRIMITIVE";
-begin
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\,
-      Q => s_level_out_d1_cdc_to,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d1_cdc_to,
-      Q => s_level_out_d2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => s_level_out_d2,
-      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\,
-      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -2299,7 +2288,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_counter_f_0 is
+entity module_ads7056_axi_quad_spi_0_0_counter_f_1 is
   port (
     tx_fifo_count : out STD_LOGIC_VECTOR ( 2 downto 0 );
     tx_FIFO_Empty_d1_reg : out STD_LOGIC;
@@ -2318,10 +2307,10 @@ entity module_ads7056_axi_quad_spi_0_0_counter_f_0 is
     \RESET_FLOPS[15].RST_FLOPS\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_counter_f_0 : entity is "counter_f";
-end module_ads7056_axi_quad_spi_0_0_counter_f_0;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_counter_f_1 : entity is "counter_f";
+end module_ads7056_axi_quad_spi_0_0_counter_f_1;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_counter_f_0 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_counter_f_1 is
   signal \icount_out[1]_i_1_n_0\ : STD_LOGIC;
   signal \icount_out[2]_i_1_n_0\ : STD_LOGIC;
   signal \icount_out[3]_i_2_n_0\ : STD_LOGIC;
@@ -3365,7 +3354,6 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logic is
     SPISEL_sync : out STD_LOGIC;
     io2_t : out STD_LOGIC;
     io3_t : out STD_LOGIC;
-    sck_o : out STD_LOGIC;
     transfer_start_d1 : out STD_LOGIC;
     transfer_start : out STD_LOGIC;
     transfer_start_d2 : out STD_LOGIC;
@@ -3375,59 +3363,54 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logic is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     drr_Overrun_int : out STD_LOGIC;
     modf_strobe_int : out STD_LOGIC;
+    SCK_O_int : out STD_LOGIC;
     io0_o : out STD_LOGIC;
     io1_o : out STD_LOGIC;
     io2_o : out STD_LOGIC;
     io3_o : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    aempty_fwft_i_reg : out STD_LOGIC;
+    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[1]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     QSPI_IO1_T_0 : out STD_LOGIC;
     p_1_out : out STD_LOGIC;
     CE : out STD_LOGIC;
     p_2_out : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     empty_fwft_fb_o_i0 : out STD_LOGIC;
     empty_fwft_i0 : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    aempty_fwft_i_reg : out STD_LOGIC;
     \RATIO_OF_2_GENERATE.Count_reg[4]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \qspi_cntrl_ps_reg[2]_0\ : out STD_LOGIC;
-    QSPI_IO1_T_1 : out STD_LOGIC;
-    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \gic0.gc1.count_d1_reg[3]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \gpr1.dout_i_reg[7]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     D_0 : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC;
-    \qspo_int_reg[6]\ : in STD_LOGIC;
     spisel : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
-    \qspo_int_reg[10]\ : in STD_LOGIC;
-    R : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
     Rst_to_spi : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\ : in STD_LOGIC;
-    \qspo_int_reg[11]\ : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 8 downto 0 );
     empty_fwft_i_reg : in STD_LOGIC;
     \gpregsm1.curr_fwft_state_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \out\ : in STD_LOGIC;
-    \goreg_dm.dout_i_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\ : in STD_LOGIC;
-    \qspo_int_reg[6]_0\ : in STD_LOGIC;
+    \goreg_dm.dout_i_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \qspo_int_reg[10]\ : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\ : in STD_LOGIC;
     CMD_decoded_int : in STD_LOGIC;
     spicr_bits_7_8_to_spi_clk : in STD_LOGIC_VECTOR ( 0 to 1 );
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\ : in STD_LOGIC;
-    DTR_FIFO_Data_Exists_d1 : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\ : in STD_LOGIC;
+    \qspo_int_reg[5]\ : in STD_LOGIC;
+    DTR_FIFO_Data_Exists_d1 : in STD_LOGIC;
     empty_fwft_fb_o_i_reg : in STD_LOGIC;
     empty_fwft_fb_i_reg : in STD_LOGIC;
-    \qspo_int_reg[9]\ : in STD_LOGIC;
     io1_i_sync : in STD_LOGIC;
     io0_i_sync : in STD_LOGIC;
-    \qspo_int_reg[11]_0\ : in STD_LOGIC;
-    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
-    \qspo_int_reg[6]_1\ : in STD_LOGIC;
-    io3_i_sync : in STD_LOGIC;
     io2_i_sync : in STD_LOGIC;
-    \qspo_int_reg[11]_1\ : in STD_LOGIC;
+    io3_i_sync : in STD_LOGIC;
+    empty_fwft_i_reg_0 : in STD_LOGIC;
+    empty_fwft_i_reg_1 : in STD_LOGIC;
+    \qspo_int_reg[10]_0\ : in STD_LOGIC;
     ram_full_fb_i_reg : in STD_LOGIC;
     scndry_out : in STD_LOGIC;
     ram_full_i_reg : in STD_LOGIC;
@@ -3444,34 +3427,46 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logi
   signal DRR_Overrun_reg_int0 : STD_LOGIC;
   signal MODF_strobe_i_1_n_0 : STD_LOGIC;
   signal Mst_Trans_inhibit_d1 : STD_LOGIC;
-  signal \^q\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal QSPI_IO0_T_i_1_n_0 : STD_LOGIC;
-  signal \^qspi_io1_t_1\ : STD_LOGIC;
+  signal QSPI_IO0_T_i_2_n_0 : STD_LOGIC;
+  signal QSPI_IO0_T_i_5_n_0 : STD_LOGIC;
+  signal QSPI_IO0_T_i_6_n_0 : STD_LOGIC;
+  signal QSPI_IO0_T_i_7_n_0 : STD_LOGIC;
+  signal \^qspi_io1_t_0\ : STD_LOGIC;
+  signal QSPI_IO1_T_i_1_n_0 : STD_LOGIC;
+  signal QSPI_IO1_T_i_3_n_0 : STD_LOGIC;
+  signal QSPI_IO1_T_i_4_n_0 : STD_LOGIC;
   signal \QSPI_MODE_2_T_CONTROL.QSPI_IO3_T_i_1_n_0\ : STD_LOGIC;
   signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[0]_i_1_n_0\ : STD_LOGIC;
   signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[1]_i_1_n_0\ : STD_LOGIC;
   signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_1_n_0\ : STD_LOGIC;
   signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_2_n_0\ : STD_LOGIC;
-  signal \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\ : STD_LOGIC;
-  signal \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3_n_0\ : STD_LOGIC;
+  signal \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_1_n_0\ : STD_LOGIC;
+  signal \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_2_n_0\ : STD_LOGIC;
   signal \^ratio_of_2_generate.count_reg[4]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_1_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_3_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_4_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\ : STD_LOGIC;
-  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_8_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_1_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_2_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_6_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_7_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_1_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\ : STD_LOGIC;
-  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_1_n_0\ : STD_LOGIC;
-  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_3_n_0\ : STD_LOGIC;
+  signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_3_n_0\ : STD_LOGIC;
@@ -3492,7 +3487,6 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logi
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[2]\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[3]\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_1_n_0\ : STD_LOGIC;
-  signal \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3_n_0\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[1]\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[2]\ : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[3]\ : STD_LOGIC;
@@ -3504,14 +3498,13 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logi
   signal \RATIO_OF_2_GENERATE.sck_o_int_i_2_n_0\ : STD_LOGIC;
   signal \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_1_n_0\ : STD_LOGIC;
   signal \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_2_n_0\ : STD_LOGIC;
+  signal \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\ : STD_LOGIC;
   signal \^spisel_sync\ : STD_LOGIC;
   signal \^spixfer_done_int\ : STD_LOGIC;
   signal SPIXfer_done_int_d1 : STD_LOGIC;
   signal SPIXfer_done_int_pulse : STD_LOGIC;
   signal SPIXfer_done_int_pulse_d1 : STD_LOGIC;
   signal \^spixfer_done_int_pulse_d2\ : STD_LOGIC;
-  signal Serial_Dout_018_out : STD_LOGIC;
-  signal Serial_Dout_30_out : STD_LOGIC;
   signal Shift_Reg : STD_LOGIC_VECTOR ( 4 to 7 );
   signal \^drr_overrun_int\ : STD_LOGIC;
   signal \^io0_o\ : STD_LOGIC;
@@ -3521,21 +3514,21 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logi
   signal \^modf_strobe_int\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC;
   signal p_2_in : STD_LOGIC;
-  signal p_2_in46_in : STD_LOGIC;
-  signal p_3_out : STD_LOGIC;
-  signal p_43_in : STD_LOGIC;
+  signal p_2_in47_in : STD_LOGIC;
+  signal p_44_in : STD_LOGIC;
+  signal p_6_out : STD_LOGIC;
   signal \plusOp__4\ : STD_LOGIC_VECTOR ( 4 downto 1 );
   signal qspi_cntrl_ns : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \qspi_cntrl_ps[0]_i_2_n_0\ : STD_LOGIC;
   signal \qspi_cntrl_ps[0]_i_3_n_0\ : STD_LOGIC;
+  signal \qspi_cntrl_ps[0]_i_4_n_0\ : STD_LOGIC;
+  signal \qspi_cntrl_ps[1]_i_2_n_0\ : STD_LOGIC;
   signal \qspi_cntrl_ps[1]_i_3_n_0\ : STD_LOGIC;
-  signal \^qspi_cntrl_ps_reg[2]_0\ : STD_LOGIC;
-  signal receive_Data_int : STD_LOGIC;
   signal rx_shft_reg_mode_0011 : STD_LOGIC_VECTOR ( 0 to 7 );
   signal sck_d1 : STD_LOGIC;
   signal sck_d2 : STD_LOGIC;
   signal sck_d3 : STD_LOGIC;
-  signal sck_o_int : STD_LOGIC;
+  signal \^sck_o_int\ : STD_LOGIC;
   signal \^spixfer_done_int_1\ : STD_LOGIC;
   signal stop_clock : STD_LOGIC;
   signal stop_clock_reg : STD_LOGIC;
@@ -3545,57 +3538,53 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logi
   signal \^transfer_start_d1\ : STD_LOGIC;
   signal transfer_start_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Allow_MODF_Strobe_i_1 : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of MODF_strobe_i_1 : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of Allow_MODF_Strobe_i_1 : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of MODF_strobe_i_1 : label is "soft_lutpair45";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of MST_TRANS_INHIBIT_D1_I : label is "FD";
   attribute box_type : string;
   attribute box_type of MST_TRANS_INHIBIT_D1_I : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM of QSPI_IO0_T : label is "FD";
   attribute box_type of QSPI_IO0_T : label is "PRIMITIVE";
+  attribute SOFT_HLUTNM of QSPI_IO0_T_i_5 : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of QSPI_IO0_T_i_6 : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of QSPI_IO0_T_i_7 : label is "soft_lutpair48";
   attribute XILINX_LEGACY_PRIM of QSPI_IO1_T : label is "FD";
   attribute box_type of QSPI_IO1_T : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \QSPI_LOOK_UP_MODE_2_MEMORY_3.CMD_decoded_int_d1_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \QSPI_LOOK_UP_MODE_2_MEMORY_3.CMD_decoded_int_d1_i_1\ : label is "soft_lutpair48";
   attribute SOFT_HLUTNM of \QSPI_LOOK_UP_MODE_2_MEMORY_3.DTR_FIFO_Data_Exists_d1_i_1\ : label is "soft_lutpair47";
   attribute XILINX_LEGACY_PRIM of \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : label is "FD";
   attribute box_type of \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM of \QSPI_MODE_2_T_CONTROL.QSPI_IO3_T\ : label is "FD";
   attribute box_type of \QSPI_MODE_2_T_CONTROL.QSPI_IO3_T\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_2\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_2\ : label is "soft_lutpair47";
   attribute XILINX_LEGACY_PRIM of QSPI_SCK_T : label is "FD";
   attribute box_type of QSPI_SCK_T : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM of QSPI_SPISEL : label is "FD";
   attribute box_type of QSPI_SPISEL : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM of QSPI_SS_T : label is "FD";
   attribute box_type of QSPI_SS_T : label is "PRIMITIVE";
-  attribute IOB : string;
-  attribute IOB of \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : label is "TRUE";
-  attribute box_type of \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.Count[0]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_2\ : label is "soft_lutpair42";
   attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.Count[1]_i_1\ : label is "soft_lutpair49";
   attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.Count[2]_i_1\ : label is "soft_lutpair49";
   attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.Count[3]_i_1\ : label is "soft_lutpair43";
   attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.Count[4]_i_3\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_8\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[3]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[7]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[7]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.sck_o_int_i_2\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of SPIXfer_done_int_pulse_d1_i_1 : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of aempty_fwft_fb_i_i_2 : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \goreg_dm.dout_i[7]_i_1__0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \gpregsm1.curr_fwft_state[0]_i_1__0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \qspi_cntrl_ps[0]_i_3\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \qspi_cntrl_ps[1]_i_3\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \qspi_cntrl_ps[2]_i_2\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[3]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[7]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[7]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of SPIXfer_done_int_pulse_d1_i_1 : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of aempty_fwft_fb_i_i_2 : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \goreg_dm.dout_i[7]_i_1__0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \gpregsm1.curr_fwft_state[0]_i_1__0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \qspi_cntrl_ps[0]_i_2\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \qspi_cntrl_ps[1]_i_3\ : label is "soft_lutpair44";
 begin
-  Q(2 downto 0) <= \^q\(2 downto 0);
-  QSPI_IO1_T_1 <= \^qspi_io1_t_1\;
-  \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) <= \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2 downto 0);
+  QSPI_IO1_T_0 <= \^qspi_io1_t_0\;
+  \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[1]_0\(2 downto 0) <= \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2 downto 0);
   \RATIO_OF_2_GENERATE.Count_reg[4]_0\(0) <= \^ratio_of_2_generate.count_reg[4]_0\(0);
   SPISEL_sync <= \^spisel_sync\;
   SPIXfer_done_int_pulse_d2 <= \^spixfer_done_int_pulse_d2\;
@@ -3605,7 +3594,6 @@ begin
   io2_o <= \^io2_o\;
   io3_o <= \^io3_o\;
   modf_strobe_int <= \^modf_strobe_int\;
-  \qspi_cntrl_ps_reg[2]_0\ <= \^qspi_cntrl_ps_reg[2]_0\;
   spiXfer_done_int <= \^spixfer_done_int_1\;
   transfer_start <= \^transfer_start\;
   transfer_start_d1 <= \^transfer_start_d1\;
@@ -3614,7 +3602,7 @@ Allow_MODF_Strobe_i_1: unisim.vcomponents.LUT4
       INIT => X"FFF4"
     )
         port map (
-      I0 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\,
+      I0 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\,
       I1 => Allow_MODF_Strobe,
       I2 => \^spisel_sync\,
       I3 => Rst_to_spi,
@@ -3653,7 +3641,7 @@ MODF_strobe_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => Allow_MODF_Strobe,
-      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\,
+      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\,
       I2 => \^spisel_sync\,
       I3 => Rst_to_spi,
       O => MODF_strobe_i_1_n_0
@@ -3690,16 +3678,62 @@ QSPI_IO0_T: unisim.vcomponents.FDRE
     );
 QSPI_IO0_T_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFF00D111"
+      INIT => X"FFFFFEABFFFFFAAB"
     )
         port map (
-      I0 => \qspi_cntrl_ps_reg[1]_0\,
-      I1 => \^q\(0),
-      I2 => \qspo_int_reg[6]_1\,
-      I3 => \^q\(1),
-      I4 => \^q\(2),
-      I5 => D_0,
+      I0 => QSPI_IO0_T_i_2_n_0,
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I4 => D_0,
+      I5 => \qspo_int_reg[5]\,
       O => QSPI_IO0_T_i_1_n_0
+    );
+QSPI_IO0_T_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000AACF8FCF"
+    )
+        port map (
+      I0 => \qspo_int_reg[5]\,
+      I1 => empty_fwft_i_reg_0,
+      I2 => Q(8),
+      I3 => QSPI_IO0_T_i_5_n_0,
+      I4 => QSPI_IO0_T_i_6_n_0,
+      I5 => QSPI_IO0_T_i_7_n_0,
+      O => QSPI_IO0_T_i_2_n_0
+    );
+QSPI_IO0_T_i_5: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFDFFFFF"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
+      I3 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
+      I4 => Q(5),
+      O => QSPI_IO0_T_i_5_n_0
+    );
+QSPI_IO0_T_i_6: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EFFFFFFF"
+    )
+        port map (
+      I0 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
+      I1 => Q(2),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
+      I3 => Q(5),
+      I4 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      O => QSPI_IO0_T_i_6_n_0
+    );
+QSPI_IO0_T_i_7: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      O => QSPI_IO0_T_i_7_n_0
     );
 QSPI_IO1_T: unisim.vcomponents.FDRE
     generic map(
@@ -3708,35 +3742,61 @@ QSPI_IO1_T: unisim.vcomponents.FDRE
         port map (
       C => ext_spi_clk,
       CE => '1',
-      D => \qspo_int_reg[6]\,
+      D => QSPI_IO1_T_i_1_n_0,
       Q => io1_t,
       R => '0'
     );
-QSPI_IO1_T_i_3: unisim.vcomponents.LUT6
+QSPI_IO1_T_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFBFFBFFFFFF"
+      INIT => X"FFFFFFFFFDDF0000"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => \qspo_int_reg[11]\(5),
-      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2),
-      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
-      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
-      I5 => \qspo_int_reg[11]\(2),
-      O => \^qspi_io1_t_1\
+      I0 => \^qspi_io1_t_0\,
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I2 => Q(4),
+      I3 => Q(3),
+      I4 => QSPI_IO1_T_i_3_n_0,
+      I5 => QSPI_IO1_T_i_4_n_0,
+      O => QSPI_IO1_T_i_1_n_0
+    );
+QSPI_IO1_T_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEFFBFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => Q(2),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      I3 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
+      I4 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
+      I5 => Q(5),
+      O => \^qspi_io1_t_0\
+    );
+QSPI_IO1_T_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFBBFF00FF00F"
+    )
+        port map (
+      I0 => \^qspi_io1_t_0\,
+      I1 => Q(8),
+      I2 => Q(7),
+      I3 => Q(6),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      O => QSPI_IO1_T_i_3_n_0
     );
 QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFF1FFFFFFFFFF"
     )
         port map (
-      I0 => \^q\(1),
-      I1 => \^q\(2),
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       I2 => \^modf_strobe_int\,
-      I3 => spicr_bits_7_8_to_spi_clk(1),
-      I4 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\,
-      I5 => spicr_bits_7_8_to_spi_clk(0),
-      O => QSPI_IO1_T_0
+      I3 => spicr_bits_7_8_to_spi_clk(0),
+      I4 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\,
+      I5 => spicr_bits_7_8_to_spi_clk(1),
+      O => QSPI_IO1_T_i_4_n_0
     );
 \QSPI_LOOK_UP_MODE_2_MEMORY_3.CMD_decoded_int_d1_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -3744,9 +3804,9 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
     )
         port map (
       I0 => DTR_FIFO_Data_Exists_d1,
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(1),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
       O => p_1_out
     );
 \QSPI_LOOK_UP_MODE_2_MEMORY_3.DTR_FIFO_Data_Exists_d1_i_1\: unisim.vcomponents.LUT4
@@ -3754,9 +3814,9 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       INIT => X"0001"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => \^q\(2),
-      I2 => \^q\(1),
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
       I3 => empty_fwft_i_reg,
       O => p_2_out
     );
@@ -3766,9 +3826,9 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
     )
         port map (
       I0 => empty_fwft_i_reg,
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      I3 => \^q\(0),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       I4 => DTR_FIFO_Data_Exists_d1,
       O => CE
     );
@@ -3779,7 +3839,7 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
         port map (
       C => ext_spi_clk,
       CE => '1',
-      D => \qspo_int_reg[10]\,
+      D => \qspi_cntrl_ps_reg[1]_0\,
       Q => io2_t,
       R => '0'
     );
@@ -3796,15 +3856,15 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
     );
 \QSPI_MODE_2_T_CONTROL.QSPI_IO3_T_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAAFBFFFFFAFBF"
+      INIT => X"EEFFEEFFFFFFABBB"
     )
         port map (
       I0 => D_0,
-      I1 => \^q\(0),
-      I2 => \qspo_int_reg[11]\(7),
-      I3 => \^q\(2),
-      I4 => \^q\(1),
-      I5 => \qspo_int_reg[6]_0\,
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I3 => Q(7),
+      I4 => \qspo_int_reg[10]_0\,
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       O => \QSPI_MODE_2_T_CONTROL.QSPI_IO3_T_i_1_n_0\
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[0]_i_1\: unisim.vcomponents.LUT6
@@ -3814,10 +3874,10 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
         port map (
       I0 => \^spixfer_done_int\,
       I1 => SPIXfer_done_int_d1,
-      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
-      I3 => \^q\(2),
-      I4 => \^q\(1),
-      I5 => \^q\(0),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       O => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[0]_i_1_n_0\
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[1]_i_1\: unisim.vcomponents.LUT6
@@ -3825,12 +3885,12 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       INIT => X"0000000000780000"
     )
         port map (
-      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
+      I0 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
       I1 => SPIXfer_done_int_pulse,
-      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
-      I3 => \^q\(2),
-      I4 => \^q\(1),
-      I5 => \^q\(0),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       O => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[1]_i_1_n_0\
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_1\: unisim.vcomponents.LUT6
@@ -3838,11 +3898,11 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       INIT => X"00000000F7FF0800"
     )
         port map (
-      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
+      I0 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
       I1 => \^spixfer_done_int\,
       I2 => SPIXfer_done_int_d1,
-      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
-      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2),
+      I3 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      I4 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
       I5 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_2_n_0\,
       O => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_1_n_0\
     );
@@ -3851,9 +3911,9 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       INIT => X"FB"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       O => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_2_n_0\
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[0]\: unisim.vcomponents.FDRE
@@ -3861,7 +3921,7 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       C => ext_spi_clk,
       CE => '1',
       D => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[0]_i_1_n_0\,
-      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
+      Q => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
       R => '0'
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[1]\: unisim.vcomponents.FDRE
@@ -3869,7 +3929,7 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       C => ext_spi_clk,
       CE => '1',
       D => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[1]_i_1_n_0\,
-      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
+      Q => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
       R => '0'
     );
 \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[2]\: unisim.vcomponents.FDRE
@@ -3877,7 +3937,7 @@ QSPI_IO1_T_i_4: unisim.vcomponents.LUT6
       C => ext_spi_clk,
       CE => '1',
       D => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt[2]_i_1_n_0\,
-      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2),
+      Q => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
       R => '0'
     );
 QSPI_SCK_T: unisim.vcomponents.FDRE
@@ -3913,41 +3973,37 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       Q => ss_t,
       R => '0'
     );
-\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\: unisim.vcomponents.FDRE
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => '0',
-      IS_C_INVERTED => '0',
-      IS_D_INVERTED => '0',
-      IS_R_INVERTED => '0'
+      INIT => X"0000BF80"
     )
         port map (
+      I0 => \^sck_o_int\,
+      I1 => \^transfer_start_d1\,
+      I2 => \^transfer_start\,
+      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\,
+      I4 => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_2_n_0\,
+      O => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_1_n_0\
+    );
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFF01FF"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\,
+      I4 => Rst_to_spi,
+      O => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_2_n_0\
+    );
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_reg\: unisim.vcomponents.FDRE
+     port map (
       C => ext_spi_clk,
       CE => '1',
-      D => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\,
-      Q => sck_o,
-      R => R
-    );
-\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EFAAAAAA20AAAAAA"
-    )
-        port map (
-      I0 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\,
-      I1 => \^q\(0),
-      I2 => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3_n_0\,
-      I3 => \^transfer_start_d1\,
-      I4 => \^transfer_start\,
-      I5 => sck_o_int,
-      O => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\
-    );
-\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^q\(2),
-      I1 => \^q\(1),
-      O => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3_n_0\
+      D => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_STARTUP_USED.SCK_O_reg_i_1_n_0\,
+      Q => SCK_O_int,
+      R => '0'
     );
 \RATIO_OF_2_GENERATE.Count[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -3962,7 +4018,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       INIT => X"6"
     )
         port map (
-      I0 => p_43_in,
+      I0 => p_44_in,
       I1 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
       O => \plusOp__4\(1)
     );
@@ -3973,7 +4029,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
         port map (
       I0 => p_1_in,
       I1 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I2 => p_43_in,
+      I2 => p_44_in,
       O => \plusOp__4\(2)
     );
 \RATIO_OF_2_GENERATE.Count[3]_i_1\: unisim.vcomponents.LUT4
@@ -3981,8 +4037,8 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       INIT => X"6AAA"
     )
         port map (
-      I0 => p_2_in46_in,
-      I1 => p_43_in,
+      I0 => p_2_in47_in,
+      I1 => p_44_in,
       I2 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
       I3 => p_1_in,
       O => \plusOp__4\(3)
@@ -3995,7 +4051,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => Rst_to_spi,
       I1 => \^transfer_start\,
       I2 => \^spixfer_done_int\,
-      O => p_3_out
+      O => p_6_out
     );
 \RATIO_OF_2_GENERATE.Count[4]_i_3\: unisim.vcomponents.LUT5
     generic map(
@@ -4003,10 +4059,10 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \^ratio_of_2_generate.count_reg[4]_0\(0),
-      I1 => p_2_in46_in,
+      I1 => p_2_in47_in,
       I2 => p_1_in,
       I3 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I4 => p_43_in,
+      I4 => p_44_in,
       O => \plusOp__4\(4)
     );
 \RATIO_OF_2_GENERATE.Count_reg[0]\: unisim.vcomponents.FDRE
@@ -4015,15 +4071,15 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       CE => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0),
       D => p_2_in,
       Q => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      R => p_3_out
+      R => p_6_out
     );
 \RATIO_OF_2_GENERATE.Count_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
       CE => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0),
       D => \plusOp__4\(1),
-      Q => p_43_in,
-      R => p_3_out
+      Q => p_44_in,
+      R => p_6_out
     );
 \RATIO_OF_2_GENERATE.Count_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -4031,15 +4087,15 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       CE => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0),
       D => \plusOp__4\(2),
       Q => p_1_in,
-      R => p_3_out
+      R => p_6_out
     );
 \RATIO_OF_2_GENERATE.Count_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
       CE => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0),
       D => \plusOp__4\(3),
-      Q => p_2_in46_in,
-      R => p_3_out
+      Q => p_2_in47_in,
+      R => p_6_out
     );
 \RATIO_OF_2_GENERATE.Count_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -4047,31 +4103,32 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       CE => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0),
       D => \plusOp__4\(4),
       Q => \^ratio_of_2_generate.count_reg[4]_0\(0),
-      R => p_3_out
+      R => p_6_out
     );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_1\: unisim.vcomponents.LUT5
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F4FFF400"
+      INIT => X"FFFFF4FF0000F400"
     )
         port map (
       I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_3_n_0\,
       I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_4_n_0\,
-      I3 => Serial_Dout_018_out,
-      I4 => \^io0_o\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\,
+      I5 => \^io0_o\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_1_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0313FFDFFFFFFFFF"
+      INIT => X"FFFFFFFF33772777"
     )
         port map (
-      I0 => \qspo_int_reg[11]\(3),
-      I1 => \^q\(2),
-      I2 => \^q\(1),
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\,
-      I4 => \qspo_int_reg[11]\(6),
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I1 => Q(6),
+      I2 => Q(3),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_3\: unisim.vcomponents.LUT5
@@ -4088,52 +4145,53 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44444444F0FFF000"
+      INIT => X"F0FFF00088888888"
     )
         port map (
-      I0 => \qspo_int_reg[9]\,
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\,
       I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[3]\,
       I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\,
       I4 => \goreg_dm.dout_i_reg[7]\(4),
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_4_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BB00BB000B00BB00"
+      INIT => X"33772777FFFFFFFF"
     )
         port map (
-      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
-      I1 => \qspo_int_reg[9]\,
-      I2 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I3 => \^transfer_start\,
-      I4 => \^transfer_start_d1\,
-      I5 => SPIXfer_done_int_d1,
-      O => Serial_Dout_018_out
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I1 => Q(6),
+      I2 => Q(3),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"000E"
+      INIT => X"4F0F"
     )
         port map (
-      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_8_n_0\,
-      I1 => \qspo_int_reg[11]\(8),
-      I2 => \^qspi_cntrl_ps_reg[2]_0\,
-      I3 => \^q\(0),
+      I0 => SPIXfer_done_int_d1,
+      I1 => \^transfer_start_d1\,
+      I2 => \^transfer_start\,
+      I3 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\
     );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_8\: unisim.vcomponents.LUT5
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF7FFFF"
+      INIT => X"00000D000D0D0D00"
     )
         port map (
-      I0 => \qspo_int_reg[11]\(5),
-      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
-      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2),
-      I3 => \qspo_int_reg[11]\(2),
-      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
-      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_8_n_0\
+      I0 => empty_fwft_i_reg,
+      I1 => Q(5),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I3 => Q(8),
+      I4 => QSPI_IO0_T_i_6_n_0,
+      I5 => QSPI_IO0_T_i_5_n_0,
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_reg\: unisim.vcomponents.FDRE
      port map (
@@ -4145,14 +4203,14 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8FFFFFFB8000000"
+      INIT => X"FAFFFFFC0A00000C"
     )
         port map (
       I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_2_n_0\,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
-      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\,
-      I3 => Serial_Dout_018_out,
-      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
       I5 => \^io1_o\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_1_n_0\
     );
@@ -4182,16 +4240,52 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FCEC0020FFFFFFFF"
+      INIT => X"0000FFFF0FEF1FFF"
     )
         port map (
-      I0 => \qspo_int_reg[11]\(3),
-      I1 => \^q\(2),
-      I2 => \^q\(1),
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\,
-      I4 => \qspo_int_reg[11]\(6),
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_6_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_7_n_0\,
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I3 => Q(3),
+      I4 => Q(6),
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\
+    );
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAA020000A800"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_6_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_7_n_0\,
+      I3 => Q(4),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I5 => Q(7),
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\
+    );
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"BA"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => Q(5),
+      I2 => empty_fwft_i_reg,
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_6_n_0\
+    );
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFFFF7FFFFFFF7FF"
+    )
+        port map (
+      I0 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
+      I1 => Q(2),
+      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
+      I3 => Q(5),
+      I4 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
+      I5 => Q(8),
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_7_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_reg\: unisim.vcomponents.FDRE
      port map (
@@ -4209,8 +4303,8 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[1]\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\,
       I2 => \goreg_dm.dout_i_reg[7]\(6),
-      I3 => Serial_Dout_30_out,
-      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3_n_0\,
       I5 => \^io2_o\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_1_n_0\
     );
@@ -4226,28 +4320,15 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"50501050"
+      INIT => X"33B3FFFF"
     )
         port map (
-      I0 => \qspo_int_reg[9]\,
-      I1 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I2 => \^transfer_start\,
-      I3 => \^transfer_start_d1\,
-      I4 => SPIXfer_done_int_d1,
-      O => Serial_Dout_30_out
-    );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1D1D1F1D3F3F1F3F"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(2),
-      I2 => \qspo_int_reg[11]\(7),
-      I3 => \qspo_int_reg[11]_1\,
-      I4 => \^qspi_io1_t_1\,
-      I5 => \qspo_int_reg[11]\(4),
-      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\
+      I0 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
+      I1 => \^transfer_start\,
+      I2 => \^transfer_start_d1\,
+      I3 => SPIXfer_done_int_d1,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_reg\: unisim.vcomponents.FDRE
      port map (
@@ -4257,28 +4338,40 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       Q => \^io2_o\,
       R => Rst_to_spi
     );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_1\: unisim.vcomponents.LUT5
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EAFFEA00"
+      INIT => X"BBBBB888B888B888"
     )
         port map (
-      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2_n_0\,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\,
-      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
-      I3 => Serial_Dout_30_out,
-      I4 => \^io3_o\,
+      I0 => \^io3_o\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_3_n_0\,
+      I2 => \qspo_int_reg[10]\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_3_n_0\,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_3_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_1_n_0\
     );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2\: unisim.vcomponents.LUT4
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_3\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0008"
+      INIT => X"1"
     )
         port map (
-      I0 => \qspo_int_reg[11]\(7),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(1),
-      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2_n_0\
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_3_n_0\
+    );
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FAFAEAEAFBEAEAEA"
+    )
+        port map (
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I2 => Q(6),
+      I3 => Q(3),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7_n_0\,
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\: unisim.vcomponents.FDRE
      port map (
@@ -4290,11 +4383,11 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F2FF0000"
+      INIT => X"F8FF0000"
     )
         port map (
-      I0 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I1 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3_n_0\,
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
       I2 => SPIXfer_done_int_d1,
       I3 => \^transfer_start_d1\,
       I4 => \^transfer_start\,
@@ -4314,13 +4407,13 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAAC0AA"
+      INIT => X"AFACA0AC"
     )
         port map (
       I0 => Shift_Reg(4),
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[2]\,
-      I2 => \qspo_int_reg[9]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[1]\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[0]_i_3_n_0\
     );
@@ -4338,13 +4431,13 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[1]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAAC0AA"
+      INIT => X"AFACA0AC"
     )
         port map (
       I0 => Shift_Reg(5),
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[3]\,
-      I2 => \qspo_int_reg[9]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[2]\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[1]_i_2_n_0\
     );
@@ -4362,13 +4455,13 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[2]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAAC0AA"
+      INIT => X"AFACA0AC"
     )
         port map (
       I0 => Shift_Reg(6),
       I1 => Shift_Reg(4),
-      I2 => \qspo_int_reg[9]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg_n_0_[3]\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[2]_i_2_n_0\
     );
@@ -4386,15 +4479,15 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3030505000F05050"
+      INIT => X"5050505000F03030"
     )
         port map (
       I0 => Shift_Reg(7),
       I1 => Shift_Reg(5),
       I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\,
       I3 => Shift_Reg(4),
-      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
-      I5 => \qspo_int_reg[9]\,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[3]_i_2_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[4]_i_1\: unisim.vcomponents.LUT5
@@ -4411,13 +4504,13 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[4]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAAC0AA"
+      INIT => X"AFACA0AC"
     )
         port map (
       I0 => io3_i_sync,
       I1 => Shift_Reg(6),
-      I2 => \qspo_int_reg[9]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       I4 => Shift_Reg(5),
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[4]_i_2_n_0\
     );
@@ -4435,14 +4528,14 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[5]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CFAFC0A0"
+      INIT => X"AFACA0AC"
     )
         port map (
-      I0 => Shift_Reg(6),
+      I0 => io2_i_sync,
       I1 => Shift_Reg(7),
-      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
-      I3 => \qspo_int_reg[9]\,
-      I4 => io2_i_sync,
+      I2 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I4 => Shift_Reg(6),
       O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[5]_i_2_n_0\
     );
 \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg[6]_i_1\: unisim.vcomponents.LUT5
@@ -4451,7 +4544,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     )
         port map (
       I0 => io1_i_sync,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I2 => Shift_Reg(7),
       I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\,
       I4 => \goreg_dm.dout_i_reg[7]\(1),
@@ -4463,7 +4556,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     )
         port map (
       I0 => io0_i_sync,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I2 => io1_i_sync,
       I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_2_n_0\,
       I4 => \goreg_dm.dout_i_reg[7]\(0),
@@ -4535,12 +4628,12 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"01"
+      INIT => X"02"
     )
         port map (
-      I0 => sck_d3,
-      I1 => \qspo_int_reg[11]\(8),
-      I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3_n_0\,
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\,
+      I1 => sck_d3,
+      I2 => Q(8),
       O => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_1_n_0\
     );
 \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_2\: unisim.vcomponents.LUT5
@@ -4551,22 +4644,9 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[5]\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[3]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[2]\,
       O => rx_shft_reg_mode_0011(1)
-    );
-\RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000FCEC0020"
-    )
-        port map (
-      I0 => \qspo_int_reg[11]\(3),
-      I1 => \^q\(2),
-      I2 => \^q\(1),
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_6_n_0\,
-      I4 => \qspo_int_reg[11]\(6),
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
-      O => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3_n_0\
     );
 \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -4576,7 +4656,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[6]\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[4]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[3]\,
       O => rx_shft_reg_mode_0011(2)
     );
@@ -4588,7 +4668,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[7]\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[5]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[4]\,
       O => rx_shft_reg_mode_0011(3)
     );
@@ -4600,21 +4680,20 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => io3_i_sync,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[6]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[5]\,
       O => rx_shft_reg_mode_0011(4)
     );
-\RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[5]_i_1\: unisim.vcomponents.LUT6
+\RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"44F444F4FFFF44F4"
+      INIT => X"B8FFB800"
     )
         port map (
-      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
-      I1 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[7]\,
-      I2 => io2_i_sync,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I0 => io2_i_sync,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
+      I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[7]\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[6]\,
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
       O => rx_shft_reg_mode_0011(5)
     );
 \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[6]_i_1\: unisim.vcomponents.LUT3
@@ -4623,7 +4702,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     )
         port map (
       I0 => io1_i_sync,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[7]\,
       O => rx_shft_reg_mode_0011(6)
     );
@@ -4633,7 +4712,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     )
         port map (
       I0 => io0_i_sync,
-      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I2 => io1_i_sync,
       O => rx_shft_reg_mode_0011(7)
     );
@@ -4697,7 +4776,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
       CE => '1',
-      D => sck_o_int,
+      D => \^sck_o_int\,
       Q => sck_d1,
       R => Rst_to_spi
     );
@@ -4722,11 +4801,11 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       INIT => X"0000000006F6F606"
     )
         port map (
-      I0 => sck_o_int,
+      I0 => \^sck_o_int\,
       I1 => \^transfer_start\,
       I2 => \RATIO_OF_2_GENERATE.sck_o_int_i_2_n_0\,
-      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\,
-      I4 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5\,
+      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5\,
+      I4 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\,
       I5 => Rst_to_spi,
       O => \RATIO_OF_2_GENERATE.sck_o_int_i_1_n_0\
     );
@@ -4745,7 +4824,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       C => ext_spi_clk,
       CE => '1',
       D => \RATIO_OF_2_GENERATE.sck_o_int_i_1_n_0\,
-      Q => sck_o_int,
+      Q => \^sck_o_int\,
       R => '0'
     );
 \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_1\: unisim.vcomponents.LUT4
@@ -4761,15 +4840,15 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4040400040004444"
+      INIT => X"4444400040004040"
     )
         port map (
       I0 => \RATIO_OF_2_GENERATE.Count_reg_n_0_[0]\,
-      I1 => p_43_in,
+      I1 => p_44_in,
       I2 => p_1_in,
-      I3 => p_2_in46_in,
-      I4 => \qspo_int_reg[9]\,
-      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_4_n_0\,
+      I3 => p_2_in47_in,
+      I4 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I5 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_5_n_0\,
       O => \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_i_2_n_0\
     );
 \RX_DATA_SCK_RATIO_2_GEN1.SPIXfer_done_int_reg\: unisim.vcomponents.FDRE
@@ -4782,12 +4861,12 @@ QSPI_SS_T: unisim.vcomponents.FDRE
     );
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
-      I0 => \^spixfer_done_int_pulse_d2\,
-      I1 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011[1]_i_3_n_0\,
-      O => receive_Data_int
+      I0 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_5_n_0\,
+      I1 => \^spixfer_done_int_pulse_d2\,
+      O => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\
     );
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -4797,14 +4876,14 @@ QSPI_SS_T: unisim.vcomponents.FDRE
       I0 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[4]\,
       I1 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_2_n_0\,
       I2 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[2]\,
-      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_1_i_4_n_0\,
+      I3 => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_4_n_0\,
       I4 => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg_n_0_[1]\,
       O => rx_shft_reg_mode_0011(0)
     );
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(0),
       Q => \gpr1.dout_i_reg[7]\(7),
       R => Rst_to_spi
@@ -4812,7 +4891,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(1),
       Q => \gpr1.dout_i_reg[7]\(6),
       R => Rst_to_spi
@@ -4820,7 +4899,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(2),
       Q => \gpr1.dout_i_reg[7]\(5),
       R => Rst_to_spi
@@ -4828,7 +4907,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(3),
       Q => \gpr1.dout_i_reg[7]\(4),
       R => Rst_to_spi
@@ -4836,7 +4915,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(4),
       Q => \gpr1.dout_i_reg[7]\(3),
       R => Rst_to_spi
@@ -4844,7 +4923,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(5),
       Q => \gpr1.dout_i_reg[7]\(2),
       R => Rst_to_spi
@@ -4852,7 +4931,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(6),
       Q => \gpr1.dout_i_reg[7]\(1),
       R => Rst_to_spi
@@ -4860,7 +4939,7 @@ QSPI_SS_T: unisim.vcomponents.FDRE
 \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
-      CE => receive_Data_int,
+      CE => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int[0]_i_1_n_0\,
       D => rx_shft_reg_mode_0011(7),
       Q => \gpr1.dout_i_reg[7]\(0),
       R => Rst_to_spi
@@ -4996,98 +5075,110 @@ aempty_fwft_fb_i_i_2: unisim.vcomponents.LUT3
       I5 => \out\,
       O => D(1)
     );
-\qspi_cntrl_ps[0]_i_1\: unisim.vcomponents.LUT6
+\qspi_cntrl_ps[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AAEAAAEABAFAAAEA"
+      INIT => X"FFFFFF40"
     )
         port map (
-      I0 => \qspi_cntrl_ps[0]_i_2_n_0\,
-      I1 => \^q\(0),
-      I2 => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3_n_0\,
+      I0 => Q(0),
+      I1 => CMD_decoded_int,
+      I2 => \qspi_cntrl_ps[0]_i_2_n_0\,
       I3 => \qspi_cntrl_ps[0]_i_3_n_0\,
-      I4 => CMD_decoded_int,
-      I5 => \qspo_int_reg[11]\(0),
+      I4 => \qspi_cntrl_ps[0]_i_4_n_0\,
       O => qspi_cntrl_ns(0)
     );
-\qspi_cntrl_ps[0]_i_2\: unisim.vcomponents.LUT6
+\qspi_cntrl_ps[0]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0F000B000F000000"
+      INIT => X"01"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => \qspo_int_reg[11]\(5),
-      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
-      I3 => empty_fwft_i_reg,
-      I4 => \^q\(2),
-      I5 => \^q\(1),
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       O => \qspi_cntrl_ps[0]_i_2_n_0\
     );
-\qspi_cntrl_ps[0]_i_3\: unisim.vcomponents.LUT4
+\qspi_cntrl_ps[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0444"
+      INIT => X"0F000D000F000000"
+    )
+        port map (
+      I0 => Q(5),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
+      I3 => empty_fwft_i_reg,
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I5 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      O => \qspi_cntrl_ps[0]_i_3_n_0\
+    );
+\qspi_cntrl_ps[0]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0400000004040404"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I3 => empty_fwft_i_reg,
+      I4 => Q(1),
+      I5 => SPIXfer_done_int_pulse,
+      O => \qspi_cntrl_ps[0]_i_4_n_0\
+    );
+\qspi_cntrl_ps[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2AFF2AFF2AFF2A00"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
+      I2 => empty_fwft_i_reg,
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
+      I4 => \qspi_cntrl_ps[1]_i_2_n_0\,
+      I5 => \qspi_cntrl_ps[1]_i_3_n_0\,
+      O => qspi_cntrl_ns(1)
+    );
+\qspi_cntrl_ps[1]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00008A008A8A8A8A"
+    )
+        port map (
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \^qspi_io1_t_0\,
+      I2 => Q(8),
+      I3 => Q(5),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I5 => empty_fwft_i_reg_1,
+      O => \qspi_cntrl_ps[1]_i_2_n_0\
+    );
+\qspi_cntrl_ps[1]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00400000"
     )
         port map (
       I0 => SPIXfer_done_int_d1,
       I1 => \^spixfer_done_int\,
-      I2 => \qspo_int_reg[11]\(1),
-      I3 => empty_fwft_i_reg,
-      O => \qspi_cntrl_ps[0]_i_3_n_0\
-    );
-\qspi_cntrl_ps[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7F700F0F7F700000"
-    )
-        port map (
-      I0 => empty_fwft_i_reg,
-      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
-      I2 => \^q\(2),
-      I3 => \qspo_int_reg[11]_0\,
-      I4 => \^q\(1),
-      I5 => \qspi_cntrl_ps[1]_i_3_n_0\,
-      O => qspi_cntrl_ns(1)
-    );
-\qspi_cntrl_ps[1]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0800"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^spixfer_done_int\,
-      I2 => SPIXfer_done_int_d1,
-      I3 => \qspo_int_reg[11]\(1),
+      I2 => Q(1),
+      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       O => \qspi_cntrl_ps[1]_i_3_n_0\
     );
-\qspi_cntrl_ps[2]_i_1\: unisim.vcomponents.LUT6
+\qspi_cntrl_ps[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7777000077770F00"
+      INIT => X"0FFF2222"
     )
         port map (
-      I0 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
-      I1 => empty_fwft_i_reg,
-      I2 => \^q\(0),
-      I3 => \^q\(1),
-      I4 => \^q\(2),
-      I5 => \^qspi_cntrl_ps_reg[2]_0\,
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
+      I1 => \^qspi_io1_t_0\,
+      I2 => empty_fwft_i_reg,
+      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       O => qspi_cntrl_ns(2)
-    );
-\qspi_cntrl_ps[2]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FDBFFFFF"
-    )
-        port map (
-      I0 => \qspo_int_reg[11]\(2),
-      I1 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(1),
-      I2 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(0),
-      I3 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg__0\(2),
-      I4 => \qspo_int_reg[11]\(5),
-      O => \^qspi_cntrl_ps_reg[2]_0\
     );
 \qspi_cntrl_ps_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
       CE => '1',
       D => qspi_cntrl_ns(0),
-      Q => \^q\(0),
+      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
       R => Rst_to_spi
     );
 \qspi_cntrl_ps_reg[1]\: unisim.vcomponents.FDRE
@@ -5095,7 +5186,7 @@ aempty_fwft_fb_i_i_2: unisim.vcomponents.LUT3
       C => ext_spi_clk,
       CE => '1',
       D => qspi_cntrl_ns(1),
-      Q => \^q\(1),
+      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(1),
       R => Rst_to_spi
     );
 \qspi_cntrl_ps_reg[2]\: unisim.vcomponents.FDRE
@@ -5103,7 +5194,7 @@ aempty_fwft_fb_i_i_2: unisim.vcomponents.LUT3
       C => ext_spi_clk,
       CE => '1',
       D => qspi_cntrl_ns(2),
-      Q => \^q\(2),
+      Q => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(2),
       R => Rst_to_spi
     );
 spisel_d1_reg: unisim.vcomponents.FDSE
@@ -5123,20 +5214,20 @@ stop_clock_reg_i_2: unisim.vcomponents.LUT6
       I1 => \^spixfer_done_int\,
       I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\,
       I3 => stop_clock_reg,
-      I4 => empty_fwft_i_reg,
-      I5 => \^q\(0),
+      I4 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I5 => empty_fwft_i_reg,
       O => stop_clock_reg_i_2_n_0
     );
 stop_clock_reg_i_3: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0080FFFF"
+      INIT => X"5555D555"
     )
         port map (
-      I0 => empty_fwft_i_reg,
-      I1 => \qspo_int_reg[11]\(1),
-      I2 => \^spixfer_done_int\,
-      I3 => SPIXfer_done_int_d1,
-      I4 => \^q\(0),
+      I0 => \^qspi_quad_mode_sp_mem_gen.addr_cnt_reg[1]_0\(0),
+      I1 => empty_fwft_i_reg,
+      I2 => Q(1),
+      I3 => \^spixfer_done_int\,
+      I4 => SPIXfer_done_int_d1,
       O => stop_clock_reg_i_3_n_0
     );
 stop_clock_reg_reg: unisim.vcomponents.FDRE
@@ -5152,7 +5243,7 @@ stop_clock_reg_reg_i_1: unisim.vcomponents.MUXF7
       I0 => stop_clock_reg_i_2_n_0,
       I1 => stop_clock_reg_i_3_n_0,
       O => stop_clock,
-      S => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_3_n_0\
+      S => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_3_n_0\
     );
 transfer_start_d1_reg: unisim.vcomponents.FDRE
      port map (
@@ -5177,10 +5268,10 @@ transfer_start_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => stop_clock,
       I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\,
-      I2 => \qspo_int_reg[11]\(5),
+      I2 => Q(5),
       I3 => empty_fwft_i_reg,
       I4 => \^spixfer_done_int\,
-      I5 => \qspo_int_reg[11]\(1),
+      I5 => Q(1),
       O => transfer_start_i_1_n_0
     );
 transfer_start_reg: unisim.vcomponents.FDRE
@@ -5190,6 +5281,177 @@ transfer_start_reg: unisim.vcomponents.FDRE
       D => transfer_start_i_1_n_0,
       Q => \^transfer_start\,
       R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity module_ads7056_axi_quad_spi_0_0_qspi_startup_block is
+  port (
+    pipe_signal_reg_r_4_0 : out STD_LOGIC;
+    cfgclk : out STD_LOGIC;
+    cfgmclk : out STD_LOGIC;
+    eos : out STD_LOGIC;
+    preq : out STD_LOGIC;
+    reset2ip_reset_int : in STD_LOGIC;
+    s_axi_aclk : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    gsr : in STD_LOGIC;
+    gts : in STD_LOGIC;
+    keyclearb : in STD_LOGIC;
+    SCK_O_int : in STD_LOGIC;
+    usrcclkts : in STD_LOGIC;
+    usrdoneo : in STD_LOGIC;
+    usrdonets : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_qspi_startup_block : entity is "qspi_startup_block";
+end module_ads7056_axi_quad_spi_0_0_qspi_startup_block;
+
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_startup_block is
+  signal pipe_signal : STD_LOGIC_VECTOR ( 7 to 7 );
+  signal \pipe_signal[0]_i_1_n_0\ : STD_LOGIC;
+  signal \pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\ : STD_LOGIC;
+  signal \pipe_signal_reg[6]_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_4_n_0\ : STD_LOGIC;
+  signal pipe_signal_reg_gate_n_0 : STD_LOGIC;
+  signal \pipe_signal_reg_n_0_[0]\ : STD_LOGIC;
+  signal pipe_signal_reg_r_0_n_0 : STD_LOGIC;
+  signal pipe_signal_reg_r_1_n_0 : STD_LOGIC;
+  signal pipe_signal_reg_r_2_n_0 : STD_LOGIC;
+  signal \^pipe_signal_reg_r_4_0\ : STD_LOGIC;
+  signal pipe_signal_reg_r_4_n_0 : STD_LOGIC;
+  signal pipe_signal_reg_r_n_0 : STD_LOGIC;
+  signal \^preq\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \STARTUP_SHARE_7SERIES_GEN.STARTUP2_7SERIES_inst\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3\ : label is "U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I/pipe_signal_reg ";
+  attribute srl_name : string;
+  attribute srl_name of \pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3\ : label is "U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I/pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3 ";
+begin
+  pipe_signal_reg_r_4_0 <= \^pipe_signal_reg_r_4_0\;
+  preq <= \^preq\;
+\STARTUP_SHARE_7SERIES_GEN.STARTUP2_7SERIES_inst\: unisim.vcomponents.STARTUPE2
+    generic map(
+      PROG_USR => "FALSE",
+      SIM_CCLK_FREQ => 0.000000
+    )
+        port map (
+      CFGCLK => cfgclk,
+      CFGMCLK => cfgmclk,
+      CLK => clk,
+      EOS => eos,
+      GSR => gsr,
+      GTS => gts,
+      KEYCLEARB => keyclearb,
+      PACK => pipe_signal(7),
+      PREQ => \^preq\,
+      USRCCLKO => SCK_O_int,
+      USRCCLKTS => usrcclkts,
+      USRDONEO => usrdoneo,
+      USRDONETS => usrdonets
+    );
+\pipe_signal[0]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^preq\,
+      I1 => \pipe_signal_reg_n_0_[0]\,
+      O => \pipe_signal[0]_i_1_n_0\
+    );
+\pipe_signal_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \pipe_signal[0]_i_1_n_0\,
+      Q => \pipe_signal_reg_n_0_[0]\,
+      R => reset2ip_reset_int
+    );
+\pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3\: unisim.vcomponents.SRL16E
+     port map (
+      A0 => '0',
+      A1 => '0',
+      A2 => '1',
+      A3 => '0',
+      CE => '1',
+      CLK => s_axi_aclk,
+      D => \pipe_signal_reg_n_0_[0]\,
+      Q => \pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\
+    );
+\pipe_signal_reg[6]_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_4\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \pipe_signal_reg[5]_srl5___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\,
+      Q => \pipe_signal_reg[6]_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_4_n_0\,
+      R => '0'
+    );
+\pipe_signal_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => pipe_signal_reg_gate_n_0,
+      Q => pipe_signal(7),
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_gate: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \pipe_signal_reg[6]_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_4_n_0\,
+      I1 => pipe_signal_reg_r_4_n_0,
+      O => pipe_signal_reg_gate_n_0
+    );
+pipe_signal_reg_r: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => '1',
+      Q => pipe_signal_reg_r_n_0,
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_r_0: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => pipe_signal_reg_r_n_0,
+      Q => pipe_signal_reg_r_0_n_0,
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_r_1: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => pipe_signal_reg_r_0_n_0,
+      Q => pipe_signal_reg_r_1_n_0,
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_r_2: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => pipe_signal_reg_r_1_n_0,
+      Q => pipe_signal_reg_r_2_n_0,
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_r_3: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => pipe_signal_reg_r_2_n_0,
+      Q => \^pipe_signal_reg_r_4_0\,
+      R => reset2ip_reset_int
+    );
+pipe_signal_reg_r_4: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \^pipe_signal_reg_r_4_0\,
+      Q => pipe_signal_reg_r_4_n_0,
+      R => reset2ip_reset_int
     );
 end STRUCTURE;
 library IEEE;
@@ -5338,72 +5600,72 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_soft_reset is
   attribute box_type : string;
   attribute box_type of FF_WRACK : label is "PRIMITIVE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of FF_WRACK_i_1 : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of FF_WRACK_i_1 : label is "soft_lutpair51";
   attribute IS_CE_INVERTED of \RESET_FLOPS[0].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[0].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[0].RST_FLOPS\ : label is "PRIMITIVE";
   attribute IS_CE_INVERTED of \RESET_FLOPS[10].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[10].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[10].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[10].RST_FLOPS_i_1\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[10].RST_FLOPS_i_1\ : label is "soft_lutpair56";
   attribute IS_CE_INVERTED of \RESET_FLOPS[11].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[11].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[11].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[11].RST_FLOPS_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[11].RST_FLOPS_i_1\ : label is "soft_lutpair57";
   attribute IS_CE_INVERTED of \RESET_FLOPS[12].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[12].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[12].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[12].RST_FLOPS_i_1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[12].RST_FLOPS_i_1\ : label is "soft_lutpair57";
   attribute IS_CE_INVERTED of \RESET_FLOPS[13].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[13].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[13].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[13].RST_FLOPS_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[13].RST_FLOPS_i_1\ : label is "soft_lutpair58";
   attribute IS_CE_INVERTED of \RESET_FLOPS[14].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[14].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[14].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[14].RST_FLOPS_i_1\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[14].RST_FLOPS_i_1\ : label is "soft_lutpair58";
   attribute IS_CE_INVERTED of \RESET_FLOPS[15].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[15].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[15].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[15].RST_FLOPS_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[15].RST_FLOPS_i_1\ : label is "soft_lutpair51";
   attribute IS_CE_INVERTED of \RESET_FLOPS[1].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[1].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[1].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[1].RST_FLOPS_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[1].RST_FLOPS_i_1\ : label is "soft_lutpair52";
   attribute IS_CE_INVERTED of \RESET_FLOPS[2].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[2].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[2].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[2].RST_FLOPS_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[2].RST_FLOPS_i_1\ : label is "soft_lutpair52";
   attribute IS_CE_INVERTED of \RESET_FLOPS[3].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[3].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[3].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[3].RST_FLOPS_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[3].RST_FLOPS_i_1\ : label is "soft_lutpair53";
   attribute IS_CE_INVERTED of \RESET_FLOPS[4].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[4].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[4].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[4].RST_FLOPS_i_1\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[4].RST_FLOPS_i_1\ : label is "soft_lutpair53";
   attribute IS_CE_INVERTED of \RESET_FLOPS[5].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[5].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[5].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[5].RST_FLOPS_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[5].RST_FLOPS_i_1\ : label is "soft_lutpair54";
   attribute IS_CE_INVERTED of \RESET_FLOPS[6].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[6].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[6].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[6].RST_FLOPS_i_1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[6].RST_FLOPS_i_1\ : label is "soft_lutpair54";
   attribute IS_CE_INVERTED of \RESET_FLOPS[7].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[7].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[7].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[7].RST_FLOPS_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[7].RST_FLOPS_i_1\ : label is "soft_lutpair55";
   attribute IS_CE_INVERTED of \RESET_FLOPS[8].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[8].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[8].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[8].RST_FLOPS_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[8].RST_FLOPS_i_1\ : label is "soft_lutpair55";
   attribute IS_CE_INVERTED of \RESET_FLOPS[9].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[9].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[9].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[9].RST_FLOPS_i_1\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of RESET_SYNC_AX2S_1_i_1 : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \icount_out[0]_i_1__0\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[9].RST_FLOPS_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of RESET_SYNC_AX2S_1_i_1 : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \icount_out[0]_i_1__0\ : label is "soft_lutpair50";
 begin
   \icount_out_reg[0]\ <= \^icount_out_reg[0]\;
 FF_WRACK: unisim.vcomponents.FDRE
@@ -6001,7 +6263,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_dmem_18 is
+entity module_ads7056_axi_quad_spi_0_0_dmem_22 is
   port (
     \goreg_dm.dout_i_reg[7]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
@@ -6014,10 +6276,10 @@ entity module_ads7056_axi_quad_spi_0_0_dmem_18 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_dmem_18 : entity is "dmem";
-end module_ads7056_axi_quad_spi_0_0_dmem_18;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_dmem_22 : entity is "dmem";
+end module_ads7056_axi_quad_spi_0_0_dmem_22;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_dmem_18 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_dmem_22 is
   signal RAM_reg_0_15_0_5_n_0 : STD_LOGIC;
   signal RAM_reg_0_15_0_5_n_1 : STD_LOGIC;
   signal RAM_reg_0_15_0_5_n_2 : STD_LOGIC;
@@ -6404,8 +6666,8 @@ begin
         port map (
       I0 => E(0),
       I1 => \ram_empty_i_i_4__0_n_0\,
-      I2 => rd_pntr_plus1(2),
-      I3 => Q(2),
+      I2 => rd_pntr_plus1(3),
+      I3 => Q(3),
       I4 => rd_pntr_plus1(1),
       I5 => Q(1),
       O => ram_empty_fb_i_reg
@@ -6415,8 +6677,8 @@ begin
       INIT => X"6FF6"
     )
         port map (
-      I0 => rd_pntr_plus1(3),
-      I1 => Q(3),
+      I0 => rd_pntr_plus1(2),
+      I1 => Q(2),
       I2 => rd_pntr_plus1(0),
       I3 => Q(0),
       O => \ram_empty_i_i_4__0_n_0\
@@ -6426,7 +6688,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23 is
+entity module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_27 is
   port (
     ram_empty_i0 : out STD_LOGIC;
     \gnxpm_cdc.rd_pntr_gc_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -6438,10 +6700,10 @@ entity module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23 : entity is "rd_bin_cntr";
-end module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_27 : entity is "rd_bin_cntr";
+end module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_27;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_27 is
   signal \^gnxpm_cdc.rd_pntr_gc_reg[3]\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \plusOp__0\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ram_empty_i_i_2_n_0 : STD_LOGIC;
@@ -6701,6 +6963,8 @@ entity module_ads7056_axi_quad_spi_0_0_rd_fwft is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg_0 : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
     ext_spi_clk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     empty_fwft_i0 : in STD_LOGIC;
@@ -6710,7 +6974,9 @@ entity module_ads7056_axi_quad_spi_0_0_rd_fwft is
     SPIXfer_done_int_pulse_d2 : in STD_LOGIC;
     transfer_start_d1 : in STD_LOGIC;
     transfer_start : in STD_LOGIC;
-    SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC
+    SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    \qspo_int_reg[8]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_fwft : entity is "rd_fwft";
@@ -6764,6 +7030,15 @@ begin
   aempty_fwft_i_reg_0(1 downto 0) <= curr_fwft_state(1 downto 0);
   empty_fwft_fb_i_reg_0 <= empty_fwft_fb_i;
   empty_fwft_fb_o_i_reg_0 <= empty_fwft_fb_o_i;
+QSPI_IO0_T_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => empty_fwft_i,
+      I1 => \qspo_int_reg[8]\(0),
+      O => QSPI_IO0_T
+    );
 \aempty_fwft_fb_i_i_1__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"F2A0B0F0"
@@ -6877,12 +7152,21 @@ empty_fwft_i_reg: unisim.vcomponents.FDPE
       D => D(0),
       Q => user_valid
     );
+\qspi_cntrl_ps[1]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => empty_fwft_i,
+      I1 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
+      O => \qspi_cntrl_ps_reg[1]\
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_rd_fwft_21 is
+entity module_ads7056_axi_quad_spi_0_0_rd_fwft_25 is
   port (
     \out\ : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6899,10 +7183,10 @@ entity module_ads7056_axi_quad_spi_0_0_rd_fwft_21 is
     \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_fwft_21 : entity is "rd_fwft";
-end module_ads7056_axi_quad_spi_0_0_rd_fwft_21;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_fwft_25 : entity is "rd_fwft";
+end module_ads7056_axi_quad_spi_0_0_rd_fwft_25;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_fwft_21 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_fwft_25 is
   signal aempty_fwft_fb_i : STD_LOGIC;
   attribute DONT_TOUCH : boolean;
   attribute DONT_TOUCH of aempty_fwft_fb_i : signal is std.standard.true;
@@ -7207,7 +7491,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22 is
+entity module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_26 is
   port (
     \out\ : out STD_LOGIC;
     ram_empty_i0 : in STD_LOGIC;
@@ -7215,10 +7499,10 @@ entity module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22 : entity is "rd_status_flags_as";
-end module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_26 : entity is "rd_status_flags_as";
+end module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_26;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_26 is
   signal ram_empty_fb_i : STD_LOGIC;
   attribute DONT_TOUCH : boolean;
   attribute DONT_TOUCH of ram_empty_fb_i : signal is std.standard.true;
@@ -7263,25 +7547,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_axi_quad_spi_0_0_rom is
   port (
-    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    QSPI_IO1_T : out STD_LOGIC;
     prmry_in : out STD_LOGIC;
-    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
-    QSPI_IO0_T : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : out STD_LOGIC;
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ : out STD_LOGIC;
-    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ : out STD_LOGIC;
-    \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ : out STD_LOGIC;
-    QSPI_IO0_T_0 : out STD_LOGIC;
-    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
-    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
+    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ : out STD_LOGIC;
+    QSPI_IO0_T : out STD_LOGIC;
     CMD_decoded_int : in STD_LOGIC;
-    \qspo_int_reg[4]_0\ : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
-    empty_fwft_i_reg : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     D : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[3].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
@@ -7299,10 +7574,7 @@ end module_ads7056_axi_quad_spi_0_0_rom;
 
 architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rom is
   signal \^q\ : STD_LOGIC_VECTOR ( 8 downto 0 );
-  signal QSPI_IO1_T_i_2_n_0 : STD_LOGIC;
-  signal QSPI_IO1_T_i_5_n_0 : STD_LOGIC;
   signal \^qspi_mode_2_t_control.qspi_io2_t_0\ : STD_LOGIC;
-  signal \^rx_data_sck_ratio_2_gen1.receive_data_int_reg[5]\ : STD_LOGIC;
   signal \qspo_int[0]_i_4_n_0\ : STD_LOGIC;
   signal \qspo_int[0]_i_5_n_0\ : STD_LOGIC;
   signal \qspo_int[0]_i_6_n_0\ : STD_LOGIC;
@@ -7330,20 +7602,17 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rom is
   signal \qspo_int_reg[3]_i_2_n_0\ : STD_LOGIC;
   signal \qspo_int_reg[3]_i_3_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of QSPI_IO0_T_i_2 : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of QSPI_IO0_T_i_3 : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \qspo_int[10]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \qspo_int[10]_i_2\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \qspo_int[11]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \qspo_int[4]_i_2\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \qspo_int[5]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \qspo_int[6]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \qspo_int[8]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \qspo_int[9]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \qspo_int[10]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \qspo_int[10]_i_2\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \qspo_int[11]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \qspo_int[4]_i_2\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \qspo_int[5]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \qspo_int[6]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \qspo_int[8]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \qspo_int[9]_i_1\ : label is "soft_lutpair33";
 begin
   Q(8 downto 0) <= \^q\(8 downto 0);
   \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ <= \^qspi_mode_2_t_control.qspi_io2_t_0\;
-  \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ <= \^rx_data_sck_ratio_2_gen1.receive_data_int_reg[5]\;
 \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
@@ -7353,128 +7622,47 @@ begin
       I1 => CMD_decoded_int,
       O => prmry_in
     );
-QSPI_IO0_T_i_2: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"08A8A8A8"
-    )
-        port map (
-      I0 => \qspi_cntrl_ps_reg[2]\(1),
-      I1 => \^q\(8),
-      I2 => \qspo_int_reg[4]_0\,
-      I3 => \^q\(3),
-      I4 => \^q\(4),
-      O => QSPI_IO0_T
-    );
 QSPI_IO0_T_i_3: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
-      I0 => \^q\(4),
-      I1 => \^q\(3),
-      O => QSPI_IO0_T_0
-    );
-QSPI_IO1_T_i_1: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF55555115"
-    )
-        port map (
-      I0 => QSPI_IO1_T_i_2_n_0,
-      I1 => \qspi_cntrl_ps_reg[0]\,
-      I2 => \^q\(4),
-      I3 => \^q\(3),
-      I4 => \qspi_cntrl_ps_reg[2]\(2),
-      I5 => \qspi_cntrl_ps_reg[1]_0\,
-      O => QSPI_IO1_T
-    );
-QSPI_IO1_T_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000666666666"
-    )
-        port map (
-      I0 => \^q\(6),
-      I1 => \^q\(7),
-      I2 => \qspi_cntrl_ps_reg[2]\(0),
-      I3 => \qspi_cntrl_ps_reg[2]\(2),
-      I4 => QSPI_IO1_T_i_5_n_0,
-      I5 => \qspi_cntrl_ps_reg[2]\(1),
-      O => QSPI_IO1_T_i_2_n_0
-    );
-QSPI_IO1_T_i_5: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF7DFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^q\(5),
-      I1 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
-      I2 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
-      I3 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
-      I4 => \^q\(2),
-      I5 => \^q\(8),
-      O => QSPI_IO1_T_i_5_n_0
+      I0 => \^q\(3),
+      I1 => \^q\(4),
+      O => QSPI_IO0_T
     );
 \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFF53F"
+      INIT => X"FFFFEFBB"
     )
         port map (
       I0 => \^qspi_mode_2_t_control.qspi_io2_t_0\,
-      I1 => \^q\(7),
-      I2 => \qspi_cntrl_ps_reg[2]\(2),
-      I3 => \qspi_cntrl_ps_reg[2]\(1),
+      I1 => \qspi_cntrl_ps_reg[2]\(1),
+      I2 => \^q\(7),
+      I3 => \qspi_cntrl_ps_reg[2]\(2),
       I4 => D,
       O => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\
     );
 \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"ABA8A8A8"
+      INIT => X"00F07070"
     )
         port map (
-      I0 => \^q\(4),
-      I1 => \qspi_cntrl_ps_reg[2]\(0),
-      I2 => \qspo_int_reg[4]_0\,
-      I3 => \^q\(8),
-      I4 => \^q\(7),
+      I0 => \^q\(7),
+      I1 => \^q\(8),
+      I2 => \qspi_cntrl_ps_reg[2]\(1),
+      I3 => \^q\(4),
+      I4 => \qspi_cntrl_ps_reg[0]\,
       O => \^qspi_mode_2_t_control.qspi_io2_t_0\
     );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_0_i_7\: unisim.vcomponents.LUT6
+\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"AAAAFB00AAAA0800"
+      INIT => X"8"
     )
         port map (
-      I0 => \^q\(6),
-      I1 => \^rx_data_sck_ratio_2_gen1.receive_data_int_reg[5]\,
-      I2 => \qspi_cntrl_ps_reg[0]\,
-      I3 => \qspi_cntrl_ps_reg[2]\(1),
-      I4 => \qspi_cntrl_ps_reg[2]\(2),
-      I5 => \^q\(3),
-      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\
-    );
-\RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_2_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFBFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^q\(8),
-      I1 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(1),
-      I2 => \^q\(2),
-      I3 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2),
-      I4 => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(0),
-      I5 => \^q\(5),
-      O => \^rx_data_sck_ratio_2_gen1.receive_data_int_reg[5]\
-    );
-\qspi_cntrl_ps[1]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00FFFFFFD0DDDDDD"
-    )
-        port map (
-      I0 => \^q\(8),
-      I1 => \qspo_int_reg[4]_0\,
-      I2 => \^q\(5),
-      I3 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
-      I4 => empty_fwft_i_reg,
-      I5 => \qspi_cntrl_ps_reg[2]\(0),
-      O => \qspi_cntrl_ps_reg[1]\
+      I0 => \^q\(7),
+      I1 => \qspi_cntrl_ps_reg[2]\(0),
+      O => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\
     );
 \qspo_int[0]_i_4\: unisim.vcomponents.LUT6
     generic map(
@@ -7917,7 +8105,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_18 is
   port (
     \out\ : out STD_LOGIC;
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg\ : out STD_LOGIC;
@@ -7925,10 +8113,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_18 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_18;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_18 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -7966,7 +8154,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_19 is
   port (
     \out\ : out STD_LOGIC;
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg\ : out STD_LOGIC;
@@ -7974,10 +8162,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15 is
     ext_spi_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_19 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_19;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_19 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8015,7 +8203,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_20 is
   port (
     AS : out STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC;
@@ -8023,10 +8211,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16 is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_20 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_20;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_20 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8063,7 +8251,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_21 is
   port (
     AS : out STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC;
@@ -8071,10 +8259,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17 is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_21 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_21;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_21 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8111,7 +8299,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 is
   port (
     \out\ : out STD_LOGIC;
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg\ : out STD_LOGIC;
@@ -8119,10 +8307,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2 is
     s_axi_aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8160,7 +8348,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 is
   port (
     AS : out STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC;
@@ -8168,10 +8356,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8208,7 +8396,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 is
+entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_5 is
   port (
     AS : out STD_LOGIC_VECTOR ( 0 to 0 );
     \out\ : in STD_LOGIC;
@@ -8216,10 +8404,10 @@ entity module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 is
     in0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 : entity is "synchronizer_ff";
-end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_5 : entity is "synchronizer_ff";
+end module_ads7056_axi_quad_spi_0_0_synchronizer_ff_5;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_synchronizer_ff_5 is
   signal Q_reg : STD_LOGIC;
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8338,7 +8526,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\ is
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_28\ is
   port (
     D : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -8346,10 +8534,10 @@ entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\ is
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_28\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_28\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_28\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8420,89 +8608,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_aclk : in STD_LOGIC;
-    AR : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1\ is
-  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of Q_reg : signal is "true";
-  attribute msgon : string;
-  attribute msgon of Q_reg : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[1]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[2]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[3]\ : label is "true";
-begin
-  D(3 downto 0) <= Q_reg(3 downto 0);
-\Q_reg_reg[0]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => Q(0),
-      Q => Q_reg(0)
-    );
-\Q_reg_reg[1]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => Q(1),
-      Q => Q_reg(1)
-    );
-\Q_reg_reg[2]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => Q(2),
-      Q => Q_reg(2)
-    );
-\Q_reg_reg[3]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => Q(3),
-      Q => Q_reg(3)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\ is
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_29\ is
   port (
     D : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -8510,10 +8616,10 @@ entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\ is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_29\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_29\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_29\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8584,99 +8690,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2\ is
-  port (
-    \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Q_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    ext_spi_clk : in STD_LOGIC;
-    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2\ is
-  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of Q_reg : signal is "true";
-  attribute msgon : string;
-  attribute msgon of Q_reg : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[1]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[2]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[3]\ : label is "true";
-begin
-  \out\(3 downto 0) <= Q_reg(3 downto 0);
-\Q_reg_reg[0]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
-      D => \Q_reg_reg[3]_0\(0),
-      Q => Q_reg(0)
-    );
-\Q_reg_reg[1]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
-      D => \Q_reg_reg[3]_0\(1),
-      Q => Q_reg(1)
-    );
-\Q_reg_reg[2]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
-      D => \Q_reg_reg[3]_0\(2),
-      Q => Q_reg(2)
-    );
-\Q_reg_reg[3]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => ext_spi_clk,
-      CE => '1',
-      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
-      D => \Q_reg_reg[3]_0\(3),
-      Q => Q_reg(3)
-    );
-\gnxpm_cdc.wr_pntr_bin[2]_i_1__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => Q_reg(2),
-      I1 => Q_reg(3),
-      O => D(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\ is
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_30\ is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8685,10 +8699,10 @@ entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\ is
     \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_30\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_30\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_30\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8768,99 +8782,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3\ is
-  port (
-    \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Q_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_aclk : in STD_LOGIC;
-    AR : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3\;
-
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3\ is
-  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of Q_reg : signal is "true";
-  attribute msgon : string;
-  attribute msgon of Q_reg : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[1]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[2]\ : label is "true";
-  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
-  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
-  attribute msgon of \Q_reg_reg[3]\ : label is "true";
-begin
-  \out\(3 downto 0) <= Q_reg(3 downto 0);
-\Q_reg_reg[0]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => \Q_reg_reg[3]_0\(0),
-      Q => Q_reg(0)
-    );
-\Q_reg_reg[1]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => \Q_reg_reg[3]_0\(1),
-      Q => Q_reg(1)
-    );
-\Q_reg_reg[2]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => \Q_reg_reg[3]_0\(2),
-      Q => Q_reg(2)
-    );
-\Q_reg_reg[3]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      CLR => AR(0),
-      D => \Q_reg_reg[3]_0\(3),
-      Q => Q_reg(3)
-    );
-\gnxpm_cdc.rd_pntr_bin[2]_i_1__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => Q_reg(2),
-      I1 => Q_reg(3),
-      O => D(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\ is
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_31\ is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8869,10 +8791,10 @@ entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\ is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\ : entity is "synchronizer_ff";
-end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_31\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_31\;
 
-architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\ is
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_31\ is
   signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute async_reg : string;
   attribute async_reg of Q_reg : signal is "true";
@@ -8939,6 +8861,272 @@ begin
       Q => Q_reg(3)
     );
 \gnxpm_cdc.rd_pntr_bin[2]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => Q_reg(2),
+      I1 => Q_reg(3),
+      O => D(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_6\ is
+  port (
+    D : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_aclk : in STD_LOGIC;
+    AR : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_6\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_6\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_6\ is
+  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute async_reg : string;
+  attribute async_reg of Q_reg : signal is "true";
+  attribute msgon : string;
+  attribute msgon of Q_reg : signal is "true";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[0]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[1]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[2]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[3]\ : label is "true";
+begin
+  D(3 downto 0) <= Q_reg(3 downto 0);
+\Q_reg_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => Q(0),
+      Q => Q_reg(0)
+    );
+\Q_reg_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => Q(1),
+      Q => Q_reg(1)
+    );
+\Q_reg_reg[2]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => Q(2),
+      Q => Q_reg(2)
+    );
+\Q_reg_reg[3]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => Q(3),
+      Q => Q_reg(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_7\ is
+  port (
+    \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Q_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    ext_spi_clk : in STD_LOGIC;
+    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_7\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_7\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_7\ is
+  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute async_reg : string;
+  attribute async_reg of Q_reg : signal is "true";
+  attribute msgon : string;
+  attribute msgon of Q_reg : signal is "true";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[0]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[1]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[2]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[3]\ : label is "true";
+begin
+  \out\(3 downto 0) <= Q_reg(3 downto 0);
+\Q_reg_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
+      D => \Q_reg_reg[3]_0\(0),
+      Q => Q_reg(0)
+    );
+\Q_reg_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
+      D => \Q_reg_reg[3]_0\(1),
+      Q => Q_reg(1)
+    );
+\Q_reg_reg[2]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
+      D => \Q_reg_reg[3]_0\(2),
+      Q => Q_reg(2)
+    );
+\Q_reg_reg[3]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => ext_spi_clk,
+      CE => '1',
+      CLR => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
+      D => \Q_reg_reg[3]_0\(3),
+      Q => Q_reg(3)
+    );
+\gnxpm_cdc.wr_pntr_bin[2]_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => Q_reg(2),
+      I1 => Q_reg(3),
+      O => D(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_8\ is
+  port (
+    \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Q_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_aclk : in STD_LOGIC;
+    AR : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_8\ : entity is "synchronizer_ff";
+end \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_8\;
+
+architecture STRUCTURE of \module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_8\ is
+  signal Q_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute async_reg : string;
+  attribute async_reg of Q_reg : signal is "true";
+  attribute msgon : string;
+  attribute msgon of Q_reg : signal is "true";
+  attribute ASYNC_REG_boolean : boolean;
+  attribute ASYNC_REG_boolean of \Q_reg_reg[0]\ : label is std.standard.true;
+  attribute KEEP : string;
+  attribute KEEP of \Q_reg_reg[0]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[0]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[1]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[1]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[2]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[2]\ : label is "true";
+  attribute ASYNC_REG_boolean of \Q_reg_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \Q_reg_reg[3]\ : label is "yes";
+  attribute msgon of \Q_reg_reg[3]\ : label is "true";
+begin
+  \out\(3 downto 0) <= Q_reg(3 downto 0);
+\Q_reg_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => \Q_reg_reg[3]_0\(0),
+      Q => Q_reg(0)
+    );
+\Q_reg_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => \Q_reg_reg[3]_0\(1),
+      Q => Q_reg(1)
+    );
+\Q_reg_reg[2]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => \Q_reg_reg[3]_0\(2),
+      Q => Q_reg(2)
+    );
+\Q_reg_reg[3]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      CLR => AR(0),
+      D => \Q_reg_reg[3]_0\(3),
+      Q => Q_reg(3)
+    );
+\gnxpm_cdc.rd_pntr_bin[2]_i_1__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
@@ -9248,7 +9436,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20 is
+entity module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_24 is
   port (
     ram_full_fb_i_reg : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -9259,10 +9447,10 @@ entity module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20 : entity is "wr_bin_cntr";
-end module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_24 : entity is "wr_bin_cntr";
+end module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_24;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_24 is
   signal \^q\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \plusOp__2\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \ram_full_i_i_4__0_n_0\ : STD_LOGIC;
@@ -9494,10 +9682,10 @@ begin
       INIT => X"00009009"
     )
         port map (
-      I0 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(0),
-      I1 => wr_pntr_plus2(0),
-      I2 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(1),
-      I3 => wr_pntr_plus2(1),
+      I0 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(3),
+      I1 => wr_pntr_plus2(3),
+      I2 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(2),
+      I3 => wr_pntr_plus2(2),
       I4 => \ram_full_i_i_4__0_n_0\,
       O => ram_full_fb_i_reg
     );
@@ -9506,10 +9694,10 @@ begin
       INIT => X"6FF6"
     )
         port map (
-      I0 => wr_pntr_plus2(2),
-      I1 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(2),
-      I2 => wr_pntr_plus2(3),
-      I3 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(3),
+      I0 => wr_pntr_plus2(1),
+      I1 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(1),
+      I2 => wr_pntr_plus2(0),
+      I3 => \gnxpm_cdc.rd_pntr_bin_reg[3]\(0),
       O => \ram_full_i_i_4__0_n_0\
     );
 end STRUCTURE;
@@ -9587,7 +9775,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19 is
+entity module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_23 is
   port (
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
     ram_full_fb_i_reg_0 : out STD_LOGIC;
@@ -9595,16 +9783,16 @@ entity module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19 is
     ext_spi_clk : in STD_LOGIC;
     \out\ : in STD_LOGIC;
     spiXfer_done_int : in STD_LOGIC;
-    \gnxpm_cdc.rd_pntr_bin_reg[0]\ : in STD_LOGIC;
-    \gic0.gc1.count_d2_reg[2]\ : in STD_LOGIC;
+    \gnxpm_cdc.rd_pntr_bin_reg[3]\ : in STD_LOGIC;
+    \gic0.gc1.count_d2_reg[0]\ : in STD_LOGIC;
     \grstd1.grst_full.grst_f.rst_d3_reg\ : in STD_LOGIC;
     scndry_out : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19 : entity is "wr_status_flags_as";
-end module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_23 : entity is "wr_status_flags_as";
+end module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_23;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_23 is
   signal ram_full_fb_i : STD_LOGIC;
   attribute DONT_TOUCH : boolean;
   attribute DONT_TOUCH of ram_full_fb_i : signal is std.standard.true;
@@ -9649,8 +9837,8 @@ ram_full_fb_i_reg: unisim.vcomponents.FDPE
         port map (
       I0 => ram_full_fb_i,
       I1 => spiXfer_done_int,
-      I2 => \gnxpm_cdc.rd_pntr_bin_reg[0]\,
-      I3 => \gic0.gc1.count_d2_reg[2]\,
+      I2 => \gnxpm_cdc.rd_pntr_bin_reg[3]\,
+      I3 => \gic0.gc1.count_d2_reg[0]\,
       I4 => \grstd1.grst_full.grst_f.rst_d3_reg\,
       O => \ram_full_i_i_1__0_n_0\
     );
@@ -9709,8 +9897,8 @@ entity module_ads7056_axi_quad_spi_0_0_address_decoder is
     Q : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     \bus2ip_addr_i_reg[6]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    bus2ip_rnw_i_reg : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 0 to 0 );
+    bus2ip_rnw_i_reg : in STD_LOGIC;
     \out\ : in STD_LOGIC;
     ip2Bus_WrAck_core_reg_d1 : in STD_LOGIC;
     ip2Bus_RdAck_intr_reg_hole_d1 : in STD_LOGIC;
@@ -9729,26 +9917,26 @@ entity module_ads7056_axi_quad_spi_0_0_address_decoder is
     SPISR_4_CPOL_CPHA_Error_int : in STD_LOGIC;
     ipif_glbl_irpt_enable_reg : in STD_LOGIC;
     irpt_rdack_d1 : in STD_LOGIC;
+    p_1_in : in STD_LOGIC;
+    p_1_in2_in : in STD_LOGIC;
+    p_1_in5_in : in STD_LOGIC;
+    p_1_in8_in : in STD_LOGIC;
+    scndry_out : in STD_LOGIC;
+    p_1_in11_in : in STD_LOGIC;
+    p_1_in14_in : in STD_LOGIC;
+    p_1_in17_in : in STD_LOGIC;
+    p_1_in23_in : in STD_LOGIC;
+    p_1_in26_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
+    p_1_in29_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
+    p_1_in32_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
+    p_1_in35_in : in STD_LOGIC;
     rx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ : in STD_LOGIC;
     rx_fifo_empty_i : in STD_LOGIC;
     empty_fwft_i_reg : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
-    p_1_in35_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
-    p_1_in32_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
-    p_1_in29_in : in STD_LOGIC;
-    p_1_in26_in : in STD_LOGIC;
-    p_1_in23_in : in STD_LOGIC;
-    p_1_in17_in : in STD_LOGIC;
-    p_1_in14_in : in STD_LOGIC;
-    p_1_in11_in : in STD_LOGIC;
-    p_1_in8_in : in STD_LOGIC;
-    scndry_out : in STD_LOGIC;
-    p_1_in5_in : in STD_LOGIC;
-    p_1_in2_in : in STD_LOGIC;
-    p_1_in : in STD_LOGIC;
     irpt_wrack_d1 : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2\ : in STD_LOGIC;
     tx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9874,18 +10062,18 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_address_decoder is
   signal \^s_axi_wready\ : STD_LOGIC;
   signal s_axi_wready_INST_0_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Bus_RNW_reg_i_1 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of Bus_RNW_reg_i_1 : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \CONTROL_REG_5_9_GENERATE[9].SPICR_data_int[9]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_2\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_3\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[21]_i_2\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[22]_i_2\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_2\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_3\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_5\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_i_2\ : label is "soft_lutpair5";
@@ -9896,9 +10084,9 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_address_decoder is
   attribute SOFT_HLUTNM of intr2bus_wrack_i_1 : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of intr2bus_wrack_i_2 : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of ip2Bus_RdAck_intr_reg_hole_d1_i_1 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of ip2Bus_RdAck_intr_reg_hole_i_1 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of ip2Bus_WrAck_intr_reg_hole_d1_i_1 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of ip2Bus_WrAck_intr_reg_hole_i_1 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of ip2Bus_RdAck_intr_reg_hole_i_1 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of ip2Bus_WrAck_intr_reg_hole_d1_i_1 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of ip2Bus_WrAck_intr_reg_hole_i_1 : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \ip_irpt_enable_reg[13]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of reset_trig_i_1 : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of sw_rst_cond_d1_i_1 : label is "soft_lutpair9";
@@ -10391,8 +10579,8 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       INIT => X"00100000"
     )
         port map (
-      I0 => p_24_in,
-      I1 => p_22_in,
+      I0 => p_22_in,
+      I1 => p_24_in,
       I2 => p_25_in,
       I3 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0\,
       I4 => ipif_glbl_irpt_enable_reg,
@@ -10421,14 +10609,14 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
     );
 \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BBBFFFFF"
+      INIT => X"ABFFFFFF"
     )
         port map (
       I0 => p_24_in,
-      I1 => p_22_in,
-      I2 => bus2ip_rnw_i_reg,
-      I3 => s_axi_wstrb(0),
-      I4 => \^ipif_glbl_irpt_enable_reg_reg\,
+      I1 => bus2ip_rnw_i_reg,
+      I2 => s_axi_wstrb(0),
+      I3 => \^ipif_glbl_irpt_enable_reg_reg\,
+      I4 => p_22_in,
       O => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_2_n_0\
     );
 \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_3\: unisim.vcomponents.LUT4
@@ -10660,7 +10848,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_2_n_0\,
       I1 => \ip_irpt_enable_reg_reg[13]\(3),
-      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\,
+      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\,
       I3 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3_n_0\,
       I4 => p_1_in29_in,
       I5 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_3_n_0\,
@@ -10712,7 +10900,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_2_n_0\,
       I1 => \ip_irpt_enable_reg_reg[13]\(1),
-      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\,
+      I2 => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\,
       I3 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_3_n_0\,
       I4 => p_1_in35_in,
       I5 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[18]_i_3_n_0\,
@@ -10875,7 +11063,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I5 => ip2Bus_WrAck_core_reg_d1,
       O => \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg\
     );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_i_1\: unisim.vcomponents.LUT5
+\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"AAA8AAAA"
     )
@@ -10989,13 +11177,13 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       Q => Q,
       \bus2ip_addr_i_reg[6]\(4 downto 0) => \bus2ip_addr_i_reg[6]\(4 downto 0)
     );
-\MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.\module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28\
+\MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.\module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19_46\
      port map (
       \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26]\ => \MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0\,
       Q => Q,
       \bus2ip_addr_i_reg[6]\(4 downto 0) => \bus2ip_addr_i_reg[6]\(4 downto 0)
     );
-\MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.\module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32\
+\MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.\module_ads7056_axi_quad_spi_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23_47\
      port map (
       \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30]\ => \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0\,
       Q => Q,
@@ -11051,8 +11239,8 @@ intr2bus_rdack_i_1: unisim.vcomponents.LUT5
       I0 => irpt_rdack_d1,
       I1 => p_25_in,
       I2 => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_2_n_0\,
-      I3 => p_22_in,
-      I4 => p_24_in,
+      I3 => p_24_in,
+      I4 => p_22_in,
       O => intr2bus_rdack0
     );
 intr2bus_wrack_i_1: unisim.vcomponents.LUT5
@@ -11184,8 +11372,8 @@ irpt_rdack_d1_i_1: unisim.vcomponents.LUT6
       I1 => \^ipif_glbl_irpt_enable_reg_reg\,
       I2 => s_axi_wstrb(0),
       I3 => bus2ip_rnw_i_reg,
-      I4 => p_22_in,
-      I5 => p_24_in,
+      I4 => p_24_in,
+      I5 => p_22_in,
       O => irpt_rdack
     );
 irpt_wrack_d1_i_1: unisim.vcomponents.LUT6
@@ -11285,8 +11473,6 @@ entity module_ads7056_axi_quad_spi_0_0_cross_clk_sync_fifo_1 is
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]\ : out STD_LOGIC;
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]\ : out STD_LOGIC;
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]\ : out STD_LOGIC;
-    R : out STD_LOGIC;
-    \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : out STD_LOGIC;
     modf_reg : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \RATIO_OF_2_GENERATE.Count_reg[4]\ : out STD_LOGIC;
@@ -11297,11 +11483,12 @@ entity module_ads7056_axi_quad_spi_0_0_cross_clk_sync_fifo_1 is
     QSPI_SCK_T : out STD_LOGIC;
     transfer_start_reg : out STD_LOGIC;
     MST_TRANS_INHIBIT_D1_I : out STD_LOGIC;
+    MODF_strobe_reg : out STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC;
     \SS_O_reg[0]\ : out STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC;
     reset2ip_reset_int : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC;
     Rst_to_spi : in STD_LOGIC;
     \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg_0\ : in STD_LOGIC;
     \RESET_FLOPS[15].RST_FLOPS\ : in STD_LOGIC;
@@ -11465,7 +11652,7 @@ begin
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(0) => s_axi_wdata(6)
     );
-\LOGIC_GENERATION_CDC.DRR_OVERRUN_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_28
+\LOGIC_GENERATION_CDC.DRR_OVERRUN_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_32
      port map (
       \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\ => \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\,
       \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\ => \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\,
@@ -11476,13 +11663,13 @@ begin
       s_axi_wdata(0) => s_axi_wdata(2),
       scndry_out => drr_Overrun_int_cdc_from_spi_d2
     );
-\LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_29
+\LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_33
      port map (
       prmry_in => modf_strobe_cdc_from_spi_int_2,
       s_axi_aclk => s_axi_aclk,
       scndry_out => modf_strobe_cdc_from_spi_d2
     );
-\LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized14\
+\LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized1\
      port map (
       SPICR_RX_FIFO_Rst_en_d1 => SPICR_RX_FIFO_Rst_en_d1,
       SPICR_RX_FIFO_Rst_en_d2 => SPICR_RX_FIFO_Rst_en_d2,
@@ -11510,42 +11697,41 @@ begin
       Q => reset_RcFIFO_ptr_cdc_from_axi_d2,
       R => Rst_to_spi
     );
-\LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized3\
+\LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0\
      port map (
       \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\ => \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\,
       ext_spi_clk => ext_spi_clk,
       scndry_out => spicr_1_spe_to_spi_clk
     );
-\LOGIC_GENERATION_CDC.SPICR_2_MST_N_SLV_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized4\
+\LOGIC_GENERATION_CDC.SPICR_2_MST_N_SLV_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_34\
      port map (
-      R => R,
-      \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\,
+      MODF_strobe_reg => MODF_strobe_reg,
       ext_spi_clk => ext_spi_clk,
       spicr_2_mst_n_slv_frm_axi_clk => spicr_2_mst_n_slv_frm_axi_clk
     );
-\LOGIC_GENERATION_CDC.SPICR_3_CPOL_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized5\
-     port map (
-      \RATIO_OF_2_GENERATE.Count_reg[4]\ => \^ratio_of_2_generate.count_reg[4]_0\,
-      ext_spi_clk => ext_spi_clk,
-      spicr_3_cpol_frm_axi_clk => spicr_3_cpol_frm_axi_clk
-    );
-\LOGIC_GENERATION_CDC.SPICR_4_CPHA_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized6\
+\LOGIC_GENERATION_CDC.SPICR_3_CPOL_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_35\
      port map (
       E(0) => E(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ => \^ratio_of_2_generate.count_reg[4]_0\,
       Q(0) => Q(0),
       \RATIO_OF_2_GENERATE.Count_reg[4]\ => \RATIO_OF_2_GENERATE.Count_reg[4]\,
       ext_spi_clk => ext_spi_clk,
-      spicr_4_cpha_frm_axi_clk => spicr_4_cpha_frm_axi_clk,
+      spicr_3_cpol_frm_axi_clk => spicr_3_cpol_frm_axi_clk,
       transfer_start_d2 => transfer_start_d2
     );
-\LOGIC_GENERATION_CDC.SPICR_5_TXFIFO_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized7\
+\LOGIC_GENERATION_CDC.SPICR_4_CPHA_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_36\
+     port map (
+      \RATIO_OF_2_GENERATE.Count_reg[4]\ => \^ratio_of_2_generate.count_reg[4]_0\,
+      ext_spi_clk => ext_spi_clk,
+      spicr_4_cpha_frm_axi_clk => spicr_4_cpha_frm_axi_clk
+    );
+\LOGIC_GENERATION_CDC.SPICR_5_TXFIFO_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_37\
      port map (
       \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\ => \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4]\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\,
       ext_spi_clk => ext_spi_clk
     );
-\LOGIC_GENERATION_CDC.SPICR_8_TR_INHIBIT_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized10\
+\LOGIC_GENERATION_CDC.SPICR_8_TR_INHIBIT_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_38\
      port map (
       \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]\ => \CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1]\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ => \^qspi_sck_t\,
@@ -11555,19 +11741,19 @@ begin
       scndry_out => spicr_1_spe_to_spi_clk,
       transfer_start_reg => transfer_start_reg
     );
-\LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[0].SPICR_BITS_7_8_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized16\
-     port map (
-      ext_spi_clk => ext_spi_clk,
-      spicr_bits_7_8_frm_axi_clk(0) => spicr_bits_7_8_frm_axi_clk(0),
-      spicr_bits_7_8_to_spi_clk(0) => \^spicr_bits_7_8_to_spi_clk\(1)
-    );
-\LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[1].SPICR_BITS_7_8_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized15\
+\LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[0].SPICR_BITS_7_8_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_39\
      port map (
       D_0 => D_0,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ => \^qspi_sck_t\,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\(0) => \^spicr_bits_7_8_to_spi_clk\(1),
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\(0) => \^spicr_bits_7_8_to_spi_clk\(0),
       ext_spi_clk => ext_spi_clk,
       modf_strobe_int => modf_strobe_int,
+      spicr_bits_7_8_frm_axi_clk(0) => spicr_bits_7_8_frm_axi_clk(0),
+      spicr_bits_7_8_to_spi_clk(0) => \^spicr_bits_7_8_to_spi_clk\(1)
+    );
+\LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[1].SPICR_BITS_7_8_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_40\
+     port map (
+      ext_spi_clk => ext_spi_clk,
       spicr_bits_7_8_frm_axi_clk(0) => spicr_bits_7_8_frm_axi_clk(1),
       spicr_bits_7_8_to_spi_clk(0) => \^spicr_bits_7_8_to_spi_clk\(0)
     );
@@ -11590,7 +11776,7 @@ begin
       Q => SPICR_RX_FIFO_Rst_en_d1,
       R => reset2ip_reset_int
     );
-\LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_30
+\LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_41
      port map (
       D(0) => D(0),
       \ip_irpt_enable_reg_reg[8]\ => \ip_irpt_enable_reg_reg[8]\,
@@ -11643,19 +11829,19 @@ begin
       Q => spisel_pulse_cdc_from_spi_d4,
       R => reset2ip_reset_int
     );
-\LOGIC_GENERATION_CDC.SPISSR_SYNC_GEN_CDC[0].SPISSR_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized13\
+\LOGIC_GENERATION_CDC.SPISSR_SYNC_GEN_CDC[0].SPISSR_AX2S_1_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_42\
      port map (
       \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\ => \SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0]\,
       \SS_O_reg[0]\ => \SS_O_reg[0]\,
       ext_spi_clk => ext_spi_clk
     );
-\LOGIC_GENERATION_CDC.SR_3_MODF_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized12\
+\LOGIC_GENERATION_CDC.SR_3_MODF_AX2S_1\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized0_43\
      port map (
       QSPI_SCK_T => \^qspi_sck_t\,
       ext_spi_clk => ext_spi_clk,
       modf_reg => modf_reg_0
     );
-\LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_31
+\LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_44
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]\ => \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]\,
@@ -11682,7 +11868,7 @@ begin
       scndry_out => \^scndry_out\,
       spiXfer_done_to_axi_1 => spiXfer_done_to_axi_1
     );
-\LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_32
+\LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1\: entity work.module_ads7056_axi_quad_spi_0_0_cdc_sync_45
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\ => \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\,
@@ -11886,7 +12072,7 @@ entity module_ads7056_axi_quad_spi_0_0_clk_x_pntrs is
     Q : out STD_LOGIC_VECTOR ( 3 downto 0 );
     ram_full_i_reg : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \gc1.count_d2_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \gc1.count_d1_reg[2]\ : in STD_LOGIC;
+    \gc1.count_d1_reg[3]\ : in STD_LOGIC;
     \gic0.gc1.count_d3_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -11969,7 +12155,7 @@ begin
       ext_spi_clk => ext_spi_clk,
       \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0) => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0)
     );
-\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1\
+\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_6\
      port map (
       AR(0) => AR(0),
       D(3 downto 0) => p_4_out(3 downto 0),
@@ -11979,7 +12165,7 @@ begin
       Q(0) => \gnxpm_cdc.rd_pntr_gc_reg_n_0_[0]\,
       s_axi_aclk => s_axi_aclk
     );
-\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2\
+\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_7\
      port map (
       D(0) => \gnxpm_cdc.gsync_stage[2].rd_stg_inst_n_4\,
       \Q_reg_reg[3]_0\(3 downto 0) => p_3_out(3 downto 0),
@@ -11987,7 +12173,7 @@ begin
       \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0) => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
       \out\(3 downto 0) => \^out\(3 downto 0)
     );
-\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3\
+\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_8\
      port map (
       AR(0) => AR(0),
       D(0) => \gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4\,
@@ -12204,11 +12390,11 @@ begin
     )
         port map (
       I0 => \ram_empty_i_i_2__0_n_0\,
-      I1 => \^q\(1),
-      I2 => \gc1.count_d2_reg[3]\(1),
-      I3 => \^q\(0),
-      I4 => \gc1.count_d2_reg[3]\(0),
-      I5 => \gc1.count_d1_reg[2]\,
+      I1 => \^q\(2),
+      I2 => \gc1.count_d2_reg[3]\(2),
+      I3 => \^q\(3),
+      I4 => \gc1.count_d2_reg[3]\(3),
+      I5 => \gc1.count_d1_reg[3]\,
       O => ram_empty_i0
     );
 \ram_empty_i_i_2__0\: unisim.vcomponents.LUT4
@@ -12216,10 +12402,10 @@ begin
       INIT => X"6FF6"
     )
         port map (
-      I0 => \^q\(3),
-      I1 => \gc1.count_d2_reg[3]\(3),
-      I2 => \^q\(2),
-      I3 => \gc1.count_d2_reg[3]\(2),
+      I0 => \^q\(0),
+      I1 => \gc1.count_d2_reg[3]\(0),
+      I2 => \^q\(1),
+      I3 => \gc1.count_d2_reg[3]\(1),
       O => \ram_empty_i_i_2__0_n_0\
     );
 end STRUCTURE;
@@ -12227,7 +12413,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9 is
+entity module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_13 is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     ram_empty_i_reg : out STD_LOGIC;
@@ -12245,10 +12431,10 @@ entity module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9 is
     \gc1.count_d2_reg[3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9 : entity is "clk_x_pntrs";
-end module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_13 : entity is "clk_x_pntrs";
+end module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_13;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_13 is
   signal \^q\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \_inferred__2/i__n_0\ : STD_LOGIC;
   signal \_inferred__3/i__n_0\ : STD_LOGIC;
@@ -12303,21 +12489,21 @@ begin
       I2 => p_6_out(3),
       O => \_inferred__3/i__n_0\
     );
-\gnxpm_cdc.gsync_stage[1].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_24\
+\gnxpm_cdc.gsync_stage[1].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_28\
      port map (
       D(3 downto 0) => p_3_out(3 downto 0),
       Q(3 downto 0) => wr_pntr_gc(3 downto 0),
       \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0) => \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0),
       s_axi_aclk => s_axi_aclk
     );
-\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized1_25\
+\gnxpm_cdc.gsync_stage[1].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_29\
      port map (
       AR(0) => AR(0),
       D(3 downto 0) => p_4_out(3 downto 0),
       Q(3 downto 0) => rd_pntr_gc(3 downto 0),
       ext_spi_clk => ext_spi_clk
     );
-\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized2_26\
+\gnxpm_cdc.gsync_stage[2].rd_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_30\
      port map (
       D(0) => gray2bin(2),
       \Q_reg_reg[3]_0\(3 downto 0) => p_3_out(3 downto 0),
@@ -12325,7 +12511,7 @@ begin
       \out\(3 downto 0) => \^out\(3 downto 0),
       s_axi_aclk => s_axi_aclk
     );
-\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized3_27\
+\gnxpm_cdc.gsync_stage[2].wr_stg_inst\: entity work.\module_ads7056_axi_quad_spi_0_0_synchronizer_ff__parameterized0_31\
      port map (
       AR(0) => AR(0),
       D(0) => \gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4\,
@@ -12552,10 +12738,10 @@ ram_empty_i_i_3: unisim.vcomponents.LUT4
       INIT => X"00009009"
     )
         port map (
-      I0 => \gic0.gc1.count_d2_reg[3]\(2),
-      I1 => \^ram_full_fb_i_reg_0\(2),
-      I2 => \gic0.gc1.count_d2_reg[3]\(3),
-      I3 => \^ram_full_fb_i_reg_0\(3),
+      I0 => \gic0.gc1.count_d2_reg[3]\(0),
+      I1 => \^ram_full_fb_i_reg_0\(0),
+      I2 => \gic0.gc1.count_d2_reg[3]\(1),
+      I3 => \^ram_full_fb_i_reg_0\(1),
       I4 => ram_full_i_i_5_n_0,
       O => ram_full_fb_i_reg
     );
@@ -12564,10 +12750,10 @@ ram_full_i_i_5: unisim.vcomponents.LUT4
       INIT => X"6FF6"
     )
         port map (
-      I0 => \^ram_full_fb_i_reg_0\(0),
-      I1 => \gic0.gc1.count_d2_reg[3]\(0),
-      I2 => \^ram_full_fb_i_reg_0\(1),
-      I3 => \gic0.gc1.count_d2_reg[3]\(1),
+      I0 => \^ram_full_fb_i_reg_0\(3),
+      I1 => \gic0.gc1.count_d2_reg[3]\(3),
+      I2 => \^ram_full_fb_i_reg_0\(2),
+      I3 => \gic0.gc1.count_d2_reg[3]\(2),
       O => ram_full_i_i_5_n_0
     );
 end STRUCTURE;
@@ -12577,25 +12763,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_axi_quad_spi_0_0_dist_mem_gen_v8_0_11_synth is
   port (
-    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    QSPI_IO1_T : out STD_LOGIC;
     prmry_in : out STD_LOGIC;
-    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
-    QSPI_IO0_T : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : out STD_LOGIC;
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ : out STD_LOGIC;
-    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ : out STD_LOGIC;
-    \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ : out STD_LOGIC;
-    QSPI_IO0_T_0 : out STD_LOGIC;
-    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
-    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
+    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ : out STD_LOGIC;
+    QSPI_IO0_T : out STD_LOGIC;
     CMD_decoded_int : in STD_LOGIC;
-    \qspo_int_reg[4]\ : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
-    empty_fwft_i_reg : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     D : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[3].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
@@ -12617,11 +12794,8 @@ begin
      port map (
       CMD_decoded_int => CMD_decoded_int,
       D => D,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       Q(8 downto 0) => Q(8 downto 0),
       QSPI_IO0_T => QSPI_IO0_T,
-      QSPI_IO0_T_0 => QSPI_IO0_T_0,
-      QSPI_IO1_T => QSPI_IO1_T,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\,
@@ -12632,18 +12806,12 @@ begin
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\,
-      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0),
-      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\,
-      \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\,
+      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\,
       Rst_to_spi => Rst_to_spi,
-      empty_fwft_i_reg => empty_fwft_i_reg,
       ext_spi_clk => ext_spi_clk,
       prmry_in => prmry_in,
       \qspi_cntrl_ps_reg[0]\ => \qspi_cntrl_ps_reg[0]\,
-      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
-      \qspi_cntrl_ps_reg[1]_0\ => \qspi_cntrl_ps_reg[1]_0\,
-      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0),
-      \qspo_int_reg[4]_0\ => \qspo_int_reg[4]\
+      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -12652,7 +12820,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_axi_quad_spi_0_0_memory is
   port (
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_aclk : in STD_LOGIC;
     I103 : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -12705,7 +12873,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_7\,
-      Q => Q(0)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(0)
     );
 \goreg_dm.dout_i_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -12716,7 +12884,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_6\,
-      Q => Q(1)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(1)
     );
 \goreg_dm.dout_i_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -12727,7 +12895,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_5\,
-      Q => Q(2)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(2)
     );
 \goreg_dm.dout_i_reg[3]\: unisim.vcomponents.FDCE
     generic map(
@@ -12738,7 +12906,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_4\,
-      Q => Q(3)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(3)
     );
 \goreg_dm.dout_i_reg[4]\: unisim.vcomponents.FDCE
     generic map(
@@ -12749,7 +12917,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_3\,
-      Q => Q(4)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(4)
     );
 \goreg_dm.dout_i_reg[5]\: unisim.vcomponents.FDCE
     generic map(
@@ -12760,7 +12928,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_2\,
-      Q => Q(5)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(5)
     );
 \goreg_dm.dout_i_reg[6]\: unisim.vcomponents.FDCE
     generic map(
@@ -12771,7 +12939,7 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_1\,
-      Q => Q(6)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(6)
     );
 \goreg_dm.dout_i_reg[7]\: unisim.vcomponents.FDCE
     generic map(
@@ -12782,14 +12950,14 @@ begin
       CE => \gpregsm1.curr_fwft_state_reg[1]\(0),
       CLR => AR(0),
       D => \gdm.dm_gen.dm_n_0\,
-      Q => Q(7)
+      Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7)
     );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_memory_12 is
+entity module_ads7056_axi_quad_spi_0_0_memory_16 is
   port (
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
@@ -12803,10 +12971,10 @@ entity module_ads7056_axi_quad_spi_0_0_memory_12 is
     \gpregsm1.curr_fwft_state_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_memory_12 : entity is "memory";
-end module_ads7056_axi_quad_spi_0_0_memory_12;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_memory_16 : entity is "memory";
+end module_ads7056_axi_quad_spi_0_0_memory_16;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_memory_12 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_memory_16 is
   signal \gdm.dm_gen.dm_n_0\ : STD_LOGIC;
   signal \gdm.dm_gen.dm_n_1\ : STD_LOGIC;
   signal \gdm.dm_gen.dm_n_2\ : STD_LOGIC;
@@ -12816,7 +12984,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_memory_12 is
   signal \gdm.dm_gen.dm_n_6\ : STD_LOGIC;
   signal \gdm.dm_gen.dm_n_7\ : STD_LOGIC;
 begin
-\gdm.dm_gen.dm\: entity work.module_ads7056_axi_quad_spi_0_0_dmem_18
+\gdm.dm_gen.dm\: entity work.module_ads7056_axi_quad_spi_0_0_dmem_22
      port map (
       AR(0) => AR(0),
       E(0) => E(0),
@@ -12937,8 +13105,10 @@ entity module_ads7056_axi_quad_spi_0_0_rd_logic is
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     ram_empty_fb_i_reg : out STD_LOGIC;
+    QSPI_IO0_T : out STD_LOGIC;
     \gnxpm_cdc.rd_pntr_gc_reg[2]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \gnxpm_cdc.rd_pntr_gc_reg[3]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
     ram_empty_i0 : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -12949,7 +13119,9 @@ entity module_ads7056_axi_quad_spi_0_0_rd_logic is
     transfer_start_d1 : in STD_LOGIC;
     transfer_start : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \qspo_int_reg[8]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_logic : entity is "rd_logic";
@@ -12967,6 +13139,8 @@ begin
       D(1 downto 0) => D(1 downto 0),
       E(0) => \^e\(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
+      QSPI_IO0_T => QSPI_IO0_T,
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg_0(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -12976,6 +13150,8 @@ begin
       empty_fwft_i0 => empty_fwft_i0,
       ext_spi_clk => ext_spi_clk,
       \out\ => \^out\,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
+      \qspo_int_reg[8]\(0) => \qspo_int_reg[8]\(0),
       transfer_start => transfer_start,
       transfer_start_d1 => transfer_start_d1
     );
@@ -13001,7 +13177,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_rd_logic_10 is
+entity module_ads7056_axi_quad_spi_0_0_rd_logic_14 is
   port (
     \out\ : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -13021,16 +13197,16 @@ entity module_ads7056_axi_quad_spi_0_0_rd_logic_10 is
     \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_logic_10 : entity is "rd_logic";
-end module_ads7056_axi_quad_spi_0_0_rd_logic_10;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_rd_logic_14 : entity is "rd_logic";
+end module_ads7056_axi_quad_spi_0_0_rd_logic_14;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_logic_10 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_rd_logic_14 is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_2_out : STD_LOGIC;
   signal ram_empty_i0 : STD_LOGIC;
 begin
   E(0) <= \^e\(0);
-\gr1.gr1_int.rfwft\: entity work.module_ads7056_axi_quad_spi_0_0_rd_fwft_21
+\gr1.gr1_int.rfwft\: entity work.module_ads7056_axi_quad_spi_0_0_rd_fwft_25
      port map (
       AR(0) => AR(0),
       Bus_RNW_reg => Bus_RNW_reg,
@@ -13046,14 +13222,14 @@ begin
       ram_empty_fb_i_reg => p_2_out,
       s_axi_aclk => s_axi_aclk
     );
-\gras.rsts\: entity work.module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_22
+\gras.rsts\: entity work.module_ads7056_axi_quad_spi_0_0_rd_status_flags_as_26
      port map (
       AR(0) => AR(0),
       \out\ => p_2_out,
       ram_empty_i0 => ram_empty_i0,
       s_axi_aclk => s_axi_aclk
     );
-rpntr: entity work.module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_23
+rpntr: entity work.module_ads7056_axi_quad_spi_0_0_rd_bin_cntr_27
      port map (
       AR(0) => AR(0),
       E(0) => \^e\(0),
@@ -13207,21 +13383,21 @@ begin
       \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg\ => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1\,
       \out\ => p_7_out
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_2
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3
      port map (
       in0(0) => wr_rst_asreg,
       \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg\ => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1\,
       \out\ => p_8_out,
       s_axi_aclk => s_axi_aclk
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_3
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4
      port map (
       AS(0) => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0\,
       ext_spi_clk => ext_spi_clk,
       in0(0) => rd_rst_asreg,
       \out\ => p_7_out
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_4
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_5
      port map (
       AS(0) => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0\,
       in0(0) => wr_rst_asreg,
@@ -13365,7 +13541,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13 is
+entity module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_17 is
   port (
     \out\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \gc1.count_reg[0]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -13376,10 +13552,10 @@ entity module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13 is
     rx_fifo_reset : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13 : entity is "reset_blk_ramfifo";
-end module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_17 : entity is "reset_blk_ramfifo";
+end module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_17;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_17 is
   signal \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1\ : STD_LOGIC;
   signal \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1\ : STD_LOGIC;
   signal \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0\ : STD_LOGIC;
@@ -13496,28 +13672,28 @@ begin
       PRE => rst_wr_reg2,
       Q => rst_d3
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_14
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_18
      port map (
       in0(0) => rd_rst_asreg,
       \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg\ => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1\,
       \out\ => p_7_out,
       s_axi_aclk => s_axi_aclk
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_15
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_19
      port map (
       ext_spi_clk => ext_spi_clk,
       in0(0) => wr_rst_asreg,
       \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg\ => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1\,
       \out\ => p_8_out
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_16
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_20
      port map (
       AS(0) => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0\,
       in0(0) => rd_rst_asreg,
       \out\ => p_7_out,
       s_axi_aclk => s_axi_aclk
     );
-\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_17
+\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst\: entity work.module_ads7056_axi_quad_spi_0_0_synchronizer_ff_21
      port map (
       AS(0) => \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0\,
       ext_spi_clk => ext_spi_clk,
@@ -13710,7 +13886,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_wr_logic_11 is
+entity module_ads7056_axi_quad_spi_0_0_wr_logic_15 is
   port (
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
     ram_full_fb_i_reg : out STD_LOGIC;
@@ -13720,7 +13896,7 @@ entity module_ads7056_axi_quad_spi_0_0_wr_logic_11 is
     ext_spi_clk : in STD_LOGIC;
     \out\ : in STD_LOGIC;
     spiXfer_done_int : in STD_LOGIC;
-    \gic0.gc1.count_d2_reg[2]\ : in STD_LOGIC;
+    \gic0.gc1.count_d2_reg[0]\ : in STD_LOGIC;
     \grstd1.grst_full.grst_f.rst_d3_reg\ : in STD_LOGIC;
     \gnxpm_cdc.rd_pntr_bin_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     scndry_out : in STD_LOGIC;
@@ -13728,26 +13904,26 @@ entity module_ads7056_axi_quad_spi_0_0_wr_logic_11 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_logic_11 : entity is "wr_logic";
-end module_ads7056_axi_quad_spi_0_0_wr_logic_11;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_wr_logic_15 : entity is "wr_logic";
+end module_ads7056_axi_quad_spi_0_0_wr_logic_15;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_logic_11 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_wr_logic_15 is
   signal wpntr_n_0 : STD_LOGIC;
 begin
-\gwas.wsts\: entity work.module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_19
+\gwas.wsts\: entity work.module_ads7056_axi_quad_spi_0_0_wr_status_flags_as_23
      port map (
       \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ => \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\,
       Rx_FIFO_Full_Fifo => Rx_FIFO_Full_Fifo,
       ext_spi_clk => ext_spi_clk,
-      \gic0.gc1.count_d2_reg[2]\ => \gic0.gc1.count_d2_reg[2]\,
-      \gnxpm_cdc.rd_pntr_bin_reg[0]\ => wpntr_n_0,
+      \gic0.gc1.count_d2_reg[0]\ => \gic0.gc1.count_d2_reg[0]\,
+      \gnxpm_cdc.rd_pntr_bin_reg[3]\ => wpntr_n_0,
       \grstd1.grst_full.grst_f.rst_d3_reg\ => \grstd1.grst_full.grst_f.rst_d3_reg\,
       \out\ => \out\,
       ram_full_fb_i_reg_0 => ram_full_fb_i_reg,
       scndry_out => scndry_out,
       spiXfer_done_int => spiXfer_done_int
     );
-wpntr: entity work.module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_20
+wpntr: entity work.module_ads7056_axi_quad_spi_0_0_wr_bin_cntr_24
      port map (
       AR(0) => AR(0),
       E(0) => E(0),
@@ -13829,26 +14005,26 @@ entity module_ads7056_axi_quad_spi_0_0_slave_attachment is
     SPISR_4_CPOL_CPHA_Error_int : in STD_LOGIC;
     ipif_glbl_irpt_enable_reg : in STD_LOGIC;
     irpt_rdack_d1 : in STD_LOGIC;
+    p_1_in : in STD_LOGIC;
+    p_1_in2_in : in STD_LOGIC;
+    p_1_in5_in : in STD_LOGIC;
+    p_1_in8_in : in STD_LOGIC;
+    scndry_out : in STD_LOGIC;
+    p_1_in11_in : in STD_LOGIC;
+    p_1_in14_in : in STD_LOGIC;
+    p_1_in17_in : in STD_LOGIC;
+    p_1_in23_in : in STD_LOGIC;
+    p_1_in26_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
+    p_1_in29_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
+    p_1_in32_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
+    p_1_in35_in : in STD_LOGIC;
     rx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ : in STD_LOGIC;
     rx_fifo_empty_i : in STD_LOGIC;
     empty_fwft_i_reg : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
-    p_1_in35_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
-    p_1_in32_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
-    p_1_in29_in : in STD_LOGIC;
-    p_1_in26_in : in STD_LOGIC;
-    p_1_in23_in : in STD_LOGIC;
-    p_1_in17_in : in STD_LOGIC;
-    p_1_in14_in : in STD_LOGIC;
-    p_1_in11_in : in STD_LOGIC;
-    p_1_in8_in : in STD_LOGIC;
-    scndry_out : in STD_LOGIC;
-    p_1_in5_in : in STD_LOGIC;
-    p_1_in2_in : in STD_LOGIC;
-    p_1_in : in STD_LOGIC;
     irpt_wrack_d1 : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2\ : in STD_LOGIC;
     tx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14726,25 +14902,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_axi_quad_spi_0_0_dist_mem_gen_v8_0_11 is
   port (
-    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    QSPI_IO1_T : out STD_LOGIC;
     prmry_in : out STD_LOGIC;
-    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
-    QSPI_IO0_T : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : out STD_LOGIC;
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ : out STD_LOGIC;
-    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ : out STD_LOGIC;
-    \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ : out STD_LOGIC;
-    QSPI_IO0_T_0 : out STD_LOGIC;
-    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
-    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
+    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ : out STD_LOGIC;
+    QSPI_IO0_T : out STD_LOGIC;
     CMD_decoded_int : in STD_LOGIC;
-    \qspo_int_reg[4]\ : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
-    empty_fwft_i_reg : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     D : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[3].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
     \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ : in STD_LOGIC;
@@ -14766,11 +14933,8 @@ begin
      port map (
       CMD_decoded_int => CMD_decoded_int,
       D => D,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       Q(8 downto 0) => Q(8 downto 0),
       QSPI_IO0_T => QSPI_IO0_T,
-      QSPI_IO0_T_0 => QSPI_IO0_T_0,
-      QSPI_IO1_T => QSPI_IO1_T,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\,
@@ -14781,18 +14945,12 @@ begin
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\,
-      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0),
-      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\,
-      \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\,
+      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\,
       Rst_to_spi => Rst_to_spi,
-      empty_fwft_i_reg => empty_fwft_i_reg,
       ext_spi_clk => ext_spi_clk,
       prmry_in => prmry_in,
       \qspi_cntrl_ps_reg[0]\ => \qspi_cntrl_ps_reg[0]\,
-      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
-      \qspi_cntrl_ps_reg[1]_0\ => \qspi_cntrl_ps_reg[1]_0\,
-      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0),
-      \qspo_int_reg[4]\ => \qspo_int_reg[4]\
+      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -14807,7 +14965,9 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     \gic0.gc1.count_reg[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     reset_TxFIFO_ptr_int : in STD_LOGIC;
@@ -14821,6 +14981,8 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo is
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -14831,9 +14993,9 @@ end module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo;
 architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo is
   signal \gntv_or_sync_fifo.gcx.clkx/_n_0\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gl0.rd_n_10\ : STD_LOGIC;
+  signal \gntv_or_sync_fifo.gl0.rd_n_11\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gl0.rd_n_6\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gl0.rd_n_7\ : STD_LOGIC;
-  signal \gntv_or_sync_fifo.gl0.rd_n_8\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gl0.rd_n_9\ : STD_LOGIC;
   signal \gras.rsts/ram_empty_i0\ : STD_LOGIC;
   signal p_0_out : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -14850,13 +15012,13 @@ begin
 \gntv_or_sync_fifo.gcx.clkx\: entity work.module_ads7056_axi_quad_spi_0_0_clk_x_pntrs
      port map (
       AR(0) => wr_rst_i(0),
-      D(2) => \gntv_or_sync_fifo.gl0.rd_n_8\,
-      D(1) => \gntv_or_sync_fifo.gl0.rd_n_9\,
-      D(0) => \gntv_or_sync_fifo.gl0.rd_n_10\,
+      D(2) => \gntv_or_sync_fifo.gl0.rd_n_9\,
+      D(1) => \gntv_or_sync_fifo.gl0.rd_n_10\,
+      D(0) => \gntv_or_sync_fifo.gl0.rd_n_11\,
       Q(3 downto 0) => p_22_out(3 downto 0),
       \Q_reg_reg[1]\(0) => \gntv_or_sync_fifo.gcx.clkx/_n_0\,
       ext_spi_clk => ext_spi_clk,
-      \gc1.count_d1_reg[2]\ => \gntv_or_sync_fifo.gl0.rd_n_7\,
+      \gc1.count_d1_reg[3]\ => \gntv_or_sync_fifo.gl0.rd_n_7\,
       \gc1.count_d2_reg[3]\(3 downto 0) => p_0_out(3 downto 0),
       \gic0.gc1.count_d3_reg[3]\(3 downto 0) => p_12_out(3 downto 0),
       \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]\(0) => rd_rst_i(1),
@@ -14882,7 +15044,9 @@ begin
       D(1 downto 0) => D(1 downto 0),
       E(0) => \gntv_or_sync_fifo.gl0.rd_n_6\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       Q(3 downto 0) => p_22_out(3 downto 0),
+      QSPI_IO0_T => QSPI_IO0_T,
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -14891,11 +15055,13 @@ begin
       empty_fwft_fb_o_i_reg => empty_fwft_fb_o_i_reg,
       empty_fwft_i0 => empty_fwft_i0,
       ext_spi_clk => ext_spi_clk,
-      \gnxpm_cdc.rd_pntr_gc_reg[2]\(2) => \gntv_or_sync_fifo.gl0.rd_n_8\,
-      \gnxpm_cdc.rd_pntr_gc_reg[2]\(1) => \gntv_or_sync_fifo.gl0.rd_n_9\,
-      \gnxpm_cdc.rd_pntr_gc_reg[2]\(0) => \gntv_or_sync_fifo.gl0.rd_n_10\,
+      \gnxpm_cdc.rd_pntr_gc_reg[2]\(2) => \gntv_or_sync_fifo.gl0.rd_n_9\,
+      \gnxpm_cdc.rd_pntr_gc_reg[2]\(1) => \gntv_or_sync_fifo.gl0.rd_n_10\,
+      \gnxpm_cdc.rd_pntr_gc_reg[2]\(0) => \gntv_or_sync_fifo.gl0.rd_n_11\,
       \gnxpm_cdc.rd_pntr_gc_reg[3]\(3 downto 0) => p_0_out(3 downto 0),
       \out\ => \out\,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
+      \qspo_int_reg[8]\(0) => Q(0),
       ram_empty_fb_i_reg => \gntv_or_sync_fifo.gl0.rd_n_7\,
       ram_empty_i0 => \gras.rsts/ram_empty_i0\,
       transfer_start => transfer_start,
@@ -14921,7 +15087,7 @@ begin
       E(0) => \gntv_or_sync_fifo.gl0.rd_n_6\,
       I103 => p_18_out,
       L(3 downto 0) => p_12_out(3 downto 0),
-      Q(7 downto 0) => Q(7 downto 0),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0) => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0),
       ext_spi_clk => ext_spi_clk,
       \gc1.count_d2_reg[3]\(3 downto 0) => p_0_out(3 downto 0),
       \gpregsm1.curr_fwft_state_reg[1]\(0) => E(0),
@@ -14943,7 +15109,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8 is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_12 is
   port (
     \out\ : out STD_LOGIC;
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
@@ -14966,10 +15132,10 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8 is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8 : entity is "fifo_generator_ramfifo";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_12 : entity is "fifo_generator_ramfifo";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_12;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_12 is
   signal \gntv_or_sync_fifo.gcx.clkx_n_4\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gcx.clkx_n_9\ : STD_LOGIC;
   signal \gntv_or_sync_fifo.gl0.rd_n_1\ : STD_LOGIC;
@@ -14989,7 +15155,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo
   signal rstblk_n_6 : STD_LOGIC;
   signal wr_rst_i : STD_LOGIC_VECTOR ( 1 downto 0 );
 begin
-\gntv_or_sync_fifo.gcx.clkx\: entity work.module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_9
+\gntv_or_sync_fifo.gcx.clkx\: entity work.module_ads7056_axi_quad_spi_0_0_clk_x_pntrs_13
      port map (
       AR(0) => wr_rst_i(0),
       D(0) => gray2bin(0),
@@ -15020,7 +15186,7 @@ begin
       I3 => p_5_out_0(2),
       O => gray2bin(0)
     );
-\gntv_or_sync_fifo.gl0.rd\: entity work.module_ads7056_axi_quad_spi_0_0_rd_logic_10
+\gntv_or_sync_fifo.gl0.rd\: entity work.module_ads7056_axi_quad_spi_0_0_rd_logic_14
      port map (
       AR(0) => rd_rst_i(2),
       Bus_RNW_reg => Bus_RNW_reg,
@@ -15041,7 +15207,7 @@ begin
       p_5_in => p_5_in,
       s_axi_aclk => s_axi_aclk
     );
-\gntv_or_sync_fifo.gl0.wr\: entity work.module_ads7056_axi_quad_spi_0_0_wr_logic_11
+\gntv_or_sync_fifo.gl0.wr\: entity work.module_ads7056_axi_quad_spi_0_0_wr_logic_15
      port map (
       AR(0) => wr_rst_i(1),
       E(0) => E(0),
@@ -15049,7 +15215,7 @@ begin
       Q(3 downto 0) => p_13_out(3 downto 0),
       Rx_FIFO_Full_Fifo => Rx_FIFO_Full_Fifo,
       ext_spi_clk => ext_spi_clk,
-      \gic0.gc1.count_d2_reg[2]\ => \gntv_or_sync_fifo.gcx.clkx_n_9\,
+      \gic0.gc1.count_d2_reg[0]\ => \gntv_or_sync_fifo.gcx.clkx_n_9\,
       \gnxpm_cdc.rd_pntr_bin_reg[3]\(3 downto 0) => p_23_out(3 downto 0),
       \gnxpm_cdc.wr_pntr_gc_reg[3]\(3 downto 0) => p_12_out(3 downto 0),
       \grstd1.grst_full.grst_f.rst_d3_reg\ => rstblk_n_6,
@@ -15058,7 +15224,7 @@ begin
       scndry_out => scndry_out,
       spiXfer_done_int => spiXfer_done_int
     );
-\gntv_or_sync_fifo.mem\: entity work.module_ads7056_axi_quad_spi_0_0_memory_12
+\gntv_or_sync_fifo.mem\: entity work.module_ads7056_axi_quad_spi_0_0_memory_16
      port map (
       AR(0) => rd_rst_i(0),
       E(0) => E(0),
@@ -15071,7 +15237,7 @@ begin
       ram_empty_fb_i_reg(0) => \gntv_or_sync_fifo.gl0.rd_n_1\,
       s_axi_aclk => s_axi_aclk
     );
-rstblk: entity work.module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_13
+rstblk: entity work.module_ads7056_axi_quad_spi_0_0_reset_blk_ramfifo_17
      port map (
       ext_spi_clk => ext_spi_clk,
       \gc1.count_reg[0]\(2 downto 0) => rd_rst_i(2 downto 0),
@@ -15153,26 +15319,26 @@ entity module_ads7056_axi_quad_spi_0_0_axi_lite_ipif is
     SPISR_4_CPOL_CPHA_Error_int : in STD_LOGIC;
     ipif_glbl_irpt_enable_reg : in STD_LOGIC;
     irpt_rdack_d1 : in STD_LOGIC;
+    p_1_in : in STD_LOGIC;
+    p_1_in2_in : in STD_LOGIC;
+    p_1_in5_in : in STD_LOGIC;
+    p_1_in8_in : in STD_LOGIC;
+    scndry_out : in STD_LOGIC;
+    p_1_in11_in : in STD_LOGIC;
+    p_1_in14_in : in STD_LOGIC;
+    p_1_in17_in : in STD_LOGIC;
+    p_1_in23_in : in STD_LOGIC;
+    p_1_in26_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
+    p_1_in29_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
+    p_1_in32_in : in STD_LOGIC;
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
+    p_1_in35_in : in STD_LOGIC;
     rx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ : in STD_LOGIC;
     rx_fifo_empty_i : in STD_LOGIC;
     empty_fwft_i_reg : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ : in STD_LOGIC;
-    p_1_in35_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ : in STD_LOGIC;
-    p_1_in32_in : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ : in STD_LOGIC;
-    p_1_in29_in : in STD_LOGIC;
-    p_1_in26_in : in STD_LOGIC;
-    p_1_in23_in : in STD_LOGIC;
-    p_1_in17_in : in STD_LOGIC;
-    p_1_in14_in : in STD_LOGIC;
-    p_1_in11_in : in STD_LOGIC;
-    p_1_in8_in : in STD_LOGIC;
-    scndry_out : in STD_LOGIC;
-    p_1_in5_in : in STD_LOGIC;
-    p_1_in2_in : in STD_LOGIC;
-    p_1_in : in STD_LOGIC;
     irpt_wrack_d1 : in STD_LOGIC;
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2\ : in STD_LOGIC;
     tx_fifo_count : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -15321,31 +15487,22 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_look_up_logic is
   port (
     DTR_FIFO_Data_Exists_d1 : out STD_LOGIC;
     CMD_decoded_int : out STD_LOGIC;
-    \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\ : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    QSPI_IO1_T : out STD_LOGIC;
     prmry_in : out STD_LOGIC;
-    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
-    QSPI_IO0_T : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ : out STD_LOGIC;
     \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ : out STD_LOGIC;
-    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ : out STD_LOGIC;
-    \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ : out STD_LOGIC;
-    QSPI_IO0_T_0 : out STD_LOGIC;
+    \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ : out STD_LOGIC;
+    QSPI_IO0_T : out STD_LOGIC;
     R : in STD_LOGIC;
     CE : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \goreg_dm.dout_i_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     Rst_to_spi : in STD_LOGIC;
     p_2_out : in STD_LOGIC;
     p_1_out : in STD_LOGIC;
-    \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC;
     \qspi_cntrl_ps_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \qspi_cntrl_ps_reg[1]_0\ : in STD_LOGIC;
-    \qspo_int_reg[4]\ : in STD_LOGIC;
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
-    empty_fwft_i_reg : in STD_LOGIC;
-    D : in STD_LOGIC
+    D : in STD_LOGIC;
+    \qspi_cntrl_ps_reg[0]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_qspi_look_up_logic : entity is "qspi_look_up_logic";
@@ -15407,7 +15564,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(7),
+      D => \goreg_dm.dout_i_reg[7]\(7),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15421,7 +15578,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(6),
+      D => \goreg_dm.dout_i_reg[7]\(6),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15435,7 +15592,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(5),
+      D => \goreg_dm.dout_i_reg[7]\(5),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15449,7 +15606,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(4),
+      D => \goreg_dm.dout_i_reg[7]\(4),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[3].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15463,7 +15620,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(3),
+      D => \goreg_dm.dout_i_reg[7]\(3),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[4].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15477,7 +15634,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(2),
+      D => \goreg_dm.dout_i_reg[7]\(2),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[5].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15491,7 +15648,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(1),
+      D => \goreg_dm.dout_i_reg[7]\(1),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[6].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15505,7 +15662,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => CE,
-      D => Q(0),
+      D => \goreg_dm.dout_i_reg[7]\(0),
       Q => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\,
       R => R
     );
@@ -15513,11 +15670,8 @@ begin
      port map (
       CMD_decoded_int => \^cmd_decoded_int\,
       D => D,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
-      Q(8 downto 0) => \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(8 downto 0),
+      Q(8 downto 0) => Q(8 downto 0),
       QSPI_IO0_T => QSPI_IO0_T,
-      QSPI_IO0_T_0 => QSPI_IO0_T_0,
-      QSPI_IO1_T => QSPI_IO1_T,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[1].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[2].TXFIFO_FIRST_ENTRY_REG_I__0\,
@@ -15528,18 +15682,12 @@ begin
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\ => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I__0\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\,
       \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ => \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\,
-      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0),
-      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\,
-      \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ => \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\,
+      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ => \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\,
       Rst_to_spi => Rst_to_spi,
-      empty_fwft_i_reg => empty_fwft_i_reg,
       ext_spi_clk => ext_spi_clk,
       prmry_in => prmry_in,
       \qspi_cntrl_ps_reg[0]\ => \qspi_cntrl_ps_reg[0]\,
-      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
-      \qspi_cntrl_ps_reg[1]_0\ => \qspi_cntrl_ps_reg[1]_0\,
-      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0),
-      \qspo_int_reg[4]\ => \qspo_int_reg[4]\
+      \qspi_cntrl_ps_reg[2]\(2 downto 0) => \qspi_cntrl_ps_reg[2]\(2 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -15554,7 +15702,9 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_top is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     \gic0.gc1.count_reg[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     reset_TxFIFO_ptr_int : in STD_LOGIC;
@@ -15568,6 +15718,8 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_top is
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -15583,8 +15735,11 @@ begin
       D(1 downto 0) => D(1 downto 0),
       E(0) => E(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\,
-      Q(7 downto 0) => Q(7 downto 0),
+      Q(0) => Q(0),
+      QSPI_IO0_T => QSPI_IO0_T,
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0) => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0),
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -15596,6 +15751,7 @@ begin
       \gic0.gc1.count_reg[0]\ => \gic0.gc1.count_reg[0]\,
       \out\ => \out\,
       p_6_in => p_6_in,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
       reset_TxFIFO_ptr_int => reset_TxFIFO_ptr_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
@@ -15607,7 +15763,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7 is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_top_11 is
   port (
     \out\ : out STD_LOGIC;
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
@@ -15630,12 +15786,12 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7 is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7 : entity is "fifo_generator_top";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_top_11 : entity is "fifo_generator_top";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_top_11;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_top_11 is
 begin
-\grf.rf\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_8
+\grf.rf\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_ramfifo_12
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       E(0) => E(0),
@@ -15662,7 +15818,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth is
   port (
     \out\ : out STD_LOGIC;
     aempty_fwft_i_reg : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -15670,7 +15826,9 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     \gic0.gc1.count_reg[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     reset_TxFIFO_ptr_int : in STD_LOGIC;
@@ -15684,14 +15842,16 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth is
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth : entity is "fifo_generator_v13_1_3_synth";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth : entity is "fifo_generator_v13_1_4_synth";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth is
 begin
 \gconvfifo.rf\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_top
      port map (
@@ -15699,8 +15859,11 @@ begin
       D(1 downto 0) => D(1 downto 0),
       E(0) => E(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\,
-      Q(7 downto 0) => Q(7 downto 0),
+      Q(0) => Q(0),
+      QSPI_IO0_T => QSPI_IO0_T,
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0) => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0),
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -15712,6 +15875,7 @@ begin
       \gic0.gc1.count_reg[0]\ => \gic0.gc1.count_reg[0]\,
       \out\ => \out\,
       p_6_in => p_6_in,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
       reset_TxFIFO_ptr_int => reset_TxFIFO_ptr_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
@@ -15723,7 +15887,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6 is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth_10 is
   port (
     \out\ : out STD_LOGIC;
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
@@ -15746,12 +15910,12 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6 is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6 : entity is "fifo_generator_v13_1_3_synth";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth_10 : entity is "fifo_generator_v13_1_4_synth";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth_10;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth_10 is
 begin
-\gconvfifo.rf\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_top_7
+\gconvfifo.rf\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_top_11
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       E(0) => E(0),
@@ -15778,7 +15942,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3 is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4 is
   port (
     \out\ : out STD_LOGIC;
     aempty_fwft_i_reg : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -15786,7 +15950,9 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3 is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     \gic0.gc1.count_reg[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     reset_TxFIFO_ptr_int : in STD_LOGIC;
@@ -15800,23 +15966,28 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3 is
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3 : entity is "fifo_generator_v13_1_3";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4 : entity is "fifo_generator_v13_1_4";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4 is
 begin
-inst_fifo_gen: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth
+inst_fifo_gen: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       D(1 downto 0) => D(1 downto 0),
       E(0) => E(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\,
-      Q(7 downto 0) => Q(7 downto 0),
+      Q(0) => Q(0),
+      QSPI_IO0_T => QSPI_IO0_T,
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0) => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0),
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -15828,6 +15999,7 @@ inst_fifo_gen: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_
       \gic0.gc1.count_reg[0]\ => \gic0.gc1.count_reg[0]\,
       \out\ => \out\,
       p_6_in => p_6_in,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
       reset_TxFIFO_ptr_int => reset_TxFIFO_ptr_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
@@ -15839,7 +16011,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5 is
+entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_9 is
   port (
     \out\ : out STD_LOGIC;
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg\ : out STD_LOGIC;
@@ -15862,12 +16034,12 @@ entity module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5 is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5 : entity is "fifo_generator_v13_1_3";
-end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_9 : entity is "fifo_generator_v13_1_4";
+end module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_9;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_9 is
 begin
-inst_fifo_gen: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_synth_6
+inst_fifo_gen: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_synth_10
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       E(0) => E(0),
@@ -15922,7 +16094,7 @@ end module_ads7056_axi_quad_spi_0_0_async_fifo_fg;
 
 architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_async_fifo_fg is
 begin
-\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3_5
+\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4_9
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       E(0) => E(0),
@@ -15949,7 +16121,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1 is
+entity module_ads7056_axi_quad_spi_0_0_async_fifo_fg_2 is
   port (
     \out\ : out STD_LOGIC;
     aempty_fwft_i_reg : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -15957,7 +16129,9 @@ entity module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1 is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ : out STD_LOGIC;
     empty_fwft_fb_o_i_reg : out STD_LOGIC;
     \gic0.gc1.count_reg[0]\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    QSPI_IO0_T : out STD_LOGIC;
+    \qspi_cntrl_ps_reg[1]\ : out STD_LOGIC;
+    \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     reset_TxFIFO_ptr_int : in STD_LOGIC;
@@ -15971,23 +16145,28 @@ entity module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1 is
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     SPIXfer_done_int_pulse_d2_reg : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1 : entity is "async_fifo_fg";
-end module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1;
+  attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_async_fifo_fg_2 : entity is "async_fifo_fg";
+end module_ads7056_axi_quad_spi_0_0_async_fifo_fg_2;
 
-architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1 is
+architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_async_fifo_fg_2 is
 begin
-\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_3
+\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM\: entity work.module_ads7056_axi_quad_spi_0_0_fifo_generator_v13_1_4
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       D(1 downto 0) => D(1 downto 0),
       E(0) => E(0),
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\,
-      Q(7 downto 0) => Q(7 downto 0),
+      Q(0) => Q(0),
+      QSPI_IO0_T => QSPI_IO0_T,
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0) => \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7 downto 0),
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
       SPIXfer_done_int_pulse_d2_reg => SPIXfer_done_int_pulse_d2_reg,
       aempty_fwft_i_reg(1 downto 0) => aempty_fwft_i_reg(1 downto 0),
@@ -15999,6 +16178,7 @@ begin
       \gic0.gc1.count_reg[0]\ => \gic0.gc1.count_reg[0]\,
       \out\ => \out\,
       p_6_in => p_6_in,
+      \qspi_cntrl_ps_reg[1]\ => \qspi_cntrl_ps_reg[1]\,
       reset_TxFIFO_ptr_int => reset_TxFIFO_ptr_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
@@ -16020,7 +16200,10 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
     io1_t : out STD_LOGIC;
     io2_t : out STD_LOGIC;
     io3_t : out STD_LOGIC;
-    sck_o : out STD_LOGIC;
+    cfgclk : out STD_LOGIC;
+    cfgmclk : out STD_LOGIC;
+    eos : out STD_LOGIC;
+    preq : out STD_LOGIC;
     IP2Bus_Error : out STD_LOGIC;
     SPISR_1_LOOP_Back_Error_int : out STD_LOGIC;
     prmry_in : out STD_LOGIC;
@@ -16087,6 +16270,13 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 13 downto 0 );
     ext_spi_clk : in STD_LOGIC;
     spisel : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    gsr : in STD_LOGIC;
+    gts : in STD_LOGIC;
+    keyclearb : in STD_LOGIC;
+    usrcclkts : in STD_LOGIC;
+    usrdoneo : in STD_LOGIC;
+    usrdonets : in STD_LOGIC;
     IP2Bus_Error_1 : in STD_LOGIC;
     SPICR_data_int_reg0 : in STD_LOGIC;
     bus2ip_reset_ipif_inverted : in STD_LOGIC;
@@ -16120,8 +16310,8 @@ entity module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     io1_i_sync : in STD_LOGIC;
     io0_i_sync : in STD_LOGIC;
-    io3_i_sync : in STD_LOGIC;
-    io2_i_sync : in STD_LOGIC
+    io2_i_sync : in STD_LOGIC;
+    io3_i_sync : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_axi_quad_spi_0_0_qspi_core_interface : entity is "qspi_core_interface";
@@ -16152,10 +16342,10 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
   signal \FIFO_EXISTS.CLK_CROSS_I_n_12\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_13\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_2\ : STD_LOGIC;
-  signal \FIFO_EXISTS.CLK_CROSS_I_n_23\ : STD_LOGIC;
-  signal \FIFO_EXISTS.CLK_CROSS_I_n_24\ : STD_LOGIC;
+  signal \FIFO_EXISTS.CLK_CROSS_I_n_21\ : STD_LOGIC;
+  signal \FIFO_EXISTS.CLK_CROSS_I_n_22\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_3\ : STD_LOGIC;
-  signal \FIFO_EXISTS.CLK_CROSS_I_n_32\ : STD_LOGIC;
+  signal \FIFO_EXISTS.CLK_CROSS_I_n_30\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_4\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_5\ : STD_LOGIC;
   signal \FIFO_EXISTS.CLK_CROSS_I_n_7\ : STD_LOGIC;
@@ -16170,6 +16360,8 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
   signal \^fifo_exists.rx_fifo_full_fifo_d1_flag_reg_0\ : STD_LOGIC;
   signal \FIFO_EXISTS.TX_FIFO_II_n_1\ : STD_LOGIC;
   signal \FIFO_EXISTS.TX_FIFO_II_n_5\ : STD_LOGIC;
+  signal \FIFO_EXISTS.TX_FIFO_II_n_7\ : STD_LOGIC;
+  signal \FIFO_EXISTS.TX_FIFO_II_n_8\ : STD_LOGIC;
   signal \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to\ : STD_LOGIC;
   signal \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to_0\ : STD_LOGIC;
   signal \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to_1\ : STD_LOGIC;
@@ -16178,32 +16370,20 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
   signal IP2Bus_RdAck_1 : STD_LOGIC;
   signal IP2Bus_WrAck_1 : STD_LOGIC;
   signal \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_i_1_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_1_reg_r_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_2_reg_r_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_3_reg_r_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\ : STD_LOGIC;
+  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2_n_0\ : STD_LOGIC;
+  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\ : STD_LOGIC;
   signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_gate_n_0\ : STD_LOGIC;
-  signal \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_11\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_n_0\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_12\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_13\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_14\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_15\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_16\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_17\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_18\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_19\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_21\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_26\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_33\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_35\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_36\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_23\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_27\ : STD_LOGIC;
   signal Look_up_op : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal R : STD_LOGIC;
   signal \RATIO_OF_2_GENERATE.Count_reg__0\ : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal R_1 : STD_LOGIC;
   signal Receive_ip2bus_error0 : STD_LOGIC;
   signal Rx_FIFO_Empty_Synced_in_SPI_domain : STD_LOGIC;
   signal Rx_FIFO_Full_Fifo : STD_LOGIC;
@@ -16213,6 +16393,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
   signal Rx_FIFO_Full_Fifo_d1_synced_i : STD_LOGIC;
   signal Rx_FIFO_Full_Fifo_org : STD_LOGIC;
   signal Rx_FIFO_Full_int : STD_LOGIC;
+  signal SCK_O_int : STD_LOGIC;
   signal SOFT_RESET_I_n_2 : STD_LOGIC;
   signal SOFT_RESET_I_n_3 : STD_LOGIC;
   signal SPICR_2_MST_N_SLV_to_spi_clk : STD_LOGIC;
@@ -16308,7 +16489,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_qspi_core_interface is
   signal tx_occ_msb_4 : STD_LOGIC;
   signal wrack : STD_LOGIC;
   attribute srl_name : string;
-  attribute srl_name of \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r\ : label is "U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r ";
+  attribute srl_name of \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2\ : label is "U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2 ";
 begin
   \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_flag_reg_0\ <= \^fifo_exists.rx_fifo_full_fifo_d1_flag_reg_0\;
   \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ <= \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to\;
@@ -16406,7 +16587,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       \CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8]\ => \^prmry_in\,
       D(0) => bus2IP_Data_for_interrupt_core(23),
       D_0 => D_0,
-      E(0) => \FIFO_EXISTS.CLK_CROSS_I_n_24\,
+      E(0) => \FIFO_EXISTS.CLK_CROSS_I_n_22\,
       \FIFO_EXISTS.DUAL_MD_INTR_GEN.SPISR_0_CMD_Error_d1_reg\ => \^scndry_out\,
       \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg\ => \FIFO_EXISTS.CLK_CROSS_I_n_2\,
       \FIFO_EXISTS.RX_FULL_EMP_MD_12_INTR_GEN.rx_fifo_empty_i_reg_0\ => \^rx_fifo_empty_i\,
@@ -16426,14 +16607,13 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]\ => \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg\ => \^ip2bus_rdack_core_reg\,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \^ip2bus_wrack_core_reg_1\,
+      MODF_strobe_reg => SPICR_2_MST_N_SLV_to_spi_clk,
       MST_TRANS_INHIBIT_D1_I => spicr_8_tr_inhibit_to_spi_clk,
       Q(0) => \RATIO_OF_2_GENERATE.Count_reg__0\(4),
       \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[7].TXFIFO_FIRST_ENTRY_REG_I\ => spicr_5_txfifo_to_spi_clk,
       QSPI_SCK_T => sr_3_modf_to_spi_clk,
-      R => R,
-      \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ => SPICR_2_MST_N_SLV_to_spi_clk,
-      \RATIO_OF_2_GENERATE.Count_reg[4]\ => spicr_4_cpha_to_spi_clk,
-      \RATIO_OF_2_GENERATE.Count_reg[4]_0\ => spicr_3_cpol_to_spi_clk,
+      \RATIO_OF_2_GENERATE.Count_reg[4]\ => spicr_3_cpol_to_spi_clk,
+      \RATIO_OF_2_GENERATE.Count_reg[4]_0\ => spicr_4_cpha_to_spi_clk,
       \RESET_FLOPS[15].RST_FLOPS\ => SOFT_RESET_I_n_2,
       Rst_to_spi => rst_to_spi_int,
       Rx_FIFO_Full_Fifo_d1_flag => Rx_FIFO_Full_Fifo_d1_flag,
@@ -16453,7 +16633,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       \icount_out_reg[2]\ => \FIFO_EXISTS.CLK_CROSS_I_n_3\,
       \icount_out_reg[3]\ => \FIFO_EXISTS.CLK_CROSS_I_n_4\,
       \ip_irpt_enable_reg_reg[8]\ => \^ip_irpt_enable_reg_reg[8]\,
-      modf_reg => \FIFO_EXISTS.CLK_CROSS_I_n_23\,
+      modf_reg => \FIFO_EXISTS.CLK_CROSS_I_n_21\,
       modf_reg_0 => \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to_0\,
       modf_strobe_int => modf_strobe_int,
       \out\ => \^gic0.gc1.count_reg[0]\,
@@ -16483,7 +16663,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       spicr_bits_7_8_to_spi_clk(0 to 1) => spicr_bits_7_8_to_spi_clk(0 to 1),
       spisel_d1_reg => spisel_d1_reg,
       transfer_start_d2 => transfer_start_d2,
-      transfer_start_reg => \FIFO_EXISTS.CLK_CROSS_I_n_32\,
+      transfer_start_reg => \FIFO_EXISTS.CLK_CROSS_I_n_30\,
       tx_FIFO_Occpncy_MSB_d1 => tx_FIFO_Occpncy_MSB_d1,
       tx_fifo_count(2 downto 0) => tx_fifo_count(3 downto 1),
       tx_occ_msb => tx_occ_msb,
@@ -16551,7 +16731,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       tx_FIFO_Occpncy_MSB_d1 => tx_FIFO_Occpncy_MSB_d1,
       tx_occ_msb => tx_occ_msb
     );
-\FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized17\
+\FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2\
      port map (
       ext_spi_clk => ext_spi_clk,
       prmry_in => \^out\,
@@ -16576,7 +16756,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       s_axi_aclk => s_axi_aclk,
       spiXfer_done_to_axi_1 => spiXfer_done_to_axi_1
     );
-\FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized18\
+\FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC\: entity work.\module_ads7056_axi_quad_spi_0_0_cdc_sync__parameterized2_0\
      port map (
       \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_sig_reg\ => \FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC_n_3\,
       \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]\ => \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27]\,
@@ -16659,7 +16839,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       Q => Rx_FIFO_Full_Fifo_d1_sig,
       R => '0'
     );
-\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I\: entity work.module_ads7056_axi_quad_spi_0_0_counter_f_0
+\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I\: entity work.module_ads7056_axi_quad_spi_0_0_counter_f_1
      port map (
       Bus_RNW_reg_reg => Bus_RNW_reg_reg_2,
       Bus_RNW_reg_reg_0 => CONTROL_REG_I_n_12,
@@ -16677,24 +16857,27 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       tx_FIFO_Empty_d1_reg => \^tx_fifo_empty_d1_reg\(0),
       tx_fifo_count(2 downto 0) => tx_fifo_count(3 downto 1)
     );
-\FIFO_EXISTS.TX_FIFO_II\: entity work.module_ads7056_axi_quad_spi_0_0_async_fifo_fg_1
+\FIFO_EXISTS.TX_FIFO_II\: entity work.module_ads7056_axi_quad_spi_0_0_async_fifo_fg_2
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
       D(1) => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_21\,
       D(0) => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/next_fwft_state\(0),
       E(0) => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_5_out\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => tx_fifo_empty,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => register_Data_slvsel_int,
       \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg\ => \^ip2bus_wrack_core_reg_1\,
-      Q(7) => data_from_txfifo(0),
-      Q(6) => data_from_txfifo(1),
-      Q(5) => data_from_txfifo(2),
-      Q(4) => data_from_txfifo(3),
-      Q(3) => data_from_txfifo(4),
-      Q(2) => data_from_txfifo(5),
-      Q(1) => data_from_txfifo(6),
-      Q(0) => data_from_txfifo(7),
+      Q(0) => Data_Phase_int,
+      QSPI_IO0_T => \FIFO_EXISTS.TX_FIFO_II_n_7\,
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(7) => data_from_txfifo(0),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(6) => data_from_txfifo(1),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(5) => data_from_txfifo(2),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(4) => data_from_txfifo(3),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(3) => data_from_txfifo(4),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(2) => data_from_txfifo(5),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(1) => data_from_txfifo(6),
+      \QSPI_LOOK_UP_MODE_2_MEMORY_3.TXFIFO_ADDR_BITS_GENERATE[0].TXFIFO_FIRST_ENTRY_REG_I\(0) => data_from_txfifo(7),
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
-      SPIXfer_done_int_pulse_d2_reg => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_33\,
+      SPIXfer_done_int_pulse_d2_reg => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_23\,
       aempty_fwft_i_reg(1) => \FIFO_EXISTS.TX_FIFO_II_n_1\,
       aempty_fwft_i_reg(0) => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/p_0_in\(0),
       empty_fwft_fb_i_reg => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/p_0_in2_in\,
@@ -16705,6 +16888,7 @@ CONTROL_REG_I: entity work.module_ads7056_axi_quad_spi_0_0_qspi_cntrl_reg
       \gic0.gc1.count_reg[0]\ => \^gic0.gc1.count_reg[0]\,
       \out\ => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_2_out\,
       p_6_in => p_6_in,
+      \qspi_cntrl_ps_reg[1]\ => \FIFO_EXISTS.TX_FIFO_II_n_8\,
       reset_TxFIFO_ptr_int => reset_TxFIFO_ptr_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
@@ -16991,39 +17175,7 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       Q => ip2Bus_WrAck_core_reg,
       R => reset2ip_reset_int
     );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_1_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => '1',
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_1_reg_r_n_0\,
-      R => reset2ip_reset_int
-    );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_2_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_1_reg_r_n_0\,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_2_reg_r_n_0\,
-      R => reset2ip_reset_int
-    );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_3_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_2_reg_r_n_0\,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_3_reg_r_n_0\,
-      R => reset2ip_reset_int
-    );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_3_reg_r_n_0\,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\,
-      R => reset2ip_reset_int
-    );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r\: unisim.vcomponents.SRL16E
+\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2\: unisim.vcomponents.SRL16E
      port map (
       A0 => '1',
       A1 => '1',
@@ -17032,14 +17184,14 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       CE => '1',
       CLK => s_axi_aclk,
       D => rd_ce_or_reduce_core_cmb,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\
+      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2_n_0\
     );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r\: unisim.vcomponents.FDRE
+\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\,
+      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_2_n_0\,
+      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\,
       R => '0'
     );
 \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_gate\: unisim.vcomponents.LUT2
@@ -17047,17 +17199,9 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       INIT => X"8"
     )
         port map (
-      I0 => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\,
-      I1 => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\,
+      I0 => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_pipe_signal_reg_r_3_n_0\,
+      I1 => \LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_n_0\,
       O => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_gate_n_0\
-    );
-\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_n_0\,
-      Q => \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0\,
-      R => reset2ip_reset_int
     );
 \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_6_reg\: unisim.vcomponents.FDRE
      port map (
@@ -17075,50 +17219,59 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       Q => read_ack_delay_7,
       R => reset2ip_reset_int
     );
+\LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I\: entity work.module_ads7056_axi_quad_spi_0_0_qspi_startup_block
+     port map (
+      SCK_O_int => SCK_O_int,
+      cfgclk => cfgclk,
+      cfgmclk => cfgmclk,
+      clk => clk,
+      eos => eos,
+      gsr => gsr,
+      gts => gts,
+      keyclearb => keyclearb,
+      pipe_signal_reg_r_4_0 => \LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I_n_0\,
+      preq => preq,
+      reset2ip_reset_int => reset2ip_reset_int,
+      s_axi_aclk => s_axi_aclk,
+      usrcclkts => usrcclkts,
+      usrdoneo => usrdoneo,
+      usrdonets => usrdonets
+    );
 \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I\: entity work.module_ads7056_axi_quad_spi_0_0_qspi_look_up_logic
      port map (
       CE => CE,
       CMD_decoded_int => CMD_decoded_int,
       D => D_0,
       DTR_FIFO_Data_Exists_d1 => DTR_FIFO_Data_Exists_d1,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => register_Data_slvsel_int,
-      Q(7) => data_from_txfifo(0),
-      Q(6) => data_from_txfifo(1),
-      Q(5) => data_from_txfifo(2),
-      Q(4) => data_from_txfifo(3),
-      Q(3) => data_from_txfifo(4),
-      Q(2) => data_from_txfifo(5),
-      Q(1) => data_from_txfifo(6),
-      Q(0) => data_from_txfifo(7),
-      QSPI_IO0_T => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_14\,
-      QSPI_IO0_T_0 => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_19\,
-      QSPI_IO1_T => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_11\,
-      \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_15\,
-      \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_16\,
-      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0),
-      R => R_1,
-      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Shift_Reg_reg[3]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_17\,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(8) => Data_Dir_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(7) => Data_Mode_1_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(6) => Data_Mode_0_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(5) => Data_Phase_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(4) => Addr_Mode_1_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(3) => Addr_Mode_0_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(2) => Addr_Bit_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(1) => Addr_Phase_int,
-      \RATIO_OF_2_GENERATE.rx_shft_reg_mode_0011_reg[7]\(0) => Look_up_op(0),
-      \RX_DATA_SCK_RATIO_2_GEN1.receive_Data_int_reg[5]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_18\,
+      Q(8) => Data_Dir_int,
+      Q(7) => Data_Mode_1_int,
+      Q(6) => Data_Mode_0_int,
+      Q(5) => Data_Phase_int,
+      Q(4) => Addr_Mode_1_int,
+      Q(3) => Addr_Mode_0_int,
+      Q(2) => Addr_Bit_int,
+      Q(1) => Addr_Phase_int,
+      Q(0) => Look_up_op(0),
+      QSPI_IO0_T => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_15\,
+      \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_12\,
+      \QSPI_MODE_2_T_CONTROL.QSPI_IO2_T_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_13\,
+      R => R,
+      \RATIO_OF_2_GENERATE.RATIO_2_CAP_QSPI_QUAD_MODE_SP_MEM_GEN.Serial_Dout_3_reg\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_14\,
       Rst_to_spi => rst_to_spi_int,
-      empty_fwft_i_reg => tx_fifo_empty,
       ext_spi_clk => ext_spi_clk,
+      \goreg_dm.dout_i_reg[7]\(7) => data_from_txfifo(0),
+      \goreg_dm.dout_i_reg[7]\(6) => data_from_txfifo(1),
+      \goreg_dm.dout_i_reg[7]\(5) => data_from_txfifo(2),
+      \goreg_dm.dout_i_reg[7]\(4) => data_from_txfifo(3),
+      \goreg_dm.dout_i_reg[7]\(3) => data_from_txfifo(4),
+      \goreg_dm.dout_i_reg[7]\(2) => data_from_txfifo(5),
+      \goreg_dm.dout_i_reg[7]\(1) => data_from_txfifo(6),
+      \goreg_dm.dout_i_reg[7]\(0) => data_from_txfifo(7),
       p_1_out => p_1_out,
       p_2_out => p_2_out,
       prmry_in => SPISR_0_CMD_Error_int,
-      \qspi_cntrl_ps_reg[0]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_36\,
-      \qspi_cntrl_ps_reg[1]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_13\,
-      \qspi_cntrl_ps_reg[1]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_26\,
-      \qspi_cntrl_ps_reg[2]\(2 downto 0) => qspi_cntrl_ps(2 downto 0),
-      \qspo_int_reg[4]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_35\
+      \qspi_cntrl_ps_reg[0]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_27\,
+      \qspi_cntrl_ps_reg[2]\(2 downto 0) => qspi_cntrl_ps(2 downto 0)
     );
 \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I\: entity work.module_ads7056_axi_quad_spi_0_0_qspi_mode_control_logic
      port map (
@@ -17132,28 +17285,37 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => spisel_d1_reg,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => spicr_8_tr_inhibit_to_spi_clk,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0\ => register_Data_slvsel_int,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\ => \FIFO_EXISTS.CLK_CROSS_I_n_32\,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\ => SPICR_2_MST_N_SLV_to_spi_clk,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\ => sr_3_modf_to_spi_clk,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\ => spicr_3_cpol_to_spi_clk,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1\ => \FIFO_EXISTS.CLK_CROSS_I_n_30\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_2\ => spicr_3_cpol_to_spi_clk,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_3\ => SPICR_2_MST_N_SLV_to_spi_clk,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_4\ => sr_3_modf_to_spi_clk,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_5\ => spicr_4_cpha_to_spi_clk,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0) => \FIFO_EXISTS.CLK_CROSS_I_n_24\,
-      Q(2 downto 0) => qspi_cntrl_ps(2 downto 0),
-      QSPI_IO1_T_0 => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_26\,
-      QSPI_IO1_T_1 => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_36\,
-      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0) => \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg__0\(2 downto 0),
-      R => R,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_6\(0) => \FIFO_EXISTS.CLK_CROSS_I_n_22\,
+      Q(8) => Data_Dir_int,
+      Q(7) => Data_Mode_1_int,
+      Q(6) => Data_Mode_0_int,
+      Q(5) => Data_Phase_int,
+      Q(4) => Addr_Mode_1_int,
+      Q(3) => Addr_Mode_0_int,
+      Q(2) => Addr_Bit_int,
+      Q(1) => Addr_Phase_int,
+      Q(0) => Look_up_op(0),
+      QSPI_IO1_T_0 => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_27\,
+      \QSPI_QUAD_MODE_SP_MEM_GEN.addr_cnt_reg[1]_0\(2 downto 0) => qspi_cntrl_ps(2 downto 0),
       \RATIO_OF_2_GENERATE.Count_reg[4]_0\(0) => \RATIO_OF_2_GENERATE.Count_reg__0\(4),
       Rst_to_spi => rst_to_spi_int,
+      SCK_O_int => SCK_O_int,
       SPISEL_sync => SPISEL_sync,
       SPIXfer_done_int_pulse_d2 => SPIXfer_done_int_pulse_d2,
-      aempty_fwft_i_reg => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_33\,
+      aempty_fwft_i_reg => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_23\,
       drr_Overrun_int => drr_Overrun_int,
       empty_fwft_fb_i_reg => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/p_0_in2_in\,
       empty_fwft_fb_o_i0 => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_fb_o_i0\,
       empty_fwft_fb_o_i_reg => \FIFO_EXISTS.TX_FIFO_II_n_5\,
       empty_fwft_i0 => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i0\,
       empty_fwft_i_reg => tx_fifo_empty,
+      empty_fwft_i_reg_0 => \FIFO_EXISTS.TX_FIFO_II_n_7\,
+      empty_fwft_i_reg_1 => \FIFO_EXISTS.TX_FIFO_II_n_8\,
       ext_spi_clk => ext_spi_clk,
       \gic0.gc1.count_d1_reg[3]\(0) => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_18_out\,
       \goreg_dm.dout_i_reg[7]\(7) => data_from_txfifo(0),
@@ -17190,27 +17352,12 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
       \out\ => \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_2_out\,
       p_1_out => p_1_out,
       p_2_out => p_2_out,
-      \qspi_cntrl_ps_reg[1]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_14\,
-      \qspi_cntrl_ps_reg[2]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I_n_35\,
-      \qspo_int_reg[10]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_15\,
-      \qspo_int_reg[11]\(8) => Data_Dir_int,
-      \qspo_int_reg[11]\(7) => Data_Mode_1_int,
-      \qspo_int_reg[11]\(6) => Data_Mode_0_int,
-      \qspo_int_reg[11]\(5) => Data_Phase_int,
-      \qspo_int_reg[11]\(4) => Addr_Mode_1_int,
-      \qspo_int_reg[11]\(3) => Addr_Mode_0_int,
-      \qspo_int_reg[11]\(2) => Addr_Bit_int,
-      \qspo_int_reg[11]\(1) => Addr_Phase_int,
-      \qspo_int_reg[11]\(0) => Look_up_op(0),
-      \qspo_int_reg[11]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_13\,
-      \qspo_int_reg[11]_1\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_18\,
-      \qspo_int_reg[6]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_11\,
-      \qspo_int_reg[6]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_16\,
-      \qspo_int_reg[6]_1\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_19\,
-      \qspo_int_reg[9]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_17\,
+      \qspi_cntrl_ps_reg[1]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_12\,
+      \qspo_int_reg[10]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_14\,
+      \qspo_int_reg[10]_0\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_13\,
+      \qspo_int_reg[5]\ => \LOGIC_FOR_MD_12_GEN.SPI_MODE_1_LUT_LOGIC_I_n_15\,
       ram_full_fb_i_reg => \FIFO_EXISTS.RX_FIFO_II_n_2\,
       ram_full_i_reg => Rx_FIFO_Full_Fifo_org,
-      sck_o => sck_o,
       sck_t => sck_t,
       scndry_out => Rx_FIFO_Empty_Synced_in_SPI_domain,
       spiXfer_done_int => spiXfer_done_int,
@@ -17225,7 +17372,7 @@ INTERRUPT_CONTROL_I: entity work.module_ads7056_axi_quad_spi_0_0_interrupt_contr
 RESET_SYNC_AXI_SPI_CLK_INST: entity work.module_ads7056_axi_quad_spi_0_0_reset_sync_module
      port map (
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3\ => spicr_5_txfifo_to_spi_clk,
-      R => R_1,
+      R => R,
       Rst_to_spi => rst_to_spi_int,
       ext_spi_clk => ext_spi_clk,
       reset2ip_reset_int => reset2ip_reset_int
@@ -17249,7 +17396,7 @@ SOFT_RESET_I: entity work.module_ads7056_axi_quad_spi_0_0_soft_reset
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to\ => \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to_0\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0\ => \^generate_level_p_s_cdc.single_bit.cross_plevel_in2scndry_in_cdc_to_1\,
       \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28]\ => \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28]\,
-      modf_reg_0 => \FIFO_EXISTS.CLK_CROSS_I_n_23\,
+      modf_reg_0 => \FIFO_EXISTS.CLK_CROSS_I_n_21\,
       reset2ip_reset_int => reset2ip_reset_int,
       s_axi_aclk => s_axi_aclk
     );
@@ -17300,7 +17447,10 @@ entity module_ads7056_axi_quad_spi_0_0_axi_quad_spi_top is
     io1_t : out STD_LOGIC;
     io2_t : out STD_LOGIC;
     io3_t : out STD_LOGIC;
-    sck_o : out STD_LOGIC;
+    cfgclk : out STD_LOGIC;
+    cfgmclk : out STD_LOGIC;
+    eos : out STD_LOGIC;
+    preq : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 0 to 0 );
     ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -17316,13 +17466,20 @@ entity module_ads7056_axi_quad_spi_0_0_axi_quad_spi_top is
     s_axi_bready : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    io0_i : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    spisel : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    gsr : in STD_LOGIC;
+    gts : in STD_LOGIC;
+    keyclearb : in STD_LOGIC;
+    usrcclkts : in STD_LOGIC;
+    usrdoneo : in STD_LOGIC;
+    usrdonets : in STD_LOGIC;
+    io0_i : in STD_LOGIC;
     io1_i : in STD_LOGIC;
     io2_i : in STD_LOGIC;
     io3_i : in STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 14 downto 0 );
-    spisel : in STD_LOGIC;
     s_axi4_aclk : in STD_LOGIC;
     s_axi4_aresetn : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
@@ -17391,11 +17548,11 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_axi_quad_spi_top is
   signal \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_50\ : STD_LOGIC;
   signal \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_51\ : STD_LOGIC;
   signal \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_52\ : STD_LOGIC;
-  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_20\ : STD_LOGIC;
-  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_76\ : STD_LOGIC;
-  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_77\ : STD_LOGIC;
-  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_78\ : STD_LOGIC;
+  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_23\ : STD_LOGIC;
   signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_79\ : STD_LOGIC;
+  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_80\ : STD_LOGIC;
+  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_81\ : STD_LOGIC;
+  signal \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_82\ : STD_LOGIC;
   signal Rx_FIFO_Empty : STD_LOGIC;
   signal Rx_FIFO_Full_Fifo_d1_synced : STD_LOGIC;
   signal \SOFT_RESET_I/reset_trig0\ : STD_LOGIC;
@@ -17520,12 +17677,12 @@ IO3_I_REG: unisim.vcomponents.FDRE
       D(0) => ip2Bus_Data_1(31),
       E(0) => \INTERRUPT_CONTROL_I/irpt_wrack_d11\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\ => Rx_FIFO_Full_Fifo_d1_synced,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_77\,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_78\,
-      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_79\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_82\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_81\,
+      \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_80\,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2\ => Tx_FIFO_Empty_SPISR_to_axi_clk,
       \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3\ => spisel_d1_reg_to_axi_clk,
-      \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_20\,
+      \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_23\,
       \GEN_IP_IRPT_STATUS_REG[3].GEN_REG_STATUS.ip_irpt_status_reg_reg[3]\ => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_50\,
       IP2Bus_Error => IP2Bus_Error,
       IP2Bus_Error_1 => IP2Bus_Error_1,
@@ -17592,7 +17749,7 @@ IO3_I_REG: unisim.vcomponents.FDRE
       \ip_irpt_enable_reg_reg[13]\(3) => \INTERRUPT_CONTROL_I/p_0_in4_in\,
       \ip_irpt_enable_reg_reg[13]\(2) => \INTERRUPT_CONTROL_I/p_0_in1_in\,
       \ip_irpt_enable_reg_reg[13]\(1) => \INTERRUPT_CONTROL_I/p_0_in\,
-      \ip_irpt_enable_reg_reg[13]\(0) => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_76\,
+      \ip_irpt_enable_reg_reg[13]\(0) => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_79\,
       ipif_glbl_irpt_enable_reg => \INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg\,
       ipif_glbl_irpt_enable_reg_reg => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_51\,
       irpt_rdack => \INTERRUPT_CONTROL_I/irpt_rdack\,
@@ -17691,7 +17848,7 @@ IO3_I_REG: unisim.vcomponents.FDRE
       \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28]\ => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_52\,
       \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]\ => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_51\,
       \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\ => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_50\,
-      \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_20\,
+      \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_23\,
       \GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6]\ => Tx_FIFO_Empty_SPISR_to_axi_clk,
       IP2Bus_Error => IP2Bus_Error,
       IP2Bus_Error_1 => IP2Bus_Error_1,
@@ -17703,9 +17860,9 @@ IO3_I_REG: unisim.vcomponents.FDRE
       \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24]_0\(2) => data_from_rx_fifo(5),
       \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24]_0\(1) => data_from_rx_fifo(6),
       \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24]_0\(0) => data_from_rx_fifo(7),
-      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_79\,
-      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_78\,
-      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_77\,
+      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_82\,
+      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_81\,
+      \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30]_0\ => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_80\,
       Q(13) => \INTERRUPT_CONTROL_I/p_0_in34_in\,
       Q(12) => \INTERRUPT_CONTROL_I/p_0_in31_in\,
       Q(11) => \INTERRUPT_CONTROL_I/p_0_in28_in\,
@@ -17719,16 +17876,22 @@ IO3_I_REG: unisim.vcomponents.FDRE
       Q(3) => \INTERRUPT_CONTROL_I/p_0_in4_in\,
       Q(2) => \INTERRUPT_CONTROL_I/p_0_in1_in\,
       Q(1) => \INTERRUPT_CONTROL_I/p_0_in\,
-      Q(0) => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_76\,
+      Q(0) => \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_n_79\,
       SPICR_data_int_reg0 => \CONTROL_REG_I/SPICR_data_int_reg0\,
       SPISR_1_LOOP_Back_Error_int => SPISR_1_LOOP_Back_Error_int,
       SPISR_2_MSB_Error_int => SPISR_2_MSB_Error_int,
       SPISR_4_CPOL_CPHA_Error_int => SPISR_4_CPOL_CPHA_Error_int,
       bus2ip_reset_ipif_inverted => bus2ip_reset_ipif_inverted,
       bus2ip_wrce_int(0) => bus2ip_wrce_int(7),
+      cfgclk => cfgclk,
+      cfgmclk => cfgmclk,
+      clk => clk,
       empty_fwft_i_reg => \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_40\,
+      eos => eos,
       ext_spi_clk => ext_spi_clk,
       \gic0.gc1.count_reg[0]\ => tx_fifo_full,
+      gsr => gsr,
+      gts => gts,
       \icount_out_reg[0]\(0) => rx_fifo_count(0),
       interrupt_wrce_strb => \INTERRUPT_CONTROL_I/interrupt_wrce_strb\,
       intr2bus_rdack0 => \INTERRUPT_CONTROL_I/intr2bus_rdack0\,
@@ -17759,6 +17922,7 @@ IO3_I_REG: unisim.vcomponents.FDRE
       irpt_rdack_d1 => \INTERRUPT_CONTROL_I/irpt_rdack_d1\,
       irpt_wrack => \INTERRUPT_CONTROL_I/irpt_wrack\,
       irpt_wrack_d1 => \INTERRUPT_CONTROL_I/irpt_wrack_d1\,
+      keyclearb => keyclearb,
       \out\ => Rx_FIFO_Empty,
       p_10_out => p_10_out,
       p_11_out => p_11_out,
@@ -17781,6 +17945,7 @@ IO3_I_REG: unisim.vcomponents.FDRE
       p_5_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_5_in\,
       p_6_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_6_in\,
       p_8_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_8_in\,
+      preq => preq,
       prmry_in => spicr_1_spe_frm_axi_clk,
       rd_ce_or_reduce_core_cmb => rd_ce_or_reduce_core_cmb,
       reset_trig0 => \SOFT_RESET_I/reset_trig0\,
@@ -17802,7 +17967,6 @@ IO3_I_REG: unisim.vcomponents.FDRE
       \s_axi_rdata_i_reg[31]\(1) => IP2Bus_Data(30),
       \s_axi_rdata_i_reg[31]\(0) => IP2Bus_Data(31),
       s_axi_wdata(13 downto 0) => s_axi_wdata(13 downto 0),
-      sck_o => sck_o,
       sck_t => sck_t,
       scndry_out => SPISR_0_CMD_Error_to_axi_clk,
       spicr_2_mst_n_slv_frm_axi_clk => spicr_2_mst_n_slv_frm_axi_clk,
@@ -17817,6 +17981,9 @@ IO3_I_REG: unisim.vcomponents.FDRE
       sw_rst_cond => \SOFT_RESET_I/sw_rst_cond\,
       sw_rst_cond_d1 => \SOFT_RESET_I/sw_rst_cond_d1\,
       tx_FIFO_Empty_d1_reg(0) => tx_fifo_count(0),
+      usrcclkts => usrcclkts,
+      usrdoneo => usrdoneo,
+      usrdonets => usrdonets,
       wr_ce_or_reduce_core_cmb => wr_ce_or_reduce_core_cmb
     );
 end STRUCTURE;
@@ -17952,7 +18119,7 @@ entity module_ads7056_axi_quad_spi_0_0_axi_quad_spi is
   attribute C_SELECT_XPM : integer;
   attribute C_SELECT_XPM of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
   attribute C_SHARED_STARTUP : integer;
-  attribute C_SHARED_STARTUP of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
+  attribute C_SHARED_STARTUP of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 1;
   attribute C_SPI_MEMORY : integer;
   attribute C_SPI_MEMORY of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 3;
   attribute C_SPI_MEM_ADDR_BITS : integer;
@@ -17980,7 +18147,7 @@ entity module_ads7056_axi_quad_spi_0_0_axi_quad_spi is
   attribute C_UC_FAMILY : integer;
   attribute C_UC_FAMILY of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
   attribute C_USE_STARTUP : integer;
-  attribute C_USE_STARTUP of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
+  attribute C_USE_STARTUP of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 1;
   attribute C_USE_STARTUP_EXT : integer;
   attribute C_USE_STARTUP_EXT of module_ads7056_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
   attribute C_XIP_MODE : integer;
@@ -17998,9 +18165,6 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0_axi_quad_spi is
   signal \^s_axi_rresp\ : STD_LOGIC_VECTOR ( 1 to 1 );
   signal \^s_axi_wready\ : STD_LOGIC;
 begin
-  cfgclk <= \<const0>\;
-  cfgmclk <= \<const0>\;
-  eos <= \<const0>\;
   io0_1_o <= \<const0>\;
   io0_1_t <= \<const0>\;
   io1_1_o <= \<const0>\;
@@ -18009,7 +18173,6 @@ begin
   io2_1_t <= \<const0>\;
   io3_1_o <= \<const0>\;
   io3_1_t <= \<const0>\;
-  preq <= \<const0>\;
   s_axi4_arready <= \<const0>\;
   s_axi4_awready <= \<const0>\;
   s_axi4_bid(0) <= \<const0>\;
@@ -18079,6 +18242,7 @@ begin
   s_axi_rresp(1) <= \^s_axi_rresp\(1);
   s_axi_rresp(0) <= \<const0>\;
   s_axi_wready <= \^s_axi_wready\;
+  sck_o <= \<const0>\;
   ss_1_o <= \<const0>\;
   ss_1_t <= \<const0>\;
 GND: unisim.vcomponents.GND
@@ -18087,7 +18251,13 @@ GND: unisim.vcomponents.GND
     );
 \NO_DUAL_QUAD_MODE.QSPI_NORMAL\: entity work.module_ads7056_axi_quad_spi_0_0_axi_quad_spi_top
      port map (
+      cfgclk => cfgclk,
+      cfgmclk => cfgmclk,
+      clk => clk,
+      eos => eos,
       ext_spi_clk => ext_spi_clk,
+      gsr => gsr,
+      gts => gts,
       io0_i => io0_i,
       io0_o => io0_o,
       io0_t => io0_t,
@@ -18101,6 +18271,8 @@ GND: unisim.vcomponents.GND
       io3_o => io3_o,
       io3_t => io3_t,
       ip2intc_irpt => ip2intc_irpt,
+      keyclearb => keyclearb,
+      preq => preq,
       s_axi4_aclk => s_axi4_aclk,
       s_axi4_aresetn => s_axi4_aresetn,
       s_axi_aclk => s_axi_aclk,
@@ -18124,11 +18296,13 @@ GND: unisim.vcomponents.GND
       s_axi_wstrb(1) => s_axi_wstrb(3),
       s_axi_wstrb(0) => s_axi_wstrb(0),
       s_axi_wvalid => s_axi_wvalid,
-      sck_o => sck_o,
       sck_t => sck_t,
       spisel => spisel,
       ss_o(0) => ss_o(0),
-      ss_t => ss_t
+      ss_t => ss_t,
+      usrcclkts => usrcclkts,
+      usrdoneo => usrdoneo,
+      usrdonets => usrdonets
     );
 end STRUCTURE;
 library IEEE;
@@ -18169,12 +18343,20 @@ entity module_ads7056_axi_quad_spi_0_0 is
     io3_i : in STD_LOGIC;
     io3_o : out STD_LOGIC;
     io3_t : out STD_LOGIC;
-    sck_i : in STD_LOGIC;
-    sck_o : out STD_LOGIC;
-    sck_t : out STD_LOGIC;
     ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     ss_t : out STD_LOGIC;
+    cfgclk : out STD_LOGIC;
+    cfgmclk : out STD_LOGIC;
+    eos : out STD_LOGIC;
+    preq : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    gsr : in STD_LOGIC;
+    gts : in STD_LOGIC;
+    keyclearb : in STD_LOGIC;
+    usrcclkts : in STD_LOGIC;
+    usrdoneo : in STD_LOGIC;
+    usrdonets : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -18184,13 +18366,10 @@ entity module_ads7056_axi_quad_spi_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of module_ads7056_axi_quad_spi_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of module_ads7056_axi_quad_spi_0_0 : entity is "axi_quad_spi,Vivado 2016.4";
+  attribute x_core_info of module_ads7056_axi_quad_spi_0_0 : entity is "axi_quad_spi,Vivado 2017.2";
 end module_ads7056_axi_quad_spi_0_0;
 
 architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0 is
-  signal NLW_U0_cfgclk_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_cfgmclk_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_eos_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_io0_1_o_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_io0_1_t_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_io1_1_o_UNCONNECTED : STD_LOGIC;
@@ -18199,13 +18378,14 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0 is
   signal NLW_U0_io2_1_t_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_io3_1_o_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_io3_1_t_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_preq_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_arready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_awready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_bvalid_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_rlast_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_rvalid_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_wready_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_sck_o_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_sck_t_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_ss_1_o_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_ss_1_t_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi4_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -18234,7 +18414,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0 is
   attribute C_SELECT_XPM : integer;
   attribute C_SELECT_XPM of U0 : label is 0;
   attribute C_SHARED_STARTUP : integer;
-  attribute C_SHARED_STARTUP of U0 : label is 0;
+  attribute C_SHARED_STARTUP of U0 : label is 1;
   attribute C_SPI_MEMORY : integer;
   attribute C_SPI_MEMORY of U0 : label is 3;
   attribute C_SPI_MEM_ADDR_BITS : integer;
@@ -18262,7 +18442,7 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0 is
   attribute C_UC_FAMILY : integer;
   attribute C_UC_FAMILY of U0 : label is 0;
   attribute C_USE_STARTUP : integer;
-  attribute C_USE_STARTUP of U0 : label is 0;
+  attribute C_USE_STARTUP of U0 : label is 1;
   attribute C_USE_STARTUP_EXT : integer;
   attribute C_USE_STARTUP_EXT of U0 : label is 0;
   attribute C_XIP_MODE : integer;
@@ -18271,13 +18451,13 @@ architecture STRUCTURE of module_ads7056_axi_quad_spi_0_0 is
 begin
 U0: entity work.module_ads7056_axi_quad_spi_0_0_axi_quad_spi
      port map (
-      cfgclk => NLW_U0_cfgclk_UNCONNECTED,
-      cfgmclk => NLW_U0_cfgmclk_UNCONNECTED,
-      clk => '0',
-      eos => NLW_U0_eos_UNCONNECTED,
+      cfgclk => cfgclk,
+      cfgmclk => cfgmclk,
+      clk => clk,
+      eos => eos,
       ext_spi_clk => ext_spi_clk,
-      gsr => '0',
-      gts => '0',
+      gsr => gsr,
+      gts => gts,
       io0_1_i => '0',
       io0_1_o => NLW_U0_io0_1_o_UNCONNECTED,
       io0_1_t => NLW_U0_io0_1_t_UNCONNECTED,
@@ -18303,9 +18483,9 @@ U0: entity work.module_ads7056_axi_quad_spi_0_0_axi_quad_spi
       io3_o => io3_o,
       io3_t => io3_t,
       ip2intc_irpt => ip2intc_irpt,
-      keyclearb => '0',
+      keyclearb => keyclearb,
       pack => '0',
-      preq => NLW_U0_preq_UNCONNECTED,
+      preq => preq,
       s_axi4_aclk => '0',
       s_axi4_araddr(23 downto 0) => B"000000000000000000000000",
       s_axi4_arburst(1 downto 0) => B"00",
@@ -18362,9 +18542,9 @@ U0: entity work.module_ads7056_axi_quad_spi_0_0_axi_quad_spi
       s_axi_wready => s_axi_wready,
       s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
       s_axi_wvalid => s_axi_wvalid,
-      sck_i => sck_i,
-      sck_o => sck_o,
-      sck_t => sck_t,
+      sck_i => '0',
+      sck_o => NLW_U0_sck_o_UNCONNECTED,
+      sck_t => NLW_U0_sck_t_UNCONNECTED,
       spisel => '1',
       ss_1_i => '0',
       ss_1_o => NLW_U0_ss_1_o_UNCONNECTED,
@@ -18372,8 +18552,8 @@ U0: entity work.module_ads7056_axi_quad_spi_0_0_axi_quad_spi
       ss_i(0) => ss_i(0),
       ss_o(0) => ss_o(0),
       ss_t => ss_t,
-      usrcclkts => '0',
-      usrdoneo => '1',
-      usrdonets => '0'
+      usrcclkts => usrcclkts,
+      usrdoneo => usrdoneo,
+      usrdonets => usrdonets
     );
 end STRUCTURE;

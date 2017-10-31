@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Sun Oct 29 22:39:37 2017
--- Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Tue Oct 31 01:21:25 2017
+-- Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_mdm_1_0/module_ads7056_mdm_1_0_sim_netlist.vhdl
+--               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_mdm_1_0/module_ads7056_mdm_1_0_sim_netlist.vhdl
 -- Design      : module_ads7056_mdm_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,25 +20,25 @@ entity module_ads7056_mdm_1_0_MB_BSCANE2 is
     drck_i : out STD_LOGIC;
     Ext_JTAG_RESET : out STD_LOGIC;
     sel : out STD_LOGIC;
-    \Use_Serial_Unified_Completion.completion_status_reg[15]\ : out STD_LOGIC;
+    \Use_Serial_Unified_Completion.completion_status_reg[10]\ : out STD_LOGIC;
     Dbg_TDI_31 : out STD_LOGIC;
-    Ext_JTAG_UPDATE : out STD_LOGIC;
+    Dbg_Update_31 : out STD_LOGIC;
+    \Use_Serial_Unified_Completion.completion_status_reg[10]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_Serial_Unified_Completion.count_reg[5]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_UART.tdo_reg_reg[7]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     shift_n_reset : out STD_LOGIC;
     AR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Use_Serial_Unified_Completion.count_reg[5]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_Serial_Unified_Completion.count_reg[5]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Use_Serial_Unified_Completion.completion_status_reg[15]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \Use_Serial_Unified_Completion.count_reg[0]__0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     tdo : in STD_LOGIC;
-    Scan_Reset : in STD_LOGIC;
-    Scan_Reset_Sel : in STD_LOGIC;
-    \Use_Serial_Unified_Completion.count_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Use_Serial_Unified_Completion.sample_1_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \p_54_out__0\ : in STD_LOGIC;
-    \p_31_out__0\ : in STD_LOGIC
+    \p_31_out__0\ : in STD_LOGIC;
+    Scan_Reset_Sel : in STD_LOGIC;
+    Scan_Reset : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.count_reg[5]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_Serial_Unified_Completion.sample_1_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_BSCANE2 : entity is "MB_BSCANE2";
@@ -49,7 +49,7 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MB_BSCANE2 is
   signal \Use_E2.BSCANE2_I_n_3\ : STD_LOGIC;
   signal \Use_E2.BSCANE2_I_n_6\ : STD_LOGIC;
   signal \Use_E2.BSCANE2_I_n_8\ : STD_LOGIC;
-  signal \^use_serial_unified_completion.completion_status_reg[15]\ : STD_LOGIC;
+  signal \^use_serial_unified_completion.completion_status_reg[10]\ : STD_LOGIC;
   signal \^sel\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \Use_BSCAN.Config_Reg[30]_i_1\ : label is "soft_lutpair31";
@@ -57,31 +57,33 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MB_BSCANE2 is
   attribute box_type : string;
   attribute box_type of \Use_E2.BSCANE2_I\ : label is "PRIMITIVE";
   attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[15]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[0]__0_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[5]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \Use_UART.tdo_reg[0]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[15]_i_2\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[0]__0_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[5]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \Use_UART.tdo_reg[0]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \shift_Count[0]_i_1\ : label is "soft_lutpair33";
 begin
   Dbg_Capture_0 <= \^dbg_capture_0\;
-  \Use_Serial_Unified_Completion.completion_status_reg[15]\ <= \^use_serial_unified_completion.completion_status_reg[15]\;
+  \Use_Serial_Unified_Completion.completion_status_reg[10]\ <= \^use_serial_unified_completion.completion_status_reg[10]\;
   sel <= \^sel\;
 \Use_BSCAN.Config_Reg[30]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8B"
+      INIT => X"D1"
     )
         port map (
-      I0 => Scan_Reset,
+      I0 => \^use_serial_unified_completion.completion_status_reg[10]\,
       I1 => Scan_Reset_Sel,
-      I2 => \^use_serial_unified_completion.completion_status_reg[15]\,
+      I2 => Scan_Reset,
       O => shift_n_reset
     );
 \Use_BSCAN.PORT_Selector[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"8B"
+      INIT => X"D1"
     )
         port map (
-      I0 => Scan_Reset,
+      I0 => \^sel\,
       I1 => Scan_Reset_Sel,
-      I2 => \^sel\,
+      I2 => Scan_Reset,
       O => AR(0)
     );
 \Use_E2.BSCANE2_I\: unisim.vcomponents.BSCANE2
@@ -95,22 +97,22 @@ begin
       RESET => Ext_JTAG_RESET,
       RUNTEST => \Use_E2.BSCANE2_I_n_3\,
       SEL => \^sel\,
-      SHIFT => \^use_serial_unified_completion.completion_status_reg[15]\,
+      SHIFT => \^use_serial_unified_completion.completion_status_reg[10]\,
       TCK => \Use_E2.BSCANE2_I_n_6\,
       TDI => Dbg_TDI_31,
       TDO => tdo,
       TMS => \Use_E2.BSCANE2_I_n_8\,
-      UPDATE => Ext_JTAG_UPDATE
+      UPDATE => Dbg_Update_31
     );
 \Use_Serial_Unified_Completion.completion_status[15]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"A8"
+      INIT => X"E0"
     )
         port map (
-      I0 => \p_54_out__0\,
+      I0 => \^use_serial_unified_completion.completion_status_reg[10]\,
       I1 => \^dbg_capture_0\,
-      I2 => \^use_serial_unified_completion.completion_status_reg[15]\,
-      O => \Use_Serial_Unified_Completion.completion_status_reg[15]_0\(0)
+      I2 => \p_54_out__0\,
+      O => \Use_Serial_Unified_Completion.completion_status_reg[10]_0\(0)
     );
 \Use_Serial_Unified_Completion.completion_status[15]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -123,13 +125,13 @@ begin
     );
 \Use_Serial_Unified_Completion.count[0]__0_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"A8"
+      INIT => X"E0"
     )
         port map (
-      I0 => \p_31_out__0\,
+      I0 => \^use_serial_unified_completion.completion_status_reg[10]\,
       I1 => \^dbg_capture_0\,
-      I2 => \^use_serial_unified_completion.completion_status_reg[15]\,
-      O => \Use_Serial_Unified_Completion.count_reg[0]__0\(0)
+      I2 => \p_31_out__0\,
+      O => \Use_Serial_Unified_Completion.count_reg[5]\(0)
     );
 \Use_Serial_Unified_Completion.count[5]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -137,16 +139,16 @@ begin
     )
         port map (
       I0 => \^dbg_capture_0\,
-      I1 => \Use_Serial_Unified_Completion.count_reg[5]_0\(0),
-      O => \Use_Serial_Unified_Completion.count_reg[5]\(0)
+      I1 => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
+      O => \Use_Serial_Unified_Completion.count_reg[5]_0\(0)
     );
 \Use_UART.tdo_reg[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
-      I0 => \^use_serial_unified_completion.completion_status_reg[15]\,
-      I1 => \^dbg_capture_0\,
+      I0 => \^dbg_capture_0\,
+      I1 => \^use_serial_unified_completion.completion_status_reg[10]\,
       O => \Use_UART.tdo_reg_reg[7]\(0)
     );
 \shift_Count[0]_i_1\: unisim.vcomponents.LUT2
@@ -154,7 +156,7 @@ begin
       INIT => X"2"
     )
         port map (
-      I0 => \^use_serial_unified_completion.completion_status_reg[15]\,
+      I0 => \^use_serial_unified_completion.completion_status_reg[10]\,
       I1 => Q(0),
       O => \shift_Count_reg[0]\(0)
     );
@@ -188,52 +190,51 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_FDC_1 is
   port (
-    data_cmd_noblock : out STD_LOGIC;
-    D_0 : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    Q_1 : out STD_LOGIC;
+    D_2 : out STD_LOGIC;
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
     \Use_Serial_Unified_Completion.completion_block_reg\ : out STD_LOGIC;
-    sample_1 : out STD_LOGIC;
-    \Use_Serial_Unified_Completion.completion_status_reg[0]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.sample_reg[15]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Use_Serial_Unified_Completion.sample_1_reg[10]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \p_31_out__0\ : out STD_LOGIC;
+    set_Ext_BRK_reg : out STD_LOGIC;
     Debug_Rst_i0 : out STD_LOGIC;
     \shifting_Data1__0\ : out STD_LOGIC;
+    \Use_Serial_Unified_Completion.mb_instr_error_reg\ : out STD_LOGIC;
     Dbg_Reg_En_0 : out STD_LOGIC_VECTOR ( 0 to 7 );
     CE : out STD_LOGIC;
     \command_1_reg[7]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.mb_instr_overrun_reg\ : out STD_LOGIC;
-    \Use_Serial_Unified_Completion.mb_instr_error_reg\ : out STD_LOGIC;
+    \Use_Serial_Unified_Completion.mb_instr_error_reg_0\ : out STD_LOGIC;
     \Use_Serial_Unified_Completion.mb_data_overrun_reg\ : out STD_LOGIC;
-    \completion_ctrl_reg[0]\ : out STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_block_reg_0\ : out STD_LOGIC;
     \Use_UART.tx_buffered_reg\ : out STD_LOGIC;
+    \completion_ctrl_reg[0]\ : out STD_LOGIC;
     CLK : in STD_LOGIC;
     sel_n : in STD_LOGIC;
-    \Use_Serial_Unified_Completion.count_reg[1]\ : in STD_LOGIC;
-    \Use_Serial_Unified_Completion.count_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    sync : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[5]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \Use_Serial_Unified_Completion.completion_status_reg[10]\ : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 10 downto 0 );
     \Use_Serial_Unified_Completion.completion_status_reg[2]\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_status_reg[3]\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_status_reg[4]\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_status_reg[5]\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_status_reg[7]\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_block_reg_1\ : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_0\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.sample_reg[15]_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    \command_reg[2]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[2]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC;
     \tdi_shifter_reg[0]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Use_BSCAN.PORT_Selector_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sel : in STD_LOGIC;
     Dbg_TDO_0 : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.count_reg[1]\ : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.count_reg[1]_0\ : in STD_LOGIC;
     \Use_Serial_Unified_Completion.count_reg[5]\ : in STD_LOGIC;
-    completion_ctrl : in STD_LOGIC;
     \p_3_out__10\ : in STD_LOGIC;
+    completion_ctrl : in STD_LOGIC;
     in0 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -241,46 +242,45 @@ entity module_ads7056_mdm_1_0_MB_FDC_1 is
 end module_ads7056_mdm_1_0_MB_FDC_1;
 
 architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDC_1 is
-  signal \^d_0\ : STD_LOGIC;
-  signal Dbg_Shift_31_INST_0_i_2_n_0 : STD_LOGIC;
+  signal \^d_2\ : STD_LOGIC;
+  signal \^q_1\ : STD_LOGIC;
   signal \^use_serial_unified_completion.completion_block_reg\ : STD_LOGIC;
-  signal \Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0\ : STD_LOGIC;
-  signal \Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0\ : STD_LOGIC;
-  signal \Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0\ : STD_LOGIC;
+  signal \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\ : STD_LOGIC;
   signal \Use_UART.tx_buffered_i_2_n_0\ : STD_LOGIC;
   signal \Using_FPGA.Native_i_2_n_0\ : STD_LOGIC;
   signal completion_ctrl0 : STD_LOGIC;
-  signal \^data_cmd_noblock\ : STD_LOGIC;
   signal \^p_31_out__0\ : STD_LOGIC;
-  signal \^sample_1\ : STD_LOGIC;
+  signal \^set_ext_brk_reg\ : STD_LOGIC;
   signal \^shifting_data1__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[1]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[2]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[3]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[4]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[5]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[6]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[0]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[2]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[3]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[4]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[5]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \Dbg_Reg_En_0[6]_INST_0\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \Dbg_Reg_En_0[7]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_2 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[15]_i_3\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[1]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[9]_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample[13]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample[14]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_2 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[15]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[8]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[9]_i_3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample[13]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample[14]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample_1[15]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample_1[15]_i_2\ : label is "soft_lutpair1";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native\ : label is "FDC_1";
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__3\ : label is "soft_lutpair2";
 begin
-  D_0 <= \^d_0\;
+  D_2 <= \^d_2\;
+  Q_1 <= \^q_1\;
   \Use_Serial_Unified_Completion.completion_block_reg\ <= \^use_serial_unified_completion.completion_block_reg\;
-  data_cmd_noblock <= \^data_cmd_noblock\;
   \p_31_out__0\ <= \^p_31_out__0\;
-  sample_1 <= \^sample_1\;
+  set_Ext_BRK_reg <= \^set_ext_brk_reg\;
   \shifting_Data1__0\ <= \^shifting_data1__0\;
 \Dbg_Reg_En_0[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
@@ -288,8 +288,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(7),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(7),
       O => Dbg_Reg_En_0(0)
     );
 \Dbg_Reg_En_0[1]_INST_0\: unisim.vcomponents.LUT3
@@ -298,8 +298,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(6),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(6),
       O => Dbg_Reg_En_0(1)
     );
 \Dbg_Reg_En_0[2]_INST_0\: unisim.vcomponents.LUT3
@@ -308,8 +308,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(5),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(5),
       O => Dbg_Reg_En_0(2)
     );
 \Dbg_Reg_En_0[3]_INST_0\: unisim.vcomponents.LUT3
@@ -318,8 +318,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(4),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(4),
       O => Dbg_Reg_En_0(3)
     );
 \Dbg_Reg_En_0[4]_INST_0\: unisim.vcomponents.LUT3
@@ -328,8 +328,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(3),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(3),
       O => Dbg_Reg_En_0(4)
     );
 \Dbg_Reg_En_0[5]_INST_0\: unisim.vcomponents.LUT3
@@ -338,8 +338,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(2),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(2),
       O => Dbg_Reg_En_0(5)
     );
 \Dbg_Reg_En_0[6]_INST_0\: unisim.vcomponents.LUT3
@@ -348,8 +348,8 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(1),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(1),
       O => Dbg_Reg_En_0(6)
     );
 \Dbg_Reg_En_0[7]_INST_0\: unisim.vcomponents.LUT3
@@ -358,43 +358,30 @@ begin
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(0),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(0),
       O => Dbg_Reg_En_0(7)
-    );
-Dbg_Shift_31_INST_0: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFBFF00000000"
-    )
-        port map (
-      I0 => \command_reg[5]\,
-      I1 => Dbg_Shift_31_INST_0_i_2_n_0,
-      I2 => Q(1),
-      I3 => \command_reg[0]\,
-      I4 => sync,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      O => E(0)
     );
 Dbg_Shift_31_INST_0_i_2: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
-      I0 => \^data_cmd_noblock\,
+      I0 => \^q_1\,
       I1 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      O => Dbg_Shift_31_INST_0_i_2_n_0
+      O => \^set_ext_brk_reg\
     );
 Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0002000000000000"
     )
         port map (
-      I0 => Dbg_Shift_31_INST_0_i_2_n_0,
-      I1 => Q(0),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(3),
-      I5 => \command_reg[0]\,
+      I0 => \^set_ext_brk_reg\,
+      I1 => \Use_BSCAN.command_reg[0]\(0),
+      I2 => \Use_BSCAN.command_reg[0]\(1),
+      I3 => \Use_BSCAN.command_reg[0]\(2),
+      I4 => \Use_BSCAN.command_reg[0]\(3),
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => Debug_Rst_i0
     );
 \Use_Serial_Unified_Completion.completion_block_i_1\: unisim.vcomponents.LUT6
@@ -412,13 +399,13 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
     );
 \Use_Serial_Unified_Completion.completion_status[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8F88"
+      INIT => X"888F"
     )
         port map (
       I0 => \^use_serial_unified_completion.completion_block_reg\,
-      I1 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(1),
-      I2 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(0),
-      I3 => \^sample_1\,
+      I1 => Q(1),
+      I2 => Q(0),
+      I3 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       O => D(0)
     );
 \Use_Serial_Unified_Completion.completion_status[15]_i_3\: unisim.vcomponents.LUT5
@@ -426,135 +413,135 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"00200000"
     )
         port map (
-      I0 => \^data_cmd_noblock\,
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \command_reg[2]\,
+      I0 => \^q_1\,
+      I1 => \Use_BSCAN.command_reg[0]\(2),
+      I2 => \Use_BSCAN.command_reg[0]\(1),
+      I3 => \Use_BSCAN.command_reg[0]\(0),
+      I4 => \Use_BSCAN.command_reg[2]\,
       O => \^use_serial_unified_completion.completion_block_reg\
     );
 \Use_Serial_Unified_Completion.completion_status[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF606060"
+      INIT => X"FF060606"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(1),
-      I1 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(0),
-      I2 => \^sample_1\,
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(2),
+      I4 => Q(2),
       O => D(1)
     );
 \Use_Serial_Unified_Completion.completion_status[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF6A006A006A00"
+      INIT => X"FFFF006A006A006A"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(2),
-      I1 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(1),
-      I2 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(0),
-      I3 => \^sample_1\,
+      I0 => Q(2),
+      I1 => Q(1),
+      I2 => Q(0),
+      I3 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I4 => \^use_serial_unified_completion.completion_block_reg\,
-      I5 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(3),
+      I5 => Q(3),
       O => D(2)
     );
 \Use_Serial_Unified_Completion.completion_status[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF606060"
+      INIT => X"FF060606"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(3),
+      I0 => Q(3),
       I1 => \Use_Serial_Unified_Completion.completion_status_reg[2]\,
-      I2 => \^sample_1\,
+      I2 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(4),
+      I4 => Q(4),
       O => D(3)
     );
 \Use_Serial_Unified_Completion.completion_status[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF606060"
+      INIT => X"FF060606"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(4),
+      I0 => Q(4),
       I1 => \Use_Serial_Unified_Completion.completion_status_reg[3]\,
-      I2 => \^sample_1\,
+      I2 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(5),
+      I4 => Q(5),
       O => D(4)
     );
 \Use_Serial_Unified_Completion.completion_status[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF606060"
+      INIT => X"FF060606"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(5),
+      I0 => Q(5),
       I1 => \Use_Serial_Unified_Completion.completion_status_reg[4]\,
-      I2 => \^sample_1\,
+      I2 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(6),
+      I4 => Q(6),
       O => D(5)
     );
 \Use_Serial_Unified_Completion.completion_status[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF484848"
+      INIT => X"FF121212"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(6),
-      I1 => \^sample_1\,
+      I0 => Q(6),
+      I1 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I2 => \Use_Serial_Unified_Completion.completion_status_reg[5]\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(7),
+      I4 => Q(7),
       O => D(6)
     );
 \Use_Serial_Unified_Completion.completion_status[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF488848884888"
+      INIT => X"FFFF122212221222"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(7),
-      I1 => \^sample_1\,
+      I0 => Q(7),
+      I1 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I2 => \Use_Serial_Unified_Completion.completion_status_reg[5]\,
-      I3 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(6),
+      I3 => Q(6),
       I4 => \^use_serial_unified_completion.completion_block_reg\,
-      I5 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(8),
+      I5 => Q(8),
       O => D(7)
     );
 \Use_Serial_Unified_Completion.completion_status[8]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF484848"
+      INIT => X"FF121212"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(8),
-      I1 => \^sample_1\,
+      I0 => Q(8),
+      I1 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I2 => \Use_Serial_Unified_Completion.completion_status_reg[7]\,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(9),
+      I4 => Q(9),
       O => D(8)
     );
 \Use_Serial_Unified_Completion.completion_status[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF0003AA00AA00"
+      INIT => X"00F100F1FF000000"
     )
         port map (
-      I0 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I1 => \^data_cmd_noblock\,
-      I2 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
+      I0 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
+      I1 => \^q_1\,
+      I2 => completion_ctrl0,
       I3 => \^use_serial_unified_completion.completion_block_reg\,
-      I4 => completion_ctrl0,
+      I4 => \Use_BSCAN.PORT_Selector_reg[0]\,
       I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
-      O => \Use_Serial_Unified_Completion.completion_status_reg[0]\(0)
+      O => E(0)
     );
 \Use_Serial_Unified_Completion.completion_status[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF488848884888"
+      INIT => X"FFFF122212221222"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(9),
-      I1 => \^sample_1\,
+      I0 => Q(9),
+      I1 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
       I2 => \Use_Serial_Unified_Completion.completion_status_reg[7]\,
-      I3 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(8),
+      I3 => Q(8),
       I4 => \^use_serial_unified_completion.completion_block_reg\,
-      I5 => \Use_Serial_Unified_Completion.completion_status_reg[10]\(10),
+      I5 => Q(10),
       O => D(9)
     );
 \Use_Serial_Unified_Completion.completion_status[9]_i_3\: unisim.vcomponents.LUT5
@@ -562,11 +549,11 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"00800000"
     )
         port map (
-      I0 => Q(2),
-      I1 => \^data_cmd_noblock\,
-      I2 => Q(0),
-      I3 => Q(1),
-      I4 => \command_reg[2]\,
+      I0 => \Use_BSCAN.command_reg[0]\(2),
+      I1 => \^q_1\,
+      I2 => \Use_BSCAN.command_reg[0]\(0),
+      I3 => \Use_BSCAN.command_reg[0]\(1),
+      I4 => \Use_BSCAN.command_reg[2]\,
       O => completion_ctrl0
     );
 \Use_Serial_Unified_Completion.count[0]__0_i_3\: unisim.vcomponents.LUT6
@@ -574,12 +561,12 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"0200000000000000"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(0),
-      I2 => Q(3),
-      I3 => Dbg_Shift_31_INST_0_i_2_n_0,
-      I4 => Q(1),
-      I5 => \command_reg[0]\,
+      I0 => \Use_BSCAN.command_reg[0]\(2),
+      I1 => \Use_BSCAN.command_reg[0]\(0),
+      I2 => \Use_BSCAN.command_reg[0]\(3),
+      I3 => \^set_ext_brk_reg\,
+      I4 => \Use_BSCAN.command_reg[0]\(1),
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => \^p_31_out__0\
     );
 \Use_Serial_Unified_Completion.count[0]_i_2\: unisim.vcomponents.LUT6
@@ -587,22 +574,22 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"0000020000000000"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(0),
-      I2 => Q(3),
-      I3 => Dbg_Shift_31_INST_0_i_2_n_0,
-      I4 => Q(1),
-      I5 => \command_reg[0]\,
+      I0 => \Use_BSCAN.command_reg[0]\(2),
+      I1 => \Use_BSCAN.command_reg[0]\(0),
+      I2 => \Use_BSCAN.command_reg[0]\(3),
+      I3 => \^set_ext_brk_reg\,
+      I4 => \Use_BSCAN.command_reg[0]\(1),
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => \^shifting_data1__0\
     );
 \Use_Serial_Unified_Completion.mb_data_overrun_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"053F0F3F05000000"
+      INIT => X"113F333F11000000"
     )
         port map (
       I0 => Dbg_TDO_0,
-      I1 => completion_ctrl0,
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I2 => completion_ctrl0,
       I3 => \^p_31_out__0\,
       I4 => \Use_Serial_Unified_Completion.count_reg[5]\,
       I5 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(2),
@@ -614,25 +601,12 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => Dbg_TDO_0,
-      I1 => \Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0\,
+      I1 => \Use_Serial_Unified_Completion.count_reg[1]_0\,
       I2 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I3 => completion_ctrl0,
       I4 => \^shifting_data1__0\,
       I5 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(1),
-      O => \Use_Serial_Unified_Completion.mb_instr_error_reg\
-    );
-\Use_Serial_Unified_Completion.mb_instr_error_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2000000000000000"
-    )
-        port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg[1]\,
-      I1 => \Use_Serial_Unified_Completion.count_reg[0]\,
-      I2 => \Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0\,
-      I3 => \command_reg[0]\,
-      I4 => sync,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      O => \Use_Serial_Unified_Completion.mb_instr_error_i_2_n_0\
+      O => \Use_Serial_Unified_Completion.mb_instr_error_reg_0\
     );
 \Use_Serial_Unified_Completion.mb_instr_overrun_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -640,77 +614,72 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => Dbg_TDO_0,
-      I1 => \Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0\,
+      I1 => \Use_Serial_Unified_Completion.count_reg[1]\,
       I2 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I3 => completion_ctrl0,
       I4 => \^shifting_data1__0\,
       I5 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(0),
       O => \Use_Serial_Unified_Completion.mb_instr_overrun_reg\
     );
-\Use_Serial_Unified_Completion.mb_instr_overrun_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1000000000000000"
-    )
-        port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg[1]\,
-      I1 => \Use_Serial_Unified_Completion.count_reg[0]\,
-      I2 => \Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0\,
-      I3 => \command_reg[0]\,
-      I4 => sync,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      O => \Use_Serial_Unified_Completion.mb_instr_overrun_i_2_n_0\
-    );
 \Use_Serial_Unified_Completion.mb_instr_overrun_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000400000000"
     )
         port map (
-      I0 => Q(1),
-      I1 => \^data_cmd_noblock\,
+      I0 => \Use_BSCAN.command_reg[0]\(1),
+      I1 => \^q_1\,
       I2 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I3 => Q(3),
-      I4 => Q(0),
-      I5 => Q(2),
-      O => \Use_Serial_Unified_Completion.mb_instr_overrun_i_3_n_0\
+      I3 => \Use_BSCAN.command_reg[0]\(3),
+      I4 => \Use_BSCAN.command_reg[0]\(0),
+      I5 => \Use_BSCAN.command_reg[0]\(2),
+      O => \Use_Serial_Unified_Completion.mb_instr_error_reg\
     );
 \Use_Serial_Unified_Completion.sample[13]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(3),
-      I1 => \^sample_1\,
+      I0 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
+      I1 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(3),
       O => \Use_Serial_Unified_Completion.sample_reg[15]\(0)
     );
 \Use_Serial_Unified_Completion.sample[14]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(4),
-      I1 => \^sample_1\,
+      I0 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
+      I1 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(4),
       O => \Use_Serial_Unified_Completion.sample_reg[15]\(1)
     );
 \Use_Serial_Unified_Completion.sample[15]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(5),
-      I1 => \^sample_1\,
+      I0 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
+      I1 => \Use_Serial_Unified_Completion.sample_reg[15]_0\(5),
       O => \Use_Serial_Unified_Completion.sample_reg[15]\(2)
     );
-\Use_Serial_Unified_Completion.sample_1[15]_i_1\: unisim.vcomponents.LUT5
+\Use_Serial_Unified_Completion.sample_1[15]_i_1\: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"DFFFF7FF"
+      INIT => X"1"
     )
         port map (
-      I0 => \command_reg[2]\,
-      I1 => Q(1),
-      I2 => Q(0),
-      I3 => \^data_cmd_noblock\,
-      I4 => Q(2),
-      O => \^sample_1\
+      I0 => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
+      O => \Use_Serial_Unified_Completion.sample_1_reg[10]\(0)
+    );
+\Use_Serial_Unified_Completion.sample_1[15]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"20000800"
+    )
+        port map (
+      I0 => \Use_BSCAN.command_reg[2]\,
+      I1 => \Use_BSCAN.command_reg[0]\(1),
+      I2 => \Use_BSCAN.command_reg[0]\(0),
+      I3 => \^q_1\,
+      I4 => \Use_BSCAN.command_reg[0]\(2),
+      O => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\
     );
 \Use_UART.tx_buffered_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -719,7 +688,7 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => \tdi_shifter_reg[0]\(7),
       I1 => \Use_UART.tx_buffered_i_2_n_0\,
-      I2 => \command_reg[0]\,
+      I2 => \Use_BSCAN.command_reg[0]_0\,
       I3 => in0,
       O => \Use_UART.tx_buffered_reg\
     );
@@ -728,12 +697,12 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"0000400000000000"
     )
         port map (
-      I0 => Q(0),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(3),
+      I0 => \Use_BSCAN.command_reg[0]\(0),
+      I1 => \Use_BSCAN.command_reg[0]\(2),
+      I2 => \Use_BSCAN.command_reg[0]\(1),
+      I3 => \Use_BSCAN.command_reg[0]\(3),
       I4 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I5 => \^data_cmd_noblock\,
+      I5 => \^q_1\,
       O => \Use_UART.tx_buffered_i_2_n_0\
     );
 \Using_FPGA.Native\: unisim.vcomponents.FDCE
@@ -745,8 +714,8 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       C => CLK,
       CE => '1',
       CLR => sel_n,
-      D => \^d_0\,
-      Q => \^data_cmd_noblock\
+      D => \^d_2\,
+      Q => \^q_1\
     );
 \Using_FPGA.Native_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -765,8 +734,8 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       INIT => X"1"
     )
         port map (
-      I0 => \^data_cmd_noblock\,
-      O => \^d_0\
+      I0 => \^q_1\,
+      O => \^d_2\
     );
 \Using_FPGA.Native_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -778,7 +747,7 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       I2 => \tdi_shifter_reg[0]\(6),
       I3 => \tdi_shifter_reg[0]\(7),
       I4 => \Use_Serial_Unified_Completion.completion_block_reg_1\,
-      I5 => \^data_cmd_noblock\,
+      I5 => \^q_1\,
       O => \Using_FPGA.Native_i_2_n_0\
     );
 \command_1[0]_i_1\: unisim.vcomponents.LUT6
@@ -791,7 +760,7 @@ Ext_NM_BRK_i_i_1: unisim.vcomponents.LUT6
       I2 => \Use_BSCAN.PORT_Selector_reg[3]\(1),
       I3 => \Use_BSCAN.PORT_Selector_reg[3]\(0),
       I4 => sel,
-      I5 => Dbg_Shift_31_INST_0_i_2_n_0,
+      I5 => \^set_ext_brk_reg\,
       O => \command_1_reg[7]\(0)
     );
 \completion_ctrl[0]_i_1\: unisim.vcomponents.LUT3
@@ -846,20 +815,72 @@ use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_FDRE_1 is
   port (
     sync : out STD_LOGIC;
-    D_0 : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.mb_instr_error_reg\ : out STD_LOGIC;
+    \Use_Serial_Unified_Completion.mb_instr_overrun_reg\ : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D_2 : in STD_LOGIC;
     CE : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.count_reg[1]\ : in STD_LOGIC;
+    \Use_Serial_Unified_Completion.count_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[6]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[5]\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_1 : entity is "MB_FDRE_1";
 end module_ads7056_mdm_1_0_MB_FDRE_1;
 
 architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_1 is
+  signal \^sync\ : STD_LOGIC;
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native\ : label is "FDRE_1";
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
+  sync <= \^sync\;
+Dbg_Shift_31_INST_0: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFEFFFFF00000000"
+    )
+        port map (
+      I0 => \^sync\,
+      I1 => \Use_BSCAN.command_reg[5]\,
+      I2 => \Using_FPGA.Native_0\,
+      I3 => Q(0),
+      I4 => \Use_BSCAN.command_reg[0]\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      O => E(0)
+    );
+\Use_Serial_Unified_Completion.mb_instr_error_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2000000000000000"
+    )
+        port map (
+      I0 => \Use_Serial_Unified_Completion.count_reg[1]\,
+      I1 => \Use_Serial_Unified_Completion.count_reg[0]\,
+      I2 => \^sync\,
+      I3 => \Use_BSCAN.command_reg[6]\,
+      I4 => \Use_BSCAN.command_reg[0]\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      O => \Use_Serial_Unified_Completion.mb_instr_error_reg\
+    );
+\Use_Serial_Unified_Completion.mb_instr_overrun_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1000000000000000"
+    )
+        port map (
+      I0 => \Use_Serial_Unified_Completion.count_reg[1]\,
+      I1 => \Use_Serial_Unified_Completion.count_reg[0]\,
+      I2 => \^sync\,
+      I3 => \Use_BSCAN.command_reg[6]\,
+      I4 => \Use_BSCAN.command_reg[0]\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      O => \Use_Serial_Unified_Completion.mb_instr_overrun_reg\
+    );
 \Using_FPGA.Native\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0',
@@ -869,15 +890,69 @@ begin
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => CE,
       D => '1',
-      Q => sync,
-      R => D_0
+      Q => \^sync\,
+      R => D_2
     );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_FDRE_10 is
+entity module_ads7056_mdm_1_0_MB_FDRE_15 is
+  port (
+    Addr : out STD_LOGIC_VECTOR ( 0 to 0 );
+    S : out STD_LOGIC;
+    \Use_Uart.reset_RX_FIFO_reg\ : in STD_LOGIC;
+    data_Exists_I_reg : in STD_LOGIC;
+    O : in STD_LOGIC;
+    S_AXI_ACLK : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
+    bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_15 : entity is "MB_FDRE";
+end module_ads7056_mdm_1_0_MB_FDRE_15;
+
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_15 is
+  signal \^addr\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute box_type : string;
+  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
+begin
+  Addr(0) <= \^addr\(0);
+\Using_FPGA.Native\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '0',
+      IS_D_INVERTED => '0',
+      IS_R_INVERTED => '0'
+    )
+        port map (
+      C => S_AXI_ACLK,
+      CE => data_Exists_I_reg,
+      D => O,
+      Q => \^addr\(0),
+      R => \Use_Uart.reset_RX_FIFO_reg\
+    );
+\Using_FPGA.Native_I1_i_1__2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"55555554AAAAAAAA"
+    )
+        port map (
+      I0 => \^addr\(0),
+      I1 => \Using_FPGA.Native_0\(1),
+      I2 => \Using_FPGA.Native_0\(0),
+      I3 => \Using_FPGA.Native_0\(2),
+      I4 => \Use_UART.fifo_Write_reg\,
+      I5 => bus2ip_rdce(0),
+      O => S
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity module_ads7056_mdm_1_0_MB_FDRE_17 is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     S : out STD_LOGIC;
@@ -890,10 +965,10 @@ entity module_ads7056_mdm_1_0_MB_FDRE_10 is
     bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_10 : entity is "MB_FDRE";
-end module_ads7056_mdm_1_0_MB_FDRE_10;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_17 : entity is "MB_FDRE";
+end module_ads7056_mdm_1_0_MB_FDRE_17;
 
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_10 is
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_17 is
   signal \^using_fpga.native_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
@@ -931,7 +1006,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_FDRE_12 is
+entity module_ads7056_mdm_1_0_MB_FDRE_19 is
   port (
     Addr : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -945,9 +1020,9 @@ entity module_ads7056_mdm_1_0_MB_FDRE_12 is
     S_AXI_ACLK : in STD_LOGIC;
     \Use_UART.tdo_reg_reg[3]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
     Data_Out : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \command_reg[0]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
     bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -955,18 +1030,18 @@ entity module_ads7056_mdm_1_0_MB_FDRE_12 is
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_12 : entity is "MB_FDRE";
-end module_ads7056_mdm_1_0_MB_FDRE_12;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_19 : entity is "MB_FDRE";
+end module_ads7056_mdm_1_0_MB_FDRE_19;
 
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_12 is
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_19 is
   signal \^addr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \buffer_Empty__2\ : STD_LOGIC;
   signal \^p_0_in\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of data_Exists_I_i_2 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \s_axi_rdata_i[1]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of data_Exists_I_i_2 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \s_axi_rdata_i[1]_i_2\ : label is "soft_lutpair9";
 begin
   Addr(0) <= \^addr\(0);
   p_0_in <= \^p_0_in\;
@@ -977,10 +1052,10 @@ begin
         port map (
       I0 => \Use_UART.tdo_reg_reg[3]\(0),
       I1 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I2 => \command_reg[0]\,
+      I2 => \Use_BSCAN.command_reg[0]\,
       I3 => \^p_0_in\,
       I4 => Data_Out(0),
-      I5 => \command_reg[0]_0\,
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => D(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.FDRE
@@ -1063,60 +1138,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_FDRE_14 is
-  port (
-    \Using_FPGA.Native_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    LI : out STD_LOGIC;
-    \Use_Uart.reset_RX_FIFO_reg\ : in STD_LOGIC;
-    data_Exists_I_reg : in STD_LOGIC;
-    sum_A_0 : in STD_LOGIC;
-    S_AXI_ACLK : in STD_LOGIC;
-    Addr : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
-    bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_14 : entity is "MB_FDRE";
-end module_ads7056_mdm_1_0_MB_FDRE_14;
-
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_14 is
-  signal \^using_fpga.native_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute box_type : string;
-  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
-begin
-  \Using_FPGA.Native_0\(0) <= \^using_fpga.native_0\(0);
-\Using_FPGA.Native\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0',
-      IS_C_INVERTED => '0',
-      IS_D_INVERTED => '0',
-      IS_R_INVERTED => '0'
-    )
-        port map (
-      C => S_AXI_ACLK,
-      CE => data_Exists_I_reg,
-      D => sum_A_0,
-      Q => \^using_fpga.native_0\(0),
-      R => \Use_Uart.reset_RX_FIFO_reg\
-    );
-\Using_FPGA.Native_i_1__2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"55555554AAAAAAAA"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\(0),
-      I1 => Addr(0),
-      I2 => Addr(2),
-      I3 => Addr(1),
-      I4 => \Use_UART.fifo_Write_reg\,
-      I5 => bus2ip_rdce(0),
-      O => LI
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_FDRE_2 is
   port (
     Addr : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1165,6 +1186,60 @@ begin
       I4 => FIFO_Write,
       I5 => \Use_UART.fifo_Read_reg\,
       O => S
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity module_ads7056_mdm_1_0_MB_FDRE_21 is
+  port (
+    \Using_FPGA.Native_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    LI : out STD_LOGIC;
+    \Use_Uart.reset_RX_FIFO_reg\ : in STD_LOGIC;
+    data_Exists_I_reg : in STD_LOGIC;
+    sum_A_0 : in STD_LOGIC;
+    S_AXI_ACLK : in STD_LOGIC;
+    Addr : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
+    bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_21 : entity is "MB_FDRE";
+end module_ads7056_mdm_1_0_MB_FDRE_21;
+
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_21 is
+  signal \^using_fpga.native_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  attribute box_type : string;
+  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
+begin
+  \Using_FPGA.Native_0\(0) <= \^using_fpga.native_0\(0);
+\Using_FPGA.Native\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '0',
+      IS_D_INVERTED => '0',
+      IS_R_INVERTED => '0'
+    )
+        port map (
+      C => S_AXI_ACLK,
+      CE => data_Exists_I_reg,
+      D => sum_A_0,
+      Q => \^using_fpga.native_0\(0),
+      R => \Use_Uart.reset_RX_FIFO_reg\
+    );
+\Using_FPGA.Native_i_1__2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"55555554AAAAAAAA"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\(0),
+      I1 => Addr(0),
+      I2 => Addr(2),
+      I3 => Addr(1),
+      I4 => \Use_UART.fifo_Write_reg\,
+      I5 => bus2ip_rdce(0),
+      O => LI
     );
 end STRUCTURE;
 library IEEE;
@@ -1239,9 +1314,9 @@ entity module_ads7056_mdm_1_0_MB_FDRE_5 is
     S_AXI_ACLK : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
     Data_Out : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \command_reg[0]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     FIFO_Write : in STD_LOGIC;
     \Use_UART.fifo_Read_reg\ : in STD_LOGIC;
@@ -1260,8 +1335,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_5 is
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_Exists_I_i_2__0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \s_axi_rdata_i[3]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \data_Exists_I_i_2__0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \s_axi_rdata_i[3]_i_2\ : label is "soft_lutpair10";
 begin
   Addr(0) <= \^addr\(0);
   tx_Buffer_Full <= \^tx_buffer_full\;
@@ -1272,10 +1347,10 @@ begin
         port map (
       I0 => Q(0),
       I1 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I2 => \command_reg[0]\,
+      I2 => \Use_BSCAN.command_reg[0]\,
       I3 => \^tx_buffer_full\,
       I4 => Data_Out(0),
-      I5 => \command_reg[0]_0\,
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => D(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.FDRE
@@ -1410,60 +1485,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_FDRE_8 is
-  port (
-    Addr : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S : out STD_LOGIC;
-    \Use_Uart.reset_RX_FIFO_reg\ : in STD_LOGIC;
-    data_Exists_I_reg : in STD_LOGIC;
-    O : in STD_LOGIC;
-    S_AXI_ACLK : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
-    bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_FDRE_8 : entity is "MB_FDRE";
-end module_ads7056_mdm_1_0_MB_FDRE_8;
-
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_FDRE_8 is
-  signal \^addr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute box_type : string;
-  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
-begin
-  Addr(0) <= \^addr\(0);
-\Using_FPGA.Native\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0',
-      IS_C_INVERTED => '0',
-      IS_D_INVERTED => '0',
-      IS_R_INVERTED => '0'
-    )
-        port map (
-      C => S_AXI_ACLK,
-      CE => data_Exists_I_reg,
-      D => O,
-      Q => \^addr\(0),
-      R => \Use_Uart.reset_RX_FIFO_reg\
-    );
-\Using_FPGA.Native_I1_i_1__2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"55555554AAAAAAAA"
-    )
-        port map (
-      I0 => \^addr\(0),
-      I1 => \Using_FPGA.Native_0\(1),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => \Using_FPGA.Native_0\(2),
-      I4 => \Use_UART.fifo_Write_reg\,
-      I5 => bus2ip_rdce(0),
-      O => S
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_FDRSE is
   port (
     Ext_BRK : out STD_LOGIC;
@@ -1592,7 +1613,85 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11 is
+entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16 is
+  port (
+    LO : out STD_LOGIC;
+    O : out STD_LOGIC;
+    S : in STD_LOGIC;
+    Addr : in STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    lopt : out STD_LOGIC;
+    lopt_1 : in STD_LOGIC;
+    lopt_2 : in STD_LOGIC;
+    lopt_3 : out STD_LOGIC;
+    lopt_4 : in STD_LOGIC;
+    lopt_5 : in STD_LOGIC;
+    lopt_6 : out STD_LOGIC;
+    lopt_7 : out STD_LOGIC;
+    lopt_8 : out STD_LOGIC;
+    lopt_9 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16 : entity is "MB_MUXCY_XORCY";
+end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16;
+
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16 is
+  signal \^lopt_1\ : STD_LOGIC;
+  signal lopt_10 : STD_LOGIC;
+  signal \^lopt_2\ : STD_LOGIC;
+  signal \^lopt_3\ : STD_LOGIC;
+  signal \^lopt_4\ : STD_LOGIC;
+  signal \^lopt_5\ : STD_LOGIC;
+  signal \^lopt_6\ : STD_LOGIC;
+  signal \^lopt_7\ : STD_LOGIC;
+  signal \^lopt_8\ : STD_LOGIC;
+  signal \^lopt_9\ : STD_LOGIC;
+  signal \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native_I1_CARRY4\ : label is "(MUXCY,XORCY)";
+  attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of \Using_FPGA.Native_I1_CARRY4\ : label is "LO:O";
+  attribute box_type : string;
+  attribute box_type of \Using_FPGA.Native_I1_CARRY4\ : label is "PRIMITIVE";
+begin
+  \^lopt_2\ <= lopt_1;
+  \^lopt_3\ <= lopt_2;
+  \^lopt_5\ <= lopt_4;
+  \^lopt_6\ <= lopt_5;
+  lopt <= \^lopt_1\;
+  lopt_10 <= lopt_9;
+  lopt_3 <= \^lopt_4\;
+  lopt_6 <= \^lopt_7\;
+  lopt_7 <= \^lopt_8\;
+  lopt_8 <= \^lopt_9\;
+\Using_FPGA.Native_I1_CARRY4\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\(3),
+      CO(2) => \^lopt_4\,
+      CO(1) => \^lopt_1\,
+      CO(0) => LO,
+      CYINIT => CI,
+      DI(3) => \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\(3),
+      DI(2) => \^lopt_5\,
+      DI(1) => \^lopt_2\,
+      DI(0) => Addr(0),
+      O(3) => \^lopt_9\,
+      O(2) => \^lopt_8\,
+      O(1) => \^lopt_7\,
+      O(0) => O,
+      S(3) => lopt_10,
+      S(2) => \^lopt_6\,
+      S(1) => \^lopt_3\,
+      S(0) => S
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18 is
   port (
     LO : out STD_LOGIC;
     O : out STD_LOGIC;
@@ -1603,10 +1702,10 @@ entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11 is
     lopt_1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11 : entity is "MB_MUXCY_XORCY";
-end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18 : entity is "MB_MUXCY_XORCY";
+end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18;
 
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11 is
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18 is
   signal \^lo\ : STD_LOGIC;
   signal \^o\ : STD_LOGIC;
 begin
@@ -1619,7 +1718,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13 is
+entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20 is
   port (
     LO : out STD_LOGIC;
     O : out STD_LOGIC;
@@ -1630,10 +1729,10 @@ entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13 is
     lopt_1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13 : entity is "MB_MUXCY_XORCY";
-end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20 : entity is "MB_MUXCY_XORCY";
+end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20;
 
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13 is
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20 is
   signal \^lo\ : STD_LOGIC;
   signal \^o\ : STD_LOGIC;
 begin
@@ -1700,87 +1799,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9 is
-  port (
-    LO : out STD_LOGIC;
-    O : out STD_LOGIC;
-    S : in STD_LOGIC;
-    Addr : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    lopt : out STD_LOGIC;
-    lopt_1 : in STD_LOGIC;
-    lopt_2 : in STD_LOGIC;
-    lopt_3 : out STD_LOGIC;
-    lopt_4 : in STD_LOGIC;
-    lopt_5 : in STD_LOGIC;
-    lopt_6 : out STD_LOGIC;
-    lopt_7 : out STD_LOGIC;
-    lopt_8 : out STD_LOGIC;
-    lopt_9 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9 : entity is "MB_MUXCY_XORCY";
-end module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9;
-
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9 is
-  signal \^lopt_1\ : STD_LOGIC;
-  signal lopt_10 : STD_LOGIC;
-  signal \^lopt_2\ : STD_LOGIC;
-  signal \^lopt_3\ : STD_LOGIC;
-  signal \^lopt_4\ : STD_LOGIC;
-  signal \^lopt_5\ : STD_LOGIC;
-  signal \^lopt_6\ : STD_LOGIC;
-  signal \^lopt_7\ : STD_LOGIC;
-  signal \^lopt_8\ : STD_LOGIC;
-  signal \^lopt_9\ : STD_LOGIC;
-  signal \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native_I1_CARRY4\ : label is "(MUXCY,XORCY)";
-  attribute XILINX_TRANSFORM_PINMAP : string;
-  attribute XILINX_TRANSFORM_PINMAP of \Using_FPGA.Native_I1_CARRY4\ : label is "LO:O";
-  attribute box_type : string;
-  attribute box_type of \Using_FPGA.Native_I1_CARRY4\ : label is "PRIMITIVE";
-begin
-  \^lopt_2\ <= lopt_1;
-  \^lopt_3\ <= lopt_2;
-  \^lopt_5\ <= lopt_4;
-  \^lopt_6\ <= lopt_5;
-  lopt <= \^lopt_1\;
-  lopt_10 <= lopt_9;
-  lopt_3 <= \^lopt_4\;
-  lopt_6 <= \^lopt_7\;
-  lopt_7 <= \^lopt_8\;
-  lopt_8 <= \^lopt_9\;
-\Using_FPGA.Native_I1_CARRY4\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\(3),
-      CO(2) => \^lopt_4\,
-      CO(1) => \^lopt_1\,
-      CO(0) => LO,
-      CYINIT => CI,
-      DI(3) => \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\(3),
-      DI(2) => \^lopt_5\,
-      DI(1) => \^lopt_2\,
-      DI(0) => Addr(0),
-      O(3) => \^lopt_9\,
-      O(2) => \^lopt_8\,
-      O(1) => \^lopt_7\,
-      O(0) => O,
-      S(3) => lopt_10,
-      S(2) => \^lopt_6\,
-      S(1) => \^lopt_3\,
-      S(0) => S
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_SRL16E is
   port (
-    \Use_UART.fifo_Din_reg[0]\ : out STD_LOGIC;
+    sel_n_reg : out STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC
   );
@@ -1807,7 +1828,7 @@ begin
       CE => '0',
       CLK => \Use_BSCAN.PORT_Selector_reg[0]\,
       D => '0',
-      Q => \Use_UART.fifo_Din_reg[0]\
+      Q => sel_n_reg
     );
 end STRUCTURE;
 library IEEE;
@@ -1844,535 +1865,6 @@ begin
       CLK => \Use_BSCAN.PORT_Selector_reg[0]\,
       D => '0',
       Q => config_TDO_2
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11\ is
-  signal Data_Out : STD_LOGIC_VECTOR ( 2 to 2 );
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_UART.tdo_reg[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8F88"
-    )
-        port map (
-      I0 => Data_Out(2),
-      I1 => \command_reg[0]\,
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I3 => Q(0),
-      O => D(0)
-    );
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => Data_Out(2)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13\ is
-  signal Data_Out : STD_LOGIC_VECTOR ( 3 to 3 );
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_UART.tdo_reg[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8F88"
-    )
-        port map (
-      I0 => Data_Out(3),
-      I1 => \command_reg[0]\,
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I3 => Q(0),
-      O => D(0)
-    );
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => Data_Out(3)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15\ is
-  port (
-    \Use_UART.tdo_reg_reg[4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => \Use_UART.tdo_reg_reg[4]\(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17\ is
-  port (
-    \Use_UART.tdo_reg_reg[5]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => \Use_UART.tdo_reg_reg[5]\(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19\ is
-  port (
-    Data_Out : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => Data_Out(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    data_Exists_I_reg : in STD_LOGIC;
-    \command_reg[0]_0\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21\ is
-  signal Data_Out : STD_LOGIC_VECTOR ( 7 to 7 );
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_UART.tdo_reg[7]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF222F222F222"
-    )
-        port map (
-      I0 => Q(0),
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I2 => \command_reg[0]\,
-      I3 => data_Exists_I_reg,
-      I4 => Data_Out(7),
-      I5 => \command_reg[0]_0\,
-      O => D(0)
-    );
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => Data_Out(7)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23\ is
-  port (
-    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23\ is
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => Q(0),
-      Q => RX_Data(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -2422,12 +1914,12 @@ entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized5\ is
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[2]\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \command_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \command_reg[6]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Use_BSCAN.command_reg[6]\ : in STD_LOGIC;
     Dbg_TDO_0 : in STD_LOGIC;
-    \command_reg[5]\ : in STD_LOGIC;
-    \command_reg[5]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[5]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[5]_0\ : in STD_LOGIC;
     config_TDO_2 : in STD_LOGIC;
     Q0_out : in STD_LOGIC;
     \shift_Count_reg[0]\ : in STD_LOGIC
@@ -2452,9 +1944,9 @@ begin
         port map (
       I0 => \Use_BSCAN.PORT_Selector_reg[2]\,
       I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\(0),
-      I2 => \command_reg[0]\,
-      I3 => \command_reg[0]_0\(2),
-      I4 => \command_reg[6]\,
+      I2 => \Use_BSCAN.command_reg[0]\,
+      I3 => \Use_BSCAN.command_reg[0]_0\(2),
+      I4 => \Use_BSCAN.command_reg[6]\,
       I5 => \Use_E2.BSCANE2_I_i_5_n_0\,
       O => tdo
     );
@@ -2464,22 +1956,22 @@ begin
     )
         port map (
       I0 => Dbg_TDO_0,
-      I1 => \command_reg[0]_0\(0),
-      I2 => \command_reg[5]\,
+      I1 => \Use_BSCAN.command_reg[0]_0\(0),
+      I2 => \Use_BSCAN.command_reg[5]\,
       I3 => \Use_E2.BSCANE2_I_i_8_n_0\,
-      I4 => \command_reg[5]_0\,
+      I4 => \Use_BSCAN.command_reg[5]_0\,
       O => \Use_E2.BSCANE2_I_i_5_n_0\
     );
 \Use_E2.BSCANE2_I_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CFCFAFA0C0C0AFA0"
+      INIT => X"CACAFFF0CACA0F00"
     )
         port map (
       I0 => ID_TDO_2,
       I1 => config_TDO_2,
-      I2 => Q(4),
+      I2 => \Use_BSCAN.command_reg[0]_0\(1),
       I3 => Q0_out,
-      I4 => \command_reg[0]_0\(1),
+      I4 => Q(4),
       I5 => \shift_Count_reg[0]\,
       O => \Use_E2.BSCANE2_I_i_8_n_0\
     );
@@ -2510,7 +2002,7 @@ entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7\ is
     S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
     Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
     S_AXI_ACLK : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7\ : entity is "MB_SRL16E";
@@ -2530,7 +2022,7 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => \command_reg[0]\,
+      I0 => \Use_BSCAN.command_reg[0]\,
       I1 => Data_Out(0),
       O => D(0)
     );
@@ -2554,7 +2046,241 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\ is
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10\ is
+  port (
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10\ is
+  signal Data_Out : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_UART.tdo_reg[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8F88"
+    )
+        port map (
+      I0 => Data_Out(3),
+      I1 => \Use_BSCAN.command_reg[0]\,
+      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
+      I3 => Q(0),
+      O => D(0)
+    );
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => Data_Out(3)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11\ is
+  port (
+    \Use_UART.tdo_reg_reg[4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => \Use_UART.tdo_reg_reg[4]\(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12\ is
+  port (
+    \Use_UART.tdo_reg_reg[5]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => \Use_UART.tdo_reg_reg[5]\(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13\ is
+  port (
+    Data_Out : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => Data_Out(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14\ is
+  port (
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    data_Exists_I_reg : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14\ is
+  signal Data_Out : STD_LOGIC_VECTOR ( 7 to 7 );
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_UART.tdo_reg[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFF222F222F222"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]\,
+      I2 => \Use_BSCAN.command_reg[0]\,
+      I3 => data_Exists_I_reg,
+      I4 => Data_Out(7),
+      I5 => \Use_BSCAN.command_reg[0]_0\,
+      O => D(0)
+    );
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => Data_Out(7)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23\ is
   port (
     RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
     CI : in STD_LOGIC;
@@ -2563,10 +2289,10 @@ entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\ is
     S_AXI_ACLK : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23\;
 
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\ is
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23\ is
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -2594,62 +2320,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9\ is
-  port (
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CI : in STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
-    S_AXI_ACLK : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9\;
-
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9\ is
-  signal Data_Out : STD_LOGIC_VECTOR ( 1 to 1 );
-  attribute box_type : string;
-  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
-  attribute srl_bus_name : string;
-  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
-  attribute srl_name : string;
-  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[1].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
-begin
-\Use_UART.tdo_reg[1]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8F88"
-    )
-        port map (
-      I0 => Data_Out(1),
-      I1 => \command_reg[0]\,
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I3 => Q(0),
-      O => D(0)
-    );
-\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000",
-      IS_CLK_INVERTED => '0'
-    )
-        port map (
-      A0 => Addr(0),
-      A1 => Addr(1),
-      A2 => Addr(2),
-      A3 => Addr(3),
-      CE => CI,
-      CLK => S_AXI_ACLK,
-      D => S_AXI_WDATA(0),
-      Q => Data_Out(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\ is
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24\ is
   port (
     RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
     CI : in STD_LOGIC;
@@ -2658,10 +2329,10 @@ entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\ is
     S_AXI_ACLK : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\ : entity is "MB_SRL16E";
-end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24\;
 
-architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\ is
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24\ is
   attribute box_type : string;
   attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
@@ -2689,6 +2360,356 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[3].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[4].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[5].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[6].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30\ is
+  port (
+    RX_Data : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30\ is
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/FIFO_RAM[7].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => Q(0),
+      Q => RX_Data(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8\ is
+  port (
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8\ is
+  signal Data_Out : STD_LOGIC_VECTOR ( 1 to 1 );
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[1].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_UART.tdo_reg[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8F88"
+    )
+        port map (
+      I0 => Data_Out(1),
+      I1 => \Use_BSCAN.command_reg[0]\,
+      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
+      I3 => Q(0),
+      O => D(0)
+    );
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => Data_Out(1)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9\ is
+  port (
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    CI : in STD_LOGIC;
+    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Addr : in STD_LOGIC_VECTOR ( 0 to 3 );
+    S_AXI_ACLK : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9\ : entity is "MB_SRL16E";
+end \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9\;
+
+architecture STRUCTURE of \module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9\ is
+  signal Data_Out : STD_LOGIC_VECTOR ( 2 to 2 );
+  attribute box_type : string;
+  attribute box_type of \Use_unisim.MB_SRL16E_I1\ : label is "PRIMITIVE";
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM ";
+  attribute srl_name : string;
+  attribute srl_name of \Use_unisim.MB_SRL16E_I1\ : label is "U0/\MDM_Core_I1/JTAG_CONTROL_I/Use_UART.TX_FIFO_I/FIFO_RAM[2].D16.SRL16E_I/Use_unisim.MB_SRL16E_I1 ";
+begin
+\Use_UART.tdo_reg[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8F88"
+    )
+        port map (
+      I0 => Data_Out(2),
+      I1 => \Use_BSCAN.command_reg[0]\,
+      I2 => \Use_BSCAN.PORT_Selector_reg[0]\,
+      I3 => Q(0),
+      O => D(0)
+    );
+\Use_unisim.MB_SRL16E_I1\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000",
+      IS_CLK_INVERTED => '0'
+    )
+        port map (
+      A0 => Addr(0),
+      A1 => Addr(1),
+      A2 => Addr(2),
+      A3 => Addr(3),
+      CE => CI,
+      CLK => S_AXI_ACLK,
+      D => S_AXI_WDATA(0),
+      Q => Data_Out(2)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity module_ads7056_mdm_1_0_MB_XORCY is
   port (
     sum_A_0 : out STD_LOGIC;
@@ -2710,7 +2731,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity module_ads7056_mdm_1_0_MB_XORCY_15 is
+entity module_ads7056_mdm_1_0_MB_XORCY_22 is
   port (
     sum_A_0 : out STD_LOGIC;
     LI : in STD_LOGIC;
@@ -2718,10 +2739,10 @@ entity module_ads7056_mdm_1_0_MB_XORCY_15 is
     lopt : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_XORCY_15 : entity is "MB_XORCY";
-end module_ads7056_mdm_1_0_MB_XORCY_15;
+  attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MB_XORCY_22 : entity is "MB_XORCY";
+end module_ads7056_mdm_1_0_MB_XORCY_22;
 
-architecture STRUCTURE of module_ads7056_mdm_1_0_MB_XORCY_15 is
+architecture STRUCTURE of module_ads7056_mdm_1_0_MB_XORCY_22 is
   signal \^sum_a_0\ : STD_LOGIC;
 begin
   \^sum_a_0\ <= lopt;
@@ -2798,9 +2819,9 @@ entity module_ads7056_mdm_1_0_SRL_FIFO is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Use_UART.tdo_reg_reg[3]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
     Data_Out : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \command_reg[0]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC;
     \Use_UART.fifo_Write_reg\ : in STD_LOGIC;
     bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 );
     Bus_RNW_reg : in STD_LOGIC;
@@ -2833,7 +2854,7 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_SRL_FIFO is
   signal sum_A_3 : STD_LOGIC;
 begin
   \Using_FPGA.Native\ <= \^using_fpga.native\;
-\Addr_Counters[0].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_8
+\Addr_Counters[0].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_15
      port map (
       Addr(0) => Addr(0),
       O => sum_A_3,
@@ -2847,7 +2868,7 @@ begin
       bus2ip_rdce(0) => bus2ip_rdce(0),
       data_Exists_I_reg => \^using_fpga.native\
     );
-\Addr_Counters[0].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_9
+\Addr_Counters[0].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_16
      port map (
       Addr(0) => Addr(0),
       CI => CI,
@@ -2865,7 +2886,7 @@ begin
       lopt_8 => lopt_4,
       lopt_9 => LI
     );
-\Addr_Counters[1].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_10
+\Addr_Counters[1].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_17
      port map (
       Addr(2) => Addr(0),
       Addr(1) => Addr(2),
@@ -2879,7 +2900,7 @@ begin
       bus2ip_rdce(0) => bus2ip_rdce(0),
       data_Exists_I_reg => \^using_fpga.native\
     );
-\Addr_Counters[1].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_11
+\Addr_Counters[1].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_18
      port map (
       CI => addr_cy_2,
       LO => addr_cy_1,
@@ -2889,7 +2910,7 @@ begin
       lopt => lopt,
       lopt_1 => lopt_2
     );
-\Addr_Counters[2].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_12
+\Addr_Counters[2].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_19
      port map (
       Addr(0) => Addr(2),
       Bus_RNW_reg => Bus_RNW_reg,
@@ -2901,6 +2922,8 @@ begin
       S => S1_out,
       S_AXI_ACLK => S_AXI_ACLK,
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]\,
+      \Use_BSCAN.command_reg[0]_0\ => \Use_BSCAN.command_reg[0]_0\,
       \Use_UART.fifo_Write_reg\ => \Use_UART.fifo_Write_reg\,
       \Use_UART.tdo_reg_reg[3]\(0) => \Use_UART.tdo_reg_reg[3]\(1),
       \Use_Uart.reset_RX_FIFO_reg\ => \Use_Uart.reset_RX_FIFO_reg\,
@@ -2908,13 +2931,11 @@ begin
       \Using_FPGA.Native_0\(1) => Addr(1),
       \Using_FPGA.Native_0\(0) => Addr(3),
       bus2ip_rdce(0) => bus2ip_rdce(0),
-      \command_reg[0]\ => \command_reg[0]\,
-      \command_reg[0]_0\ => \command_reg[0]_0\,
       data_Exists_I_reg => \Addr_Counters[2].FDRE_I_n_5\,
       data_Exists_I_reg_0 => \^using_fpga.native\,
       p_0_in => p_0_in
     );
-\Addr_Counters[2].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_13
+\Addr_Counters[2].Used_MuxCY.MUXCY_L_I\: entity work.module_ads7056_mdm_1_0_MB_MUXCY_XORCY_20
      port map (
       Addr(0) => Addr(2),
       CI => addr_cy_1,
@@ -2924,7 +2945,7 @@ begin
       lopt => lopt_1,
       lopt_1 => lopt_3
     );
-\Addr_Counters[3].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_14
+\Addr_Counters[3].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_21
      port map (
       Addr(2) => Addr(0),
       Addr(1) => Addr(1),
@@ -2938,14 +2959,14 @@ begin
       data_Exists_I_reg => \^using_fpga.native\,
       sum_A_0 => sum_A_0
     );
-\Addr_Counters[3].No_MuxCY.XORCY_I\: entity work.module_ads7056_mdm_1_0_MB_XORCY_15
+\Addr_Counters[3].No_MuxCY.XORCY_I\: entity work.module_ads7056_mdm_1_0_MB_XORCY_22
      port map (
       LI => LI,
       LO => addr_cy_0,
       lopt => lopt_4,
       sum_A_0 => sum_A_0
     );
-\FIFO_RAM[0].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_16\
+\FIFO_RAM[0].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_23\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2953,7 +2974,7 @@ begin
       RX_Data(0) => RX_Data(0),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[1].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized9_17\
+\FIFO_RAM[1].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_24\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2961,7 +2982,7 @@ begin
       RX_Data(0) => RX_Data(1),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[2].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized11_18\
+\FIFO_RAM[2].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_25\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2969,7 +2990,7 @@ begin
       RX_Data(0) => RX_Data(2),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[3].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized13_19\
+\FIFO_RAM[3].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_26\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2977,7 +2998,7 @@ begin
       RX_Data(0) => RX_Data(3),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[4].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized15_20\
+\FIFO_RAM[4].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_27\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2985,7 +3006,7 @@ begin
       RX_Data(0) => RX_Data(4),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[5].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized17_21\
+\FIFO_RAM[5].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_28\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -2993,7 +3014,7 @@ begin
       RX_Data(0) => RX_Data(5),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[6].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized19_22\
+\FIFO_RAM[6].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_29\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3001,7 +3022,7 @@ begin
       RX_Data(0) => RX_Data(6),
       S_AXI_ACLK => S_AXI_ACLK
     );
-\FIFO_RAM[7].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized21_23\
+\FIFO_RAM[7].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_30\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3016,10 +3037,10 @@ begin
         port map (
       I0 => \Use_UART.tdo_reg_reg[3]\(0),
       I1 => \Use_BSCAN.PORT_Selector_reg[0]\,
-      I2 => \command_reg[0]\,
+      I2 => \Use_BSCAN.command_reg[0]\,
       I3 => \^using_fpga.native\,
       I4 => Data_Out(0),
-      I5 => \command_reg[0]_0\,
+      I5 => \Use_BSCAN.command_reg[0]_0\,
       O => D(0)
     );
 data_Exists_I_reg: unisim.vcomponents.FDRE
@@ -3051,8 +3072,8 @@ entity module_ads7056_mdm_1_0_SRL_FIFO_0 is
     S_AXI_WDATA : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]\ : in STD_LOGIC;
-    \command_reg[0]_0\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
+    \Use_BSCAN.command_reg[0]_0\ : in STD_LOGIC;
     FIFO_Write : in STD_LOGIC;
     \Use_UART.fifo_Read_reg\ : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
@@ -3089,8 +3110,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_SRL_FIFO_0 is
   signal sum_A_2 : STD_LOGIC;
   signal sum_A_3 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Interrupt_INST_0 : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of Interrupt_INST_0 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_2__0\ : label is "soft_lutpair11";
 begin
   \Using_FPGA.Native\ <= \^using_fpga.native\;
 \Addr_Counters[0].FDRE_I\: entity work.module_ads7056_mdm_1_0_MB_FDRE_2
@@ -3163,13 +3184,13 @@ begin
       S => S1_out,
       S_AXI_ACLK => S_AXI_ACLK,
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]\,
+      \Use_BSCAN.command_reg[0]_0\ => \Use_BSCAN.command_reg[0]_0\,
       \Use_UART.fifo_Read_reg\ => \Use_UART.fifo_Read_reg\,
       \Use_Uart.reset_TX_FIFO_reg\ => \Use_Uart.reset_TX_FIFO_reg\,
       \Using_FPGA.Native_0\(2) => Addr(0),
       \Using_FPGA.Native_0\(1) => Addr(1),
       \Using_FPGA.Native_0\(0) => Addr(3),
-      \command_reg[0]\ => \command_reg[0]\,
-      \command_reg[0]_0\ => \command_reg[0]_0\,
       data_Exists_I_reg => \Addr_Counters[2].FDRE_I_n_5\,
       data_Exists_I_reg_0 => \^using_fpga.native\,
       \out\ => \out\,
@@ -3213,9 +3234,9 @@ begin
       D(0) => D(5),
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(7),
-      \command_reg[0]\ => \command_reg[0]_0\
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]_0\
     );
-\FIFO_RAM[1].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized9\
+\FIFO_RAM[1].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_8\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3224,9 +3245,9 @@ begin
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(6),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
-      \command_reg[0]\ => \command_reg[0]_0\
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]_0\
     );
-\FIFO_RAM[2].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized11\
+\FIFO_RAM[2].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_9\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3235,9 +3256,9 @@ begin
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(5),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
-      \command_reg[0]\ => \command_reg[0]_0\
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]_0\
     );
-\FIFO_RAM[3].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized13\
+\FIFO_RAM[3].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_10\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3246,9 +3267,9 @@ begin
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(4),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
-      \command_reg[0]\ => \command_reg[0]_0\
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]_0\
     );
-\FIFO_RAM[4].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized15\
+\FIFO_RAM[4].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_11\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3256,7 +3277,7 @@ begin
       S_AXI_WDATA(0) => S_AXI_WDATA(3),
       \Use_UART.tdo_reg_reg[4]\(0) => \Use_UART.tdo_reg_reg[4]\(1)
     );
-\FIFO_RAM[5].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized17\
+\FIFO_RAM[5].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_12\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3264,7 +3285,7 @@ begin
       S_AXI_WDATA(0) => S_AXI_WDATA(2),
       \Use_UART.tdo_reg_reg[5]\(0) => \Use_UART.tdo_reg_reg[4]\(0)
     );
-\FIFO_RAM[6].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized19\
+\FIFO_RAM[6].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_13\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3272,7 +3293,7 @@ begin
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(1)
     );
-\FIFO_RAM[7].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized21\
+\FIFO_RAM[7].D16.SRL16E_I\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized7_14\
      port map (
       Addr(0 to 3) => Addr(0 to 3),
       CI => CI,
@@ -3281,8 +3302,8 @@ begin
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(0) => S_AXI_WDATA(0),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
-      \command_reg[0]\ => \command_reg[0]\,
-      \command_reg[0]_0\ => \command_reg[0]_0\,
+      \Use_BSCAN.command_reg[0]\ => \Use_BSCAN.command_reg[0]\,
+      \Use_BSCAN.command_reg[0]_0\ => \Use_BSCAN.command_reg[0]_0\,
       data_Exists_I_reg => \^using_fpga.native\
     );
 Interrupt_INST_0: unisim.vcomponents.LUT4
@@ -3385,21 +3406,21 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_address_decoder is
   signal \^s_axi_rresp_i_reg[1]_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of Bus_RNW_reg_i_1 : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of S_AXI_ARREADY_INST_0 : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of S_AXI_WREADY_INST_0 : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \Use_Uart.clear_Ext_BRK_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \Use_Uart.enable_interrupts_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \Use_Uart.reset_RX_FIFO_i_2\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of S_AXI_ARREADY_INST_0 : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of S_AXI_WREADY_INST_0 : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \Use_Uart.clear_Ext_BRK_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \Use_Uart.enable_interrupts_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \Use_Uart.reset_RX_FIFO_i_2\ : label is "soft_lutpair26";
   attribute SOFT_HLUTNM of \Use_Uart.reset_TX_FIFO_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_I1_i_3\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_I1_i_3__0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \s_axi_rdata_i[0]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \s_axi_rdata_i[5]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s_axi_rdata_i[6]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s_axi_rresp_i[1]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_I1_i_3\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_I1_i_3__0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \Using_FPGA.Native_i_1__1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s_axi_rdata_i[0]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s_axi_rdata_i[5]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s_axi_rdata_i[7]_i_2\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s_axi_rresp_i[1]_i_1\ : label is "soft_lutpair23";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -3778,12 +3799,12 @@ entity module_ads7056_mdm_1_0_JTAG_CONTROL is
     Debug_SYS_Rst : out STD_LOGIC;
     Dbg_Rst_0 : out STD_LOGIC;
     Ext_BRK : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     tdo : out STD_LOGIC;
     tx_Buffer_Full : out STD_LOGIC;
     p_0_in : out STD_LOGIC;
     \Use_Serial_Unified_Completion.completion_block_reg_0\ : out STD_LOGIC;
     \p_31_out__0\ : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     Dbg_Reg_En_0 : out STD_LOGIC_VECTOR ( 0 to 7 );
     \Use_Serial_Unified_Completion.count_reg[4]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     tx_Buffer_Empty : out STD_LOGIC;
@@ -3795,19 +3816,19 @@ entity module_ads7056_mdm_1_0_JTAG_CONTROL is
     S_AXI_ACLK : in STD_LOGIC;
     \Use_Uart.reset_TX_FIFO_reg\ : in STD_LOGIC;
     S_AXI_WDATA : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \Use_Uart.clear_Ext_BRK_reg\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_0\ : in STD_LOGIC;
+    \Use_Uart.clear_Ext_BRK_reg\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[2]\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Dbg_TDO_0 : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_1\ : in STD_LOGIC;
     sel : in STD_LOGIC;
+    Scan_Reset_Sel : in STD_LOGIC;
+    Scan_Reset : in STD_LOGIC;
     FIFO_Write : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\ : in STD_LOGIC;
     bus2ip_rdce : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Scan_Reset : in STD_LOGIC;
-    Scan_Reset_Sel : in STD_LOGIC;
     Q_0 : in STD_LOGIC;
     enable_interrupts : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC;
@@ -3815,7 +3836,7 @@ entity module_ads7056_mdm_1_0_JTAG_CONTROL is
     \Use_BSCAN.PORT_Selector_reg[0]_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \command_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_BSCAN.command_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.count_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -3829,24 +3850,30 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   signal A3 : STD_LOGIC;
   signal \^ar\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal CE : STD_LOGIC;
-  signal D_0 : STD_LOGIC;
+  signal D_2 : STD_LOGIC;
   signal Data_Out : STD_LOGIC_VECTOR ( 4 to 5 );
   signal Dbg_Shift_31_INST_0_i_1_n_0 : STD_LOGIC;
   signal Dbg_Shift_31_INST_0_i_3_n_0 : STD_LOGIC;
   signal Debug_Rst_i0 : STD_LOGIC;
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal FDC_I_n_15 : STD_LOGIC;
-  signal FDC_I_n_16 : STD_LOGIC;
-  signal FDC_I_n_17 : STD_LOGIC;
-  signal FDC_I_n_18 : STD_LOGIC;
-  signal FDC_I_n_32 : STD_LOGIC;
-  signal FDC_I_n_33 : STD_LOGIC;
-  signal FDC_I_n_34 : STD_LOGIC;
-  signal FDC_I_n_35 : STD_LOGIC;
-  signal FDC_I_n_36 : STD_LOGIC;
-  signal FDC_I_n_37 : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Q0_out : STD_LOGIC;
+  signal Q_1 : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_13\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_14\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_15\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_16\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_19\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_22\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_33\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_34\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_35\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_36\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_37\ : STD_LOGIC;
+  signal \Use_BSCAN.FDC_I_n_38\ : STD_LOGIC;
+  signal \Use_BSCAN.SYNC_FDRE_n_1\ : STD_LOGIC;
+  signal \Use_BSCAN.SYNC_FDRE_n_2\ : STD_LOGIC;
+  signal \Use_BSCAN.command[0]_i_1_n_0\ : STD_LOGIC;
   signal \Use_Config_SRL16E.SRL16E_1_n_0\ : STD_LOGIC;
   signal \Use_E2.BSCANE2_I_i_3_n_0\ : STD_LOGIC;
   signal \Use_E2.BSCANE2_I_i_4_n_0\ : STD_LOGIC;
@@ -3873,7 +3900,7 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   signal \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0\ : STD_LOGIC;
-  signal \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\ : STD_LOGIC;
+  signal \Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.sample_1_reg_n_0_[10]\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.sample_1_reg_n_0_[11]\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.sample_1_reg_n_0_[12]\ : STD_LOGIC;
@@ -3897,14 +3924,11 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   signal \Use_UART.tdo_reg[4]_i_2_n_0\ : STD_LOGIC;
   signal \^using_fpga.native\ : STD_LOGIC;
   signal command : STD_LOGIC_VECTOR ( 0 to 7 );
-  signal \command[0]_i_1_n_0\ : STD_LOGIC;
   signal command_1 : STD_LOGIC_VECTOR ( 0 to 7 );
   signal command_10 : STD_LOGIC;
-  signal command_regn_0_0 : STD_LOGIC;
   signal completion_ctrl : STD_LOGIC;
   signal completion_status : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal config_TDO_2 : STD_LOGIC;
-  signal data_cmd_noblock : STD_LOGIC;
   signal execute : STD_LOGIC;
   signal execute_1 : STD_LOGIC;
   attribute async_reg : string;
@@ -3913,21 +3937,22 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   attribute async_reg of execute_2 : signal is "true";
   signal execute_3 : STD_LOGIC;
   signal fifo_Din : STD_LOGIC_VECTOR ( 0 to 7 );
-  signal fifo_Read1_out : STD_LOGIC;
-  signal fifo_Write3_out : STD_LOGIC;
+  signal fifo_Read2_out : STD_LOGIC;
+  signal fifo_Write4_out : STD_LOGIC;
   signal mb_instr_overrun : STD_LOGIC;
-  signal p_0_in_2 : STD_LOGIC;
+  signal p_0_in_4 : STD_LOGIC;
   signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 5 downto 1 );
   signal \p_0_in__1\ : STD_LOGIC_VECTOR ( 4 downto 1 );
   signal p_1_in : STD_LOGIC_VECTOR ( 14 downto 0 );
-  signal p_1_in_1 : STD_LOGIC;
+  signal p_1_in_3 : STD_LOGIC;
   signal p_2_out : STD_LOGIC;
   signal \p_3_out__10\ : STD_LOGIC;
   signal sample : STD_LOGIC_VECTOR ( 15 downto 13 );
   attribute async_reg of sample : signal is "true";
   signal sample_1 : STD_LOGIC;
   signal sel_n : STD_LOGIC;
-  signal sel_n_i_1_n_0 : STD_LOGIC;
+  signal sel_n0 : STD_LOGIC;
+  signal sel_reset : STD_LOGIC;
   signal set_Ext_BRK : STD_LOGIC;
   signal \shift_Count_reg__0\ : STD_LOGIC_VECTOR ( 4 to 4 );
   signal \shifting_Data1__0\ : STD_LOGIC;
@@ -3946,19 +3971,19 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   signal tx_buffered_2 : STD_LOGIC;
   attribute async_reg of tx_buffered_2 : signal is "true";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_1 : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_3 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[11]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[12]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[13]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[14]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[4]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[5]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[0]__0_i_4\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[2]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[3]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.mb_data_overrun_i_2\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample_1[15]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_1 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of Dbg_Shift_31_INST_0_i_3 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[10]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[11]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[13]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[14]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[4]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.completion_status[5]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[0]__0_i_4\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[2]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.count[3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.mb_data_overrun_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \Use_Serial_Unified_Completion.sample_1[15]_i_3\ : label is "soft_lutpair13";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \Use_Serial_Unified_Completion.sample_reg[13]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -3971,15 +3996,15 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_JTAG_CONTROL is
   attribute KEEP of \Use_UART.execute_1_reg\ : label is "yes";
   attribute ASYNC_REG_boolean of \Use_UART.execute_2_reg\ : label is std.standard.true;
   attribute KEEP of \Use_UART.execute_2_reg\ : label is "yes";
-  attribute SOFT_HLUTNM of \Use_UART.execute_i_3\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \Use_UART.fifo_Write_i_2\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \Use_UART.tdo_reg[0]_i_4\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \Use_UART.execute_i_3\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \Use_UART.fifo_Write_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \Use_UART.tdo_reg[0]_i_4\ : label is "soft_lutpair17";
   attribute ASYNC_REG_boolean of \Use_UART.tx_buffered_1_reg\ : label is std.standard.true;
   attribute KEEP of \Use_UART.tx_buffered_1_reg\ : label is "yes";
   attribute ASYNC_REG_boolean of \Use_UART.tx_buffered_2_reg\ : label is std.standard.true;
   attribute KEEP of \Use_UART.tx_buffered_2_reg\ : label is "yes";
-  attribute SOFT_HLUTNM of \shift_Count[2]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \shift_Count[3]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \shift_Count[2]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \shift_Count[3]_i_1\ : label is "soft_lutpair15";
 begin
   AR(0) <= \^ar\(0);
   E(0) <= \^e\(0);
@@ -4017,7 +4042,7 @@ Debug_Rst_i_reg: unisim.vcomponents.FDCE
       C => CLK,
       CE => Debug_Rst_i0,
       CLR => \^ar\(0),
-      D => p_1_in_1,
+      D => p_1_in_3,
       Q => Dbg_Rst_0
     );
 Debug_SYS_Rst_i_reg: unisim.vcomponents.FDCE
@@ -4048,84 +4073,202 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       C => CLK,
       CE => Debug_Rst_i0,
       CLR => \^ar\(0),
-      D => p_0_in_2,
+      D => p_0_in_4,
       Q => Ext_NM_BRK
     );
-FDC_I: entity work.module_ads7056_mdm_1_0_MB_FDC_1
+\Use_BSCAN.FDC_I\: entity work.module_ads7056_mdm_1_0_MB_FDC_1
      port map (
       CE => CE,
       CLK => CLK,
       D(9 downto 0) => p_1_in(9 downto 0),
-      D_0 => D_0,
+      D_2 => D_2,
       Dbg_Reg_En_0(0 to 7) => Dbg_Reg_En_0(0 to 7),
       Dbg_TDO_0 => Dbg_TDO_0,
       Debug_Rst_i0 => Debug_Rst_i0,
-      E(0) => \^e\(0),
-      Q(7) => command(0),
-      Q(6) => command(1),
-      Q(5) => command(2),
-      Q(4) => command(3),
-      Q(3) => command(4),
-      Q(2) => command(5),
-      Q(1) => command(6),
-      Q(0) => command(7),
-      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_0\,
-      \Use_BSCAN.PORT_Selector_reg[0]_0\ => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      E(0) => \Use_BSCAN.FDC_I_n_13\,
+      Q(10 downto 0) => completion_status(10 downto 0),
+      Q_1 => Q_1,
+      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      \Use_BSCAN.PORT_Selector_reg[0]_0\ => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       \Use_BSCAN.PORT_Selector_reg[3]\(3 downto 0) => \Use_BSCAN.PORT_Selector_reg[3]\(3 downto 0),
+      \Use_BSCAN.command_reg[0]\(7) => command(0),
+      \Use_BSCAN.command_reg[0]\(6) => command(1),
+      \Use_BSCAN.command_reg[0]\(5) => command(2),
+      \Use_BSCAN.command_reg[0]\(4) => command(3),
+      \Use_BSCAN.command_reg[0]\(3) => command(4),
+      \Use_BSCAN.command_reg[0]\(2) => command(5),
+      \Use_BSCAN.command_reg[0]\(1) => command(6),
+      \Use_BSCAN.command_reg[0]\(0) => command(7),
+      \Use_BSCAN.command_reg[0]_0\ => Dbg_Shift_31_INST_0_i_3_n_0,
+      \Use_BSCAN.command_reg[2]\ => \Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0\,
       \Use_Serial_Unified_Completion.completion_block_reg\ => \Use_Serial_Unified_Completion.completion_block_reg_0\,
-      \Use_Serial_Unified_Completion.completion_block_reg_0\ => FDC_I_n_36,
+      \Use_Serial_Unified_Completion.completion_block_reg_0\ => \Use_BSCAN.FDC_I_n_36\,
       \Use_Serial_Unified_Completion.completion_block_reg_1\ => \Use_Serial_Unified_Completion.completion_block_reg_n_0\,
-      \Use_Serial_Unified_Completion.completion_status_reg[0]\(0) => FDC_I_n_15,
-      \Use_Serial_Unified_Completion.completion_status_reg[10]\(10 downto 0) => completion_status(10 downto 0),
       \Use_Serial_Unified_Completion.completion_status_reg[2]\ => \Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0\,
       \Use_Serial_Unified_Completion.completion_status_reg[3]\ => \Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0\,
       \Use_Serial_Unified_Completion.completion_status_reg[4]\ => \Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0\,
       \Use_Serial_Unified_Completion.completion_status_reg[5]\ => \Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0\,
       \Use_Serial_Unified_Completion.completion_status_reg[7]\ => \Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0\,
-      \Use_Serial_Unified_Completion.count_reg[0]\ => \Use_Serial_Unified_Completion.count_reg_n_0_[0]\,
-      \Use_Serial_Unified_Completion.count_reg[1]\ => \Use_Serial_Unified_Completion.count_reg_n_0_[1]\,
+      \Use_Serial_Unified_Completion.count_reg[1]\ => \Use_BSCAN.SYNC_FDRE_n_2\,
+      \Use_Serial_Unified_Completion.count_reg[1]_0\ => \Use_BSCAN.SYNC_FDRE_n_1\,
       \Use_Serial_Unified_Completion.count_reg[5]\ => \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0\,
-      \Use_Serial_Unified_Completion.mb_data_overrun_reg\ => FDC_I_n_34,
-      \Use_Serial_Unified_Completion.mb_instr_error_reg\ => FDC_I_n_33,
-      \Use_Serial_Unified_Completion.mb_instr_overrun_reg\ => FDC_I_n_32,
-      \Use_Serial_Unified_Completion.sample_reg[15]\(2) => FDC_I_n_16,
-      \Use_Serial_Unified_Completion.sample_reg[15]\(1) => FDC_I_n_17,
-      \Use_Serial_Unified_Completion.sample_reg[15]\(0) => FDC_I_n_18,
+      \Use_Serial_Unified_Completion.mb_data_overrun_reg\ => \Use_BSCAN.FDC_I_n_35\,
+      \Use_Serial_Unified_Completion.mb_instr_error_reg\ => \Use_BSCAN.FDC_I_n_22\,
+      \Use_Serial_Unified_Completion.mb_instr_error_reg_0\ => \Use_BSCAN.FDC_I_n_34\,
+      \Use_Serial_Unified_Completion.mb_instr_overrun_reg\ => \Use_BSCAN.FDC_I_n_33\,
+      \Use_Serial_Unified_Completion.sample_1_reg[10]\(0) => sample_1,
+      \Use_Serial_Unified_Completion.sample_reg[15]\(2) => \Use_BSCAN.FDC_I_n_14\,
+      \Use_Serial_Unified_Completion.sample_reg[15]\(1) => \Use_BSCAN.FDC_I_n_15\,
+      \Use_Serial_Unified_Completion.sample_reg[15]\(0) => \Use_BSCAN.FDC_I_n_16\,
       \Use_Serial_Unified_Completion.sample_reg[15]_0\(5 downto 3) => sample(15 downto 13),
       \Use_Serial_Unified_Completion.sample_reg[15]_0\(2) => \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0\,
       \Use_Serial_Unified_Completion.sample_reg[15]_0\(1) => \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0\,
       \Use_Serial_Unified_Completion.sample_reg[15]_0\(0) => mb_instr_overrun,
-      \Use_UART.tx_buffered_reg\ => FDC_I_n_37,
+      \Use_UART.tx_buffered_reg\ => \Use_BSCAN.FDC_I_n_37\,
       \command_1_reg[7]\(0) => command_10,
-      \command_reg[0]\ => Dbg_Shift_31_INST_0_i_3_n_0,
-      \command_reg[2]\ => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\,
-      \command_reg[5]\ => Dbg_Shift_31_INST_0_i_1_n_0,
       completion_ctrl => completion_ctrl,
-      \completion_ctrl_reg[0]\ => FDC_I_n_35,
-      data_cmd_noblock => data_cmd_noblock,
+      \completion_ctrl_reg[0]\ => \Use_BSCAN.FDC_I_n_38\,
       in0 => tx_buffered,
       \p_31_out__0\ => \p_31_out__0\,
       \p_3_out__10\ => \p_3_out__10\,
-      sample_1 => sample_1,
       sel => sel,
       sel_n => sel_n,
+      set_Ext_BRK_reg => \Use_BSCAN.FDC_I_n_19\,
       \shifting_Data1__0\ => \shifting_Data1__0\,
-      sync => sync,
-      \tdi_shifter_reg[0]\(7) => p_1_in_1,
+      \tdi_shifter_reg[0]\(7) => p_1_in_3,
       \tdi_shifter_reg[0]\(6) => \tdi_shifter_reg_n_0_[1]\,
       \tdi_shifter_reg[0]\(5) => \tdi_shifter_reg_n_0_[2]\,
-      \tdi_shifter_reg[0]\(4) => p_0_in_2,
+      \tdi_shifter_reg[0]\(4) => p_0_in_4,
       \tdi_shifter_reg[0]\(3) => \tdi_shifter_reg_n_0_[4]\,
       \tdi_shifter_reg[0]\(2) => \tdi_shifter_reg_n_0_[5]\,
       \tdi_shifter_reg[0]\(1) => \tdi_shifter_reg_n_0_[6]\,
       \tdi_shifter_reg[0]\(0) => \tdi_shifter_reg_n_0_[7]\
     );
-SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
+\Use_BSCAN.SYNC_FDRE\: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
      port map (
       CE => CE,
-      D_0 => D_0,
+      D_2 => D_2,
+      E(0) => \^e\(0),
+      Q(0) => command(6),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
+      \Use_BSCAN.PORT_Selector_reg[0]_0\ => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      \Use_BSCAN.command_reg[0]\ => Dbg_Shift_31_INST_0_i_3_n_0,
+      \Use_BSCAN.command_reg[5]\ => Dbg_Shift_31_INST_0_i_1_n_0,
+      \Use_BSCAN.command_reg[6]\ => \Use_BSCAN.FDC_I_n_22\,
+      \Use_Serial_Unified_Completion.count_reg[0]\ => \Use_Serial_Unified_Completion.count_reg_n_0_[0]\,
+      \Use_Serial_Unified_Completion.count_reg[1]\ => \Use_Serial_Unified_Completion.count_reg_n_0_[1]\,
+      \Use_Serial_Unified_Completion.mb_instr_error_reg\ => \Use_BSCAN.SYNC_FDRE_n_1\,
+      \Use_Serial_Unified_Completion.mb_instr_overrun_reg\ => \Use_BSCAN.SYNC_FDRE_n_2\,
+      \Using_FPGA.Native_0\ => \Use_BSCAN.FDC_I_n_19\,
       sync => sync
+    );
+\Use_BSCAN.command[0]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000008"
+    )
+        port map (
+      I0 => sel,
+      I1 => \Use_BSCAN.PORT_Selector_reg[3]\(0),
+      I2 => \Use_BSCAN.PORT_Selector_reg[3]\(1),
+      I3 => \Use_BSCAN.PORT_Selector_reg[3]\(3),
+      I4 => \Use_BSCAN.PORT_Selector_reg[3]\(2),
+      O => \Use_BSCAN.command[0]_i_1_n_0\
+    );
+\Use_BSCAN.command_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(0),
+      Q => command(0)
+    );
+\Use_BSCAN.command_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(1),
+      Q => command(1)
+    );
+\Use_BSCAN.command_reg[2]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(2),
+      Q => command(2)
+    );
+\Use_BSCAN.command_reg[3]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(3),
+      Q => command(3)
+    );
+\Use_BSCAN.command_reg[4]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(4),
+      Q => command(4)
+    );
+\Use_BSCAN.command_reg[5]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(5),
+      Q => command(5)
+    );
+\Use_BSCAN.command_reg[6]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(6),
+      Q => command(6)
+    );
+\Use_BSCAN.command_reg[7]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0',
+      IS_C_INVERTED => '1'
+    )
+        port map (
+      C => CLK,
+      CE => \Use_BSCAN.command[0]_i_1_n_0\,
+      CLR => \^ar\(0),
+      D => command_1(7),
+      Q => command(7)
     );
 \Use_Config_SRL16E.SRL16E_1\: entity work.module_ads7056_mdm_1_0_MB_SRL16E
      port map (
@@ -4134,7 +4277,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       Q(1) => A1,
       Q(0) => \^q\(0),
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
-      \Use_UART.fifo_Din_reg[0]\ => \Use_Config_SRL16E.SRL16E_1_n_0\
+      sel_n_reg => \Use_Config_SRL16E.SRL16E_1_n_0\
     );
 \Use_Config_SRL16E.SRL16E_2\: entity work.\module_ads7056_mdm_1_0_MB_SRL16E__parameterized1\
      port map (
@@ -4227,13 +4370,13 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]\,
       \Use_BSCAN.PORT_Selector_reg[0]_0\(0) => \Use_BSCAN.PORT_Selector_reg[3]\(0),
       \Use_BSCAN.PORT_Selector_reg[2]\ => \Use_BSCAN.PORT_Selector_reg[2]\,
-      \command_reg[0]\ => \Use_E2.BSCANE2_I_i_3_n_0\,
-      \command_reg[0]_0\(2) => command(0),
-      \command_reg[0]_0\(1) => command(5),
-      \command_reg[0]_0\(0) => command(6),
-      \command_reg[5]\ => \Use_E2.BSCANE2_I_i_7_n_0\,
-      \command_reg[5]_0\ => \Use_E2.BSCANE2_I_i_9_n_0\,
-      \command_reg[6]\ => \Use_E2.BSCANE2_I_i_4_n_0\,
+      \Use_BSCAN.command_reg[0]\ => \Use_E2.BSCANE2_I_i_3_n_0\,
+      \Use_BSCAN.command_reg[0]_0\(2) => command(0),
+      \Use_BSCAN.command_reg[0]_0\(1) => command(5),
+      \Use_BSCAN.command_reg[0]_0\(0) => command(6),
+      \Use_BSCAN.command_reg[5]\ => \Use_E2.BSCANE2_I_i_7_n_0\,
+      \Use_BSCAN.command_reg[5]_0\ => \Use_E2.BSCANE2_I_i_9_n_0\,
+      \Use_BSCAN.command_reg[6]\ => \Use_E2.BSCANE2_I_i_4_n_0\,
       config_TDO_2 => config_TDO_2,
       \shift_Count_reg[0]\ => \Use_Config_SRL16E.SRL16E_1_n_0\,
       tdo => tdo
@@ -4281,7 +4424,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_36,
+      D => \Use_BSCAN.FDC_I_n_36\,
       Q => \Use_Serial_Unified_Completion.completion_block_reg_n_0\
     );
 \Use_Serial_Unified_Completion.completion_status[10]_i_1\: unisim.vcomponents.LUT3
@@ -4290,7 +4433,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.sample_1_reg_n_0_[10]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I2 => completion_status(11),
       O => p_1_in(10)
     );
@@ -4300,7 +4443,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.sample_1_reg_n_0_[11]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I2 => completion_status(12),
       O => p_1_in(11)
     );
@@ -4310,7 +4453,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.sample_1_reg_n_0_[12]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I2 => completion_status(13),
       O => p_1_in(12)
     );
@@ -4320,7 +4463,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.sample_1_reg_n_0_[13]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I2 => completion_status(14),
       O => p_1_in(13)
     );
@@ -4330,7 +4473,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.sample_1_reg_n_0_[14]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I2 => completion_status(15),
       O => p_1_in(14)
     );
@@ -4396,7 +4539,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(0),
       Q => completion_status(0)
@@ -4473,7 +4616,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(1),
       Q => completion_status(1)
@@ -4484,7 +4627,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(2),
       Q => completion_status(2)
@@ -4495,7 +4638,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(3),
       Q => completion_status(3)
@@ -4506,7 +4649,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(4),
       Q => completion_status(4)
@@ -4517,7 +4660,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(5),
       Q => completion_status(5)
@@ -4528,7 +4671,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(6),
       Q => completion_status(6)
@@ -4539,7 +4682,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(7),
       Q => completion_status(7)
@@ -4550,7 +4693,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(8),
       Q => completion_status(8)
@@ -4561,7 +4704,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => FDC_I_n_15,
+      CE => \Use_BSCAN.FDC_I_n_13\,
       CLR => \^ar\(0),
       D => p_1_in(9),
       Q => completion_status(9)
@@ -4574,7 +4717,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I0 => \Use_Serial_Unified_Completion.count_reg__1\(1),
       I1 => \Use_Serial_Unified_Completion.count[0]__0_i_4_n_0\,
       I2 => \Use_Serial_Unified_Completion.count_reg__1\(0),
-      I3 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I3 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \p_0_in__0\(5)
     );
 \Use_Serial_Unified_Completion.count[0]__0_i_4\: unisim.vcomponents.LUT4
@@ -4594,10 +4737,10 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.count_reg_n_0_[1]\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I2 => sync,
       I3 => \Use_Serial_Unified_Completion.count_reg_n_0_[0]\,
-      I4 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I4 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I5 => \shifting_Data1__0\,
       O => \Use_Serial_Unified_Completion.count[0]_i_1_n_0\
     );
@@ -4611,7 +4754,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I2 => \^use_serial_unified_completion.count_reg[4]_0\(0),
       I3 => \Use_Serial_Unified_Completion.count_reg__1\(3),
       I4 => \Use_Serial_Unified_Completion.count_reg__1\(1),
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \p_0_in__0\(4)
     );
 \Use_Serial_Unified_Completion.count[1]_i_1\: unisim.vcomponents.LUT6
@@ -4619,10 +4762,10 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       INIT => X"00F7FFFF00080000"
     )
         port map (
-      I0 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I0 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I1 => sync,
       I2 => \Use_Serial_Unified_Completion.count_reg_n_0_[0]\,
-      I3 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I3 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I4 => \shifting_Data1__0\,
       I5 => \Use_Serial_Unified_Completion.count_reg_n_0_[1]\,
       O => \Use_Serial_Unified_Completion.count[1]_i_1_n_0\
@@ -4636,7 +4779,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I1 => \^use_serial_unified_completion.count_reg[4]_0\(0),
       I2 => \Use_Serial_Unified_Completion.count_reg__1\(4),
       I3 => \Use_Serial_Unified_Completion.count_reg__1\(2),
-      I4 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I4 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \p_0_in__0\(3)
     );
 \Use_Serial_Unified_Completion.count[3]_i_1\: unisim.vcomponents.LUT4
@@ -4647,7 +4790,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I0 => \Use_Serial_Unified_Completion.count_reg__1\(4),
       I1 => \^use_serial_unified_completion.count_reg[4]_0\(0),
       I2 => \Use_Serial_Unified_Completion.count_reg__1\(3),
-      I3 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I3 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \p_0_in__0\(2)
     );
 \Use_Serial_Unified_Completion.count[4]_i_1\: unisim.vcomponents.LUT3
@@ -4657,7 +4800,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
         port map (
       I0 => \^use_serial_unified_completion.count_reg[4]_0\(0),
       I1 => \Use_Serial_Unified_Completion.count_reg__1\(4),
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I2 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \p_0_in__0\(1)
     );
 \Use_Serial_Unified_Completion.count_reg[0]\: unisim.vcomponents.FDCE
@@ -4677,7 +4820,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \p_0_in__0\(5),
       Q => \Use_Serial_Unified_Completion.count_reg__1\(0)
@@ -4699,7 +4842,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \p_0_in__0\(4),
       Q => \Use_Serial_Unified_Completion.count_reg__1\(1)
@@ -4710,7 +4853,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \p_0_in__0\(3),
       Q => \Use_Serial_Unified_Completion.count_reg__1\(2)
@@ -4721,7 +4864,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \p_0_in__0\(2),
       Q => \Use_Serial_Unified_Completion.count_reg__1\(3)
@@ -4732,7 +4875,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \p_0_in__0\(1),
       Q => \Use_Serial_Unified_Completion.count_reg__1\(4)
@@ -4743,7 +4886,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => \command_reg[5]_0\(0),
+      CE => \Use_BSCAN.command_reg[5]_0\(0),
       CLR => \^ar\(0),
       D => \Use_Serial_Unified_Completion.count_reg[5]_0\(0),
       Q => \^use_serial_unified_completion.count_reg[4]_0\(0)
@@ -4764,7 +4907,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       INIT => X"0008"
     )
         port map (
-      I0 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I0 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I1 => \Use_Serial_Unified_Completion.count_reg__1\(0),
       I2 => \Use_Serial_Unified_Completion.count_reg__1\(1),
       I3 => \Use_Serial_Unified_Completion.count_reg__1\(2),
@@ -4778,7 +4921,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_34,
+      D => \Use_BSCAN.FDC_I_n_35\,
       Q => \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0\
     );
 \Use_Serial_Unified_Completion.mb_instr_error_reg\: unisim.vcomponents.FDCE
@@ -4789,7 +4932,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_33,
+      D => \Use_BSCAN.FDC_I_n_34\,
       Q => \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0\
     );
 \Use_Serial_Unified_Completion.mb_instr_overrun_reg\: unisim.vcomponents.FDCE
@@ -4800,10 +4943,10 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_32,
+      D => \Use_BSCAN.FDC_I_n_33\,
       Q => mb_instr_overrun
     );
-\Use_Serial_Unified_Completion.sample_1[15]_i_2\: unisim.vcomponents.LUT5
+\Use_Serial_Unified_Completion.sample_1[15]_i_3\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000008"
     )
@@ -4813,7 +4956,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I2 => command(0),
       I3 => command(1),
       I4 => command(3),
-      O => \Use_Serial_Unified_Completion.sample_1[15]_i_2_n_0\
+      O => \Use_Serial_Unified_Completion.sample_1[15]_i_3_n_0\
     );
 \Use_Serial_Unified_Completion.sample_1_reg[10]\: unisim.vcomponents.FDCE
      port map (
@@ -4868,7 +5011,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_18,
+      D => \Use_BSCAN.FDC_I_n_16\,
       Q => sample(13)
     );
 \Use_Serial_Unified_Completion.sample_reg[14]\: unisim.vcomponents.FDCE
@@ -4876,7 +5019,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_17,
+      D => \Use_BSCAN.FDC_I_n_15\,
       Q => sample(14)
     );
 \Use_Serial_Unified_Completion.sample_reg[15]\: unisim.vcomponents.FDCE
@@ -4884,7 +5027,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_16,
+      D => \Use_BSCAN.FDC_I_n_14\,
       Q => sample(15)
     );
 \Use_UART.Ext_BRK_FDRSE\: entity work.module_ads7056_mdm_1_0_MB_FDRSE
@@ -4912,15 +5055,15 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       Q(0) => fifo_Din(7),
       RX_Data(0 to 7) => RX_Data(0 to 7),
       S_AXI_ACLK => S_AXI_ACLK,
-      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      \Use_BSCAN.command_reg[0]\ => \Use_UART.tdo_reg[4]_i_2_n_0\,
+      \Use_BSCAN.command_reg[0]_0\ => \Use_UART.tdo_reg[0]_i_3_n_0\,
       \Use_UART.fifo_Write_reg\ => \Use_UART.fifo_Write_reg_n_0\,
       \Use_UART.tdo_reg_reg[3]\(1) => tdo_reg(3),
       \Use_UART.tdo_reg_reg[3]\(0) => tdo_reg(4),
       \Use_Uart.reset_RX_FIFO_reg\ => \Use_Uart.reset_RX_FIFO_reg\,
       \Using_FPGA.Native\ => \^using_fpga.native\,
       bus2ip_rdce(0) => bus2ip_rdce(0),
-      \command_reg[0]\ => \Use_UART.tdo_reg[4]_i_2_n_0\,
-      \command_reg[0]_0\ => \Use_UART.tdo_reg[0]_i_3_n_0\,
       p_0_in => p_0_in
     );
 \Use_UART.TX_FIFO_I\: entity work.module_ads7056_mdm_1_0_SRL_FIFO_0
@@ -4943,14 +5086,14 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       Q_0 => Q_0,
       S_AXI_ACLK => S_AXI_ACLK,
       S_AXI_WDATA(7 downto 0) => S_AXI_WDATA(7 downto 0),
-      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      \Use_BSCAN.PORT_Selector_reg[0]\ => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      \Use_BSCAN.command_reg[0]\ => \Use_UART.tdo_reg[4]_i_2_n_0\,
+      \Use_BSCAN.command_reg[0]_0\ => \Use_UART.tdo_reg[0]_i_3_n_0\,
       \Use_UART.fifo_Read_reg\ => \Use_UART.fifo_Read_reg_n_0\,
       \Use_UART.tdo_reg_reg[4]\(1) => Data_Out(4),
       \Use_UART.tdo_reg_reg[4]\(0) => Data_Out(5),
       \Use_Uart.reset_TX_FIFO_reg\ => \Use_Uart.reset_TX_FIFO_reg\,
       \Using_FPGA.Native\ => \Using_FPGA.Native_0\,
-      \command_reg[0]\ => \Use_UART.tdo_reg[4]_i_2_n_0\,
-      \command_reg[0]_0\ => \Use_UART.tdo_reg[0]_i_3_n_0\,
       data_Exists_I_reg_0 => \^using_fpga.native\,
       enable_interrupts => enable_interrupts,
       \out\ => tx_buffered_2,
@@ -5009,7 +5152,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_Serial_Unified_Completion.completion_block_reg_n_0\,
-      I1 => data_cmd_noblock,
+      I1 => Q_1,
       I2 => Scan_Reset_Sel,
       I3 => Scan_Reset,
       O => \Use_UART.execute_i_2_n_0\
@@ -5100,16 +5243,16 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     );
 \Use_UART.fifo_Read_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000400000"
+      INIT => X"0000000010000000"
     )
         port map (
       I0 => \Use_UART.execute_i_3_n_0\,
-      I1 => command(6),
-      I2 => command(7),
-      I3 => execute_3,
-      I4 => execute_2,
+      I1 => execute_3,
+      I2 => execute_2,
+      I3 => command(6),
+      I4 => command(7),
       I5 => \Use_UART.fifo_Write_i_2_n_0\,
-      O => fifo_Read1_out
+      O => fifo_Read2_out
     );
 \Use_UART.fifo_Read_reg\: unisim.vcomponents.FDRE
     generic map(
@@ -5118,7 +5261,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
         port map (
       C => S_AXI_ACLK,
       CE => '1',
-      D => fifo_Read1_out,
+      D => fifo_Read2_out,
       Q => \Use_UART.fifo_Read_reg_n_0\,
       R => '0'
     );
@@ -5128,12 +5271,12 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
     )
         port map (
       I0 => \Use_UART.execute_i_3_n_0\,
-      I1 => command(6),
-      I2 => command(7),
-      I3 => execute_3,
-      I4 => execute_2,
+      I1 => execute_3,
+      I2 => execute_2,
+      I3 => command(6),
+      I4 => command(7),
       I5 => \Use_UART.fifo_Write_i_2_n_0\,
-      O => fifo_Write3_out
+      O => fifo_Write4_out
     );
 \Use_UART.fifo_Write_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -5153,7 +5296,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
         port map (
       C => S_AXI_ACLK,
       CE => '1',
-      D => fifo_Write3_out,
+      D => fifo_Write4_out,
       Q => \Use_UART.fifo_Write_reg_n_0\,
       R => '0'
     );
@@ -5167,7 +5310,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       I2 => command(6),
       I3 => command(2),
       I4 => \Use_UART.tdo_reg[0]_i_4_n_0\,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       O => \Use_UART.tdo_reg[0]_i_3_n_0\
     );
 \Use_UART.tdo_reg[0]_i_4\: unisim.vcomponents.LUT3
@@ -5185,7 +5328,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       INIT => X"0000000000000200"
     )
         port map (
-      I0 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I0 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
       I1 => command(0),
       I2 => \Use_UART.execute_i_3_n_0\,
       I3 => command(6),
@@ -5311,20 +5454,8 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => CLK,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_37,
+      D => \Use_BSCAN.FDC_I_n_37\,
       Q => tx_buffered
-    );
-\command[0]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000008"
-    )
-        port map (
-      I0 => sel,
-      I1 => \Use_BSCAN.PORT_Selector_reg[3]\(0),
-      I2 => \Use_BSCAN.PORT_Selector_reg[3]\(1),
-      I3 => \Use_BSCAN.PORT_Selector_reg[3]\(3),
-      I4 => \Use_BSCAN.PORT_Selector_reg[3]\(2),
-      O => \command[0]_i_1_n_0\
     );
 \command_1_reg[0]\: unisim.vcomponents.FDCE
     generic map(
@@ -5334,7 +5465,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => CLK,
       CE => command_10,
       CLR => \^ar\(0),
-      D => p_1_in_1,
+      D => p_1_in_3,
       Q => command_1(0)
     );
 \command_1_reg[1]\: unisim.vcomponents.FDCE
@@ -5367,7 +5498,7 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       C => CLK,
       CE => command_10,
       CLR => \^ar\(0),
-      D => p_0_in_2,
+      D => p_0_in_4,
       Q => command_1(3)
     );
 \command_1_reg[4]\: unisim.vcomponents.FDCE
@@ -5414,102 +5545,6 @@ SYNC_FDRE: entity work.module_ads7056_mdm_1_0_MB_FDRE_1
       D => \tdi_shifter_reg_n_0_[7]\,
       Q => command_1(7)
     );
-\command_reg[0]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(0),
-      Q => command(0)
-    );
-\command_reg[1]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(1),
-      Q => command(1)
-    );
-\command_reg[2]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(2),
-      Q => command(2)
-    );
-\command_reg[3]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(3),
-      Q => command(3)
-    );
-\command_reg[4]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(4),
-      Q => command(4)
-    );
-\command_reg[5]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(5),
-      Q => command(5)
-    );
-\command_reg[6]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(6),
-      Q => command(6)
-    );
-\command_reg[7]\: unisim.vcomponents.FDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => command_regn_0_0,
-      CE => \command[0]_i_1_n_0\,
-      CLR => \^ar\(0),
-      D => command_1(7),
-      Q => command(7)
-    );
-command_regi_0: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => CLK,
-      O => command_regn_0_0
-    );
 \completion_ctrl_reg[0]\: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
@@ -5518,25 +5553,41 @@ command_regi_0: unisim.vcomponents.LUT1
       C => CLK,
       CE => '1',
       CLR => \^ar\(0),
-      D => FDC_I_n_35,
+      D => \Use_BSCAN.FDC_I_n_38\,
       Q => completion_ctrl
     );
-sel_n_i_1: unisim.vcomponents.LUT3
+sel_n_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"74"
+      INIT => X"FEFFFFFF"
     )
         port map (
-      I0 => \command[0]_i_1_n_0\,
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
-      I2 => sel_n,
-      O => sel_n_i_1_n_0
+      I0 => \Use_BSCAN.PORT_Selector_reg[3]\(2),
+      I1 => \Use_BSCAN.PORT_Selector_reg[3]\(3),
+      I2 => \Use_BSCAN.PORT_Selector_reg[3]\(1),
+      I3 => \Use_BSCAN.PORT_Selector_reg[3]\(0),
+      I4 => sel,
+      O => sel_n0
+    );
+sel_n_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F444"
+    )
+        port map (
+      I0 => \Use_BSCAN.command[0]_i_1_n_0\,
+      I1 => CLK,
+      I2 => Scan_Reset_Sel,
+      I3 => Scan_Reset,
+      O => sel_reset
     );
 sel_n_reg: unisim.vcomponents.FDPE
-     port map (
+    generic map(
+      INIT => '1'
+    )
+        port map (
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
-      CE => '1',
-      D => sel_n_i_1_n_0,
-      PRE => \^ar\(0),
+      CE => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      D => sel_n0,
+      PRE => sel_reset,
       Q => sel_n
     );
 set_Ext_BRK_reg: unisim.vcomponents.FDCE
@@ -5556,7 +5607,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \^q\(0),
-      I1 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I1 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I2 => A1,
       O => \p_0_in__1\(1)
     );
@@ -5567,7 +5618,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
         port map (
       I0 => A1,
       I1 => \^q\(0),
-      I2 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I2 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I3 => A2,
       O => \p_0_in__1\(2)
     );
@@ -5579,7 +5630,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       I0 => A2,
       I1 => \^q\(0),
       I2 => A1,
-      I3 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I3 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I4 => A3,
       O => \p_0_in__1\(3)
     );
@@ -5592,7 +5643,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       I1 => A1,
       I2 => \^q\(0),
       I3 => A2,
-      I4 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I4 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       I5 => \shift_Count_reg__0\(4),
       O => \p_0_in__1\(4)
     );
@@ -5661,7 +5712,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       I2 => \Use_BSCAN.PORT_Selector_reg[3]\(1),
       I3 => \Use_BSCAN.PORT_Selector_reg[3]\(0),
       I4 => sel,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]_0\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
       O => tdi_shifter0
     );
 \tdi_shifter_reg[0]\: unisim.vcomponents.FDCE
@@ -5673,7 +5724,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       CE => tdi_shifter0,
       CLR => \^ar\(0),
       D => Dbg_TDI_31,
-      Q => p_1_in_1
+      Q => p_1_in_3
     );
 \tdi_shifter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -5683,7 +5734,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => tdi_shifter0,
       CLR => \^ar\(0),
-      D => p_1_in_1,
+      D => p_1_in_3,
       Q => \tdi_shifter_reg_n_0_[1]\
     );
 \tdi_shifter_reg[2]\: unisim.vcomponents.FDCE
@@ -5706,7 +5757,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       CE => tdi_shifter0,
       CLR => \^ar\(0),
       D => \tdi_shifter_reg_n_0_[2]\,
-      Q => p_0_in_2
+      Q => p_0_in_4
     );
 \tdi_shifter_reg[4]\: unisim.vcomponents.FDCE
     generic map(
@@ -5716,7 +5767,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       C => \Use_BSCAN.PORT_Selector_reg[0]\,
       CE => tdi_shifter0,
       CLR => \^ar\(0),
-      D => p_0_in_2,
+      D => p_0_in_4,
       Q => \tdi_shifter_reg_n_0_[4]\
     );
 \tdi_shifter_reg[5]\: unisim.vcomponents.FDCE
@@ -5826,8 +5877,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_slave_attachment is
   signal \state[1]_i_3_n_0\ : STD_LOGIC;
   signal uart_ip2bus_data : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_3\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_3\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair29";
 begin
   S_AXI_BRESP(0) <= \^s_axi_bresp\(0);
   S_AXI_BVALID <= \^s_axi_bvalid\;
@@ -6184,12 +6235,12 @@ entity module_ads7056_mdm_1_0_MDM_Core is
     Dbg_Disable_0 : out STD_LOGIC;
     Ext_BRK : out STD_LOGIC;
     enable_interrupts : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     tdo : out STD_LOGIC;
     tx_Buffer_Full : out STD_LOGIC;
     p_0_in : out STD_LOGIC;
     \p_54_out__0\ : out STD_LOGIC;
     \p_31_out__0\ : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     Dbg_Reg_En_0 : out STD_LOGIC_VECTOR ( 0 to 7 );
     Ext_JTAG_SEL : out STD_LOGIC;
     \Use_Serial_Unified_Completion.count_reg[4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6202,14 +6253,16 @@ entity module_ads7056_mdm_1_0_MDM_Core is
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 0 to 0 );
     reset_RX_FIFO : in STD_LOGIC;
     reset_TX_FIFO : in STD_LOGIC;
+    \Use_BSCAN.PORT_Selector_reg[0]_1\ : in STD_LOGIC;
     clear_Ext_BRK : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]\ : in STD_LOGIC;
     shift_n_reset : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]_1\ : in STD_LOGIC;
     Dbg_TDO_0 : in STD_LOGIC;
-    \Use_BSCAN.PORT_Selector_reg[0]_2\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Use_BSCAN.PORT_Selector_reg[0]_2\ : in STD_LOGIC;
     sel : in STD_LOGIC;
+    Scan_Reset_Sel : in STD_LOGIC;
+    Scan_Reset : in STD_LOGIC;
     Ext_JTAG_TDO : in STD_LOGIC;
     FIFO_Write : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC;
@@ -6218,14 +6271,12 @@ entity module_ads7056_mdm_1_0_MDM_Core is
     S_AXI_ARESETN : in STD_LOGIC;
     \Use_Serial_Unified_Completion.count_reg[5]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Scan_Reset : in STD_LOGIC;
-    Scan_Reset_Sel : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     Dbg_TDI_31 : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_3\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \command_reg[5]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
+    \Use_BSCAN.command_reg[5]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of module_ads7056_mdm_1_0_MDM_Core : entity is "MDM_Core";
@@ -6269,7 +6320,6 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MDM_Core is
   signal \Use_BSCAN.Config_Reg_reg_n_0_[30]\ : STD_LOGIC;
   signal \Use_BSCAN.Config_Reg_reg_n_0_[3]\ : STD_LOGIC;
   signal \Use_BSCAN.Config_Reg_reg_n_0_[9]\ : STD_LOGIC;
-  signal \Use_BSCAN.PORT_Selector_regn_0_0\ : STD_LOGIC;
   signal \Use_E2.BSCANE2_I_i_2_n_0\ : STD_LOGIC;
   signal \^use_uart.clear_ext_brk_reg_0\ : STD_LOGIC;
   signal \Use_Uart.clear_Ext_BRK_reg_n_0\ : STD_LOGIC;
@@ -6279,14 +6329,21 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MDM_Core is
   signal \^enable_interrupts\ : STD_LOGIC;
   signal p_2_out_1 : STD_LOGIC;
   signal tx_Buffer_Empty : STD_LOGIC;
+  attribute SHREG_EXTRACT : string;
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[0]\ : label is "yes";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \Use_BSCAN.Config_Reg_reg[12]_srl13_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_11\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg ";
   attribute srl_name : string;
   attribute srl_name of \Use_BSCAN.Config_Reg_reg[12]_srl13_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_11\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[12]_srl13_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_11 ";
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[1]\ : label is "yes";
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[25]\ : label is "yes";
   attribute srl_bus_name of \Use_BSCAN.Config_Reg_reg[28]_srl2_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_0\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg ";
   attribute srl_name of \Use_BSCAN.Config_Reg_reg[28]_srl2_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_0\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[28]_srl2_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_0 ";
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[2]\ : label is "yes";
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[30]\ : label is "yes";
   attribute srl_bus_name of \Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg ";
   attribute srl_name of \Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2\ : label is "U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2 ";
+  attribute SHREG_EXTRACT of \Use_BSCAN.Config_Reg_reg[9]\ : label is "yes";
 begin
   \Use_Uart.clear_Ext_BRK_reg_0\ <= \^use_uart.clear_ext_brk_reg_0\;
   enable_interrupts <= \^enable_interrupts\;
@@ -6333,6 +6390,7 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
       \Use_BSCAN.PORT_Selector_reg[0]_2\(0) => \Use_BSCAN.PORT_Selector_reg[0]_3\(0),
       \Use_BSCAN.PORT_Selector_reg[2]\ => \Use_E2.BSCANE2_I_i_2_n_0\,
       \Use_BSCAN.PORT_Selector_reg[3]\(3 downto 0) => PORT_Selector(3 downto 0),
+      \Use_BSCAN.command_reg[5]_0\(0) => \Use_BSCAN.command_reg[5]\(0),
       \Use_Serial_Unified_Completion.completion_block_reg_0\ => \p_54_out__0\,
       \Use_Serial_Unified_Completion.completion_status_reg[15]_0\(0) => \Use_Serial_Unified_Completion.completion_status_reg[15]\(0),
       \Use_Serial_Unified_Completion.count_reg[4]_0\(0) => \Use_Serial_Unified_Completion.count_reg[4]\(0),
@@ -6344,7 +6402,6 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
       \Using_FPGA.Native_0\ => fifo_Data_Present,
       \Using_FPGA.Native_1\(0) => \Using_FPGA.Native\(0),
       bus2ip_rdce(0) => bus2ip_rdce(0),
-      \command_reg[5]_0\(0) => \command_reg[5]\(0),
       enable_interrupts => \^enable_interrupts\,
       \out\ => \out\,
       p_0_in => p_0_in,
@@ -6708,10 +6765,11 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
     );
 \Use_BSCAN.PORT_Selector_reg[0]\: unisim.vcomponents.FDCE
     generic map(
-      INIT => '0'
+      INIT => '0',
+      IS_C_INVERTED => '1'
     )
         port map (
-      C => \Use_BSCAN.PORT_Selector_regn_0_0\,
+      C => CLK,
       CE => '1',
       CLR => AR(0),
       D => PORT_Selector_1(0),
@@ -6719,10 +6777,11 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
     );
 \Use_BSCAN.PORT_Selector_reg[1]\: unisim.vcomponents.FDCE
     generic map(
-      INIT => '0'
+      INIT => '0',
+      IS_C_INVERTED => '1'
     )
         port map (
-      C => \Use_BSCAN.PORT_Selector_regn_0_0\,
+      C => CLK,
       CE => '1',
       CLR => AR(0),
       D => PORT_Selector_1(1),
@@ -6730,10 +6789,11 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
     );
 \Use_BSCAN.PORT_Selector_reg[2]\: unisim.vcomponents.FDCE
     generic map(
-      INIT => '0'
+      INIT => '0',
+      IS_C_INVERTED => '1'
     )
         port map (
-      C => \Use_BSCAN.PORT_Selector_regn_0_0\,
+      C => CLK,
       CE => '1',
       CLR => AR(0),
       D => PORT_Selector_1(2),
@@ -6741,22 +6801,15 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
     );
 \Use_BSCAN.PORT_Selector_reg[3]\: unisim.vcomponents.FDCE
     generic map(
-      INIT => '0'
+      INIT => '0',
+      IS_C_INVERTED => '1'
     )
         port map (
-      C => \Use_BSCAN.PORT_Selector_regn_0_0\,
+      C => CLK,
       CE => '1',
       CLR => AR(0),
       D => PORT_Selector_1(3),
       Q => PORT_Selector(3)
-    );
-\Use_BSCAN.PORT_Selector_regi_0\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => CLK,
-      O => \Use_BSCAN.PORT_Selector_regn_0_0\
     );
 \Use_BSCAN.TDI_Shifter[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -6768,7 +6821,7 @@ JTAG_CONTROL_I: entity work.module_ads7056_mdm_1_0_JTAG_CONTROL
       I2 => PORT_Selector(1),
       I3 => PORT_Selector(0),
       I4 => sel,
-      I5 => \Use_BSCAN.PORT_Selector_reg[0]_1\,
+      I5 => \Use_BSCAN.PORT_Selector_reg[0]_2\,
       O => p_2_out_1
     );
 \Use_BSCAN.TDI_Shifter_reg[0]\: unisim.vcomponents.FDCE
@@ -8496,6 +8549,8 @@ entity module_ads7056_mdm_1_0_MDM is
     Ext_JTAG_TDI : out STD_LOGIC;
     Ext_JTAG_TDO : in STD_LOGIC
   );
+  attribute C_AVOID_PRIMITIVES : integer;
+  attribute C_AVOID_PRIMITIVES of module_ads7056_mdm_1_0_MDM : entity is 0;
   attribute C_DATA_SIZE : integer;
   attribute C_DATA_SIZE of module_ads7056_mdm_1_0_MDM : entity is 32;
   attribute C_DBG_MEM_ACCESS : integer;
@@ -8528,6 +8583,8 @@ entity module_ads7056_mdm_1_0_MDM is
   attribute C_S_AXI_ADDR_WIDTH of module_ads7056_mdm_1_0_MDM : entity is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of module_ads7056_mdm_1_0_MDM : entity is 32;
+  attribute C_TRACE_ASYNC_RESET : integer;
+  attribute C_TRACE_ASYNC_RESET of module_ads7056_mdm_1_0_MDM : entity is 0;
   attribute C_TRACE_CLK_FREQ_HZ : integer;
   attribute C_TRACE_CLK_FREQ_HZ of module_ads7056_mdm_1_0_MDM : entity is 200000000;
   attribute C_TRACE_CLK_OUT_PHASE : integer;
@@ -8554,9 +8611,9 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MDM is
   signal \^dbg_clk_31\ : STD_LOGIC;
   signal \^dbg_shift_0\ : STD_LOGIC;
   signal \^dbg_tdi_31\ : STD_LOGIC;
+  signal \^dbg_update_31\ : STD_LOGIC;
   signal \^ext_jtag_capture\ : STD_LOGIC;
   signal \^ext_jtag_shift\ : STD_LOGIC;
-  signal \^ext_jtag_update\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\ : STD_LOGIC;
@@ -8566,6 +8623,7 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MDM is
   signal \JTAG_CONTROL_I/p_0_in28_in\ : STD_LOGIC;
   signal \JTAG_CONTROL_I/p_31_out__0\ : STD_LOGIC;
   signal \JTAG_CONTROL_I/p_54_out__0\ : STD_LOGIC;
+  signal \JTAG_CONTROL_I/sel\ : STD_LOGIC;
   signal MDM_Core_I1_n_0 : STD_LOGIC;
   signal MDM_Core_I1_n_12 : STD_LOGIC;
   signal MDM_Core_I1_n_35 : STD_LOGIC;
@@ -8575,9 +8633,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0_MDM is
   signal \^s_axi_rdata\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^s_axi_rresp\ : STD_LOGIC_VECTOR ( 1 to 1 );
   signal \Use_AXI_IPIF.AXI_LITE_IPIF_I_n_15\ : STD_LOGIC;
-  signal \Use_E2.BSCAN_I_n_13\ : STD_LOGIC;
-  signal \Use_E2.BSCAN_I_n_14\ : STD_LOGIC;
   signal \Use_E2.BSCAN_I_n_7\ : STD_LOGIC;
+  signal \Use_E2.BSCAN_I_n_9\ : STD_LOGIC;
   signal bus2ip_rdce : STD_LOGIC_VECTOR ( 3 to 3 );
   signal bus2ip_wrce : STD_LOGIC_VECTOR ( 2 to 2 );
   signal clear_Ext_BRK : STD_LOGIC;
@@ -10570,38 +10627,38 @@ begin
   Dbg_Trig_Out_9(5) <= \<const0>\;
   Dbg_Trig_Out_9(6) <= \<const0>\;
   Dbg_Trig_Out_9(7) <= \<const0>\;
-  Dbg_Update_0 <= \^ext_jtag_update\;
-  Dbg_Update_1 <= \^ext_jtag_update\;
-  Dbg_Update_10 <= \^ext_jtag_update\;
-  Dbg_Update_11 <= \^ext_jtag_update\;
-  Dbg_Update_12 <= \^ext_jtag_update\;
-  Dbg_Update_13 <= \^ext_jtag_update\;
-  Dbg_Update_14 <= \^ext_jtag_update\;
-  Dbg_Update_15 <= \^ext_jtag_update\;
-  Dbg_Update_16 <= \^ext_jtag_update\;
-  Dbg_Update_17 <= \^ext_jtag_update\;
-  Dbg_Update_18 <= \^ext_jtag_update\;
-  Dbg_Update_19 <= \^ext_jtag_update\;
-  Dbg_Update_2 <= \^ext_jtag_update\;
-  Dbg_Update_20 <= \^ext_jtag_update\;
-  Dbg_Update_21 <= \^ext_jtag_update\;
-  Dbg_Update_22 <= \^ext_jtag_update\;
-  Dbg_Update_23 <= \^ext_jtag_update\;
-  Dbg_Update_24 <= \^ext_jtag_update\;
-  Dbg_Update_25 <= \^ext_jtag_update\;
-  Dbg_Update_26 <= \^ext_jtag_update\;
-  Dbg_Update_27 <= \^ext_jtag_update\;
-  Dbg_Update_28 <= \^ext_jtag_update\;
-  Dbg_Update_29 <= \^ext_jtag_update\;
-  Dbg_Update_3 <= \^ext_jtag_update\;
-  Dbg_Update_30 <= \^ext_jtag_update\;
-  Dbg_Update_31 <= \^ext_jtag_update\;
-  Dbg_Update_4 <= \^ext_jtag_update\;
-  Dbg_Update_5 <= \^ext_jtag_update\;
-  Dbg_Update_6 <= \^ext_jtag_update\;
-  Dbg_Update_7 <= \^ext_jtag_update\;
-  Dbg_Update_8 <= \^ext_jtag_update\;
-  Dbg_Update_9 <= \^ext_jtag_update\;
+  Dbg_Update_0 <= \^dbg_update_31\;
+  Dbg_Update_1 <= \^dbg_update_31\;
+  Dbg_Update_10 <= \^dbg_update_31\;
+  Dbg_Update_11 <= \^dbg_update_31\;
+  Dbg_Update_12 <= \^dbg_update_31\;
+  Dbg_Update_13 <= \^dbg_update_31\;
+  Dbg_Update_14 <= \^dbg_update_31\;
+  Dbg_Update_15 <= \^dbg_update_31\;
+  Dbg_Update_16 <= \^dbg_update_31\;
+  Dbg_Update_17 <= \^dbg_update_31\;
+  Dbg_Update_18 <= \^dbg_update_31\;
+  Dbg_Update_19 <= \^dbg_update_31\;
+  Dbg_Update_2 <= \^dbg_update_31\;
+  Dbg_Update_20 <= \^dbg_update_31\;
+  Dbg_Update_21 <= \^dbg_update_31\;
+  Dbg_Update_22 <= \^dbg_update_31\;
+  Dbg_Update_23 <= \^dbg_update_31\;
+  Dbg_Update_24 <= \^dbg_update_31\;
+  Dbg_Update_25 <= \^dbg_update_31\;
+  Dbg_Update_26 <= \^dbg_update_31\;
+  Dbg_Update_27 <= \^dbg_update_31\;
+  Dbg_Update_28 <= \^dbg_update_31\;
+  Dbg_Update_29 <= \^dbg_update_31\;
+  Dbg_Update_3 <= \^dbg_update_31\;
+  Dbg_Update_30 <= \^dbg_update_31\;
+  Dbg_Update_31 <= \^dbg_update_31\;
+  Dbg_Update_4 <= \^dbg_update_31\;
+  Dbg_Update_5 <= \^dbg_update_31\;
+  Dbg_Update_6 <= \^dbg_update_31\;
+  Dbg_Update_7 <= \^dbg_update_31\;
+  Dbg_Update_8 <= \^dbg_update_31\;
+  Dbg_Update_9 <= \^dbg_update_31\;
   Dbg_WDATA_0(31) <= \<const0>\;
   Dbg_WDATA_0(30) <= \<const0>\;
   Dbg_WDATA_0(29) <= \<const0>\;
@@ -11662,7 +11719,7 @@ begin
   Ext_JTAG_DRCK <= \^dbg_clk_31\;
   Ext_JTAG_SHIFT <= \^ext_jtag_shift\;
   Ext_JTAG_TDI <= \^dbg_tdi_31\;
-  Ext_JTAG_UPDATE <= \^ext_jtag_update\;
+  Ext_JTAG_UPDATE <= \^dbg_update_31\;
   LMB_Addr_Strobe_0 <= \<const0>\;
   LMB_Addr_Strobe_1 <= \<const0>\;
   LMB_Addr_Strobe_10 <= \<const0>\;
@@ -14215,7 +14272,7 @@ MDM_Core_I1: entity work.module_ads7056_mdm_1_0_MDM_Core
      port map (
       AR(0) => sel_n_reset,
       Bus_RNW_reg => \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg\,
-      CLK => \^ext_jtag_update\,
+      CLK => \^dbg_update_31\,
       D(0) => p_1_in(15),
       Dbg_Disable_0 => Dbg_Disable_0,
       Dbg_Reg_En_0(0 to 7) => Dbg_Reg_En_0(0 to 7),
@@ -14241,18 +14298,18 @@ MDM_Core_I1: entity work.module_ads7056_mdm_1_0_MDM_Core
       Scan_Reset => Scan_Reset,
       Scan_Reset_Sel => Scan_Reset_Sel,
       \Use_BSCAN.PORT_Selector_reg[0]_0\ => \^dbg_clk_31\,
-      \Use_BSCAN.PORT_Selector_reg[0]_1\ => \^ext_jtag_shift\,
-      \Use_BSCAN.PORT_Selector_reg[0]_2\ => \^ext_jtag_capture\,
-      \Use_BSCAN.PORT_Selector_reg[0]_3\(0) => \Use_E2.BSCAN_I_n_7\,
+      \Use_BSCAN.PORT_Selector_reg[0]_1\ => \^ext_jtag_capture\,
+      \Use_BSCAN.PORT_Selector_reg[0]_2\ => \^ext_jtag_shift\,
+      \Use_BSCAN.PORT_Selector_reg[0]_3\(0) => \Use_E2.BSCAN_I_n_9\,
+      \Use_BSCAN.command_reg[5]\(0) => \JTAG_CONTROL_I/sel\,
       \Use_Serial_Unified_Completion.completion_status_reg[15]\(0) => MDM_Core_I1_n_35,
       \Use_Serial_Unified_Completion.count_reg[4]\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\(5),
       \Use_Serial_Unified_Completion.count_reg[5]\(0) => p_0_in(0),
       \Use_Uart.clear_Ext_BRK_reg_0\ => MDM_Core_I1_n_12,
-      \Using_FPGA.Native\(0) => \Use_E2.BSCAN_I_n_13\,
+      \Using_FPGA.Native\(0) => \Use_E2.BSCAN_I_n_7\,
       bus2ip_rdce(0) => bus2ip_rdce(3),
       bus2ip_wrce(0) => bus2ip_wrce(2),
       clear_Ext_BRK => clear_Ext_BRK,
-      \command_reg[5]\(0) => \Use_E2.BSCAN_I_n_14\,
       enable_interrupts => enable_interrupts,
       fifo_Data_Present => \JTAG_CONTROL_I/fifo_Data_Present\,
       \out\ => \JTAG_CONTROL_I/p_0_in28_in\,
@@ -14318,18 +14375,18 @@ MDM_Core_I1: entity work.module_ads7056_mdm_1_0_MDM_Core
       D(0) => p_1_in(15),
       Dbg_Capture_0 => \^ext_jtag_capture\,
       Dbg_TDI_31 => \^dbg_tdi_31\,
+      Dbg_Update_31 => \^dbg_update_31\,
       Ext_JTAG_RESET => Ext_JTAG_RESET,
-      Ext_JTAG_UPDATE => \^ext_jtag_update\,
       Q(0) => MDM_Core_I1_n_0,
       Scan_Reset => Scan_Reset,
       Scan_Reset_Sel => Scan_Reset_Sel,
-      \Use_Serial_Unified_Completion.completion_status_reg[15]\ => \^ext_jtag_shift\,
-      \Use_Serial_Unified_Completion.completion_status_reg[15]_0\(0) => \Use_E2.BSCAN_I_n_13\,
-      \Use_Serial_Unified_Completion.count_reg[0]__0\(0) => \Use_E2.BSCAN_I_n_14\,
-      \Use_Serial_Unified_Completion.count_reg[5]\(0) => p_0_in(0),
-      \Use_Serial_Unified_Completion.count_reg[5]_0\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\(5),
+      \Use_Serial_Unified_Completion.completion_status_reg[10]\ => \^ext_jtag_shift\,
+      \Use_Serial_Unified_Completion.completion_status_reg[10]_0\(0) => \Use_E2.BSCAN_I_n_7\,
+      \Use_Serial_Unified_Completion.count_reg[5]\(0) => \JTAG_CONTROL_I/sel\,
+      \Use_Serial_Unified_Completion.count_reg[5]_0\(0) => p_0_in(0),
+      \Use_Serial_Unified_Completion.count_reg[5]_1\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\(5),
       \Use_Serial_Unified_Completion.sample_1_reg[15]\(0) => MDM_Core_I1_n_35,
-      \Use_UART.tdo_reg_reg[7]\(0) => \Use_E2.BSCAN_I_n_7\,
+      \Use_UART.tdo_reg_reg[7]\(0) => \Use_E2.BSCAN_I_n_9\,
       drck_i => drck_i,
       \p_31_out__0\ => \JTAG_CONTROL_I/p_31_out__0\,
       \p_54_out__0\ => \JTAG_CONTROL_I/p_54_out__0\,
@@ -14387,7 +14444,7 @@ entity module_ads7056_mdm_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of module_ads7056_mdm_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of module_ads7056_mdm_1_0 : entity is "MDM,Vivado 2016.4";
+  attribute x_core_info of module_ads7056_mdm_1_0 : entity is "MDM,Vivado 2017.2";
 end module_ads7056_mdm_1_0;
 
 architecture STRUCTURE of module_ads7056_mdm_1_0 is
@@ -15265,6 +15322,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0 is
   signal NLW_U0_M_AXI_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_U0_M_AXI_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_TRACE_DATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  attribute C_AVOID_PRIMITIVES : integer;
+  attribute C_AVOID_PRIMITIVES of U0 : label is 0;
   attribute C_DATA_SIZE : integer;
   attribute C_DATA_SIZE of U0 : label is 32;
   attribute C_DBG_MEM_ACCESS : integer;
@@ -15297,6 +15356,8 @@ architecture STRUCTURE of module_ads7056_mdm_1_0 is
   attribute C_S_AXI_ADDR_WIDTH of U0 : label is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of U0 : label is 32;
+  attribute C_TRACE_ASYNC_RESET : integer;
+  attribute C_TRACE_ASYNC_RESET of U0 : label is 0;
   attribute C_TRACE_CLK_FREQ_HZ : integer;
   attribute C_TRACE_CLK_FREQ_HZ of U0 : label is 200000000;
   attribute C_TRACE_CLK_OUT_PHASE : integer;

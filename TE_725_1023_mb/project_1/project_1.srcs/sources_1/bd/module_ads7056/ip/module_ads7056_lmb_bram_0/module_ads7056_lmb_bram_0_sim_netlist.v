@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Oct 29 22:37:25 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:20:29 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_lmb_bram_0/module_ads7056_lmb_bram_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_lmb_bram_0/module_ads7056_lmb_bram_0_sim_netlist.v
 // Design      : module_ads7056_lmb_bram_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_lmb_bram_0,blk_mem_gen_v8_3_5,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_3_5,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_lmb_bram_0,blk_mem_gen_v8_3_6,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_3_6,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_lmb_bram_0
    (clka,
@@ -152,7 +152,7 @@ module module_ads7056_lmb_bram_0
   (* C_WRITE_WIDTH_B = "32" *) 
   (* C_XDEVICEFAMILY = "artix7" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5 U0
+  module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6 U0
        (.addra(addra),
         .addrb(addrb),
         .clka(clka),
@@ -1570,7 +1570,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[1:0][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -1840,7 +1839,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized0
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[3:2][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2110,7 +2108,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized1
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[5:4][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2380,7 +2377,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized10
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[23:22][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2650,7 +2646,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized11
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[25:24][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2920,7 +2915,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized12
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[27:26][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -3190,7 +3184,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized13
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[29:28][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -3460,7 +3453,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized14
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[31:30][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -3730,7 +3722,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized2
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[7:6][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -4000,7 +3991,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized3
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[9:8][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -4270,7 +4260,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized4
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[11:10][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -4540,7 +4529,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized5
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[13:12][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -4810,7 +4798,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized6
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[15:14][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -5080,7 +5067,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized7
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[17:16][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -5350,7 +5336,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized8
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[19:18][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -5620,7 +5605,6 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized9
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[21:20][0:16383]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -5921,8 +5905,8 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) 
 (* C_WRITE_DEPTH_A = "16384" *) (* C_WRITE_DEPTH_B = "16384" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_5" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5
+(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6
    (clka,
     rsta,
     ena,
@@ -6188,7 +6172,7 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth inst_blk_mem_gen
+  module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth inst_blk_mem_gen
        (.addra(addra[15:2]),
         .addrb(addrb[15:2]),
         .clka(clka),
@@ -6205,8 +6189,8 @@ module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_5_synth" *) 
-module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_5_synth
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
+module module_ads7056_lmb_bram_0_blk_mem_gen_v8_3_6_synth
    (douta,
     doutb,
     clka,
@@ -6317,8 +6301,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

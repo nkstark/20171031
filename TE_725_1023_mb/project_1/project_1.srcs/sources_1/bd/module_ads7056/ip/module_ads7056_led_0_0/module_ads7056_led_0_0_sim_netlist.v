@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Oct 29 23:48:57 2017
-// Host        : DESKTOP-6EAE6HJ running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Tue Oct 31 01:17:12 2017
+// Host        : DESKTOP-I9PFHR4 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/nks/Desktop/TE_725_1023/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_led_0_0/module_ads7056_led_0_0_sim_netlist.v
+//               D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/ip/module_ads7056_led_0_0/module_ads7056_led_0_0_sim_netlist.v
 // Design      : module_ads7056_led_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "module_ads7056_led_0_0,led,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "led,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "module_ads7056_led_0_0,led,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "led,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module module_ads7056_led_0_0
    (clk_led,
@@ -113,7 +113,6 @@ module module_ads7056_led_0_0_led
   wire [23:18]counter_compare;
   wire \counter_compare[18]_i_1_n_0 ;
   wire \counter_compare[23]_i_1_n_0 ;
-  wire counter_compare_regn_0_0;
   wire [31:6]counter_reg;
   wire \counter_reg[0]_i_2_n_0 ;
   wire \counter_reg[0]_i_2_n_1 ;
@@ -541,37 +540,36 @@ module module_ads7056_led_0_0_led
   LUT4 #(
     .INIT(16'h0001)) 
     \counter_compare[18]_i_1 
-       (.I0(control[0]),
-        .I1(control[1]),
-        .I2(control[3]),
-        .I3(control[2]),
+       (.I0(control[1]),
+        .I1(control[0]),
+        .I2(control[2]),
+        .I3(control[3]),
         .O(\counter_compare[18]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \counter_compare[23]_i_1 
-       (.I0(control[0]),
-        .I1(control[1]),
-        .I2(control[3]),
-        .I3(control[2]),
+       (.I0(control[1]),
+        .I1(control[0]),
+        .I2(control[2]),
+        .I3(control[3]),
         .O(\counter_compare[23]_i_1_n_0 ));
-  FDRE \counter_compare_reg[18] 
-       (.C(counter_compare_regn_0_0),
+  FDRE #(
+    .IS_C_INVERTED(1'b1)) 
+    \counter_compare_reg[18] 
+       (.C(clk_led),
         .CE(1'b1),
         .D(\counter_compare[18]_i_1_n_0 ),
         .Q(counter_compare[18]),
         .R(1'b0));
-  FDRE \counter_compare_reg[23] 
-       (.C(counter_compare_regn_0_0),
+  FDRE #(
+    .IS_C_INVERTED(1'b1)) 
+    \counter_compare_reg[23] 
+       (.C(clk_led),
         .CE(1'b1),
         .D(\counter_compare[23]_i_1_n_0 ),
         .Q(counter_compare[23]),
         .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    counter_compare_regi_0
-       (.I0(clk_led),
-        .O(counter_compare_regn_0_0));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[0] 
@@ -947,8 +945,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

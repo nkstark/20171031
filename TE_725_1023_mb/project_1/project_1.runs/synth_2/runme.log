@@ -1,0 +1,497 @@
+
+*** Running vivado
+    with args -log module_ads7056_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source module_ads7056_wrapper.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source module_ads7056_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2017.2/data/ip'.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 284.266 ; gain = 62.367
+Command: synth_design -top module_ads7056_wrapper -part xc7a35tcsg324-2 -resource_sharing off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14900 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 366.867 ; gain = 76.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_wrapper' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:775]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_ADS7056_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ADS7056_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_ADS7056_0_0' (1#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ADS7056_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_axi_gpio_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_axi_gpio_0_0' (2#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_axi_quad_spi_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_axi_quad_spi_0_0' (3#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_quad_spi_0' of module 'module_ads7056_axi_quad_spi_0_0' requires 47 connections, but only 43 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:1089]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_clk_wiz_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_clk_wiz_0_0' (4#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_led_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_led_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_led_0_0' (5#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_led_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_mdm_1_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_mdm_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_mdm_1_0' (6#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_mdm_1_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_me18_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_me18_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_me18_0_0' (7#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_me18_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_microblaze_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_microblaze_0_0' (8#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'module_ads7056_microblaze_0_0' requires 126 connections, but only 108 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:1181]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_microblaze_0_axi_intc_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_microblaze_0_axi_intc_0' (9#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_microblaze_0_axi_periph_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:1514]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1PVCZAG' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:12]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1PVCZAG' (10#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:12]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_QLF8GF' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:144]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_QLF8GF' (11#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:144]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_25OUCN' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:276]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_25OUCN' (12#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:276]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_11FBPMO' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:408]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_11FBPMO' (13#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:408]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_8F5IHP' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2560]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_8F5IHP' (14#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2560]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1891SE2' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2706]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_auto_pc_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_auto_pc_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_auto_pc_0' (15#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_auto_pc_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1891SE2' (16#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2706]
+INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_1JBLV4I' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2988]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_auto_pc_1' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_auto_pc_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_auto_pc_1' (17#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_auto_pc_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_1JBLV4I' (18#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2988]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_xbar_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_xbar_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_xbar_0' (19#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_awready' does not match port width (3) of module 'module_ads7056_xbar_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2545]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_bresp' does not match port width (6) of module 'module_ads7056_xbar_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2548]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_bvalid' does not match port width (3) of module 'module_ads7056_xbar_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2549]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_wready' does not match port width (3) of module 'module_ads7056_xbar_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2555]
+WARNING: [Synth 8-350] instance 'xbar' of module 'module_ads7056_xbar_0' requires 40 connections, but only 38 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:2519]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_microblaze_0_axi_periph_0' (20#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:1514]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1MFJ55K' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:540]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_dlmb_bram_if_cntlr_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_dlmb_bram_if_cntlr_0' (21#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_dlmb_v10_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_dlmb_v10_0' (22#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'module_ads7056_dlmb_v10_0' requires 25 connections, but only 24 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:686]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_ilmb_bram_if_cntlr_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_ilmb_bram_if_cntlr_0' (23#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_ilmb_v10_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_ilmb_v10_0' (24#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'module_ads7056_ilmb_v10_0' requires 25 connections, but only 24 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:732]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_lmb_bram_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_lmb_bram_0' (25#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1MFJ55K' (26#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:540]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_microblaze_0_xlconcat_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_xlconcat_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_microblaze_0_xlconcat_0' (27#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_microblaze_0_xlconcat_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_rst_clk_wiz_0_120M_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_rst_clk_wiz_0_120M_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_rst_clk_wiz_0_120M_0' (28#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_rst_clk_wiz_0_120M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_0_120M' of module 'module_ads7056_rst_clk_wiz_0_120M_0' requires 10 connections, but only 9 given [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:1495]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_util_ds_buf_0_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_util_ds_buf_0_0' (29#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'module_ads7056_util_ds_buf_1_0' [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_util_ds_buf_1_0' (30#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/realtime/module_ads7056_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056' (31#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056.v:775]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [D:/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (32#1) [D:/xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:17657]
+INFO: [Synth 8-256] done synthesizing module 'module_ads7056_wrapper' (33#1) [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/sources_1/bd/module_ads7056/hdl/module_ads7056_wrapper.v:12]
+WARNING: [Synth 8-3331] design s02_couplers_imp_1JBLV4I has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_1JBLV4I has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_1891SE2 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_1891SE2 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_8F5IHP has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_8F5IHP has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_8F5IHP has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_8F5IHP has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_11FBPMO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_11FBPMO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_11FBPMO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_11FBPMO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_25OUCN has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_25OUCN has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_25OUCN has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_25OUCN has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_QLF8GF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_QLF8GF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_QLF8GF has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_QLF8GF has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1PVCZAG has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1PVCZAG has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1PVCZAG has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1PVCZAG has unconnected port S_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 406.195 ; gain = 115.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 406.195 ; gain = 115.418
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcsg324-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp43/module_ads7056_ADS7056_0_0_in_context.xdc] for cell 'module_ads7056_i/ADS7056_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp43/module_ads7056_ADS7056_0_0_in_context.xdc] for cell 'module_ads7056_i/ADS7056_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp45/module_ads7056_me18_0_0_in_context.xdc] for cell 'module_ads7056_i/me18_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp45/module_ads7056_me18_0_0_in_context.xdc] for cell 'module_ads7056_i/me18_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp47/module_ads7056_led_0_0_in_context.xdc] for cell 'module_ads7056_i/led_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp47/module_ads7056_led_0_0_in_context.xdc] for cell 'module_ads7056_i/led_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp49/module_ads7056_clk_wiz_0_0_in_context.xdc] for cell 'module_ads7056_i/clk_wiz_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp49/module_ads7056_clk_wiz_0_0_in_context.xdc] for cell 'module_ads7056_i/clk_wiz_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc] for cell 'module_ads7056_i/util_ds_buf_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc] for cell 'module_ads7056_i/util_ds_buf_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp53/module_ads7056_microblaze_0_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp53/module_ads7056_microblaze_0_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp55/module_ads7056_dlmb_v10_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp55/module_ads7056_dlmb_v10_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp57/module_ads7056_ilmb_v10_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp57/module_ads7056_ilmb_v10_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp59/module_ads7056_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp59/module_ads7056_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp61/module_ads7056_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp61/module_ads7056_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp63/module_ads7056_lmb_bram_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp63/module_ads7056_lmb_bram_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp65/module_ads7056_microblaze_0_axi_intc_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp65/module_ads7056_microblaze_0_axi_intc_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_intc'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp67/module_ads7056_microblaze_0_xlconcat_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_xlconcat'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp67/module_ads7056_microblaze_0_xlconcat_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_xlconcat'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp69/module_ads7056_mdm_1_0_in_context.xdc] for cell 'module_ads7056_i/mdm_1'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp69/module_ads7056_mdm_1_0_in_context.xdc] for cell 'module_ads7056_i/mdm_1'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp71/module_ads7056_rst_clk_wiz_0_120M_0_in_context.xdc] for cell 'module_ads7056_i/rst_clk_wiz_0_120M'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp71/module_ads7056_rst_clk_wiz_0_120M_0_in_context.xdc] for cell 'module_ads7056_i/rst_clk_wiz_0_120M'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp73/module_ads7056_axi_gpio_0_0_in_context.xdc] for cell 'module_ads7056_i/axi_gpio_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp73/module_ads7056_axi_gpio_0_0_in_context.xdc] for cell 'module_ads7056_i/axi_gpio_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp75/module_ads7056_util_ds_buf_1_0_in_context.xdc] for cell 'module_ads7056_i/util_ds_buf_1'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp75/module_ads7056_util_ds_buf_1_0_in_context.xdc] for cell 'module_ads7056_i/util_ds_buf_1'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp77/module_ads7056_axi_quad_spi_0_0_in_context.xdc] for cell 'module_ads7056_i/axi_quad_spi_0'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp77/module_ads7056_axi_quad_spi_0_0_in_context.xdc] for cell 'module_ads7056_i/axi_quad_spi_0'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp79/module_ads7056_xbar_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp79/module_ads7056_xbar_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp81/module_ads7056_auto_pc_1_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/s02_couplers/auto_pc'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp81/module_ads7056_auto_pc_1_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/s02_couplers/auto_pc'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp83/module_ads7056_auto_pc_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp83/module_ads7056_auto_pc_0_in_context.xdc] for cell 'module_ads7056_i/microblaze_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/constrs_1/new/led.xdc]
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/constrs_1/new/led.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.srcs/constrs_1/new/led.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/module_ads7056_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/module_ads7056_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/dont_touch.xdc]
+Finished Parsing XDC File [D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 674.965 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'module_ads7056_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'module_ads7056_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '16.667', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'module_ads7056_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '8.333', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clock_rtl. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp49/module_ads7056_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clock_rtl. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp49/module_ads7056_clk_wiz_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for POF_N[0]. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for POF_N[0]. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for POF_P[0]. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for POF_P[0]. (constraint file  D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/.Xil/Vivado-12084-DESKTOP-I9PFHR4/dcp51/module_ads7056_util_ds_buf_0_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for module_ads7056_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/ADS7056_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/led_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/me18_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_axi_intc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_axi_periph/s02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/microblaze_0_xlconcat. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/rst_clk_wiz_0_120M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/util_ds_buf_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for module_ads7056_i/util_ds_buf_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design module_ads7056_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/clk_wiz_0/clk_out1' to pin 'module_ads7056_i/clk_wiz_0/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/clk_wiz_0/clk_out2' to pin 'module_ads7056_i/clk_wiz_0/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/clk_wiz_0/clk_out3' to pin 'module_ads7056_i/clk_wiz_0/bbstub_clk_out3/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'module_ads7056_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'module_ads7056_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/mdm_1/Dbg_Clk_0' to pin 'module_ads7056_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'module_ads7056_i/mdm_1/Dbg_Update_0' to pin 'module_ads7056_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------------+----------+
+|      |BlackBox name                          |Instances |
++------+---------------------------------------+----------+
+|1     |module_ads7056_xbar_0                  |         1|
+|2     |module_ads7056_auto_pc_0               |         1|
+|3     |module_ads7056_auto_pc_1               |         1|
+|4     |module_ads7056_ADS7056_0_0             |         1|
+|5     |module_ads7056_axi_gpio_0_0            |         1|
+|6     |module_ads7056_axi_quad_spi_0_0        |         1|
+|7     |module_ads7056_clk_wiz_0_0             |         1|
+|8     |module_ads7056_led_0_0                 |         1|
+|9     |module_ads7056_mdm_1_0                 |         1|
+|10    |module_ads7056_me18_0_0                |         1|
+|11    |module_ads7056_microblaze_0_0          |         1|
+|12    |module_ads7056_microblaze_0_axi_intc_0 |         1|
+|13    |module_ads7056_microblaze_0_xlconcat_0 |         1|
+|14    |module_ads7056_rst_clk_wiz_0_120M_0    |         1|
+|15    |module_ads7056_util_ds_buf_0_0         |         1|
+|16    |module_ads7056_util_ds_buf_1_0         |         1|
+|17    |module_ads7056_dlmb_bram_if_cntlr_0    |         1|
+|18    |module_ads7056_dlmb_v10_0              |         1|
+|19    |module_ads7056_ilmb_bram_if_cntlr_0    |         1|
+|20    |module_ads7056_ilmb_v10_0              |         1|
+|21    |module_ads7056_lmb_bram_0              |         1|
++------+---------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |module_ads7056_ADS7056_0_0             |     1|
+|2     |module_ads7056_auto_pc_0               |     1|
+|3     |module_ads7056_auto_pc_1               |     1|
+|4     |module_ads7056_axi_gpio_0_0            |     1|
+|5     |module_ads7056_axi_quad_spi_0_0        |     1|
+|6     |module_ads7056_clk_wiz_0_0             |     1|
+|7     |module_ads7056_dlmb_bram_if_cntlr_0    |     1|
+|8     |module_ads7056_dlmb_v10_0              |     1|
+|9     |module_ads7056_ilmb_bram_if_cntlr_0    |     1|
+|10    |module_ads7056_ilmb_v10_0              |     1|
+|11    |module_ads7056_led_0_0                 |     1|
+|12    |module_ads7056_lmb_bram_0              |     1|
+|13    |module_ads7056_mdm_1_0                 |     1|
+|14    |module_ads7056_me18_0_0                |     1|
+|15    |module_ads7056_microblaze_0_0          |     1|
+|16    |module_ads7056_microblaze_0_axi_intc_0 |     1|
+|17    |module_ads7056_microblaze_0_xlconcat_0 |     1|
+|18    |module_ads7056_rst_clk_wiz_0_120M_0    |     1|
+|19    |module_ads7056_util_ds_buf_0_0         |     1|
+|20    |module_ads7056_util_ds_buf_1_0         |     1|
+|21    |module_ads7056_xbar_0                  |     1|
+|22    |IBUF                                   |     4|
+|23    |IOBUF                                  |     5|
+|24    |OBUF                                   |     3|
++------+---------------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+-----------------------------------------+------+
+|      |Instance                      |Module                                   |Cells |
++------+------------------------------+-----------------------------------------+------+
+|1     |top                           |                                         |  2105|
+|2     |  module_ads7056_i            |module_ads7056                           |  2093|
+|3     |    microblaze_0_axi_periph   |module_ads7056_microblaze_0_axi_periph_0 |   794|
+|4     |      s01_couplers            |s01_couplers_imp_1891SE2                 |   153|
+|5     |      s02_couplers            |s02_couplers_imp_1JBLV4I                 |    74|
+|6     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1MFJ55K    |   494|
++------+------------------------------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 674.965 ; gain = 115.418
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 674.965 ; gain = 384.188
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+90 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 677.852 ; gain = 393.586
+INFO: [Common 17-1381] The checkpoint 'D:/GIT_Project/20171031/TE_725_1023_mb/project_1/project_1.runs/synth_2/module_ads7056_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 677.852 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 01:25:03 2017...
